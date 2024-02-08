@@ -1,0 +1,16 @@
+.pagintaion {
+  display: inline-flex !important;
+  width: auto !important;
+}
+ 
+.pagintaion .swiper-pagination-bullet {
+  display: inline-block !important;
+  width: 40px !important;
+  height: 2px !important;
+  background-color: #af8d64f3 !important;
+  border-radius: 0;
+}
+
+.pagintaion .swiper-pagination-bullet-active{
+  background-color: #000000;
+}
