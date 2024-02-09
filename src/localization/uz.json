@@ -1,0 +1,11 @@
+{
+  "translation": {
+    "navbar": {
+      "home" : "Asosiy",
+      "about": "Biz haqimizda",
+      "rooms":"Honalar",
+      "gallery":"Suratlar",
+      "contact": "Aloqa"
+    }
+  }
+}

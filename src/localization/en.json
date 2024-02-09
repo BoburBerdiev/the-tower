@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "navbar": {
+      "home" : "Home",
+      "about": "About us",
+      "rooms":"Rooms",
+      "gallery":"Gallery",
+      "contact": "Contact"
+    },
+    "btn": {
+      "more":"More",
+      "booking":"Booking"
+    }
+  }
+}
