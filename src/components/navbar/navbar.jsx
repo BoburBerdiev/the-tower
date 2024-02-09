@@ -1,8 +1,8 @@
 import {  CiMenuFries  } from "react-icons/ci";
-// import './navbar.css'
 import { useCallback, useState } from "react";
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from "react-i18next";
 import Link from "next/link";
+import {ButtonUI , ImgUI} from "@/components";
 
 
 
@@ -45,11 +45,11 @@ const Navbar = () => {
   return (  
     <>
 
-    <nav className='bg-[#FFFFFFE5] py-3 w-full z-[100] sticky left-0  top-0'>
+    <nav className='bg-[#FFFFFFE5] py-3 w-full z-[100] sticky left-0  top-0 shadow-md'>
       <div  className=" container  flex justify-between overflow-x-hidden">
-        <a href="/">
-          <img src='/image/Tower hotel___eng 1.png' alt="Tower"  className='w-[70px] h-[50px] md:w-[98px]  md:h-[73px] object-contain '/>
-        </a>
+        <Link href="/" className={'relative w-[70px] h-[50px] md:w-[98px]  md:h-[73px]'}>
+          <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'Tower'}  objectFit={'object-contain'}/>
+        </Link>
         <div className='flex items-center '>
           <ul className={`${navOpen ? ' right-0': '-right-full'} top-[114px] md:top-[130px] pt-10 lg:pt-0 flex items-center gap-4 md:gap-[60px] fixed lg:static text-lg text-black font-roboto w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
             {

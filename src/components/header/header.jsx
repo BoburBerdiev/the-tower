@@ -1,6 +1,4 @@
-import Slider from "../slider/slider"
-import './header.css'
-import {Booking} from "../index";
+import {Booking , Slider} from "@/components";
 
 const HeaderBannerText =[
   {

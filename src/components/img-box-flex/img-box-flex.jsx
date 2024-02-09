@@ -1,5 +1,4 @@
-import SectionTitle from "../Section-title/SectionTitle";
-import ImgUl from "../img-ul/img-ul";
+import {ImgUI , SectionTitle} from "@/components";
 
 const ImgBoxFlex = ({ title, content, src, imgOrder }) => {
   return (
@@ -19,7 +18,7 @@ const ImgBoxFlex = ({ title, content, src, imgOrder }) => {
           imgOrder ? "order-1" : "order-2"
         } w-full aspect-video md:aspect-[16/14]`}
       >
-        <ImgUl  src={src} objectFit={"object-cover"} />
+        <ImgUI  src={src} objectFit={"object-cover"} />
       </div>
     </div>
   );

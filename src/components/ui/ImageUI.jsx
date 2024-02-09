@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const ImageUI = ({src , alt , imgStyle ,priority}) => {
+const ImageUI = ({src , alt , imgStyle ,priority , objectFitContain}) => {
 
     const [loading , setLoading] = useState(true)
 
@@ -11,7 +11,7 @@ const ImageUI = ({src , alt , imgStyle ,priority}) => {
                 src={src}
                 alt={alt}
                 layout="fill"
-                className={` w-full h-full  ${imgStyle} duration-200 ease-in-out  ${
+                className={` ${objectFitContain ? 'object-contain' : 'object-cover'}  w-full h-full  ${imgStyle} duration-200 ease-in-out  ${
                     loading ? 'scale-110 blur-2xl grayscale':
                         'scale-100  blur-0 grayscale-0'
                 } `}

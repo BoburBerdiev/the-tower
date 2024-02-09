@@ -4,8 +4,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Autoplay, Navigation ,Pagination } from "swiper/modules";
-import { ImgUl } from "../../components";
-import "./slider.css";
+import { ImgUI } from "@/components/";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { HiChevronDown } from "react-icons/hi";
@@ -67,7 +66,7 @@ const Slider = ({
             </div>
             <div className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000088]">
             {
-              isLoading ? <Skeleton duration={2} height={'100%'} width={'100%'} /> : <ImgUl  objectFit="object-cover" src={slider.img} />
+              isLoading ? <Skeleton duration={2} height={'100%'} width={'100%'} /> : <ImgUI  objectFit="object-cover" src={slider.img} />
             }
               
             </div>

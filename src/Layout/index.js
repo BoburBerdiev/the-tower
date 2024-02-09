@@ -1,12 +1,13 @@
-import { Footer, Navbar} from "@/components/index";
+import {Footer, Navbar, TopNav} from "@/components/index";
 
 
 const Layout = ({ children }) => {
 
     return (
-        <div className={''}>
+        <div className={'relative'}>
+            <TopNav />
             <Navbar  />
-            <main className={" min-h-screen mt-[80px] bg-red-700 " }>
+            <main className={"  " }>
                 {children}
             </main>
             <Footer  />

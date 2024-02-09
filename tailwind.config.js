@@ -9,7 +9,28 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
+    extend: {
+      colors: {
+        'brown': '#8F8170',
+        'iron':"#59657A",
+        'customGrey': '#808080'
+      },
+      fontFamily: {
+        'elegance': ['Rounded-Elegance'],
+        'roboto': ['Roboto' ],
+      },
+
+    },
   },
   plugins: [],
 }

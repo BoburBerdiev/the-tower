@@ -1,4 +1,4 @@
-import {ButtonUl, DropdownBooking, NumberGuests, TypeRoom} from "../index";
+import {ButtonUI, DropdownBooking, NumberGuests, TypeRoom} from "@/components";
 import {useEffect, useState} from "react";
 import DatePicker from 'react-datepicker'
 import moment from "moment";
@@ -74,7 +74,7 @@ const Booking = () => {
             >
                 <TypeRoom type={typeRoomArr} setTypeRoom={setTypeRoom}/>
             </DropdownBooking>
-    <ButtonUl typeClass={'bg-brown text-white'}  text={t('btn.booking')}/>
+    <ButtonUI typeClass={'bg-brown text-white'}  text={t('btn.booking')}/>
     </div>
         </div>
     )

@@ -1,14 +1,13 @@
-import React from 'react'
-import {ButtonUl} from '../index'
 import { FaInstagram, FaFacebookF,FaTelegramPlane  } from "react-icons/fa";
+import {ButtonUI} from "@/components";
 
 
 const MesengerList = () => {
   return (
     <div className='flex gap-4 '>
-      <ButtonUl href={'/'} icon={<FaInstagram />}/>
-      <ButtonUl href={'/'} icon={<FaFacebookF />}/>
-      <ButtonUl href={'/'} icon={<FaTelegramPlane />}/>
+      <ButtonUI href={'/'} icon={<FaInstagram />}/>
+      <ButtonUI href={'/'} icon={<FaFacebookF />}/>
+      <ButtonUI href={'/'} icon={<FaTelegramPlane />}/>
     </div>
   )
 }

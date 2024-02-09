@@ -1,3 +1,129 @@
+@import './font.css';
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn-gold {
+        @apply text-white bg-brown
+    }
+    .btn-white {
+        @apply text-brown border-[1.5px] border-brown
+    }
+    .btn-link {
+        @apply text-white bg-brown inline-flex items-center justify-center p-2.5 text-xl
+    }
+    .section-title{
+        @apply text-2xl
+        text-iron
+        md:text-4xl lg:text-5xl
+        font-elegance
+    }
+    .header-title{
+        @apply text-4xl text-white font-elegance font-normal md:text-5xl lg:text-6xl xl:text-7xl
+    }
+    .section-text{
+        @apply text-black tracking-[0.4px] font-light md:text-lg font-[roboto] xl:text-xl
+    }
+    .nav-active{
+        @apply bg-brown text-white
+    }
+    .nav-btn{
+        @apply bg-white text-brown
+    }
+
+}
+
+
+
+
+.react-datepicker__day--in-selecting-range,.react-datepicker__day--in-range{
+    border-radius: 0 !important;
+    background-color: rgba(143, 129, 112,0.3) !important;
+}
+
+.react-datepicker__day--today{
+    color: #fff !important;
+    border-radius: 3px !important;
+    background-color: #8F8170 !important;
+}
+
+.react-datepicker__day--range-start, .react-datepicker__day--selecting-range-start{
+    border-radius:  3px 0 0 3px  !important;
+    background-color: #8F8170 !important;
+
+}
+
+.react-datepicker__day--range-end, .react-datepicker__day--selecting-range-end{
+    border-radius: 0 3px 3px 0 !important;
+    color: #fff !important;
+    background-color: #8F8170 !important;
+}
+
+.react-datepicker{
+    display: flex;
+    align-items: start;
+}
+
+.react-datepicker__day{
+    width: 24px !important;
+    line-height: 24px !important;
+}
+
+
+@media (max-width: 500px) {
+    .react-datepicker{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*.react-datepicker__month-container{*/
+/*  float: inherit !important;*/
+/*  display: inline-block !important;*/
+/*}*/
+
+/*.react-datepicker__month-container{*/
+/*  float: none !important;*/
+/*}*/
+
+
+/*       SLIDER   */
+.header-slider .swiper-pagination  {
+    display: none !important;
+}
+.section-slider .swiper-pagination-bullet {
+    width: 20px;
+    height: 4px;
+    background-color: #af8d64f3;
+    border-radius: 0;
+}
+.room-slider .pagintaion-slider .swiper-pagination-bullet{
+    width: 60px;
+    height: 4px;
+    background-color:rgba(255, 255, 255, 0.50) !important;
+    border-radius: 0;
+}
+.room-slider .pagintaion-slider .swiper-pagination-bullet-active{
+    width: 60px;
+    height: 4px;
+    background-color:white !important;
+    border-radius: 0;
+}
+.pagintaion-slider {
+    display: inline-flex !important;
+    width: auto !important;
+}
+.pagintaion-slider .swiper-pagination-bullet {
+    display: inline-block !important;
+    width: 40px !important;
+    height: 2px !important;
+    background-color: #af8d64f3 !important;
+    border-radius: 0;
+}
+.pagintaion-slider .swiper-pagination-bullet-active{
+    background-color: #000000;
+}

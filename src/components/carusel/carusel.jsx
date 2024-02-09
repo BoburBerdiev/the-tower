@@ -5,10 +5,10 @@ import "swiper/css";
 // import "./carusel.css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import HotelCard from "../hotel-card/hotel-card";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import {HotelCard} from "@/components";
 
 const Carusel = ({ content }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SectionTextUl = ({content, style}) => {
+const SectionTextUI = ({content, style}) => {
   return (
     <>
       <p className={`${style} roboto-light  `}>{content}</p>
@@ -8,4 +8,4 @@ const SectionTextUl = ({content, style}) => {
   )
 }
 
-export default SectionTextUl
+export default SectionTextUI

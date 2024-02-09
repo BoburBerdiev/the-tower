@@ -1,5 +1,5 @@
 import { SiInstagram, SiFacebook, SiTelegram } from 'react-icons/si'
-import { ImgUI , FooterContent } from '@/components'
+import {ImgUI, FooterContent, MesengerList} from '@/components'
 
 const FooterContentData = {
   menu: {
@@ -69,7 +69,7 @@ const Footer = () => {
       <footer className='relative bg-white border-t border-[#8F8170]'>
         <div className="container grid grid-cols-2 gap-5 py-10 lg:grid-cols-4 text-iron">
           <div className='flex flex-col justify-between roboto-regular text-xl gap-[10px]'>
-            <a href='' className='block w-[120px] h-[90px]'>
+            <a href='' className='block w-[120px] h-[90px] relative'>
               <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFit={'object-contain'}/>
             </a>
             <div className='space-y-2  md:space-y-2.5 text-base md:text-xl'>
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
           <div className='space-y-3 lg:space-y-8'>
            <FooterContent  title={'Адрес'} list={FooterContentData.location.list} />
-           {/*<MesengerList/>*/}
+           <MesengerList/>
           </div>
         </div>
       </footer>
@@ -96,11 +96,11 @@ const Footer = () => {
         </div>
         <div className="container relative z-[2] flex flex-col text-white/60 md:flex-row justify-between items-center text-xs md:text-sm text-white roboto-light gap-[10px]">
           <p className=''>
-            @{new Date().getFullYear()} The Tower Hotel. Все права защищены.
+            {new Date().getFullYear()} The Tower Hotel. Все права защищены.
           </p>
           <a href="https://abduganiev.uz" className='flex items-center gap-[10px] opacity-70'>
             Сайт создан
-            <span  className='w-[30px]'>
+            <span  className='w-[30px] relative h-[30px]'>
               <ImgUI src={'/image/abduganiev.png'} objectFit={'object-contain'} alt={'ABDUGANIEV TECHNOLOGY'} />
             </span>
           </a>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ButtonUl} from "../index";
+import {ButtonUI} from "@/components/index";
 import {FiMinus} from "react-icons/fi";
 import {FaPlus} from "react-icons/fa6";
 
@@ -48,12 +48,12 @@ const NumberGuests = ({guests,setGuests}) => {
                     номеров
                 </p>
                 <div className={'flex items-center gap-3'}>
-                    <ButtonUl   icon={<FiMinus className={'text-green-700'}/>}
+                    <ButtonUI   icon={<FiMinus className={'text-green-700'}/>}
                                 typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                 onClick={()=>handleDecrement('room')}
                     />
                     <p className={'font-roboto font-thin text-xl'}>{countRoom}</p>
-                    <ButtonUl icon={<FaPlus className={'text-red-700'}/>}
+                    <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
                               typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                 onClick={()=>handleIncrement('room')}
                     />
@@ -67,12 +67,12 @@ const NumberGuests = ({guests,setGuests}) => {
 
                     <div className={'space-y-1'}>
                         <div className={'flex items-center gap-5'}>
-                            <ButtonUl icon={<FiMinus className={'text-green-700'}/>}
+                            <ButtonUI icon={<FiMinus className={'text-green-700'}/>}
                                       typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                 onClick={()=>handleDecrement('older')}
                             />
                             <p className={'font-roboto font-thin text-xl'}>{countOlder}</p>
-                            <ButtonUl icon={<FaPlus className={'text-red-700'}/>}
+                            <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
                                       typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                       onClick={()=>handleIncrement('older')}/>
                         </div>
@@ -82,12 +82,12 @@ const NumberGuests = ({guests,setGuests}) => {
                     </div>
                     <div className={'space-y-1 '}>
                         <div className={'flex items-center gap-5'}>
-                            <ButtonUl icon={<FiMinus className={'text-green-700'}/>}
+                            <ButtonUI icon={<FiMinus className={'text-green-700'}/>}
                                       typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                         onClick={()=>handleDecrement('child')}
                             />
                             <p className={'font-roboto font-thin text-xl'}>{countChildren}</p>
-                            <ButtonUl icon={<FaPlus className={'text-red-700'}/>}
+                            <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
                                       typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
                                       onClick={()=>handleIncrement('child')}
                             />

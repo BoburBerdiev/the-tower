@@ -1,5 +1,4 @@
-import React from 'react'
-import ButtonUl from '../button-uI/button-uI'
+import {ButtonUI} from "@/components";
 
 const SectionTitle = ({title,  justify, subTitle, colorContent, btnText }) => {
   return (
@@ -12,7 +11,7 @@ const SectionTitle = ({title,  justify, subTitle, colorContent, btnText }) => {
       {
         btnText && 
         <div  data-aos='fade-up' data-aos-delay='120'>
-          <ButtonUl text={btnText}  typeClass='btn-white'/> 
+          <ButtonUI text={btnText}  typeClass='btn-white'/>
         </div>
       }
       

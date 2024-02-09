@@ -5,6 +5,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { PersistGate } from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
+import "../localization/i18n";
 export default function App({ Component, pageProps }) {
 
   const queryClient = new QueryClient();

@@ -1,7 +1,6 @@
-import React from 'react'
-import ImgUl from '../img-ul/img-ul'
+import {ImgUI} from "@/components";
 
-const SectionUl = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureBottomPostion,centerFigure}) => {
+const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureBottomPostion,centerFigure}) => {
 
 
   // bgFigureTopPostion  2ta qiymat keliw kk (top left  yoki bottom right)
@@ -12,13 +11,13 @@ const SectionUl = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           {
             bgFigureTopPostion &&
           <div className={` ${bgFigureTopPostion ? bgFigureTopPostion : " top-0 left-0"} absolute  w-full  h-[300px] z-[1] hidden md:block`}>
-            <ImgUl src={'/image/pattern.png'} objectFit={'object-cover'} />
+            <ImgUI src={'/image/pattern.png'} objectFit={'object-cover'} />
           </div>
           }
           {
             centerFigure &&
             <div className="h-full w-[30%] hidden lg:block absolute top-0 right-0 z-[1]">
-            <ImgUl src={'/image/room-figure.png'} objectFit={'object-cover'}/>
+            <ImgUI src={'/image/room-figure.png'} objectFit={'object-cover'}/>
           </div>
           }
           <div className="container relative z-[6]">
@@ -30,7 +29,7 @@ const SectionUl = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           {
             bgFigureBottomPostion &&
           <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute  w-full  h-[300px] z-[1]`}>
-            <ImgUl src={'/image/pattern.png'} objectFit={'object-cover'} />
+            <ImgUI src={'/image/pattern.png'} objectFit={'object-cover'} />
           </div>
           }
         </section>
@@ -38,4 +37,4 @@ const SectionUl = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
   )
 }
 
-export default SectionUl
+export default SectionUI
