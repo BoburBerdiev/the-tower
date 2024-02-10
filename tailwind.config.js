@@ -26,10 +26,9 @@ module.exports = {
         'customGrey': '#808080'
       },
       fontFamily: {
-        'elegance': ['Rounded-Elegance'],
-        'roboto': ['Roboto' ],
+        'elegance': ['elegance'],
+        'roboto': ['roboto'],
       },
-
     },
   },
   plugins: [],

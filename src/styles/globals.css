@@ -26,7 +26,7 @@
         @apply text-4xl text-white font-elegance font-normal md:text-5xl lg:text-6xl xl:text-7xl
     }
     .section-text{
-        @apply text-black tracking-[0.4px] font-light md:text-lg font-[roboto] xl:text-xl
+        @apply text-black tracking-[0.4px] font-light md:text-lg  xl:text-xl
     }
     .nav-active{
         @apply bg-brown text-white

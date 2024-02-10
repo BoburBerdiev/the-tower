@@ -6,7 +6,6 @@ import 'moment/locale/uz'
 import {FiMinus} from "react-icons/fi";
 import { useTranslation } from 'react-i18next'
 
-
 moment.locale('uz')
 
 const typeRoomArr=[
