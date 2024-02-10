@@ -3,6 +3,15 @@ import 'aos/dist/aos.css';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
+// swiper
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+// swiper
+
+
 import { HydrationProvider, Client } from "react-hydration-provider";
 import {Provider} from "react-redux";
 import { QueryClientProvider, QueryClient } from "react-query";
