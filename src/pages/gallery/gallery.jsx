@@ -5,7 +5,6 @@ import {GalleryZoomInner, SectionUI , SectionTitle} from "@/components";
 const Gallery = () => {
  
   return (
-    <>
 
     <SectionUI padding='py-10 md:py-20   '>
       <div className="mb-5 md:mb-10">
@@ -14,7 +13,6 @@ const Gallery = () => {
       {/*<GalleryZoom />*/}
       {/*<GalleryZoomInner />*/}
     </SectionUI>
-    </>
   )
 }
 
