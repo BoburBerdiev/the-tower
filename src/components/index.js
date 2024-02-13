@@ -24,4 +24,6 @@ export { default as LittleTitleUI } from './ui/Little-title-UI'
 export { default as HotelCardSkeleton } from './hotel-card-skeleton/hotel-card-skeleton'
 export { default as InputUI } from './ui/Input-UI'
 export { default as TypeRoom } from './type-room/type-room'
+export { default as MiniHeader } from './mini-header/mini-header'
+export { default as NewsCard } from './news-card/news-card'
 
