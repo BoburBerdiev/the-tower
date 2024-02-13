@@ -1,16 +1,16 @@
+import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
-import LightGallery from 'lightgallery/react';
 import {ImgUI} from "@/components";
 
-const galleryZoomContent = [
-  "/image/IMG_7362-min.jpg",
-  "/image/IMG_7361-min.jpg",
-  "/image/IMG_5346-min.jpg",
-  "/image/IMG_5484-min.jpg",
-  "/image/IMG_5451-min.jpg",
-]
 const GalleryZoom = () => {
+  const galleryZoomContent = [
+    "/image/IMG_7362-min.jpg",
+    "/image/IMG_7361-min.jpg",
+    "/image/IMG_5346-min.jpg",
+    "/image/IMG_5484-min.jpg",
+    "/image/IMG_5451-min.jpg",
+  ]
   const onInit = () => {
     console.log('lightGallery has been initialized');
 };
@@ -18,23 +18,23 @@ const GalleryZoom = () => {
     <LightGallery
     onInit={onInit}
     elementClassNames={"grid grid-cols-4  md:gap-5 gap-3"}
-    speed={500}
+    // speed={500}
     plugins={[lgThumbnail, lgZoom]}
 >
-<a data-aos='zoom-in' data-aos-delay='100' href={galleryZoomContent[0]} className="block col-span-4 md:col-span-2 relative h-[200px] md:h-[350px]">
-<ImgUI src={galleryZoomContent[0]} objectFit={'object-cover'} />
+<a  href={galleryZoomContent[0]} className="block col-span-4 md:col-span-2 relative h-[200px] md:h-[350px]">
+<ImgUI src={galleryZoomContent[0]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
-<a data-aos='zoom-in' data-aos-delay='150' href={galleryZoomContent[1]} className="block col-span-2 h-[200px] relative md:h-[350px]">
-<ImgUI src={galleryZoomContent[1]} objectFit={'object-cover'} />
+<a  href={galleryZoomContent[1]} className="block col-span-2 h-[200px] relative md:h-[350px]">
+<ImgUI src={galleryZoomContent[1]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
-<a data-aos='zoom-in' data-aos-delay='200' href={galleryZoomContent[2]} className="block  col-span-2 h-[200px] relative md:h-[350px]">
-<ImgUI src={galleryZoomContent[2]} objectFit={'object-cover'} />
+<a href={galleryZoomContent[2]} className="block  col-span-2 h-[200px] relative md:h-[350px]">
+<ImgUI src={galleryZoomContent[2]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
-<a data-aos='zoom-in' data-aos-delay='250' href={galleryZoomContent[3]} className="block h-[200px] md:h-[350px] relative col-span-2 md:col-span-1 ">
-<ImgUI src={galleryZoomContent[3]} objectFit={'object-cover'} />
+<a href={galleryZoomContent[3]} className="block h-[200px] md:h-[350px] relative col-span-2 md:col-span-1 ">
+<ImgUI src={galleryZoomContent[3]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
-<a data-aos='zoom-in' data-aos-delay='300' href={galleryZoomContent[4]} className="block col-span-2 md:col-span-1 relative h-[200px] md:h-[350px] ">
-<ImgUI src={galleryZoomContent[4]} objectFit={'object-cover'} />
+<a  href={galleryZoomContent[4]} className="block col-span-2 md:col-span-1 relative h-[200px] md:h-[350px] ">
+<ImgUI src={galleryZoomContent[4]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
 </LightGallery>
   )
