@@ -1,4 +1,4 @@
-import {ImgUI, Carusel, Header, SectionTitle, ButtonUI , GalleryZoom, HotelCard, SectionUI, ServiceCard} from '@/components/'
+import {ImgUI, Carusel, Header, SectionTitle, ButtonUI , GalleryZoom, HotelCard, SectionUI, ServiceCard, LocationInfos} from '@/components/'
 const hotelCardData = [
     {
         img: "/image/IMG_5481-min.jpg" ,
@@ -95,11 +95,95 @@ const serviceCardData = [
         decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
         href: 'link',
         src: '/image/IMG_7363-min.jpg'
-    },
+    }, 
 ]
 
 
 const Home = () => {
+
+    const locationInfos = [
+        {
+            title: "Рестораны и кафе",
+            icon:"/image/restaurants&cafes.svg",
+            locations: [
+                {
+                    place: 'Кафе-бар: T4K Performance Bar',
+                    distance: '200 м'
+                },
+                {
+                    place: 'Кафе-бар: Бухара',
+                    distance: '250 м'
+                },
+                {
+                    place: 'Ресторан: Азия',
+                    distance: '300 м'
+                }
+            ]
+        },
+        {
+            title: "Развлечения",
+            icon:"/image/entertainment.svg",
+            locations: [
+                {
+                    place: 'Пкио им.Фурката',
+                    distance: '2,1 км'
+                },
+                {
+                    place: 'Сеульский национальный парк',
+                    distance: '2,6 км'
+                },
+                {
+                    place: 'Парк Навруз',
+                    distance: '3,1 км'
+                },
+                {
+                    place: 'Пкио им.Фурката',
+                    distance: '2,1 км'
+                },
+                {
+                    place: 'Сеульский национальный парк',
+                    distance: '2,6 км'
+                },
+                {
+                    place: 'Парк Навруз',
+                    distance: '3,1 км'
+                }
+            ]
+        },
+        {
+            title: "Общественный транспорт",
+            icon: "/image/public-transport.svg",
+            locations: [
+                {
+                    place: 'Поезд: Tashkent-Passenger',
+                    distance: '600 м'
+                },
+                {
+                    place: 'Поезд: Tashkent',
+                    distance: '850 м'
+                },
+                {
+                    place: 'Метро: Oybek',
+                    distance: '1,5 км'
+                },
+                {
+                    place: 'Метро: Pushkin',
+                    distance: '4,6 км'
+                }
+            ]
+        },
+        {
+            title: "Ближайшие аэропорты",
+            icon: "/image/airports.svg",
+            locations: [
+                {
+                    place: 'Международный аэропорт Ташкент им Ислама Каримова',
+                    distance: '200 м'
+                }
+            ]
+        }
+    ]
+
     return (
         <div>
             <Header />
@@ -151,6 +235,21 @@ const Home = () => {
                     </div>
                 </div>
 
+            </SectionUI>
+            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px]'}>
+                <div className='relative z-[5]'>
+                    <SectionTitle title={'Ориентиры поблизости'} colorContent={true} />
+                    <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
+                        {
+                            locationInfos.map(item => (
+                                <LocationInfos title={item.title} icon={item.icon} locations={item.locations} />
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className='absolute bottom-[-50px] md:bottom-[-90px] left-0 right-0 z-[1] h-full w-full'>
+                    <ImgUI src={'/image/info-section-bg.png'} alt={'locations'} objectFit={'object-cover'} />
+                </div>
             </SectionUI>
             <SectionUI bgFigureTopPostion={'top-0 -left-1/2'} padding={'py-10 md:pb-[45px] md:pt-20 lg:pt-32 xl:pt-[180px]   '}>
                 <div className="pb-5 md:pb-10">
