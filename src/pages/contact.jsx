@@ -4,13 +4,13 @@ const Contact = () => {
   return (
     <div>
       <SectionUI bgFigureTopPostion={'-top-20 -left-1/2'} padding={'py-10 md:py-20 '}>
-        <div className="grid items-center grid-cols-1 gap-14 md:gap-20 md:grid-cols-2">
+        <div className="grid items-center grid-cols-1 gap-10">
           {/* section title */}
           <div>
             <div className="mb-10">
-              <SectionTitle title={'Свяжитесь с нами'} />
+              <SectionTitle justify={'justify-center'} title={'Свяжитесь с нами'} />
             </div>
-            <div data-aos='fade-up' data-aos-delay='0.2' className="space-y-[10px]">
+            <div data-aos='fade-up' data-aos-once data-aos-delay='0.2' className="space-y-5 text-center">
               <a className="block" href={`tel:${9999999}`}>
                 <p className="space-x-2">
                   <span className="text-base md:text-xl text-iron">
@@ -37,11 +37,11 @@ const Contact = () => {
                 </p>
               </a>
             </div>
-            <div data-aos='fade-up' data-aos-delay='0.3' className="mt-10 md:mt-20">
+            <div data-aos='fade-up' data-aos-once data-aos-delay='0.3' className="mt-5 flex justify-center">
               <MesengerList />
             </div>
           </div>
-          <div className="aspect-[16/14] md:aspect-square" data-aos='zoom-in' data-aos-delay='100'>
+          <div className="aspect-[16/14] md:aspect-[15/8]" data-aos='zoom-in' data-aos-delay='100'>
             <iframe
               className="w-full h-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.584925628522!2d69.2450766758738!3d41.29613727131159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b94effcbfff%3A0xd931165a53b433f3!2sWIKIDEV!5e0!3m2!1sru!2s!4v1703072387732!5m2!1sru!2s"

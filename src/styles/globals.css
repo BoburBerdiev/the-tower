@@ -34,6 +34,9 @@
     .nav-btn{
         @apply bg-white text-brown
     }
+    .mini-header-title {
+        @apply text-white font-elegance text-2xl  md:text-4xl lg:text-5xl
+    }
 
 }
 
