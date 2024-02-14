@@ -1,9 +1,24 @@
-import {ImgUI, Carusel, Header, SectionTitle, ButtonUI , GalleryZoom, HotelCard, SectionUI, ServiceCard, LocationInfos} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI , HotelCard, SectionUI, ServiceCard, LocationInfos ,SwiperSlider} from '@/components/'
+
 const hotelCardData = [
     {
         img: "/image/IMG_5481-min.jpg" ,
         title: "Standart Twin",
         id:5,
+        information: [
+            '27 m2',
+            '2 чел',
+            '1 ванная',
+            'балкон'
+        ],
+        slug: "link",
+        price: '400 000 ',
+        time: 'за ночь',
+    },
+    {
+        img: "/image/IMG_5481-min.jpg" ,
+        title: "Standart Twin",
+        id:50,
         information: [
             '27 m2',
             '2 чел',
@@ -95,7 +110,7 @@ const serviceCardData = [
         decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
         href: 'link',
         src: '/image/IMG_7363-min.jpg'
-    }, 
+    },
 ]
 
 
@@ -266,7 +281,8 @@ const Home = () => {
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
                     <SectionTitle title={'Фотогалерея'} />
-                    <GalleryZoom />
+                    {/*<GalleryZoom />*/}
+                    <SwiperSlider gallery={hotelCardData} />
                     <div data-aos='fade-up' data-aos-delay='150' className="flex flex-col items-center w-full">
                         <ButtonUI text={'Посмотреть все фото'} typeClass={'btn-white'} />
                     </div>

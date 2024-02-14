@@ -9,8 +9,6 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-// swiper
-
 
 import { HydrationProvider, Client } from "react-hydration-provider";
 import {Provider} from "react-redux";
