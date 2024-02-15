@@ -26,8 +26,11 @@ module.exports = {
         'customGrey': '#808080'
       },
       fontFamily: {
-        'elegance': ['elegance'],
-        'roboto': ['roboto'],
+        // app.js ga qarab font ulansin
+        elegance: ['var(--font-rounded-elegance)'],
+        roboto: ['var(--font-roboto)'],
+        inter: ['var(--font-inter)'],
+        openSans: ['var(--font-open-sans)']
       },
     },
   },
