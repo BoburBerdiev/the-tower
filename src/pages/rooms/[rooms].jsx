@@ -59,9 +59,9 @@ const Room = () => {
 
     return (
         <div className="wrapper">
-            {/*<div className="w-full h-[90vh]">*/}
-            {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
-            {/*</div>*/}
+            <div className="w-full h-[90vh]">
+                <Slider SliderContent={roomBannerContent} innerBtn={true} />
+            </div>
             <SectionUI bgFigureTopPostion={'-top-32 left-0'} padding={'py-10 md:py-20 lg:py-32 xl:py-[180px]'}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 ">
                     <div className="flex flex-col justify-center space-y-5 md:space-y-10">

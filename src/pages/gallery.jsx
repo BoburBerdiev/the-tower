@@ -1,6 +1,6 @@
 
 
-import {GalleryZoomInner, SectionUI , SectionTitle} from "@/components";
+import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom} from "@/components";
 
 const Gallery = () => {
 
@@ -24,8 +24,15 @@ const Gallery = () => {
         {
             id:5,
             src:"/image/IMG_5514-min.jpg"
+        },
+        {
+            id:7,
+            src:"/image/IMG_5481-min.jpg"
+        },
+        {
+            id:15,
+            src:"/image/IMG_5514-min.jpg"
         }
-
     ]
     console.log(1)
 

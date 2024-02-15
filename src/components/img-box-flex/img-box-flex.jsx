@@ -1,8 +1,18 @@
-import {ImgUI , SectionTitle} from "@/components";
-
+import { SectionTitle, Slider} from "@/components";
+const roomsInner =[
+    {
+        img: "/image/IMG_7363-min.jpg"
+    },
+    {
+        img: "/image/IMG_7361-min.jpg"
+    },
+    {
+        img: "/image/IMG_7362-min.jpg"
+    },
+]
 const ImgBoxFlex = ({ title, content, src, imgOrder }) => {
   return (
-    <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div className="grid items-center grid-cols-1 gap-8   md:grid-cols-2 md:gap-10 lg:gap-16">
       <div
         className={`${
           imgOrder ? "order-2" : "order-1"
@@ -16,9 +26,9 @@ const ImgBoxFlex = ({ title, content, src, imgOrder }) => {
       data-aos-delay='150'
         className={`${
           imgOrder ? "order-1" : "order-2"
-        } w-full aspect-video md:aspect-[16/14]`}
+        } w-full aspect-video md:aspect-[16/14] room-slider`}
       >
-        <ImgUI  src={src} objectFit={"object-cover"} />
+              <Slider SliderContent={roomsInner} PaginationInner={true}/>
       </div>
     </div>
   );
