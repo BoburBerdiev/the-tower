@@ -32,10 +32,10 @@ const TopNav = () => {
   return (
     <div className='bg-brown w-full'>
      <div className='container'>
-      <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center text-white '>
+      <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white '>
         <DropdownUl list={lang} defualtList={lang[0]} />
-        <a href="tel:+998 55 512 11 00" className='hidden sm:block text-sm xl:text-base '>+998 55 512 11 00</a>
-        <a href="#" className='hidden lg:block text-sm xl:text-base'>Малая Бешагачская ул., 40-40 / 1, Яккасарайский район, Ташкент, 100070, Узбекистан</a>
+        <a href="tel:+998 55 512 11 00" className='hidden sm:block'>+998 55 512 11 00</a>
+        <a href="#" className='hidden lg:block'>Малая Бешагачская ул., 40-40 / 1, Яккасарайский район, Ташкент, 100070, Узбекистан</a>
       </div>
     </div>
     </div>
