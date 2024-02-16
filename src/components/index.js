@@ -27,6 +27,6 @@ export { default as InputUI } from './ui/Input-UI'
 export { default as TypeRoom } from './type-room/type-room'
 export { default as MiniHeader } from './mini-header/mini-header'
 export { default as NewsCard } from './news-card/news-card'
-export {default as LocationInfos } from './location-infos/location-infos'
+export { default as LocationInfos } from './location-infos/location-infos'
 export { default as SwiperSlider } from './swiper-slider/swiper-slider'
-
+export { default as ReviewCard } from './review-card/review-card'

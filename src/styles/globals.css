@@ -128,3 +128,11 @@
 .pagintaion-slider .swiper-pagination-bullet-active{
     background-color: #000000;
 }
+
+
+/* input type = number arrowi o'chirish */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

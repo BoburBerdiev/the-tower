@@ -4,11 +4,25 @@ import React from 'react'
 import { LuCalendarRange } from 'react-icons/lu'
 
 const  News = ({sliderContent, title, date, desc}) => {
+  const newsImage = [
+    {
+      id:1,
+      src:"/image/IMG_5481-min.jpg"
+    },
+    {
+        id:2,
+        src:"/image/IMG_5481-min.jpg"
+    },
+    {
+        id:3,
+        src:"/image/IMG_5481-min.jpg"
+    }
+  ]
   return (
     <SectionUI bgFigureBottomPostion={'bottom-0 left-0'} bgFigureTopPostion={'top-0 right-0'} padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
       <div className='container'>
         <div className='relative z-[5] md:float-left w-full lg:w-[450px] xl:w-[650px] h-[275px] xl:h-[350px] mr-10 mb-5'>
-          <Slider SliderContent={sliderContent} PaginationInner={true} />
+          <Slider SliderContent={newsImage} PaginationInner={true} />
         </div>
         <h3 className='text-xl 2xl:text-2xl font-inter font-semibold'>Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.</h3>
         <div className='flex items-center py-3'>
