@@ -46,16 +46,16 @@ const Navbar = () => {
     <>
 
     <nav className='bg-[#FFFFFF] py-3 w-full z-[100] sticky left-0  top-0 shadow-md'>
-      <div  className=" container  flex justify-between overflow-x-hidden">
-        <Link href="/" className={'relative w-[70px] h-[50px] md:w-[98px]  md:h-[73px]'}>
-          <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'Tower'}  objectFit={'object-contain'}/>
+      <div  className=" container  flex justify-between overflow-x-hidden font-roboto">
+        <Link href="/" className={'relative w-12 md:w-16 h-9 md:h-12'}>
+          <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'Tower'}/>
         </Link>
         <div className='flex items-center '>
-          <ul className={`${navOpen ? ' right-0': '-right-full'} top-[114px] md:top-[130px] pt-10 lg:pt-0 flex items-center gap-4 md:gap-[60px] font-elegance fixed lg:static text-lg text-black w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
+          <ul className={`${navOpen ? ' right-0': '-right-full'} top-[95px] md:top-[130px] pt-10 lg:pt-0 flex items-center gap-4 md:gap-[60px] fixed lg:static text-lg text-black w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
             {
               navLinks.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.link}   className='duration-200 hover:text-brown roboto-light'>{t(item.name)}</Link>
+                    <Link href={item.link} className='duration-200 hover:text-brown roboto-light'>{t(item.name)}</Link>
                   </li>
                 ))
             }

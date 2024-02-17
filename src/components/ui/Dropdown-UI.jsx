@@ -22,7 +22,7 @@ const DropdownUl = ({ list  ,  defualtList , bgStyle}) => {
                 <FaAngleDown className={`${dropdown && "rotate-180 " } duration-100`} />
 
             </button>
-            <div className={`${dropdown ? 'block' : 'hidden'} z-[101]  absolute top-11 left-0  p-5 bg-brown text-white`}>
+            <div className={`${dropdown ? 'block' : 'hidden'} z-[101]  absolute top-19 -left-2  p-3 bg-brown text-white`}>
                 {
                     list?.map(item => (
                         <div key={item.id} >
