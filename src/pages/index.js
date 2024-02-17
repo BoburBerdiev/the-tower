@@ -251,7 +251,7 @@ const Home = () => {
                 </div>
 
             </SectionUI>
-            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px]'}>
+            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
                     <SectionTitle title={'Ориентиры поблизости'} colorContent={true} />
                     <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
@@ -262,8 +262,8 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <div className='absolute bottom-[-50px] md:bottom-[-90px] left-0 right-0 z-[1] h-full w-full'>
-                    <ImgUI src={'/image/info-section-bg.png'} alt={'locations'} objectFit={'object-cover'} />
+                <div className='absolute -bottom-24 left-0 right-0 z-[1] h-full w-full '>
+                    <ImgUI src={'/image/bg.svg'} alt={'locations'} objectFit={'object-cover'} />
                 </div>
             </SectionUI>
             <SectionUI bgFigureTopPostion={'top-0 -left-1/2'} padding={'py-10 md:pb-[45px] md:pt-20 lg:pt-32 xl:pt-[180px]   '}>
