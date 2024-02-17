@@ -1,5 +1,5 @@
 
-const ButtonUl = ({ typeClass, href , text , icon,onClick }) => {
+const ButtonUl = ({ typeClass, href , text , icon,onClick , btnNews }) => {
 
     return (
         <>
@@ -24,7 +24,12 @@ const ButtonUl = ({ typeClass, href , text , icon,onClick }) => {
                         }
                     </button>
             }
-
+            {
+                btnNews &&
+                <button className="">
+                    <a href="#" className="uppercase relative text-black block text-2xl py-[15px] px-[30px] before:absolute before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[1]  before:transition-transform  before:duration-500  before:transform  before:origin-bottom-right before:scale-0 hover:before:scale-100 hover:before:origin-top-left   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[1]  after:transition-transform  after:duration-500  after:transform  after:origin-bottom-right after:border ">Button</a>
+                </button>
+            }
 
         </>
     )

@@ -205,10 +205,10 @@ const Home = () => {
             <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-20 lg:py-[90px] lg:pt-32 xl:pt-[180px]'}>
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                     <div className="space-y-3 md:space-y-5 ">
-                        <SectionTitle title={'Добро пожаловать в The Tower Hotel!'} />
-                        <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">Удобное расположение в центре города Ташкента, недалеко от основных транспортных развязок, выставочных и бизнес-центров позволяет быстро добраться до места назначения. В Tower hotel Tashkent вы сможете ощутить по-настоящему высокое качество обслуживания. В нашем отеле 96 комфортабельных номеров, которые оснащены самым современным оборудованием по стандартам отелей Tower, высококачественными кроватями (перина) и постельным бельем, Смарт-телевизорами, обновленной системой кондиционирования воздуха, мини-баром, бесплатным высокоскоростным доступом в Интернет (Wi-Fi), мини-баром бар, фен, сейф.</p>
+                        <SectionTitle styleSubtitle={'text-start'} title={'Добро пожаловать в The Tower Hotel!'} />
+                        <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям. </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
-                            <ButtonUI  text={'Читать подробнее'} typeClass={'btn-white'}  />
+                            <ButtonUI btnNews={true}/>
                         </div>
                     </div>
                     <div className="relative flex flex-col items-end ">
