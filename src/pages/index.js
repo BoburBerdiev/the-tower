@@ -208,7 +208,8 @@ const Home = () => {
                         <SectionTitle styleSubtitle={'text-start'} title={'Добро пожаловать в The Tower Hotel!'} />
                         <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям. </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
-                            <ButtonUI btnNews={true}/>
+                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={true}/>
+                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={false}/>
                         </div>
                     </div>
                     <div className="relative flex flex-col items-end ">
