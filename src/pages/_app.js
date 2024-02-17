@@ -27,12 +27,12 @@ const roboto = Roboto({
     variable: '--font-roboto'
 })
 
-export const openSans = Open_Sans({
+const openSans = Open_Sans({
     subsets: ['cyrillic', 'latin'],
     variable: '--font-open-sans',
 })
 
-export const inter = Inter({
+const inter = Inter({
     subsets: ['cyrillic', 'latin'],
     variable: '--font-inter',
 })
@@ -41,6 +41,8 @@ const elegance = localFont({
     src:"../fonts/roundedelegance/Rounded_Elegance.ttf",
     variable: '--font-rounded-elegance'
 })
+
+
 
 
 export default function App({ Component, pageProps }) {
