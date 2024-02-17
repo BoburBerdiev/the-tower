@@ -1,6 +1,6 @@
 
 
-import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom} from "@/components";
+import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom, MiniHeader} from "@/components";
 
 const Gallery = () => {
 
@@ -35,16 +35,21 @@ const Gallery = () => {
         }
     ]
     console.log(1)
-
+    const newsBanner = {
+        title: 'Фотогалерея',
+        img : '/image/IMG_5451-min.jpg'
+    }
   return (
+      <>
+          <div>
+              <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
+          </div>
+          <SectionUI padding='py-10 md:py-20   '>
 
-    <SectionUI padding='py-10 md:py-20   '>
-      <div className="mb-5 md:mb-10">
-        <SectionTitle justify={'justify-center'}  title={'Фотогалерея'} subTitle={'В нашем отеле 96 комфортабельных номеров, которые оснащены самым современным оборудованием по стандартам отелей Tower, высококачественными кроватями (перина) и постельным бельем, Смарт-телевизорами, обновленной системой кондиционирования воздуха, мини-баром, бесплатным высокоскоростным доступом в Интернет (Wi-Fi), мини-баром бар, фен, сейф.'}/>
-      </div>
-      {/*<GalleryZoom />*/}
-      <GalleryZoomInner images={images} />
-    </SectionUI>
+              <GalleryZoomInner images={images}/>
+          </SectionUI>
+      </>
+
   )
 }
 
