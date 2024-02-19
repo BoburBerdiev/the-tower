@@ -28,14 +28,14 @@ function SearchPanel(props) {
             <button onClick={openSeachPanel} className={'flex justify-center items-center'}>
                 <CiSearch className="text-xl lg:text-2xl"/>
             </button>
-            <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 bg-white p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-full"}`}>
+            <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 backdrop-blur-2xl bg-white/70 p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-full"}`}>
                 <button onClick={closeSeachPanel} className="self-end	">
                     <TfiClose />
                 </button>
                 <div className="w-full md:max-w-[700px] mb-10">
                     <input type="text" className=" w-full rounded-md p-2 md:p-3 lg:px-5 outline-none text-sm md:text-base font-roboto border text-gray-600  shadow-lg" />
                 </div>
-                <div className="container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
+                <div className="container grid grid-cols-2  lg:grid-cols-3 gap-4 lg:gap-8">
                     {
                         <HotelCard img={'/image/IMG_5448-min.jpg'} cardTitle={'Title'} time={'09-10'} price={'120 000'} descriptions={describe}  />
                     }
