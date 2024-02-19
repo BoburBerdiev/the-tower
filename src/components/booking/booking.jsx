@@ -73,7 +73,9 @@ const Booking = () => {
             >
                 <TypeRoom type={typeRoomArr} setTypeRoom={setTypeRoom}/>
             </DropdownBooking>
-    <ButtonUI typeClass={'bg-brown text-white'}  text={t('btn.booking')}/>
+            <div >
+                <ButtonUI text={t('btn.booking')}/>
+            </div>
     </div>
         </div>
     )

@@ -1,105 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Navigation, Pagination,} from 'swiper/modules';
 import {GrNext, GrPrevious} from "react-icons/gr";
-import {HotelCard, ImgUI} from "@/components";
+import {HotelCard, ImgUI, NewsCard} from "@/components";
 
 
-// gallery
-const hotelCardData = [
-    {
-        img: "/image/IMG_5481-min.jpg" ,
-        title: "Standart Twin",
-        id:5,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        img: "/image/IMG_5481-min.jpg" ,
-        title: "Standart Twin",
-        id:10,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        img: "/image/IMG_5481-min.jpg" ,
-        title: "Standart Twin",
-        id:1,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        img: "/image/IMG_5484-min.jpg" ,
-        title: "Standart Twin",
-        id:2,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        img: "/image/IMG_5346-min.jpg" ,
-        title: "Standart Twin",
-        id:3,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-]
-const gallery = [
-    {
-        scr:'/image/abduganiev.png',
-        id:1
-    }
-    ,{
-        scr:'/image/abduganiev.png',
-        id:2
-    }
-    ,{
-        scr:'/image/IMG_5513-min.png',
-        id:3
-    },
-    {
-        scr:'/image/footer-bg.png',
-        id:4
-    },
-    {
-        scr:'/image/pattern.png',
-        id:5
-    },
-]
-const SwiperSlider = ({}) => {
+const SwiperSlider = ({gallery , hotelCardData, newsCard }) => {
     return (
         <div className='card-ui relative'>
             <Swiper
@@ -141,18 +46,28 @@ const SwiperSlider = ({}) => {
                 modules={[Navigation , Pagination]}
                 className="w-full mySwiper h-full flex items-center justify-center overflow-auto"
             >
-                {/*{*/}
-                {/*    gallery?.map(image => (*/}
-                {/*         <SwiperSlide className={'h-full'}  key={image?.id}>*/}
-                {/*            <div className={'w-full aspect-video '}>*/}
-                {/*             <ImgUI src={image?.scr}  />*/}
-                {/*            </div>*/}
-                {/*         </SwiperSlide>*/}
-                {/*    ))*/}
-                {/*}*/}
-                {hotelCardData.map(card => (
+                {
+                    gallery &&
+                    gallery?.map(image => (
+                         <SwiperSlide className={'h-full'}  key={image?.id}>
+                            <div className={'w-full aspect-video '}>
+                             <ImgUI src={image?.scr}  />
+                            </div>
+                         </SwiperSlide>
+                    ))
+                }
+                {
+                hotelCardData &&
+                hotelCardData?.map(card => (
                     <SwiperSlide className={'h-full'}  key={card?.id}>
-                        <HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />
+                        <HotelCard img={card?.img} key={card.id} id={card.id} cardTitle={card?.title} descriptions={card?.information} href={card?.slug} price={card?.price} time={card?.time} />
+                    </SwiperSlide>
+                ))}
+                {
+                newsCard &&
+                newsCard?.map(card => (
+                    <SwiperSlide className={'h-full'}  key={card?.id}>
+                        <NewsCard img={card?.img} date={card?.date} decr={card?.decr} href={card?.href} />
                     </SwiperSlide>
                 ))}
                 {/*{productsArr?.map(product => (*/}

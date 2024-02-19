@@ -19,18 +19,11 @@ const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAo
            <div className='flex flex-wrap leading-normal gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
               <RoomsCharacterList list={descriptions} />
            </div>
-           <a href={href} className='text-sm block leading-normal font-roboto underline tracking-[0.36px] text-iron md:text-lg ' >{t('btn.more')}</a>
          </div>
         </div>
        <div className='flex flex-col justify-between gap-2 mt-2 md:mt-5 sm:flex-row md:items-center'>
-        <div className='flex items-center justify-between font-elegance md:flex-col md:items-start '>
-          <h4 className='text-lg md:text-x leading-normall lg:text-2xl '>
-            <span>{price}</span>
-            <span className='text-xs uppercase xl:text-2xl'>UZS</span>
-            </h4>
-          <p className='text-sm leading-normal md:text-base lg:text-lg'>{time}</p>
-        </div>
-        <ButtonUI  typeClass={'btn-gold'} text={t('btn.booking')}  />
+        <ButtonUI paddingFull={true} text={t('btn.booking')}  />
+        <ButtonUI btnBorder={true} paddingFull={true} href={'/'}  text={t('btn.more')}  />
        </div>
 
       </div>

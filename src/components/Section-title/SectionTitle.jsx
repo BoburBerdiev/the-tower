@@ -11,7 +11,7 @@ const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSu
       {
         btnText && 
         <div  data-aos='fade-up' data-aos-delay='120'>
-          <ButtonUI text={btnText}  typeClass='btn-white'/>
+          <ButtonUI text={btnText} btnBorder={true}  />
         </div>
       }
       
