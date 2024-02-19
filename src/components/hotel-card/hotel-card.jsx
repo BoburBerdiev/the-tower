@@ -3,7 +3,7 @@ import {ButtonUI , ImgUI} from '@/components/index'
 import {RoomsCharacterList} from "@/components";
 
 
-const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAos}) => {
+const HotelCard = ({img, cardTitle, descriptions,  indexForAos}) => {
     console.log({descriptions})
   const {t} = useTranslation()
 
@@ -22,7 +22,7 @@ const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAo
            </div>
          </div>
         </div>
-       <div className='flex flex-col justify-between gap-2 mt-2 md:mt-5 sm:flex-row md:items-center'>
+       <div className='flex flex-col w-full justify-between gap-2 mt-2 md:mt-5 sm:flex-row md:items-center'>
         <ButtonUI paddingFull={true} text={t('btn.booking')}  />
         <ButtonUI btnBorder={true} paddingFull={true} href={'/'}  text={t('btn.more')}  />
        </div>
