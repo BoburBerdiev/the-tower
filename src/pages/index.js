@@ -1,4 +1,5 @@
-import {ImgUI,  Header, SectionTitle, ButtonUI , HotelCard, SectionUI, ServiceCard, LocationInfos ,SwiperSlider} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider} from '@/components/'
+import { useTranslation } from 'react-i18next'
 
 const hotelCardData = [
     {
@@ -240,7 +241,7 @@ const newsCard = [
 ]
 
 const Home = () => {
-
+    const {t} = useTranslation()
     
     return (
         <div>
@@ -251,7 +252,7 @@ const Home = () => {
                         <SectionTitle styleSubtitle={'text-start'} title={'Добро пожаловать в The Tower Hotel!'} />
                         <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям. </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
-                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={true}/>
+                            <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true}/>
                         </div>
                     </div>
                     <div className="relative flex flex-col items-end aspect-square lg:aspect-auto">
@@ -267,7 +268,7 @@ const Home = () => {
             <SectionUI padding={'pt-10 md:pt-20 lg:pt-[90px] pb-5 md:pb-11'} >
                 <div className="space-y-5 md:space-y-10">
                     <div className='flex  '>
-                    <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={'Все номера'} />
+                    <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={t('btn.allNums')} />
                     </div>
                     {/*<GalleryZoom />*/}
                     <SwiperSlider hotelCardData={hotelCardData} />
@@ -302,7 +303,7 @@ const Home = () => {
             </SectionUI>
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={'Фотогалерея'} justify={'justify-between'}  btnText={'Посмотреть все фото'}/>
+                    <SectionTitle title={'Фотогалерея'} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
                     {/*<GalleryZoom />*/}
                     <SwiperSlider gallery={gallery} />
                 </div>
@@ -317,7 +318,7 @@ const Home = () => {
                         <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'} justify={'justify-center'}/>
                         <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">Забронируйте пребывание с предоплатой и сэкономьте до 25%</p>
                         <div  data-aos='fade-up' data-aos-delay='150'>
-                            <ButtonUI text={'Подробнее'} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
+                            <ButtonUI text={t('btn.more')} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
                         </div>
                     </div>
                 </div>

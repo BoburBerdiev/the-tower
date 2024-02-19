@@ -1,7 +1,9 @@
 import {ButtonUI,  ImgUI} from "@/components"
+import { useTranslation } from "react-i18next"
 import Skeleton from "react-loading-skeleton"
 
 const ServiceCard = ({src, title, href, decsr , indexForAos}) => {
+  const {t} = useTranslation()
   
   return (
     <div data-aos='fade-up' data-aos-delay={`${indexForAos}00`} className="relative overflow-hidden cursor-pointer group">
@@ -14,7 +16,7 @@ const ServiceCard = ({src, title, href, decsr , indexForAos}) => {
           <div className="grid grid-rows-[0fr] transition-all duration-500 ease group-hover:grid-rows-[1fr]">
             <p className="mb-3 overflow-hidden text-xs font-light text-center transition-all duration-500 opacity-0 font-roboto md:text-sm xl:text-base md:mb-5 ease group-hover:opacity-100">{decsr}</p>
           </div>
-          <ButtonUI text={'Подробнее'} href={href} btnWhiteBorder={true}  btnBorder={true} />
+          <ButtonUI text={t('btn.more')} href={href} btnWhiteBorder={true}  btnBorder={true} />
         </div>
       </div>
       {
