@@ -17,7 +17,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Inter, Open_Sans, Roboto} from "@next/font/google";
+import {Inter, Open_Sans, Playfair, Roboto} from "@next/font/google";
 import localFont from "@next/font/local";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -26,6 +26,12 @@ const roboto = Roboto({
     weight: ['300' , '400' , '500'  , '700'],
     variable: '--font-roboto'
 })
+
+// const girloy = Gilroy({
+//     subsets:['cyrillic', 'latin'],
+//     weight: ['300' , '400' , '500'  , '700'],
+//     variable: '--font-roboto'
+// })
 
 const openSans = Open_Sans({
     subsets: ['cyrillic', 'latin'],
@@ -37,10 +43,17 @@ const inter = Inter({
     variable: '--font-inter',
 })
 
-const elegance = localFont({
-    src:"../fonts/roundedelegance/Rounded_Elegance.ttf",
-    variable: '--font-rounded-elegance'
+const elegance = Playfair({
+    subsets: ['cyrillic', 'latin'],
+    variable: '--font-rounded-elegance',
 })
+
+
+
+// const elegance = localFont({
+//     src:"../fonts/roundedelegance/Rounded_Elegance.ttf",
+//     variable: '--font-rounded-elegance'
+// })
 
 
 

@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import {ButtonUI , ImgUI} from '@/components/index'
+import {RoomsCharacterList} from "@/components";
 
 
 const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAos}) => {
-
+    console.log({descriptions})
   const {t} = useTranslation()
 
   return (
@@ -17,9 +18,7 @@ const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAo
          <div className='md:space-y-3 '>
            <h5 className='font-elegance leading-normal tracking-[0.48px] uppercase text-lg md:text-xl lg:text-2xl '>{cardTitle}</h5>
            <div className='flex flex-wrap leading-normal gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
-              {descriptions?.map((description , index) => (
-                <p key={index}>{description}</p>
-              ))}
+              <RoomsCharacterList list={descriptions} />
            </div>
          </div>
         </div>
