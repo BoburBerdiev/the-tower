@@ -28,7 +28,7 @@ const ImgBoxFlex = ({ title, content, src, imgOrder }) => {
           imgOrder ? "order-1" : "order-2"
         } w-full aspect-video md:aspect-[16/14] room-slider`}
       >
-              <Slider SliderContent={roomsInner} PaginationInner={true}/>
+          <Slider SliderContent={roomsInner} PaginationInner={true}/>
       </div>
     </div>
   );

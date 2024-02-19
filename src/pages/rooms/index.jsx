@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { HotelCard, SectionTitle, SectionUI, Slider, HotelCardSkeleton } from "@/components"
+import {
+    SectionTitle,
+    SectionUI,
+    Slider,
+    HotelCardSkeleton,
+    RoomsCharacterList,
+    MiniHeader,
+    RoomsRow
+} from "@/components"
+
 
 const roomsBannerText = [
     {
@@ -143,24 +152,38 @@ const roomsCardsContent = [
         time: 'за ночь',
     },
 ]
+
+const newsBanner = {
+    title: 'Наши номера',
+    img : '/image/IMG_5451-min.jpg'
+}
 const index = () => {
     const [load, setLoad] = useState(false)
     return (
         <div>
-            <div className="w-full h-[90vh]">
-                <Slider SliderContent={roomsBannerText} innerBtn={true} />
+            {/*<div className="w-full h-[90vh]">*/}
+            {/*    <Slider SliderContent={roomsBannerText} innerBtn={true} />*/}
+            {/*</div>*/}
+
+            <div>
+                <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
             </div>
-            <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-20 lg:pb-[90px] lg:pt-32 xl:pt-[180px]'}>
-                <SectionTitle justify={'justify-center'} title={'Наши номера'} subTitle={'В нашем отеле 96 комфортабельных номеров, которые оснащены самым современным оборудованием по стандартам отелей Tower, высококачественными кроватями (перина) и постельным бельем, Смарт-телевизорами, обновленной системой кондиционирования воздуха, мини-баром, бесплатным высокоскоростным доступом в Интернет (Wi-Fi), мини-баром бар, фен, сейф.'}/>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:gap-[30px] pt-10">
+            <SectionUI bgFigureTopPostion={'top-0 left-0'}
+                       padding={'py-10 md:py-20 lg:pb-[90px] lg:pt-32 xl:pt-[100px]'}>
+
+                <div className="grid grid-cols-1 gap-5 lg:gap-[30px] pt-10">
                     {
                         load ?
-                            Array(9).fill("").map((_,ind)=>(
+                            Array(9).fill("").map((_, ind) => (
                                 <HotelCardSkeleton key={ind}/>
                             ))
                             :
-                            roomsCardsContent.map(card => (
-                                <HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />
+                            roomsCardsContent.map((card , index) => (
+                                <>
+                                    {/*<HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />*/}
+                                    <RoomsRow key={card.id} order={index} card={card}/>
+                                </>
+
                             ))
                     }
                 </div>

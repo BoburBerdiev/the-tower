@@ -1,8 +1,8 @@
-import {  CiMenuFries  } from "react-icons/ci";
+import {CiMenuFries, CiSearch} from "react-icons/ci";
 import { useCallback, useState } from "react";
 import {useTranslation} from "react-i18next";
 import Link from "next/link";
-import {ButtonUI , ImgUI} from "@/components";
+import {ButtonUI, ImgUI, SearchPanel} from "@/components";
 
 
 
@@ -31,6 +31,10 @@ const Navbar = () => {
       name: 'navbar.contact',
       link: '/contact'
     },
+    {
+      name: 'navbar.news',
+      link: '/news'
+    },
   ]
 
   const [navOpen, setNavOpen] = useState(false)
@@ -51,23 +55,28 @@ const Navbar = () => {
           <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'Tower'}/>
         </Link>
         <div className='flex items-center '>
-          <ul className={`${navOpen ? ' right-0': '-right-full'} top-[95px] md:top-[130px] pt-10 lg:pt-0 flex items-center gap-4 md:gap-[60px] fixed lg:static text-lg text-black w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
+          <ul className={`${navOpen ? ' right-0' : '-right-full'} top-[95px] md:top-[130px] pt-10 lg:pt-0 flex items-center gap-4 md:gap-[60px] fixed lg:static text-lg text-black w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
             {
               navLinks.map((item) => (
                   <li key={item.name}>
-                    <Link href={item.link} className='duration-200 hover:text-brown roboto-light'>{t(item.name)}</Link>
+                    <Link href={item.link} className='duration-200 hover:text-brown font-elegance font-medium'>{t(item.name)}</Link>
                   </li>
-                ))
+              ))
             }
+            <li >
+              <SearchPanel/>
+            </li>
           </ul>
-          <div  className={`lg:hidden p-2 border  rounded-md  duration-200 text-lg ${navOpen ? 'nav-active' : 'nav-btn'}`} onClick={openNav} >
+          <div
+              className={`lg:hidden p-2 border  rounded-md  duration-200 text-lg ${navOpen ? 'nav-active' : 'nav-btn'}`}
+              onClick={openNav}>
             <CiMenuFries/>
           </div>
 
         </div>
       </div>
     </nav>
-   
+
     </>
   )
 }
