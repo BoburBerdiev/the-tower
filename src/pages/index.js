@@ -205,10 +205,11 @@ const Home = () => {
             <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-20 lg:py-[90px] lg:pt-32 xl:pt-[180px]'}>
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                     <div className="space-y-3 md:space-y-5 ">
-                        <SectionTitle title={'Добро пожаловать в The Tower Hotel!'} />
-                        <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">Удобное расположение в центре города Ташкента, недалеко от основных транспортных развязок, выставочных и бизнес-центров позволяет быстро добраться до места назначения. В Tower hotel Tashkent вы сможете ощутить по-настоящему высокое качество обслуживания. В нашем отеле 96 комфортабельных номеров, которые оснащены самым современным оборудованием по стандартам отелей Tower, высококачественными кроватями (перина) и постельным бельем, Смарт-телевизорами, обновленной системой кондиционирования воздуха, мини-баром, бесплатным высокоскоростным доступом в Интернет (Wi-Fi), мини-баром бар, фен, сейф.</p>
+                        <SectionTitle styleSubtitle={'text-start'} title={'Добро пожаловать в The Tower Hotel!'} />
+                        <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям. </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
-                            <ButtonUI  text={'Читать подробнее'} typeClass={'btn-white'}  />
+                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={true}/>
+                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={false}/>
                         </div>
                     </div>
                     <div className="relative flex flex-col items-end ">
@@ -251,7 +252,7 @@ const Home = () => {
                 </div>
 
             </SectionUI>
-            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px]'}>
+            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
                     <SectionTitle title={'Ориентиры поблизости'} colorContent={true} />
                     <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
@@ -262,8 +263,8 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <div className='absolute bottom-[-50px] md:bottom-[-90px] left-0 right-0 z-[1] h-full w-full'>
-                    <ImgUI src={'/image/info-section-bg.png'} alt={'locations'} objectFit={'object-cover'} />
+                <div className='absolute -bottom-24 left-0 right-0 z-[1] h-full w-full '>
+                    <ImgUI src={'/image/bg.svg'} alt={'locations'} objectFit={'object-cover'} />
                 </div>
             </SectionUI>
             <SectionUI bgFigureTopPostion={'top-0 -left-1/2'} padding={'py-10 md:pb-[45px] md:pt-20 lg:pt-32 xl:pt-[180px]   '}>
