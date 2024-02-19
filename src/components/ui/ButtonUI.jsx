@@ -1,5 +1,5 @@
 
-const ButtonUl = ({ typeClass, href , text , icon,onClick , stylePadding, paddingFull, btnBorder, btnWhiteBorder }) => {
+const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnBorder, btnWhiteBorder }) => {
 
     return (
         <>

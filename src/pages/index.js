@@ -112,93 +112,136 @@ const serviceCardData = [
         src: '/image/IMG_7363-min.jpg'
     },
 ]
-
+const locationInfos = [
+    {
+        title: "Рестораны и кафе",
+        icon:"/image/restaurants&cafes.svg",
+        locations: [
+            {
+                place: 'Кафе-бар: T4K Performance Bar',
+                distance: '200 м'
+            },
+            {
+                place: 'Кафе-бар: Бухара',
+                distance: '250 м'
+            },
+            {
+                place: 'Ресторан: Азия',
+                distance: '300 м'
+            }
+        ]
+    },
+    {
+        title: "Развлечения",
+        icon:"/image/entertainment.svg",
+        locations: [
+            {
+                place: 'Пкио им.Фурката',
+                distance: '2,1 км'
+            },
+            {
+                place: 'Сеульский национальный парк',
+                distance: '2,6 км'
+            },
+            {
+                place: 'Парк Навруз',
+                distance: '3,1 км'
+            },
+            {
+                place: 'Пкио им.Фурката',
+                distance: '2,1 км'
+            },
+            {
+                place: 'Сеульский национальный парк',
+                distance: '2,6 км'
+            },
+            {
+                place: 'Парк Навруз',
+                distance: '3,1 км'
+            }
+        ]
+    },
+    {
+        title: "Общественный транспорт",
+        icon: "/image/public-transport.svg",
+        locations: [
+            {
+                place: 'Поезд: Tashkent-Passenger',
+                distance: '600 м'
+            },
+            {
+                place: 'Поезд: Tashkent',
+                distance: '850 м'
+            },
+            {
+                place: 'Метро: Oybek',
+                distance: '1,5 км'
+            },
+            {
+                place: 'Метро: Pushkin',
+                distance: '4,6 км'
+            }
+        ]
+    },
+    {
+        title: "Ближайшие аэропорты",
+        icon: "/image/airports.svg",
+        locations: [
+            {
+                place: 'Международный аэропорт Ташкент им Ислама Каримова',
+                distance: '200 м'
+            }
+        ]
+    }
+]
+const gallery = [
+    {
+        scr:'/image/IMG_5346-min.jpg',
+        id:1
+    }
+    ,{
+        scr:'/image/IMG_5397-min.jpg',
+        id:2
+    }
+    ,{
+        scr:'/image/IMG_5448-min.jpg',
+        id:3
+    },
+    {
+        scr:'/image/IMG_5451-min.jpg',
+        id:5
+    },
+]
+const newsCard = [
+    {
+        img: '/image/IMG_5497-min.jpg',
+        date: "17 февр. 2023г.",
+        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
+        href: "/"
+    },
+    {
+        img: '/image/IMG_5497-min.jpg',
+        date: "17 февр. 2023г.",
+        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
+        href: "/"
+    },
+    {
+        img: '/image/IMG_5497-min.jpg',
+        date: "17 февр. 2023г.",
+        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
+        href: "/"
+    },
+    {
+        img: '/image/IMG_5497-min.jpg',
+        date: "17 февр. 2023г.",
+        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
+        href: "/"
+    },
+]
 
 const Home = () => {
 
-    const locationInfos = [
-        {
-            title: "Рестораны и кафе",
-            icon:"/image/restaurants&cafes.svg",
-            locations: [
-                {
-                    place: 'Кафе-бар: T4K Performance Bar',
-                    distance: '200 м'
-                },
-                {
-                    place: 'Кафе-бар: Бухара',
-                    distance: '250 м'
-                },
-                {
-                    place: 'Ресторан: Азия',
-                    distance: '300 м'
-                }
-            ]
-        },
-        {
-            title: "Развлечения",
-            icon:"/image/entertainment.svg",
-            locations: [
-                {
-                    place: 'Пкио им.Фурката',
-                    distance: '2,1 км'
-                },
-                {
-                    place: 'Сеульский национальный парк',
-                    distance: '2,6 км'
-                },
-                {
-                    place: 'Парк Навруз',
-                    distance: '3,1 км'
-                },
-                {
-                    place: 'Пкио им.Фурката',
-                    distance: '2,1 км'
-                },
-                {
-                    place: 'Сеульский национальный парк',
-                    distance: '2,6 км'
-                },
-                {
-                    place: 'Парк Навруз',
-                    distance: '3,1 км'
-                }
-            ]
-        },
-        {
-            title: "Общественный транспорт",
-            icon: "/image/public-transport.svg",
-            locations: [
-                {
-                    place: 'Поезд: Tashkent-Passenger',
-                    distance: '600 м'
-                },
-                {
-                    place: 'Поезд: Tashkent',
-                    distance: '850 м'
-                },
-                {
-                    place: 'Метро: Oybek',
-                    distance: '1,5 км'
-                },
-                {
-                    place: 'Метро: Pushkin',
-                    distance: '4,6 км'
-                }
-            ]
-        },
-        {
-            title: "Ближайшие аэропорты",
-            icon: "/image/airports.svg",
-            locations: [
-                {
-                    place: 'Международный аэропорт Ташкент им Ислама Каримова',
-                    distance: '200 м'
-                }
-            ]
-        }
-    ]
-
+    
     return (
         <div>
             <Header />
@@ -221,17 +264,16 @@ const Home = () => {
                     </div>
                 </div>
             </SectionUI>
-            <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
+            <SectionUI padding={'pt-10 md:pt-20 lg:pt-[90px] pb-5 md:pb-11'} >
                 <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={'Фотогалерея'} />
-                    {/*<GalleryZoom />*/}
-                    <SwiperSlider gallery={hotelCardData} />
-                    <div data-aos='fade-up' data-aos-delay='150' className="flex flex-col items-center w-full">
-                        <ButtonUI text={'Посмотреть все фото'} typeClass={'btn-white'} />
+                    <div className='flex  '>
+                    <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={'Все номера'} />
                     </div>
+                    {/*<GalleryZoom />*/}
+                    <SwiperSlider hotelCardData={hotelCardData} />
                 </div>
             </SectionUI>
-            <SectionUI bgFigureBottomPostion={'bottom-0 left-0'}  padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
+            <SectionUI bgFigureBottomPostion={'-top-20 -left-[60%]'}  padding={'py-10 md:py-20 lg:pt-[54px] lg:pb-[100px]'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={'Наши услуги'}/>
                 </div>
@@ -242,24 +284,6 @@ const Home = () => {
                         ))
                     }
                 </div>
-            </SectionUI>
-            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px]'}>
-                <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:gap-16">
-                    <div
-                        className={` space-y-4 md:space-y-8`}
-                    >
-                        <SectionTitle colorContent={true} title={'Избавьтесь от стресса'} />
-                        <p   data-aos='fade-up' data-aos-delay='150' className="text-justify text-white section-text">Ресторан отеля порадует гостей уютной атмосферой. Специальное меню ресторана, которое будет соответствовать всем международным требованиям, а также блюда, приготовленные шеф-поваром, не оставят равнодушным даже самого настоящего гурмана.
-                            Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами.  В отеле есть 2 зала вместимостью 25-80 человек для проведения конференций и совещаний, а также большой зал для презентаций и приемов.</p>
-                    </div>
-                    <div
-                        data-aos='zoom-in' data-aos-delay='50'
-                        className={` w-full aspect-video md:aspect-[16/14] relative`}
-                    >
-                        <ImgUI src={'/image/IMG_5448-min.jpg'} objectFit={"object-cover"} />
-                    </div>
-                </div>
-
             </SectionUI>
             <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
@@ -276,26 +300,11 @@ const Home = () => {
                     <ImgUI src={'/image/bg.svg'} alt={'locations'} objectFit={'object-cover'} />
                 </div>
             </SectionUI>
-            <SectionUI bgFigureTopPostion={'top-0 -left-1/2'} padding={'py-10 md:pb-[45px] md:pt-20 lg:pt-32 xl:pt-[180px]   '}>
-                <div className="pb-5 md:pb-10">
-                    <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={'Все номера'} />
-                </div>
-                 <div className="grid grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-[30px]">
-               {hotelCardData.map(card => (
-          <HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />
-        ))}
-        {/*        <Carusel content={hotelCardData} />*/}
-
-                 </div>
-            </SectionUI>
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={'Фотогалерея'} />
+                    <SectionTitle title={'Фотогалерея'} justify={'justify-between'}  btnText={'Посмотреть все фото'}/>
                     {/*<GalleryZoom />*/}
-                    <SwiperSlider gallery={hotelCardData} />
-                    <div data-aos='fade-up' data-aos-delay='150' className="flex flex-col items-center w-full">
-                        <ButtonUI text={'Посмотреть все фото'} typeClass={'btn-white'} />
-                    </div>
+                    <SwiperSlider gallery={gallery} />
                 </div>
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
@@ -305,15 +314,20 @@ const Home = () => {
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">
                     <div className="text-white flex flex-col items-center max-w-[690px]">
-                        <SectionTitle title={'Почувствуйте себя как дома!'} colorContent={'text-white'} justify={'justify-center'}/>
-                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">В Tower hotel Tashkent вы сможете ощутить по-настоящему высокое качество обслуживания. </p>
+                        <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'} justify={'justify-center'}/>
+                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">Забронируйте пребывание с предоплатой и сэкономьте до 25%</p>
                         <div  data-aos='fade-up' data-aos-delay='150'>
-                            <ButtonUI text={'Подробнее'} typeClass={'py-2.5 px-6 text-white border border-white'}/>
-
+                            <ButtonUI text={'Подробнее'} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
                         </div>
                     </div>
                 </div>
             </section>
+            <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
+            <div className="pb-5 md:pb-10">
+                    <SectionTitle title={'Новостной блог'}/>
+                </div>
+                <SwiperSlider newsCard={newsCard} />
+            </SectionUI>
         </div>
     )
 }
