@@ -1,5 +1,14 @@
 import { useTranslation } from "react-i18next"
-import { ButtonUI, GalleryZoom, ImgUI, SectionTextUI, SectionTitle, SectionUI, Slider } from "../../components"
+import {
+    ButtonUI,
+    GalleryZoom,
+    ImgUI,
+    RoomInnerSlider,
+    SectionTextUI,
+    SectionTitle,
+    SectionUI,
+    Slider
+} from "../../components"
 
 const roomBannerContent = [
     {
@@ -58,9 +67,16 @@ const Room = () => {
     const {t} = useTranslation()
 
     return (
-        <div className="wrapper">
-            <div className="w-full h-[90vh]">
-                <Slider SliderContent={roomBannerContent} innerBtn={true} />
+        <div className="wrapper py-10 md:py-20 ">
+            {/*<div className="w-full h-[90vh]">*/}
+            {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
+            {/*</div>*/}
+
+            <div className={'w-full container'}>
+
+                <SectionTitle justify={'justify-center'} title={'Номер "Standart Double"'}/>
+
+                <RoomInnerSlider images={roomBannerContent} />
             </div>
             <SectionUI bgFigureTopPostion={'-top-32 left-0'} padding={'py-10 md:py-20 lg:py-32 xl:py-[180px]'}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 ">

@@ -4,8 +4,7 @@ import {RoomsCharacterList} from "@/components";
 
 
 const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAos}) => {
-    console.log({descriptions})
-  const {t} = useTranslation()
+    const {t} = useTranslation()
 
   return (
 

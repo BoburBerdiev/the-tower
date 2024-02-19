@@ -7,7 +7,6 @@ import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 const GalleryZoomInner = ({images}) => {
-    console.log(images[0].src)
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
         <>

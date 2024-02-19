@@ -1,4 +1,5 @@
-import {RoomsCharacterList, Slider} from "@/components";
+import {ButtonUI, RoomsCharacterList, Slider} from "@/components";
+import {useTranslation} from "react-i18next";
 const roomsInner =[
     {
         img: "/image/IMG_7363-min.jpg"
@@ -11,6 +12,8 @@ const roomsInner =[
     },
 ]
 const RoomsRow = ({card  , order}) =>  {
+    const {t} = useTranslation()
+
     console.log(card)
 
     return (
@@ -26,8 +29,9 @@ const RoomsRow = ({card  , order}) =>  {
                     Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.
                 </p>
                 <RoomsCharacterList list={card.information} />
-                <div>
-h
+                <div className={'flex gap-x-5'}>
+                 <ButtonUI typeClass={'btn-gold'} text={t('btn.booking')}   />
+                 <ButtonUI typeClass={'btn-gold'} btnBorder={true} text={t('Подробнее')}   />
                 </div>
             </div>
         </div>
