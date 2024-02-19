@@ -1,4 +1,4 @@
-import {Autoplay, EffectFade, FreeMode, Navigation, Thumbs} from 'swiper/modules';
+import {Autoplay, EffectFade, FreeMode, Navigation, Pagination, Thumbs} from 'swiper/modules';
 import {ImgUI} from "@/components";
 import {GrNext, GrPrevious} from "react-icons/gr";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -12,21 +12,24 @@ const RoomInnerSlider = ({images}) => {
         <>
             {
                 images.length > 0 &&
-                <div className={'grid grid-cols-6 gap-[30px]'}>
-                    <div className={'col-span-5'}>
+                <div className={'grid grid-cols-8 xl:grid-cols-12 gap-2 lg:gap-[30px]'}>
+                    <div className={'col-span-6 xl:col-span-10 room-slider'}>
                         <Swiper
 
                             loop={true}
                             spaceBetween={10}
                             thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
-                            modules={[FreeMode, Thumbs ,EffectFade, Autoplay]}
-                            className="mySwiper2 h-[430px]"
+                            modules={[FreeMode, Thumbs ,EffectFade, Autoplay, Pagination]}
+                            className="mySwiper2  w-full aspect-square sm:h-[350px] md:h-[450px] lg:h-[500px]  "
                             effect={"fade"}
+                            pagination={{
+                                clickable: true,
+                              }}
                         >
                             {
                                 images?.map(image => (
                                     <SwiperSlide key={image?.id}>
-                                        <div  href={image?.src} className={'block w-full aspect-video lg:aspect-[10/4]'}>
+                                        <div  href={image?.src} className={'block w-full h-full'}>
                                             <ImgUI priority={true} src={image?.img}/>
                                         </div>
                                     </SwiperSlide>
@@ -37,7 +40,7 @@ const RoomInnerSlider = ({images}) => {
                         </Swiper>
                     </div>
 
-                    <div className={'col-span-1  gap-4'}>
+                    <div className={'col-span-2 h-full xl:col-span-2  gap-4 room-inner-slider'}>
                         <Swiper
                             onSwiper={setThumbsSwiper}
                             loop={true}
@@ -46,21 +49,16 @@ const RoomInnerSlider = ({images}) => {
                             freeMode={true}
                             watchSlidesProgress={true}
                             modules={[FreeMode, Thumbs ,Navigation]}
-                            className={"mySwiper flex flex-col"}
-
+                            className={"mySwiper flex flex-col w-full h-full"}
                         >
-                                {
-                                    images?.map(image => (
-                                        <div className={'w-full h-[150px] bg-red-300'}>
-                                        <SwiperSlide className={'w-full h-full'} key={image?.id}>
-                                            <div className={'w-full h-full relative'}>
-                                                <ImgUI src={image?.img}/>
-                                            </div>
-                                        </SwiperSlide>
-                                        </div>
-
-                                    ))
-                                }
+                                    {
+                                        images?.map(image => (
+                                            <SwiperSlide key={image?.id} className='relative  w-full '>
+                                                <ImgUI src={image?.img} imgStyle={'object-cover cursor-pointer'}/>
+                                            </SwiperSlide>
+    
+                                        ))
+                                    }
                         </Swiper>
                     </div>
 
