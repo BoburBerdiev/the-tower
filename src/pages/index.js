@@ -209,16 +209,25 @@ const Home = () => {
                         <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text">THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям. </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
                             <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={true}/>
-                            <ButtonUI btnNews={true} text={'Читать подробнее'} btnBorder={false}/>
                         </div>
                     </div>
-                    <div className="relative flex flex-col items-end ">
-                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[68%] h-[78%] xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2  border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10  	">
+                    <div className="relative flex flex-col items-end aspect-square lg:aspect-auto">
+                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[68%]  aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2  border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10  	">
                             <ImgUI src={'/image/IMG_5397-min.jpg'} objectFit={'object-cover'}/>
                         </div>
-                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%] h-[62%] lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-0 left-0 z-[9]">
+                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%]  aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-0 left-0 z-[9]">
                             <ImgUI  src={'/image/IMG_5397-min.jpg'} objectFit={'object-cover'}/>
                         </div>
+                    </div>
+                </div>
+            </SectionUI>
+            <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
+                <div className="space-y-5 md:space-y-10">
+                    <SectionTitle title={'Фотогалерея'} />
+                    {/*<GalleryZoom />*/}
+                    <SwiperSlider gallery={hotelCardData} />
+                    <div data-aos='fade-up' data-aos-delay='150' className="flex flex-col items-center w-full">
+                        <ButtonUI text={'Посмотреть все фото'} typeClass={'btn-white'} />
                     </div>
                 </div>
             </SectionUI>

@@ -1,5 +1,5 @@
 
-const ButtonUl = ({ typeClass, href , text , icon,onClick , btnNews, stylePadding, paddingFull, btnBorder }) => {
+const ButtonUl = ({ typeClass, href , text , icon,onClick , stylePadding, paddingFull, btnBorder, btnWhiteBorder }) => {
 
     return (
         <>
@@ -7,7 +7,7 @@ const ButtonUl = ({ typeClass, href , text , icon,onClick , btnNews, stylePaddin
             {
                 href 
                     ?
-                    <a href={href} onClick={onClick} className={btnBorder ? `btn-border font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `  : ` btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `}>
+                    <a href={href} onClick={onClick} className={btnBorder ? ` ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `  : ` btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `}>
                         <span>
                             {text}
                         </span>
@@ -16,7 +16,7 @@ const ButtonUl = ({ typeClass, href , text , icon,onClick , btnNews, stylePaddin
                         }
                     </a>
                     :
-                    <button onClick={onClick} className={btnBorder ? `btn-border font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `  : ` btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `}>
+                    <button onClick={onClick} className={btnBorder ? ` ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `  : ` btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `} ${paddingFull && 'py-3.5 w-full'}  `}>
                         <span>
                             {text}
                         </span>
