@@ -1,9 +1,8 @@
 import {ButtonUI, DropdownBooking, NumberGuests, TypeRoom} from "@/components";
-import {useEffect, useState} from "react";
+import { useState} from "react";
 import DatePicker from 'react-datepicker'
 import moment from "moment";
 import 'moment/locale/uz'
-import {FiMinus} from "react-icons/fi";
 import { useTranslation } from 'react-i18next'
 
 moment.locale('uz')
@@ -74,7 +73,7 @@ const Booking = () => {
                 <TypeRoom type={typeRoomArr} setTypeRoom={setTypeRoom}/>
             </DropdownBooking>
             <div >
-                <ButtonUI text={t('btn.booking')}/>
+                <ButtonUI btnBorder={true} text={t('btn.booking')}/>
             </div>
     </div>
         </div>
