@@ -14,14 +14,17 @@ const roomBannerContent = [
     {
         title: "Стандартный номер",
         img: "/image/IMG_5513-min.jpg",
+        id: 0
     },
     {
         title: "Стандартный номер 2",
-        img: "/image/IMG_5513-min.jpg",
+        img: "/image/IMG_5451-min.jpg",
+        id: 1
     },
     {
         title: "Стандартный номер 3",
         img: "/image/IMG_5513-min.jpg",
+        id: 2
     },
 ]
 const additionalAmenities = [
@@ -61,7 +64,53 @@ const roomsInner =[
         img: "/image/IMG_7362-min.jpg"
     },
 ]
-
+const services = [
+    {
+        img: '',
+        text: "Фитнес-центр",
+        id: 0
+    },
+    {
+        img: '',
+        text: "Мини-бар",
+        id: 1
+    },
+    {
+        img: '',
+        text: "Крытый бассейн",
+        id: 2
+    },
+    {
+        img: '',
+        text: "Кондиционер",
+        id: 3
+    },
+    {
+        img: '',
+        text: "Телевизор",
+        id: 4
+    },
+    {
+        img: '',
+        text: "Бесплатная парковка",
+        id: 5
+    },
+    {
+        img: '',
+        text: "Бесплатный Wi-Fi",
+        id: 6
+    },
+    {
+        img: '',
+        text: "Вид на город",
+        id: 7
+    },
+    {
+        img: '',
+        text: "Превосходный завтрак",
+        id: 8
+    },
+]
 
 const Room = () => {
     const {t} = useTranslation()
@@ -73,64 +122,25 @@ const Room = () => {
             {/*</div>*/}
 
             <div className={'w-full container'}>
-
-                <SectionTitle justify={'justify-center'} title={'Номер "Standart Double"'}/>
-
+                <div className="pb-5 md:pb-10">
+                    <SectionTitle justify={'justify-center'} title={'Номер "Standart Double"'}/>
+                </div>
                 <RoomInnerSlider images={roomBannerContent} />
+                <p className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">Комфортная комната для 1 персоны в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.В номере имеется:</p>
             </div>
-            <SectionUI bgFigureTopPostion={'-top-32 left-0'} padding={'py-10 md:py-20 lg:py-32 xl:py-[180px]'}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 ">
-                    <div className="flex flex-col justify-center space-y-5 md:space-y-10">
-                        <div className="space-y-5">
-                            <SectionTitle title={'Описание'}/>
-                            <SectionTextUI style={'section-text'} content={'Интерьер стандартого номера практичен и современен. Спальня и гостиная разделены и оформлены в классическом и элегантном стиле. Рабочее место оборудовано самым современным оборудованием. Это первоклассный люкс, предоставляющий оазис мира и спокойствия.'}/>
-                        </div>
-                        <div className="tracking-[0.48px] text-xl lg:text-2xl font-roboto flex flex-col gap-y-3 lg:gap-y-5 ">
-                            <div className="flex items-center gap-x-3 lg:gap-x-5">
-                                <p className="text-iron ">Тип кровати:</p>
-                                <p className="font-light">Double/Twin</p>
+           <SectionUI>
+                <h3 className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">Удобства и услуги </h3>
+                <div className="flex flex-wrap gap-2 md:gap-6">
+                    {
+                        services?.map(service => (
+                            <div key={service.id} className="flex items-center gap-2 md:gap-4 py-2 px-3 md:pl-5 md:py-3.5 md:pr-11  border border-[#B0A79B] cursor-pointer text-[#59657A] font-roboto text-sm md:text-base lg:text-lg">
+                                <img src={service.img} alt="Icon" className="w-4 h-4 md:w-6 md:h-6 object-contain" />
+                                <span>{service.text}</span>
                             </div>
-                            <div className="flex items-center gap-x-3 lg:gap-x-5">
-                                <p className="text-iron ">Вместимость:</p>
-                                <p className="font-light">2 чел</p>
-                            </div>
-                            <div className="flex items-center gap-x-3 lg:gap-x-5">
-                                <p className="text-iron ">Площадь номера:</p>
-                                <p className="font-light">54 m<sup className="text-sm">2</sup></p>
-                            </div>
-                            <div className="flex items-center gap-x-3 lg:gap-x-5">
-                                <p className="text-iron ">Заезд / выезд::</p>
-                                <p className="font-light">14:00/12:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full aspect-square md:h-full ">
-                        <Slider SliderContent={roomsInner} PaginationInner={true} />
-                    </div>
+                        ))
+                    }
                 </div>
-            </SectionUI>
-            <SectionUI bgGold={true} centerFigure={true}>
-
-                <div className="">
-                    <SectionTitle colorContent={true} title={'Дополнительные удобства'} />
-                    <ul className="text-white md:text-lg xl:text-xl list-disc list-inside font-roboto font-light tracking-[0.4px] gap-1.5 flex flex-col mt-5">
-                        {
-                            additionalAmenities.map(item => (
-                                <li key={item.id}>{item.title}</li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </SectionUI>
-            <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
-                <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={'Фотогалерея'} />
-                    <GalleryZoom />
-                    <div className="w-full flex flex-col items-center">
-                        <ButtonUI text={t('btn.booking')} typeClass={'btn-gold'} />
-                    </div>
-                </div>
-            </SectionUI>
+           </SectionUI>
         </div>
     )
 }
