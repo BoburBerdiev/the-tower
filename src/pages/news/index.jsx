@@ -1,10 +1,11 @@
 import { MiniHeader, NewsCard, SectionUI, Slider } from '@/components'
 import NewsCardSkeleton from '@/components/news-card-skeleton/news-card-skeleton'
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const index = () => {
+  const {t} = useTranslation()
   const newsBanner = {
-    title: 'Новостной блог',
+    title: t('news.title'),
     img : '/image/IMG_5451-min.jpg'
   }
   return (
