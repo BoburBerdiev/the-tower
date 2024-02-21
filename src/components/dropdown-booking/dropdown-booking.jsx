@@ -36,45 +36,45 @@ const DropdownBooking = ({title, subTitle, titleSecond, subTitleSecond, children
                     <div className={' flex items-center gap-3 md:gap-5 lg:gap-7 xl:gap-12'}>
                         <div>
 
-                            <h5 className={'text-brown text-sm sm:text-base text-center sm:text-start font-light '}>
+                            <h5 className={'text-brown text-sm sm:text-lg text-center sm:text-start font-elegance font-light '}>
                                 {title}
                             </h5>
                             <button className="py-1 md:py-2  flex items-start gap-2"
                                     onClick={handleDropdown}
                             >
-                          <span className={'text-black text-center sm:text-start text-base sm:text-lg font-light  '}>
+                          <span className={'text-black/80 text-center sm:text-start text-base sm:text-lg'}>
                             {subTitle}
                           </span>
-                                <FaAngleDown className={`text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
+                                <FaAngleDown className={` text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
                             </button>
                         </div>
                         <CgArrowLongRight className={'text-base sm:text-xl lg:text-2xl text-brown flex-shrink-0'}/>
                         <div>
 
-                            <h5 className={'text-brown text-sm sm:text-base text-center sm:text-start font-light '}>
+                            <h5 className={'text-brown text-sm sm:text-lg text-center sm:text-start font-elegance font-light  '}>
                                 {titleSecond}
                             </h5>
                             <button className="py-1 md:py-2 flex items-start gap-2"
                                     onClick={handleDropdown}
                             >
-                          <span className={'text-black text-base sm:text-lg text-center sm:text-start font-light '}>
+                          <span className={'text-black/80 text-center sm:text-start text-base sm:text-lg'}>
                             {subTitleSecond}
                           </span>
-                                <FaAngleDown className={`text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
+                                <FaAngleDown className={` text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
                             </button>
                         </div>
                     </div>
                     :
                     <>
-                        <h5 className={'text-brown text-sm sm:text-base text-center sm:text-start font-light '}>
+                        <h5 className={'text-brown text-sm sm:text-lg text-center sm:text-start font-elegance font-light '}>
                             {title}
                         </h5>
                         <button className="py-2  flex items-start gap-2"
                                 onClick={handleDropdown}>
-                          <span className={' text-black text-center sm:text-start text-base sm:text-lg font-light '}>
+                          <span className={'text-black/80 text-center sm:text-start text-base sm:text-lg'}>
                             {subTitle}
                           </span>
-                            <FaAngleDown className={`text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
+                            <FaAngleDown className={` text-sm sm:text-base text-black duration-100 flex-shrink-0 mt-1.5`}/>
                         </button>
                     </>
             }

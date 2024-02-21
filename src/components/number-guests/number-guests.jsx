@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {ButtonUI} from "@/components/index";
 import {FiMinus} from "react-icons/fi";
 import {FaPlus} from "react-icons/fa6";
+import {ButtonUI} from "@/components";
 
 const NumberGuests = ({guests,setGuests}) => {
     const [countRoom, setCountRoom] = useState(0)
@@ -42,19 +42,19 @@ const NumberGuests = ({guests,setGuests}) => {
 
 
     return (
-        <div>
-            <div className={'flex items-center justify-between px-7 py-2 bg-gray-200 w-full'}>
-                <p className={'text-lg font-light font-roboto '}>
+        <div className={'border shadow-md border-brown'}>
+            <div className={'flex items-center justify-between   px-5 py-2 bg-brown w-full'}>
+                <p className={'font-elegance text-white'}>
                     номеров
                 </p>
-                <div className={'flex items-center gap-3'}>
-                    <ButtonUI   icon={<FiMinus className={'text-green-700'}/>}
-                                typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
+                <div className={'flex items-center gap-2'}>
+                    <ButtonUI   icon={<FiMinus className={'text-sm text-white'}/>}
+                                btnBorder={true}
                                 onClick={()=>handleDecrement('room')}
                     />
-                    <p className={'font-roboto font-thin text-xl'}>{countRoom}</p>
-                    <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
-                              typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
+                    <p className={'font-roboto  text-xl text-white'}>{countRoom}</p>
+                    <ButtonUI icon={<FaPlus className={'text-sm text-white'}/>}
+                              btnBorder={true}
                                 onClick={()=>handleIncrement('room')}
                     />
                 </div>
@@ -66,17 +66,19 @@ const NumberGuests = ({guests,setGuests}) => {
                 <div className={'grid grid-cols-2 gap-3'}>
 
                     <div className={'space-y-1'}>
-                        <div className={'flex items-center gap-5'}>
-                            <ButtonUI icon={<FiMinus className={'text-green-700'}/>}
-                                      typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
-                                onClick={()=>handleDecrement('older')}
+                        <div className={'flex items-center gap-2'}>
+                            <ButtonUI icon={<FiMinus className={'text-sm text-black/80'}/>}
+                                      btnBorder={true}
+                                      onClick={() => handleDecrement('older')}
                             />
-                            <p className={'font-roboto font-thin text-xl'}>{countOlder}</p>
-                            <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
-                                      typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
-                                      onClick={()=>handleIncrement('older')}/>
+                            <p className={'font-roboto  text-xl text-black/80'}>{countOlder}</p>
+                            <ButtonUI icon={<FaPlus className={'text-sm text-black/80'}/>}
+                                      btnBorder={true}
+                                      onClick={() => handleIncrement('older')}
+                            />
                         </div>
-                        <p className={'font-roboto font-light text-center text-sm'}>
+
+                        <p className={'font-roboto  text-center text-sm'}>
                             взрослих
                         </p>
                     </div>
@@ -84,7 +86,7 @@ const NumberGuests = ({guests,setGuests}) => {
                         <div className={'flex items-center gap-5'}>
                             <ButtonUI icon={<FiMinus className={'text-green-700'}/>}
                                       typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
-                                        onClick={()=>handleDecrement('child')}
+                                      onClick={() => handleDecrement('child')}
                             />
                             <p className={'font-roboto font-thin text-xl'}>{countChildren}</p>
                             <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
@@ -92,7 +94,7 @@ const NumberGuests = ({guests,setGuests}) => {
                                       onClick={()=>handleIncrement('child')}
                             />
                         </div>
-                        <p className={'font-roboto font-light text-center text-sm'}>
+                        <p className={'font-roboto  text-center text-sm'}>
                             детей (0-11 лет)
                         </p>
                     </div>
