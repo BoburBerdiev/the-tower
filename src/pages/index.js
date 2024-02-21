@@ -270,7 +270,6 @@ const Home = () => {
                     <div className='flex  '>
                     <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={t('btn.allNums')} />
                     </div>
-                    {/*<GalleryZoom />*/}
                     <SwiperSlider hotelCardData={hotelCardData} />
                 </div>
             </SectionUI>

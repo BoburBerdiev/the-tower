@@ -13,6 +13,7 @@ const GalleryZoom = () => {
   ]
   const onInit = () => {
     console.log('lightGallery has been initialized');
+    console.log(1);
 };
   return (
     <LightGallery
