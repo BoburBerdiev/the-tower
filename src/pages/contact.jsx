@@ -1,6 +1,9 @@
 import { SectionTitle, SectionUI , MesengerList } from '@/components/'
+import { useTranslation } from 'react-i18next';
+
 
 const Contact = () => {
+  const {t} = useTranslation()
   return (
     <div>
       <SectionUI bgFigureTopPostion={'-top-20 -left-1/2'} padding={'py-10 md:py-20 '}>
@@ -8,7 +11,7 @@ const Contact = () => {
           {/* section title */}
           <div>
             <div className="mb-10">
-              <SectionTitle justify={'justify-center'} title={'Свяжитесь с нами'} />
+              <SectionTitle justify={'justify-center'} title={t('contact.title')} />
             </div>
             <div data-aos='fade-up' data-aos-once data-aos-delay='0.2' className="space-y-5 text-center">
               <a className="block" href={`tel:${9999999}`}>

@@ -1,9 +1,9 @@
-
-
 import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom, MiniHeader} from "@/components";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
 
+    const {t} = useTranslation()
     const images = [
         {
             id:1,
@@ -36,7 +36,7 @@ const Gallery = () => {
     ]
     console.log(1)
     const newsBanner = {
-        title: 'Фотогалерея',
+        title: t('gallery.title'),
         img : '/image/IMG_5451-min.jpg'
     }
   return (

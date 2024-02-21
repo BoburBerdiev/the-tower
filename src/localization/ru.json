@@ -14,6 +14,22 @@
       "readMore": "Читать подробнее",
       "allNums": "Все номера",
       "viewAllPhoto": "Посмотреть все фото"
+    },
+    "contact": {
+      "title": "Свяжитесь с нами"
+    },
+    "news": {
+      "title": "Новостной блог"
+    },
+    "gallery": {
+      "title": "Фотогалерея"
+    },
+    "about": {
+      "headerTitle": "О нашем отеле",
+      "section1": {
+        "title": "Добро пожаловать в The Tower Hotel!",
+        "text": ""
+      }
     }
   }
 }
