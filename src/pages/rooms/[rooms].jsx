@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next"
+import { RxInfoCircled } from "react-icons/rx";
+import { IoMdCheckmark } from "react-icons/io";
 import {
     ButtonUI,
     GalleryZoom,
@@ -64,6 +66,16 @@ const roomsInner =[
         img: "/image/IMG_7362-min.jpg"
     },
 ]
+const roomIinfo = {
+        id: 1,
+        type: 'Standart Twin',
+        information: [
+            '27 m2',
+            '2 чел',
+            '1 ванная',
+            'балкон'
+        ],   
+    }
 const services = [
     {
         img: '',
@@ -111,12 +123,62 @@ const services = [
         id: 8
     },
 ]
+const common = [
+    {
+        id: 1,
+        text: 'Односпальная кровать'
+    },
+    {
+        id: 2,
+        text: 'Гардероб'
+    },
+    {
+        id: 3,
+        text: 'Утюг'
+    },
+    {
+        id: 4,
+        text: 'Рабочий стол'
+    },
+    {
+        id: 5,
+        text: 'Мини бар'
+    },
+    {
+        id: 6,
+        text: 'Ванные принадлежности'
+    },
+    {
+        id: 7,
+        text: 'Кофеварка, чайник'
+    },
+    {
+        id: 8,
+        text: 'Завтрак Шведский стол'
+    },
+    {
+        id: 9,
+        text: 'Смарт ТВ'
+    },
+    {
+        id: 10,
+        text: 'Бесплатный Wi-Fi'
+    },
+    {
+        id: 11,
+        text: 'Сейф в номере'
+    },
+    {
+        id: 12,
+        text: 'Площадь номера 28m2'
+    },
+]
 
 const Room = () => {
     const {t} = useTranslation()
 
     return (
-        <div className="wrapper py-10 md:py-20 ">
+        <div className="wrapper pt-10 md:pt-20 ">
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
@@ -128,7 +190,7 @@ const Room = () => {
                 <RoomInnerSlider images={roomBannerContent} />
                 <p className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">Комфортная комната для 1 персоны в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.В номере имеется:</p>
             </div>
-           <SectionUI>
+           <SectionUI padding={'py-[50px]'}>
                 <h3 className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">Удобства и услуги </h3>
                 <div className="flex flex-wrap gap-2 md:gap-6">
                     {
@@ -140,7 +202,37 @@ const Room = () => {
                         ))
                     }
                 </div>
+                <div className="py-10">
+                    <h4 className="flex items-center gap-x-[10px] text-lg">
+                        <RxInfoCircled className="text-[#808080] text-xl" />
+                        <span className="font-roboto font-medium">Общие</span>
+                    </h4>
+                    <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-x-5 lg:gap-x-[30px] gap-y-[10px] max-md:text-sm lg:text-lg font-roboto mt-[10px]">
+                        {common.map(item => (
+                            <li key={item.id} className="flex items-center gap-2 md:gap-x-[10px]">
+                                <IoMdCheckmark className="md:text-xl text-[#808080]" />
+                                {item.text}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
            </SectionUI>
+           <div className="bg-white duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-xl py-5">
+                <div className="container flex items-center justify-between gap-x-5">
+                    <div className="text-2xl font-elegance shrink-0">
+                        Номер "{roomIinfo.type}"
+                    </div>
+                    <div
+                        className='flex shrink-0 leading-normal divide-x-2 divide-iron gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
+                        {roomIinfo &&  roomIinfo.information?.map((item, index) => (
+                            <p key={index} className="px-3">{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        <ButtonUI paddingFull={true} text={t('btn.booking')}  />
+                    </div>
+                </div>
+           </div>
         </div>
     )
 }
