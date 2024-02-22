@@ -1,5 +1,5 @@
 
-const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnBorder, btnWhiteBorder }) => {
+const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnBorder, btnWhiteBorder, type, target }) => {
 
     return (
         <>
@@ -7,7 +7,7 @@ const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnB
             {
                 href 
                     ?
-                    <a href={href} onClick={onClick} className={btnBorder ? ` ${paddingFull && 'py-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
+                    <a href={href} onClick={onClick} target={target} className={btnBorder ? ` ${paddingFull && 'py-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
                         <span>
                             {text}
                         </span>
@@ -16,7 +16,7 @@ const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnB
                         }
                     </a>
                     :
-                    <button onClick={onClick} className={btnBorder ? ` ${paddingFull && ' spy-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
+                    <button type={type} onClick={onClick} className={btnBorder ? ` ${paddingFull && ' spy-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
                         <span>
                             {text}
                         </span>

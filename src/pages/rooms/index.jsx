@@ -8,6 +8,7 @@ import {
     MiniHeader,
     RoomsRow
 } from "@/components"
+import { useTranslation } from "react-i18next";
 
 
 const roomsBannerText = [
@@ -26,7 +27,17 @@ const roomsBannerText = [
 ];
 const roomsCardsContent = [
     {
-        img: "/image/IMG_5513-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart Twin",
         id:0,
         information: [
@@ -38,9 +49,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5346-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart double",
         id:1,
         information: [
@@ -52,9 +74,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '550 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "deluxe",
         id:2,
         information: [
@@ -66,9 +99,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '650 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "deluxe",
         id:3,
         information: [
@@ -80,9 +124,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '650 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5513-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart Twin",
         id:4,
         information: [
@@ -94,9 +149,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart double",
         id:5,
         information: [
@@ -108,9 +174,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart Twin",
         id:6,
         information: [
@@ -122,9 +199,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart Twin",
         id:7,
         information: [
@@ -136,9 +224,20 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                img: "/image/IMG_7363-min.jpg"
+            },
+            {
+                img: "/image/IMG_7361-min.jpg"
+            },
+            {
+                img: "/image/IMG_7362-min.jpg"
+            },
+        ],
         title: "Standart Twin",
         id:8,
         information: [
@@ -150,15 +249,18 @@ const roomsCardsContent = [
         slug: "link",
         price: '400 000 ',
         time: 'за ночь',
+        decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
 ]
-
-const newsBanner = {
-    title: 'Наши номера',
-    img : '/image/IMG_5451-min.jpg'
-}
 const index = () => {
     const [load, setLoad] = useState(false)
+    const {t} = useTranslation()
+
+    
+const newsBanner = {
+    title: t('rooms.miniHeader'),
+    img : '/image/IMG_5451-min.jpg'
+}
     return (
         <div>
             {/*<div className="w-full h-[90vh]">*/}
