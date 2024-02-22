@@ -14,7 +14,6 @@ const roomsInner =[
 const RoomsRow = ({card  , order}) =>  {
     const {t} = useTranslation()
 
-    console.log(card)
 
     return (
         <div class={`grid grid-cols-1  md:grid-cols-2 gap-7  md:gap-16 items-center ${order % 2 === 0}  `}>

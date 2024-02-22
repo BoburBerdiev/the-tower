@@ -1,6 +1,6 @@
 import {ButtonUI} from "@/components";
 
-const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSubtitle }) => {
+const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSubtitle , href }) => {
   return (
     
     <div className={`flex flex-col md:flex-row gap-y-5 w-full items-center  ${justify ? justify : 'justify-start'}`}>
@@ -11,7 +11,7 @@ const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSu
       {
         btnText && 
         <div  data-aos='fade-up' data-aos-delay='120'>
-          <ButtonUI text={btnText} btnBorder={true}  />
+          <ButtonUI text={btnText} btnBorder={true} href={href}  />
         </div>
       }
       

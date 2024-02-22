@@ -50,12 +50,12 @@ const Slider = ({
             className="relative flex justify-center w-full h-full"
           >
             <div className="relative z-20 w-full h-full">
-              <div className="container flex flex-col items-center justify-center h-full pb-10 space-y-5">
-                <h2 data-aos='fade-up' data-aos-delay='0.1' className="text-center header-title w-full max-w-[1000px]">{
+              <div className="container flex flex-col items-center justify-center h-full pb-10 space-y-5 ">
+                <h2 data-aos='fade-up' data-aos-delay='0.1' className="text-center header-title w-full max-w-[1000px] drop-shadow-lg">{
                     isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : slider.title
                   }</h2>
                   {
-                    slider.subTitle && <p data-aos='fade-up' data-aos-delay='50' className="lowercase text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
+                    slider.subTitle && <p data-aos='fade-up' data-aos-delay='50' className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
                     {
                       isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : slider.subTitle
                     }
