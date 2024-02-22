@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import 'aos/dist/aos.css';
+
+
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
@@ -18,7 +20,6 @@ import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
 import {Inter, Open_Sans, Playfair, Roboto} from "@next/font/google";
-import localFont from "@next/font/local";
 import "react-datepicker/dist/react-datepicker.css";
 
 const roboto = Roboto({
@@ -67,7 +68,6 @@ export default function App({ Component, pageProps }) {
        <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                {/* fonts ----  , elegance.className */}
                 <main className={`${roboto.variable} ${inter.variable} ${openSans.variable} ${elegance.variable}`}>
                     <Layout>
                         <Component {...pageProps} />

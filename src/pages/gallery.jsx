@@ -34,7 +34,6 @@ const Gallery = () => {
             src:"/image/IMG_5514-min.jpg"
         }
     ]
-    console.log(1)
     const newsBanner = {
         title: t('gallery.title'),
         img : '/image/IMG_5451-min.jpg'
@@ -45,7 +44,7 @@ const Gallery = () => {
               <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
           </div>
           <SectionUI padding='py-10 md:py-20   '>
-
+                <GalleryZoom />
               <GalleryZoomInner images={images}/>
           </SectionUI>
       </>

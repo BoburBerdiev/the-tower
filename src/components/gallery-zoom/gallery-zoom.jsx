@@ -12,8 +12,6 @@ const GalleryZoom = () => {
     "/image/IMG_5451-min.jpg",
   ]
   const onInit = () => {
-    console.log('lightGallery has been initialized');
-    console.log(1);
 };
   return (
     <LightGallery
@@ -22,7 +20,7 @@ const GalleryZoom = () => {
     // speed={500}
     plugins={[lgThumbnail, lgZoom]}
 >
-{/* <a  href={galleryZoomContent[0]} className="block col-span-4 md:col-span-2 relative h-[200px] md:h-[350px]">
+<a  href={galleryZoomContent[0]} className="block col-span-4 md:col-span-2 relative h-[200px] md:h-[350px]">
 <ImgUI src={galleryZoomContent[0]} alt={'gallery'} objectFit={'object-cover'} />
 </a>
 <a  href={galleryZoomContent[1]} className="block col-span-2 h-[200px] relative md:h-[350px]">
@@ -36,7 +34,7 @@ const GalleryZoom = () => {
 </a>
 <a  href={galleryZoomContent[4]} className="block col-span-2 md:col-span-1 relative h-[200px] md:h-[350px] ">
 <ImgUI src={galleryZoomContent[4]} alt={'gallery'} objectFit={'object-cover'} />
-</a> */}
+</a>
 </LightGallery>
   )
 }

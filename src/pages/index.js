@@ -215,24 +215,28 @@ const gallery = [
 ]
 const newsCard = [
     {
+        id:24,
         img: '/image/IMG_5497-min.jpg',
         date: "17 февр. 2023г.",
         decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
         href: "/"
     },
     {
+        id:23,
         img: '/image/IMG_5497-min.jpg',
         date: "17 февр. 2023г.",
         decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
         href: "/"
     },
     {
+        id:21,
         img: '/image/IMG_5497-min.jpg',
         date: "17 февр. 2023г.",
         decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
         href: "/"
     },
     {
+        id:20,
         img: '/image/IMG_5497-min.jpg',
         date: "17 февр. 2023г.",
         decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
@@ -268,7 +272,7 @@ const Home = () => {
             <SectionUI padding={'pt-10 md:pt-20 lg:pt-[90px] pb-5 md:pb-11'} >
                 <div className="space-y-5 md:space-y-10">
                     <div className='flex  '>
-                    <SectionTitle title={'Типы номеров'} justify={'justify-between'}   btnText={t('btn.allNums')} />
+                    <SectionTitle title={'Типы номеров'} justify={'justify-between'} href={'/news'}   btnText={t('btn.allNums')} />
                     </div>
                     <SwiperSlider hotelCardData={hotelCardData} />
                 </div>

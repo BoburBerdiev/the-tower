@@ -3,7 +3,6 @@ import React from 'react'
 
 const SwiperZoom = () => {
   const onInit = () => {
-    console.log('lightGallery has been initialized');
   }
   return (
     <div className='card-ui relative'>

@@ -43,7 +43,7 @@ const NumberGuests = ({guests,setGuests}) => {
 
     return (
         <div className={'border shadow-md border-brown'}>
-            <div className={'flex items-center justify-between   px-5 py-2 bg-brown w-full'}>
+            <div className={'flex items-center justify-between   px-3 py-1 bg-brown w-full'}>
                 <p className={'font-elegance text-white'}>
                     номеров
                 </p>
@@ -59,8 +59,8 @@ const NumberGuests = ({guests,setGuests}) => {
                     />
                 </div>
             </div>
-            <div className={'bg-white px-7 py-2 space-y-1.5'}>
-                <h6 className={'font-roboto font-bold text-center text-sm'}>
+            <div className={'bg-white  px-3 py-1 space-y-1'}>
+                <h6 className={'font-roboto font-medium text-center text-base'}>
                     номер 01
                 </h6>
                 <div className={'grid grid-cols-2 gap-3'}>
@@ -78,23 +78,24 @@ const NumberGuests = ({guests,setGuests}) => {
                             />
                         </div>
 
-                        <p className={'font-roboto  text-center text-sm'}>
+                        <p className={'font-roboto  text-center text-xs'}>
                             взрослих
                         </p>
                     </div>
-                    <div className={'space-y-1 '}>
-                        <div className={'flex items-center gap-5'}>
-                            <ButtonUI icon={<FiMinus className={'text-green-700'}/>}
-                                      typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
+                    <div className={''}>
+                        <div className={'flex items-center gap-2'}>
+                            <ButtonUI icon={<FiMinus className={'text-sm text-black/80'}/>}
+                                      btnBorder={true}
                                       onClick={() => handleDecrement('child')}
                             />
-                            <p className={'font-roboto font-thin text-xl'}>{countChildren}</p>
-                            <ButtonUI icon={<FaPlus className={'text-red-700'}/>}
-                                      typeClass={'rounded-full bg-gray-300 px-1 py-1 '}
-                                      onClick={()=>handleIncrement('child')}
+                            <p className={'font-roboto  text-xl text-black/80'}>{countChildren}</p>
+                            <ButtonUI icon={<FaPlus className={'text-sm text-black/80'}/>}
+                                      btnBorder={true}
+                                      onClick={() => handleIncrement('child')}
                             />
                         </div>
-                        <p className={'font-roboto  text-center text-sm'}>
+
+                        <p className={'font-roboto  text-center text-xs'}>
                             детей (0-11 лет)
                         </p>
                     </div>
