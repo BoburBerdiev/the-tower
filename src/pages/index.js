@@ -324,7 +324,7 @@ const Home = () => {
                 </div>
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
-            <div className="pb-5 md:pb-10">
+                <div className="pb-5 md:pb-10">
                     <SectionTitle title={'Новостной блог'}/>
                 </div>
                 <SwiperSlider newsCard={newsCard} />
