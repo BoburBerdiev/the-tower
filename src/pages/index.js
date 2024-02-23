@@ -1,4 +1,4 @@
-import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, SwiperGallery} from '@/components/'
 import { useTranslation } from 'react-i18next'
 
 const hotelCardData = [
@@ -331,6 +331,9 @@ const Home = () => {
                     <SectionTitle title={'Новостной блог'}/>
                 </div>
                 <SwiperSlider newsCard={newsCard} />
+            </SectionUI>
+            <SectionUI>
+                <SwiperGallery gallery={gallery} />
             </SectionUI>
         </div>
     )
