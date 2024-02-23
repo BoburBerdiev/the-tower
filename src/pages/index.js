@@ -272,14 +272,14 @@ const Home = () => {
             <SectionUI padding={'pt-10 md:pt-20 lg:pt-[90px] pb-5 md:pb-11'} >
                 <div className="space-y-5 md:space-y-10">
                     <div className='flex  '>
-                    <SectionTitle title={'Типы номеров'} justify={'justify-between'} href={'/news'}   btnText={t('btn.allNums')} />
+                    <SectionTitle title={t('index.section2.title')} justify={'justify-between'} href={'/news'}   btnText={t('btn.allNums')} />
                     </div>
                     <SwiperSlider hotelCardData={hotelCardData} />
                 </div>
             </SectionUI>
             <SectionUI bgFigureBottomPostion={'-top-20 -left-[60%]'}  padding={'py-10 md:py-20 lg:pt-[54px] lg:pb-[100px]'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={'Наши услуги'}/>
+                    <SectionTitle title={t('index.section3.title')}/>
                 </div>
                 <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 md:gap-6 ">
                     {
@@ -291,7 +291,7 @@ const Home = () => {
             </SectionUI>
             <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
-                    <SectionTitle title={'Ориентиры поблизости'} colorContent={true} />
+                    <SectionTitle title={t('index.section4.title')} colorContent={true} />
                     <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
                         {
                             locationInfos.map(item => (
@@ -306,7 +306,7 @@ const Home = () => {
             </SectionUI>
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={'Фотогалерея'} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
+                    <SectionTitle title={t('index.section5.title')} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
                     {/*<GalleryZoom />*/}
                     <SwiperSlider gallery={gallery} />
                 </div>
@@ -327,8 +327,8 @@ const Home = () => {
                 </div>
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
-            <div className="pb-5 md:pb-10">
-                    <SectionTitle title={'Новостной блог'}/>
+                <div className="pb-5 md:pb-10">
+                    <SectionTitle title={t('index.section6.title')}/>
                 </div>
                 <SwiperSlider newsCard={newsCard} />
             </SectionUI>
