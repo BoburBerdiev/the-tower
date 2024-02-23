@@ -332,9 +332,6 @@ const Home = () => {
                 </div>
                 <SwiperSlider newsCard={newsCard} />
             </SectionUI>
-            <SectionUI>
-                <SwiperGallery gallery={gallery} />
-            </SectionUI>
         </div>
     )
 }
