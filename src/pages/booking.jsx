@@ -1,19 +1,43 @@
 import { LittleTitleUI, SectionTitle, SectionUI, InputUI, ButtonUI } from '@/components/'
+import { useForm } from "react-hook-form";
+
 const optionArr = [
   {
     value:"Стандартный номер",
     id:"1"
   },
   {
-    value:"Стандартный номер",
-    id:"2"
+    value:"Стандартный номер 2",
+    id:"4"
+  },
+  {
+    value:"Стандартный номер 3",
+    id:"20"
+  },
+  {
+    value:"Стандартный номер 24",
+    id:"22"
+  },
+  {
+    value:"Стандартный номер 12",
+    id:"21"
   },
 ]
 const Booking = () => {
+  const {register,
+    handleSubmit,
+    formState: {  },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+
   return (
     <div className="wrapper">
       <SectionUI padding={'py-10  md:pb-[90px]'}>
-          <form action="" className="w-full space-y-5 md:space-y-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-5 md:space-y-10">
             <div>
               <SectionTitle title={'Бронирование'} justify={'justify-center'}  subTitle={'Это бронирование не подтверждено. Мы рассмотрим ваш запрос и подтвердим бронирование.'}/>
             </div>
@@ -22,11 +46,11 @@ const Booking = () => {
               <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-3 md:gap-[30px] max-w-[800px]">
                 <InputUI labelText={'Дата заезда/выезда'} type={'date'} placeholder={''} id={'chechIn'} />
                 <InputUI type={'date'} />
-                <InputUI type={'select'} labelText={'Тип номера'} id={'typeNumber'} selectList={optionArr} />
+                <InputUI selectName={'type-number'}  formname={  {...register('type-number')}} type={'select'} labelText={'Тип номера'} id={'typeNumber'} selectList={optionArr} />
                 <InputUI type={'select'} labelText={'Номера'} selectList={optionArr} />
                 <InputUI type={'select'} labelText={'Взрослые'} selectList={optionArr} />
                 <InputUI type={'select'} labelText={'Дети'} selectList={optionArr}/>
-                <InputUI type={'name'} placeholder={'Фамилия (по-английски)'} labelText={'ФИО (на английском языке)'}/>
+                <InputUI formname={'name'}  type={'name'} placeholder={'Фамилия (по-английски)'} labelText={'ФИО (на английском языке)'}/>
                 <InputUI type={'name'} placeholder={'Имя (по-английски)'}  />
                 <InputUI type={'number'} placeholder={'+1234567890'}  labelText={'Номер телефона'}/>
                 <InputUI type={'mail'} placeholder={'example@gmail.com'} labelText={'Электронная почта'} />
@@ -52,7 +76,7 @@ const Booking = () => {
                 <p>- Для отмены бронирования обращайтесь в отдел бронирования номеров.</p>
                 <p className="mt-4 md:mt-6">The Tower Hotel Tashkent, тел.номер: <a href="tel:+998 55 512 11 00">+998 55 512 11 00</a></p>
               </div>
-              <ButtonUI text={'Забронировать'} typeClass={'btn-gold'}/>
+              <ButtonUI text={'Забронировать'} typeClass={'btn-gold'} type={'submit'} />
             </div>
           </form>
       </SectionUI>
