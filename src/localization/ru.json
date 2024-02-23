@@ -30,6 +30,40 @@
         "title": "Добро пожаловать в The Tower Hotel!",
         "text": ""
       }
+    },
+    "index": {
+      "headerBooking": {
+       "checkIn": "Заезд",
+       "entryDay": "Входной день",
+       "departure": "Выезд",
+       "departureDay": "День отъезда",
+       "numberOfGuests" : "Число гостей",
+       "room": "номер ",
+       "adults": "взрослых ",
+       "children": "детей",
+       "roomNumber": "номеров",
+       "forChildren": "детей (0-11 лет)",
+       "typeOfNumber": "Тип номера",
+       "choose": "Выбрать"
+      },
+      "section2": {
+        "title": "Типы номеров"
+      },
+      "section3": {
+        "title": "Наши услуги"
+      },
+      "section4": {
+        "title": "Ориентиры поблизости"
+      },
+      "section5": {
+        "title": "Фотогалерея"
+      },
+      "section6": {
+        "title": "Новостной блог"
+      }
+    },
+    "rooms": {
+      "miniHeader": "Наши номера"
     }
   }
 }

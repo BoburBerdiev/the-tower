@@ -22,7 +22,7 @@ const Booking = () => {
 
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
-    const [typeRoom, setTypeRoom] = useState("Выбрать")
+    const [typeRoom, setTypeRoom] = useState(t('index.headerBooking.choose'))
 
     const [guests, setGuests] = useState({
         room:1,
@@ -42,10 +42,10 @@ const Booking = () => {
     <div className={'bg-white py-2 shadow-xl md:py-4 lg:py-6 px-5 sm:px-[35px] md:px-[50px]  xl:px-[70px] flex lg:flex-row flex-col items-center justify-center gap-3 md:gap-5 xl:gap-12'}>
 
             <DropdownBooking
-                title={'Заезд'}
-                subTitle={startDate ? moment(startDate).format('ll') : 'Входной день'}
-                titleSecond={'Выезд'}
-                subTitleSecond={endDate ? moment(endDate).format('ll') : 'День отъезда'}>
+                title={t('index.headerBooking.checkIn')}
+                subTitle={startDate ? moment(startDate).format('ll') : t('index.headerBooking.entryDay')}
+                titleSecond={t('index.headerBooking.departure')}
+                subTitleSecond={endDate ? moment(endDate).format('ll') : t('index.headerBooking.departureDay')}>
                 <DatePicker
                     selected={null}
                     onChange={handleDateChange}
@@ -60,20 +60,20 @@ const Booking = () => {
             <div className={'bg-brown w-full lg:w-[2px] h-0.5 lg:h-6'}/>
 
             <DropdownBooking
-                title={'Число гостей'}
-                subTitle={`${guests.room} номер ${guests.older} взрослых, ${guests.children} детей`}
+                title={t('index.headerBooking.numberOfGuests')}
+                subTitle={`${guests.room} ${t('index.headerBooking.room')} ${guests.older} ${t('index.headerBooking.adults')}, ${guests.children} ${t('index.headerBooking.children')}`}
             >
                 <NumberGuests setGuests={setGuests} guests={guests}/>
             </DropdownBooking>
-            <div className={'bg-brown w-full lg:w-[2px] h-0.5 lg:h-6 '}/>
+            <div className={'bg-brown w-full lg:w-[2px] h-0.5 lg:h-6 relative z-10'}/>
             <DropdownBooking
-                title={'Тип номера'}
+                title={t('index.headerBooking.typeOfNumber')}
                 subTitle={typeRoom}
             >
                 <TypeRoom type={typeRoomArr} setTypeRoom={setTypeRoom}/>
             </DropdownBooking>
             <div >
-                <ButtonUI btnBorder={true} text={t('btn.booking')}/>
+                <ButtonUI text={t('btn.booking')}/>
             </div>
     </div>
         </div>

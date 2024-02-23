@@ -98,12 +98,17 @@ const Footer = () => {
           <p className=''>
             {new Date().getFullYear()} The Tower Hotel. Все права защищены.
           </p>
-          <a href="https://abduganiev.uz" className='flex items-center gap-[10px] opacity-70'>
-            Сайт создан
-            <span  className='w-[30px] relative h-[30px]'>
-              <ImgUI src={'/image/abduganiev.png'} objectFit={'object-contain'} alt={'ABDUGANIEV TECHNOLOGY'} />
-            </span>
-          </a>
+          <div className='flex items-center gap-3 '>
+            <span>Сайт созда:н</span>
+            <a href="https://abduganiev.uz" target='_blank' className='flex group items-center gap-2 relative w-[80px] md:w-[100px] h-[50px] overflow-hidden'>
+              <div className='w-8 h-8 object-cover relative duration-200 group-hover:scale-50 group-hover:opacity-0 group-hover:-translate-x-10'>
+                <ImgUI src={'/image/abduganiev-A.png'} objectFitContain={'object-contain'}/>
+              </div>
+              <div className='shrink-0  duration-300  opacity-0 translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 absolute left-0 object-contain w-full h-full'>
+                <ImgUI src={'/image/abduganiev.png'} objectFitContain={'object-contain'}/>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </>
