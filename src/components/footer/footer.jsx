@@ -6,10 +6,6 @@ const FooterContentData = {
     title: 'Меню',
     list: [
       {
-        name: 'Главная',
-        link: "/"
-      },
-      {
         name: 'Об отеле',
         link: "/"
       },
@@ -22,31 +18,35 @@ const FooterContentData = {
         link: "/"
       },
       {
+        name: 'Новости',
+        link: "/"
+      },
+      {
         name: 'Контакты',
         link: "/"
       },
     ],
   },
   info: {
-    title: 'Помощь',
-    list: [
-      {
-        name: 'Для клиентов',
-        link: "/"
-      },
-      {
-        name: 'Контактная информация',
-        link: "/"
-      },
-      {
-        name: 'Часто задаваемые вопросы',
-        link: "/"
-      },
-      {
-        name: 'Карта сайта',
-        link: "/"
-      },
-    ],
+    title: 'Следите за нашими новостями',
+    // list: [
+    //   {
+    //     name: 'Для клиентов',
+    //     link: "/"
+    //   },
+    //   {
+    //     name: 'Контактная информация',
+    //     link: "/"
+    //   },
+    //   {
+    //     name: 'Часто задаваемые вопросы',
+    //     link: "/"
+    //   },
+    //   {
+    //     name: 'Карта сайта',
+    //     link: "/"
+    //   },
+    // ],
   },
    location: {
     title: 'Адрес',
@@ -72,21 +72,20 @@ const Footer = () => {
             <a href='' className='block w-[120px] h-[90px] relative'>
               <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFit={'object-contain'}/>
             </a>
-            <div className='space-y-2  md:space-y-2.5 text-base md:text-xl'>
+            <div className='space-y-1 text-base md:text-xl'>
               <a href="tel:+998 55 512 11 00" className='block hover:underline'>+998 55 512 11 00</a>
               <a href="mailto:info@towerhotel.uz" className='block hover:underline'>info@towerhotel.uz</a>
-
             </div>
           </div>
           <div>
-            <FooterContent  title={'Меню'} list={FooterContentData.menu.list} />
-          </div>
-          <div>
-            <FooterContent  title={'Помощь'} list={FooterContentData.info.list} />
+            <FooterContent  title={'Навигация'} list={FooterContentData.menu.list} />
           </div>
           <div className='space-y-3 lg:space-y-8'>
            <FooterContent  title={'Адрес'} list={FooterContentData.location.list} />
-           <MesengerList/>
+          </div>
+          <div>
+            <FooterContent  title={'Следите за нашими новостями'} />
+            <MesengerList/>
           </div>
         </div>
       </footer>
