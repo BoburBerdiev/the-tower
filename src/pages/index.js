@@ -1,4 +1,5 @@
-import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, SwiperGallery} from '@/components/'
+import LightGalleryComponent from '@/components/swiper-gallery-zoom/swiper-gallery'
 import { useTranslation } from 'react-i18next'
 
 const hotelCardData = [
@@ -198,19 +199,23 @@ const locationInfos = [
 const gallery = [
     {
         scr:'/image/IMG_5346-min.jpg',
+        thumbnailUrl:'/image/IMG_5346-min.jpg',
         id:1
     }
     ,{
         scr:'/image/IMG_5397-min.jpg',
+        thumbnailUrl:'/image/IMG_5397-min.jpg',
         id:2
     }
     ,{
         scr:'/image/IMG_5448-min.jpg',
+        thumbnailUrl:'/image/IMG_5448-min.jpg',
         id:3
     },
     {
         scr:'/image/IMG_5451-min.jpg',
-        id:5
+        thumbnailUrl:'/image/IMG_5451-min.jpg',
+        id:4
     },
 ]
 const newsCard = [
