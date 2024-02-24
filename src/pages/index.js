@@ -314,7 +314,6 @@ const Home = () => {
                     <SectionTitle title={t('index.section5.title')} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
                     {/*<GalleryZoom />*/}
                     <SwiperSlider gallery={gallery} />
-                    <LightGalleryComponent />
                 </div>
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
