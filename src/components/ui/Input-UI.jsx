@@ -10,7 +10,7 @@ import {useForm } from "react-hook-form";
 // name props = input name attribute ucun
 // children props = date type li input ucun bola
 
-const InputUl = ({type, placeholder, labelText,selectName, id, name, children, infoInput,selectList , formname}) => {
+const InputUl = ({type, placeholder, labelText,setSelectOptionName , id, name, children, infoInput,selectList , formname}) => {
     const [openDropdown, setOpenDropdown] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const [selectOption , setSelectOption] = useState('')
@@ -18,14 +18,12 @@ const InputUl = ({type, placeholder, labelText,selectName, id, name, children, i
     const inputHandler = (e) => {
         e.preventDefault()
         setOpenDropdown(!openDropdown)
-
-
     }
-
     useEffect(() => {
-        console.log( selectOption)
-        console.log(selectName)
-        setValue(`${selectName}` , selectOption)
+        setSelectOptionName({
+            name: labelText ,
+            value: selectOption
+        })
     } , [selectOption])
     return (
         <div className='space-y-3 flex flex-col w-full relative justify-end'>

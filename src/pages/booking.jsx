@@ -1,6 +1,6 @@
 import { LittleTitleUI, SectionTitle, SectionUI, InputUI, ButtonUI } from '@/components/'
 import { useForm } from "react-hook-form";
-
+import {useEffect, useState} from "react";
 const optionArr = [
   {
     value:"Стандартный номер",
@@ -25,13 +25,18 @@ const optionArr = [
 ]
 const Booking = () => {
   const {register,
-    handleSubmit,
+    handleSubmit ,setValue,
     formState: {  },
   } = useForm();
+const [selectOptionName , setSelectOptionName] = useState(null)
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
+useEffect(() => {
+  setValue(selectOptionName?.name , selectOptionName?.value )
+}, [selectOptionName])
 
 
   return (
@@ -47,7 +52,7 @@ const Booking = () => {
                 <InputUI labelText={'Дата заезда/выезда'} type={'date'} placeholder={''} id={'chechIn'} />
                 <InputUI type={'date'} />
                 <InputUI selectName={'type-number'}  formname={  {...register('type-number')}} type={'select'} labelText={'Тип номера'} id={'typeNumber'} selectList={optionArr} />
-                <InputUI type={'select'} labelText={'Номера'} selectList={optionArr} />
+                <InputUI type={'select'} labelText={'Номера'} selectList={optionArr} selectOptionName={setSelectOptionName} />
                 <InputUI type={'select'} labelText={'Взрослые'} selectList={optionArr} />
                 <InputUI type={'select'} labelText={'Дети'} selectList={optionArr}/>
                 <InputUI formname={'name'}  type={'name'} placeholder={'Фамилия (по-английски)'} labelText={'ФИО (на английском языке)'}/>
