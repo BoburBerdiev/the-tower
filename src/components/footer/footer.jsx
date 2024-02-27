@@ -3,74 +3,9 @@ import {ImgUI, FooterContent, MesengerList} from '@/components'
 import { useTranslation } from 'react-i18next'
 
 
-<<<<<<< HEAD
-const FooterContentData = {
-  menu: {
-    title: 'Меню',
-    list: [
-      {
-        name: 'Об отеле',
-        link: "/"
-      },
-      {
-        name: 'Номера',
-        link: "/"
-      },
-      {
-        name: 'Фотогалерея',
-        link: "/"
-      },
-      {
-        name: 'Новости',
-        link: "/"
-      },
-      {
-        name: 'Контакты',
-        link: "/"
-      },
-    ],
-  },
-  info: {
-    title: 'Следите за нашими новостями',
-    // list: [
-    //   {
-    //     name: 'Для клиентов',
-    //     link: "/"
-    //   },
-    //   {
-    //     name: 'Контактная информация',
-    //     link: "/"
-    //   },
-    //   {
-    //     name: 'Часто задаваемые вопросы',
-    //     link: "/"
-    //   },
-    //   {
-    //     name: 'Карта сайта',
-    //     link: "/"
-    //   },
-    // ],
-  },
-   location: {
-    title: 'Адрес',
-    list: [
-      {
-        name: 'Малая Бешагачская ул., 40-40 / 1, Яккасарайский район, Ташкент, 100070, Узбекистан',
-        link: "/"
-      },
-      {
-        name: 'Посмотреть на карте',
-        link: "/"
-      },
-    ],
-  },
-}
-=======
->>>>>>> fa165d8e17a0ada03e1f62f7eb17b6d6a1de5245
 
 const Footer = () => {
   const {t} = useTranslation()
-  
   const FooterContentData = {
     menu: {
       title: t('footer.menu.title'),
@@ -118,22 +53,22 @@ const Footer = () => {
             <a href='' className='block w-[120px] h-[90px] relative'>
               <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFit={'object-contain'}/>
             </a>
-<<<<<<< HEAD
-            <div className='space-y-1 text-base md:text-xl'>
-              <a href="tel:+998 55 512 11 00" className='block hover:underline'>+998 55 512 11 00</a>
-              <a href="mailto:info@towerhotel.uz" className='block hover:underline'>info@towerhotel.uz</a>
-            </div>
-          </div>
-          <div>
-            <FooterContent  title={'Навигация'} list={FooterContentData.menu.list} />
-          </div>
-          <div className='space-y-3 lg:space-y-8'>
-           <FooterContent  title={'Адрес'} list={FooterContentData.location.list} />
-          </div>
-          <div>
-            <FooterContent  title={'Следите за нашими новостями'} />
-            <MesengerList/>
-=======
+{/*<<<<<<< HEAD*/}
+{/*            <div className='space-y-1 text-base md:text-xl'>*/}
+{/*              <a href="tel:+998 55 512 11 00" className='block hover:underline'>+998 55 512 11 00</a>*/}
+{/*              <a href="mailto:info@towerhotel.uz" className='block hover:underline'>info@towerhotel.uz</a>*/}
+{/*            </div>*/}
+{/*          </div>*/}
+{/*          <div>*/}
+{/*            <FooterContent  title={'Навигация'} list={FooterContentData.menu.list} />*/}
+{/*          </div>*/}
+{/*          <div className='space-y-3 lg:space-y-8'>*/}
+{/*           <FooterContent  title={'Адрес'} list={FooterContentData.location.list} />*/}
+{/*          </div>*/}
+{/*          <div>*/}
+{/*            <FooterContent  title={'Следите за нашими новостями'} />*/}
+{/*            <MesengerList/>*/}
+{/*=======*/}
             <div className='md:space-y-2 '>
               <a href="tel:+998 55 512 11 00" className='block hover:underline text-base md:text-xl lg:text-2xl'>+998 55 512 11 00</a>
               <a href="mailto:info@towerhotel.uz" className='block hover:underline text-sm md:text-base'>info@towerhotel.uz</a>
@@ -148,7 +83,7 @@ const Footer = () => {
           <div className='space-y-3 lg:space-y-5'>
            <FooterContent  title={FooterContentData.managers.title}   />
            <MesengerList/>
->>>>>>> fa165d8e17a0ada03e1f62f7eb17b6d6a1de5245
+{/*>>>>>>> fa165d8e17a0ada03e1f62f7eb17b6d6a1de5245*/}
           </div>
         </div>
       </footer>

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const LocationInfos = ({title, icon, alt, locations}) => {
   return (
@@ -12,7 +11,7 @@ const LocationInfos = ({title, icon, alt, locations}) => {
       <ul className='space-y-[5px] md:space-y-[10px]'>
         {
           locations.map(location => (
-            <li className='flex items-center justify-between gap-10 font-thin'>
+            <li key={location?.id} className='flex items-center justify-between gap-10 font-thin'>
               <p>{location.place}</p>
               <p>{location.distance}</p>
             </li>

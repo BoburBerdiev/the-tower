@@ -10,8 +10,6 @@ const DropdownBooking = ({title, subTitle, titleSecond, subTitleSecond, children
     const handleDropdown = () => {
         setIsShowDropdown(prevState => !prevState)
     }
-
-
     useEffect(() => {
         const handleWindow = () => {
             setIsShowDropdown(false)

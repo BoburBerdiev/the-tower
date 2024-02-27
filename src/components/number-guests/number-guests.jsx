@@ -3,44 +3,35 @@ import {FiMinus} from "react-icons/fi";
 import {FaPlus} from "react-icons/fa6";
 import {ButtonUI} from "@/components";
 import { useTranslation } from 'react-i18next';
+import {useDispatch, useSelector} from "react-redux";
+import {
+    plusCountRoomBooking ,minusCountChildrenBooking, minusCountOlderBooking ,minusCountRoomBooking ,plusCountChildrenBooking ,plusCountOlderBooking} from "@/slice/booking";
 
 const NumberGuests = ({guests,setGuests}) => {
-    const [countRoom, setCountRoom] = useState(0)
-    const [countOlder, setCountOlder] = useState(0)
-    const [countChildren, setCountChildren] = useState(0)
+
     const {t} = useTranslation()
+    const dispatch = useDispatch()
+    let {countRoomBooking ,countOlderBooking ,countChildrenBooking} = useSelector(state => state.bookingSlice)
+
+
     const handleIncrement=(type)=>{
         if (type==='room'){
-            setCountRoom(prevState => prevState+1)
+            dispatch(plusCountRoomBooking())
         }else if(type==='older'){
-            setCountOlder(prevState => prevState+1)
+            dispatch(plusCountOlderBooking())
         }else if(type==='child'){
-            setCountChildren(prevState => prevState+1)
+            dispatch(plusCountChildrenBooking())
         }
     }
     const handleDecrement=(type)=>{
-        if (type==='room'&&countRoom>0){
-            setCountRoom(prevState => prevState-1)
-        }else if(type==='older'&&countOlder>0){
-            setCountOlder(prevState => prevState-1)
-        }else if(type==='child'&&countChildren>0){
-            setCountChildren(prevState => prevState-1)
+        if (type==='room' && countRoomBooking>0){
+            dispatch(minusCountRoomBooking())
+        }else if(type==='older' && countOlderBooking>0){
+            dispatch(minusCountOlderBooking())
+        }else if(type==='child' && countChildrenBooking>0){
+            dispatch(minusCountChildrenBooking())
         }
     }
-
-    useEffect(() => {
-        const roomChange={...guests,room:countRoom}
-        setGuests(roomChange)
-    }, [countRoom]);
-    useEffect(() => {
-        const roomChange={...guests,older:countOlder}
-        setGuests(roomChange)
-    }, [countOlder]);
-    useEffect(() => {
-        const roomChange={...guests,children:countChildren}
-        setGuests(roomChange)
-    }, [countChildren]);
-
 
     return (
         <div className={'border shadow-md border-brown'}>
@@ -53,7 +44,7 @@ const NumberGuests = ({guests,setGuests}) => {
                                 btnBorder={true}
                                 onClick={()=>handleDecrement('room')}
                     />
-                    <p className={'font-roboto  text-xl text-white'}>{countRoom}</p>
+                    <p className={'font-roboto  text-xl text-white'}>{countRoomBooking}</p>
                     <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FaPlus className={'text-sm text-white'}/>}
                               btnBorder={true}
                                 onClick={()=>handleIncrement('room')}
@@ -70,7 +61,7 @@ const NumberGuests = ({guests,setGuests}) => {
                                       btnBorder={true}
                                       onClick={() => handleDecrement('older')}
                             />
-                            <p className={'font-roboto  text-xl text-black/80'}>{countOlder}</p>
+                            <p className={'font-roboto  text-xl text-black/80'}>{countOlderBooking }</p>
                             <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FaPlus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
                                       btnBorder={true}
                                       onClick={() => handleIncrement('older')}
@@ -87,7 +78,7 @@ const NumberGuests = ({guests,setGuests}) => {
                                       btnBorder={true}
                                       onClick={() => handleDecrement('child')}
                             />
-                            <p className={'font-roboto  text-xl text-black/80'}>{countChildren}</p>
+                            <p className={'font-roboto  text-xl text-black/80'}>{countChildrenBooking}</p>
                             <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FaPlus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
                                       btnBorder={true}
                                       onClick={() => handleIncrement('child')}

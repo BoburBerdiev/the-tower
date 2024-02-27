@@ -1,5 +1,4 @@
 import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, SwiperGallery} from '@/components/'
-import LightGalleryComponent from '@/components/swiper-gallery-zoom/swiper-gallery'
 import { useTranslation } from 'react-i18next'
 
 const hotelCardData = [
@@ -116,80 +115,99 @@ const serviceCardData = [
 ]
 const locationInfos = [
     {
+        id:2,
         title: "Рестораны и кафе",
         icon:"/image/restaurants&cafes.svg",
         locations: [
             {
+                id:30,
                 place: 'Кафе-бар: T4K Performance Bar',
                 distance: '200 м'
             },
             {
+                id:3,
                 place: 'Кафе-бар: Бухара',
                 distance: '250 м'
             },
             {
+                id:1,
                 place: 'Ресторан: Азия',
                 distance: '300 м'
             }
         ]
     },
     {
+        id:4,
         title: "Развлечения",
         icon:"/image/entertainment.svg",
         locations: [
             {
+                id:1,
                 place: 'Пкио им.Фурката',
                 distance: '2,1 км'
             },
             {
+                id:2,
                 place: 'Сеульский национальный парк',
                 distance: '2,6 км'
             },
             {
+                id:3,
                 place: 'Парк Навруз',
                 distance: '3,1 км'
             },
             {
+                id:5,
                 place: 'Пкио им.Фурката',
                 distance: '2,1 км'
             },
             {
+                id:120,
                 place: 'Сеульский национальный парк',
                 distance: '2,6 км'
             },
             {
+                id:1500,
                 place: 'Парк Навруз',
                 distance: '3,1 км'
             }
         ]
     },
     {
+        id:5,
         title: "Общественный транспорт",
         icon: "/image/public-transport.svg",
         locations: [
             {
+                id:1,
                 place: 'Поезд: Tashkent-Passenger',
                 distance: '600 м'
             },
             {
+                id:2,
                 place: 'Поезд: Tashkent',
                 distance: '850 м'
             },
             {
+                id:3,
                 place: 'Метро: Oybek',
                 distance: '1,5 км'
             },
             {
+                id:100,
+
                 place: 'Метро: Pushkin',
                 distance: '4,6 км'
             }
         ]
     },
     {
+        id:10,
         title: "Ближайшие аэропорты",
         icon: "/image/airports.svg",
         locations: [
             {
+                id:10,
                 place: 'Международный аэропорт Ташкент им Ислама Каримова',
                 distance: '200 м'
             }
@@ -300,7 +318,7 @@ const Home = () => {
                     <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
                         {
                             locationInfos.map(item => (
-                                <LocationInfos title={item.title} icon={item.icon} locations={item.locations} />
+                                <LocationInfos key={item?.id} title={item?.title} icon={item?.icon} locations={item?.locations} />
                             ))
                         }
                     </div>

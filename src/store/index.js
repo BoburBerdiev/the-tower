@@ -12,16 +12,11 @@ import {
 import storage from 'redux-persist/lib/storage'
 
 import langSlice from '@/slice/lang'
-import sortSlice from '@/slice/sort'
-import pageSlice from '@/slice/page'
-import CardSlice from '@/slice/cardPosition'
-import filterSlice from '@/slice/filter'
-import filterQuerySlice from '@/slice/filterQuery'
-import basketSlice from '@/slice/basket'
-import lastProductSlice from '@/slice/lastProduct'
+import bookingSlice from '@/slice/booking'
+
 
 const rootReducer =combineReducers({
-    langSlice,sortSlice , pageSlice ,CardSlice, lastProductSlice ,filterSlice , basketSlice ,filterQuerySlice
+    langSlice,bookingSlice
 })
 
 const persistConfig = {

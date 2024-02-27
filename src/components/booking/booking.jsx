@@ -4,6 +4,8 @@ import DatePicker from 'react-datepicker'
 import moment from "moment";
 import 'moment/locale/uz'
 import { useTranslation } from 'react-i18next'
+import {useDispatch, useSelector} from "react-redux";
+import { changleTimeBooking } from "@/slice/booking";
 
 moment.locale('uz')
 
@@ -19,21 +21,20 @@ const typeRoomArr=[
 const Booking = () => {
 
      const {t} = useTranslation()
-
+    const dispatch = useDispatch();
+    const { timeBooking ,typeBooking ,countRoomBooking ,countOlderBooking ,countChildrenBooking} = useSelector(
+        (state) => state.bookingSlice);
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
-    const [typeRoom, setTypeRoom] = useState(t('index.headerBooking.choose'))
 
-    const [guests, setGuests] = useState({
-        room:1,
-        older:2,
-        children:0
-    })
 
+    const sendBooking = () => {
+
+    }
     const handleDateChange = (date) => {
+        dispatch(changleTimeBooking([`${date[0]}` ,`${date[1]}`]))
         setStartDate(date[0])
         setEndDate(date[1])
-
     };
 
     return (
@@ -43,15 +44,16 @@ const Booking = () => {
 
             <DropdownBooking
                 title={t('index.headerBooking.checkIn')}
-                subTitle={startDate ? moment(startDate).format('ll') : t('index.headerBooking.entryDay')}
+                subTitle={timeBooking[0] ? moment(timeBooking[0]).format('ll') : t('index.headerBooking.entryDay')}
                 titleSecond={t('index.headerBooking.departure')}
-                subTitleSecond={endDate ? moment(endDate).format('ll') : t('index.headerBooking.departureDay')}>
+                subTitleSecond={timeBooking[1] ? moment(timeBooking[1]).format('ll') : t('index.headerBooking.departureDay')}>
                 <DatePicker
                     selected={null}
                     onChange={handleDateChange}
                     startDate={startDate}
                     endDate={endDate}
                     selectsRange
+                    dataFormat={'dd/MM/yyyy'}
                     inline
                     monthsShown={2}
                     minDate={moment().add(0, 'days').toDate()}
@@ -61,19 +63,19 @@ const Booking = () => {
 
             <DropdownBooking
                 title={t('index.headerBooking.numberOfGuests')}
-                subTitle={`${guests.room} ${t('index.headerBooking.room')} ${guests.older} ${t('index.headerBooking.adults')}, ${guests.children} ${t('index.headerBooking.children')}`}
+                subTitle={`${countRoomBooking} ${t('index.headerBooking.room')} ${countOlderBooking} ${t('index.headerBooking.adults')}, ${countChildrenBooking} ${t('index.headerBooking.children')}`}
             >
-                <NumberGuests setGuests={setGuests} guests={guests}/>
+                <NumberGuests  />
             </DropdownBooking>
             <div className={'bg-brown w-full lg:w-[2px] h-0.5 lg:h-6 relative z-10'}/>
             <DropdownBooking
                 title={t('index.headerBooking.typeOfNumber')}
-                subTitle={typeRoom}
+                subTitle={ typeBooking|| t('index.headerBooking.choose')}
             >
-                <TypeRoom type={typeRoomArr} setTypeRoom={setTypeRoom}/>
+                <TypeRoom type={typeRoomArr} />
             </DropdownBooking>
             <div >
-                <ButtonUI text={t('btn.booking')}/>
+                <ButtonUI text={t('btn.booking')} href={'/booking'} />
             </div>
     </div>
         </div>
