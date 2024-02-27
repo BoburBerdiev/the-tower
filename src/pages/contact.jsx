@@ -1,11 +1,23 @@
+import SEO from '@/SEO/SEO';
 import { SectionTitle, SectionUI , MesengerList } from '@/components/'
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import {contactSEO} from "@/SEO/SEO.config"
 
 
 const Contact = () => {
   const {t} = useTranslation()
+  const {lang} = useSelector(state => state.langSlice)
   return (
     <div>
+      <SEO
+                ogImage={'/logo.png'}
+                title={contactSEO[lang].title}
+                description={contactSEO[lang].description}
+                ogTitle={contactSEO[lang].ogTitle}
+                ogDescription={contactSEO[lang].ogDescription}
+                twitterHandle={contactSEO[lang].twitterHandle}
+            />
       <SectionUI bgFigureTopPostion={'-top-20 -left-1/2'} padding={'py-10 md:py-20 '}>
         <div className="grid items-center grid-cols-1 gap-10">
           {/* section title */}

@@ -1,15 +1,27 @@
+import SEO from '@/SEO/SEO'
 import { MiniHeader, NewsCard, SectionUI, Slider } from '@/components'
 import NewsCardSkeleton from '@/components/news-card-skeleton/news-card-skeleton'
 import { useTranslation } from 'react-i18next'
-
+import {news} from '@/SEO/SEO.config'
+import { useSelector } from 'react-redux'
 const index = () => {
   const {t} = useTranslation()
+const {lang} = useSelector(state => state.langSlice)
+
   const newsBanner = {
     title: t('news.title'),
     img : '/image/IMG_5451-min.jpg'
   }
   return (
     <div>
+       <SEO
+                ogImage={'/logo.png'}
+                title={news[lang].title}
+                description={news[lang].description}
+                ogTitle={news[lang].ogTitle}
+                ogDescription={news[lang].ogDescription}
+                twitterHandle={news[lang].twitterHandle}
+            />
       <div>
         <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
       </div>

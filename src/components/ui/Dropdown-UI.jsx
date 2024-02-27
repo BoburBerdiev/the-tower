@@ -1,15 +1,17 @@
 import { useState } from "react"
 import { FaAngleDown } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
-const DropdownUl = ({ list  ,  defualtList , bgStyle}) => {
-
-
+const DropdownUl = ({ list  ,  defualtList }) => {
+    // const {changleLang} = useSelector(state => state.changleLang)
     const  [dropdown , setDropdown] = useState(false)
 
     const openDropdown  = () => {
         setDropdown(!dropdown)
     }
+    const setLang = () => {
 
+    }
     return (
         <div className="relative">
 
@@ -19,18 +21,24 @@ const DropdownUl = ({ list  ,  defualtList , bgStyle}) => {
           defualtList?.title
       }
       </span>
-                <FaAngleDown className={`${dropdown && "rotate-180 " } duration-100`} />
+                <FaAngleDown className={`${dropdown && "-rotate-180 " } duration-500`} />
 
             </button>
-            <div className={`${dropdown ? 'block' : 'hidden'} z-[101]  absolute top-19 -left-2  p-3 bg-brown text-white`}>
-                {
+
+            <div class={`grid ${dropdown ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}  -ml-5 absolute left-2 rounded-b top-[36px] bg-brown z-[101] border-light transition-all ease duration-500`}>
+             <div class=" text-base overflow-hidden">
+              <div class="px-4 py-1 flex flex-col gap-2">
+              {
                     list?.map(item => (
-                        <div key={item.id} >
+                        <div key={item.id} className="cursor-pointer text-sm" onClick={setLang} >
                             {item?.title}
                         </div>
                     ))
                 }
+              </div>
             </div>
+          </div>
+          
         </div>
 
     )

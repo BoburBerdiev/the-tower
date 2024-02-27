@@ -11,6 +11,9 @@ import {
     SectionUI,
     Slider
 } from "../../components"
+import SEO from "@/SEO/SEO";
+import {roomsInnerSeo} from '@/SEO/SEO.config'
+import { useSelector } from "react-redux";
 
 const roomBannerContent = [
     {
@@ -176,13 +179,21 @@ const common = [
 
 const Room = () => {
     const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
 
     return (
         <div className="wrapper pt-10 md:pt-20 ">
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
-
+            <SEO
+                ogImage={'/logo.png'}
+                title={roomsInnerSeo[lang].title}
+                description={roomsInnerSeo[lang].description}
+                ogTitle={roomsInnerSeo[lang].ogTitle}
+                ogDescription={roomsInnerSeo[lang].ogDescription}
+                twitterHandle={roomsInnerSeo[lang].twitterHandle}
+            />
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle justify={'justify-center'} title={'Номер "Standart Double"'}/>
