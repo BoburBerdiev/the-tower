@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {changleTypeBooking} from "@/slice/booking";
+import SEO from '@/SEO/SEO';
+import {booking} from "@/SEO/SEO.config"
 const optionArr = [
   {
     value:"Стандартный номер",
@@ -44,9 +46,19 @@ useEffect(() => {
   }
 }, [selectOptionName])
 
+const {lang} = useSelector(state => state.langSlice)
+
 
   return (
     <div className="wrapper">
+       <SEO
+                ogImage={'/logo.png'}
+                title={booking[lang].title}
+                description={booking[lang].description}
+                ogTitle={booking[lang].ogTitle}
+                ogDescription={booking[lang].ogDescription}
+                twitterHandle={booking[lang].twitterHandle}
+            />
       <SectionUI padding={'py-10  md:pb-[90px]'}>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-5 md:space-y-10">
             <div>

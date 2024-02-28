@@ -1,9 +1,13 @@
+import SEO from "@/SEO/SEO";
 import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom, MiniHeader} from "@/components";
 import { useTranslation } from "react-i18next";
+import {gallery} from '@/SEO/SEO.config'
+import { useSelector } from "react-redux";
 
 const Gallery = () => {
 
     const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
     const images = [
         {
             id:1,
@@ -40,6 +44,14 @@ const Gallery = () => {
     }
   return (
       <>
+      <SEO
+              ogImage={'/image/Tower hotel___eng 1.png'}
+              title={gallery[lang].title}
+              description={gallery[lang].description}
+              ogTitle={gallery[lang].ogTitle}
+              ogDescription={gallery[lang].ogDescription}
+              twitterHandle={gallery[lang].twitterHandle}
+            />
           <div>
               <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
           </div>

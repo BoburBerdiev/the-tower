@@ -15,5 +15,16 @@ export const PageWayRouter  = ( pageAsPath , findPage) => {
      return  pageSplit?.find(item => item === findPage)
    }
 
+   
+}
 
+
+export const langSelect = ( lang , ru , eng ,uz) => {
+   if(lang === 'ru')  {
+       return ru
+   }else if(lang === 'eng'){
+       return eng
+   }else if(lang === 'uz') {
+       return uz
+   }
 }
