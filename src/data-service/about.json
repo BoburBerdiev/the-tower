@@ -1,0 +1,55 @@
+
+
+
+
+{
+  "id": 1,
+  "index_title_ru": "Добро пожаловать в The Tower Hotel!",
+  "index_title_uz": "Tower mehmonxonasiga xush kelibsiz!",
+  "index_title_en": "Welcome to The Tower Hotel!",
+  "index_sub_title_ru": "THE TOWER HOTEL это отель премиум класса, который отвечает на все стандарты обслуживания, персональное обслуживание, имеет комфортабельные номера, самые новые технологии и широкий спектр дополнительных услуг. А так же мы, предоставляем своим гостям беспрецедентный уровень комфорта, высококлассное питание, оперативное решение всех запросов. Отель расположен в центре города Ташкент, близок к основным достопримечательностям.",
+  "index_sub_title_uz": "THE TOWER HOTEL – barcha xizmat ko‘rsatish standartlariga, shaxsiy xizmat ko‘rsatishga javob beradigan, qulay xonalar, eng yangi texnologiyalar va keng ko‘lamli qo‘shimcha xizmatlarga ega bo‘lgan premium mehmonxona. Shuningdek, biz mehmonlarimizga misli ko'rilmagan darajada qulaylik, yuqori sifatli oziq-ovqat va barcha so'rovlarni tezkor hal qilishni ta'minlaymiz. Mehmonxona Toshkentning markazida, asosiy diqqatga sazovor joylarga yaqin joyda joylashgan.",
+  "index_sub_title_en": "THE TOWER HOTEL is a premium hotel that meets all service standards, personal service, has comfortable rooms, the latest technology and a wide range of additional services. We also provide our guests with an unprecedented level of comfort, high-quality food, and prompt resolution of all requests. The hotel is located in the center of Tashkent, close to the main attractions.",
+  "index_image_1": "http://127.0.0.1:8000/media/images/85d7ed69-7e0b-4287-a7aa-34fc7325649e.png",
+  "index_image_2": "http://127.0.0.1:8000/media/images/7f609fcd-9a92-4f8d-97c1-f7c562e7bfcf.png",
+  "title_ru": "Добро пожаловать в The Tower Hotel!",
+  "title_uz": "Tower mehmonxonasiga xush kelibsiz!",
+  "title_en": "Welcome to The Tower Hotel!",
+  "sub_title_ru": "Гости могут насладиться комфортным пребыванием в одном из 96 номеров, оформленных в неоклассическом стиле. Для проведения мероприятий отель предлагает 2 конференцзала вместимостью до 80 человек, а также предлагает тренажерный зал, закрытый бассейн, финскую сауну и турецкий хаммам.",
+  "sub_title_uz": "Mehmonlar neoklassik uslubda bezatilgan 96 ta xonadan birida qulay dam olishlari mumkin. Tadbirlar uchun mehmonxona 80 kishiga mo'ljallangan 2 ta konferentsiya zalini, shuningdek, sport zali, yopiq basseyn, Fin saunasi va turk hamamini taklif etadi.",
+  "sub_title_en": "Guests can enjoy a comfortable stay in one of the 96 rooms decorated in a neoclassical style. For events, the hotel offers 2 conference rooms with a capacity of up to 80 people, and also offers a gym, indoor swimming pool, Finnish sauna and Turkish hammam.",
+  "images": [
+    {
+      "id": 7,
+      "image": "http://127.0.0.1:8000/media/images/05e1d186-4540-408e-9ecd-c9f1b4ec19b0.png"
+    },
+    {
+      "id": 8,
+      "image": "http://127.0.0.1:8000/media/images/6fa69f35-fff8-427f-8470-c18234b44a17.png"
+    },
+    {
+      "id": 9,
+      "image": "http://127.0.0.1:8000/media/images/ca053556-e66b-4692-87db-2e3d4ee7e76c.png"
+    }
+  ],
+  "additional_title_ru": "Комфорт, отдых и роскошь",
+  "additional_title_uz": "Konfort, dam olish va hashamat",
+  "additional_title_en": "Comfort, relaxation and luxury",
+  "additional_sub_title_ru": "Ресторан предлагает своим гостям ежедневный завтрак «шведский стол», обед и ужин подаются в формате a la carte. Наслаждайтесь восточной атмосферой и интернациональной кухней, это лучшее место для семейных вечеров или деловых встреч. 24-часавой бар расположенный в холле отеля, гости могут насладиться свежей выпечкой и ароматным кофе во время ожидания гостей. Летняя терраса расположенная на 12 этаже отеля потрясающий вид на город в сочетании с изысканным меню оставит только теплые воспоминания о вашем пребывании.",
+  "additional_sub_title_uz": "Restoran o'z mehmonlariga har kuni bufet nonushtasini taklif qiladi, tushlik va kechki ovqat a la carte taqdim etiladi. Sharqona atmosfera va xalqaro taomlardan bahramand bo'ling, bu oilaviy oqshomlar yoki biznes uchrashuvlari uchun eng yaxshi joy. Mehmonxona qabulxonasida joylashgan 24 soatlik bar mehmonlarni kutish vaqtida yangi pishiriqlar va aromatik qahvalardan bahramand bo'lish imkonini beradi. Mehmonxonaning 12-qavatida joylashgan yozgi terasta shaharning ajoyib ko'rinishi va sizning turar joyingiz haqida faqat iliq xotiralarni qoldiradigan ajoyib menyu mavjud.",
+  "additional_sub_title_en": "The restaurant offers its guests a daily buffet breakfast, lunch and dinner are served a la carte. Enjoy the oriental atmosphere and international cuisine, this is the best place for family evenings or business meetings. A 24-hour bar located in the hotel lobby allows guests to enjoy fresh pastries and aromatic coffee while waiting for guests. The summer terrace located on the 12th floor of the hotel has a stunning view of the city combined with an exquisite menu that will leave only warm memories of your stay.",
+  "additional_images": [
+    {
+      "id": 7,
+      "image": "http://127.0.0.1:8000/media/images/05e1d186-4540-408e-9ecd-c9f1b4ec19b0.png"
+    },
+    {
+      "id": 8,
+      "image": "http://127.0.0.1:8000/media/images/6fa69f35-fff8-427f-8470-c18234b44a17.png"
+    },
+    {
+      "id": 9,
+      "image": "http://127.0.0.1:8000/media/images/ca053556-e66b-4692-87db-2e3d4ee7e76c.png"
+    }
+  ]
+}

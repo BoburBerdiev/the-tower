@@ -28,9 +28,7 @@ const Booking = () => {
     const [endDate, setEndDate] = useState(null);
 
 
-    const sendBooking = () => {
 
-    }
     const handleDateChange = (date) => {
         dispatch(changleTimeBooking([`${date[0]}` ,`${date[1]}`]))
         setStartDate(date[0])
