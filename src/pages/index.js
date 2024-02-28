@@ -300,7 +300,7 @@ const Home = () => {
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={t('index.section3.title')}/>
                 </div>
-                <SwiperSlider services={serviceCardData} xlSlidesPerView={"4"} />
+                <SwiperSlider services={serviceCardData} xlSlidesPerView={4} />
             </SectionUI>
             <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
@@ -341,7 +341,7 @@ const Home = () => {
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={t('index.section6.title')}/>
+                    <SectionTitle title={t('index.section6.title')} btnText={'Все новости'} justify={'justify-between'} href={'/news'} />
                 </div>
                 <SwiperSlider newsCard={newsCard} />
             </SectionUI>

@@ -6,8 +6,8 @@ const ServiceCard = ({src, title, href, decsr , indexForAos}) => {
   const {t} = useTranslation()
   
   return (
-    <div data-aos='fade-up' data-aos-delay={`${indexForAos}00`} className="relative overflow-hidden cursor-pointer group">
-      <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[510px]   ">
+    <div data-aos='fade-up' data-aos-delay={`${indexForAos}00`} className="relative overflow-hidden cursor-pointer group card-shadow">
+      <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[510px] group-hover:scale-105 transition duration-300  ">
           {<ImgUI objectFit={'object-cover'} src={src}/> || <Skeleton baseColor="grey" width={`100%`} height={`100%`} />}
       </div>
       <div className="w-full h-full text-white absolute z-20 top-0 transition-all duration-500 ease group-hover:bg-black/50 bg-[-298.719px_0px/267.876%_100%] bg-no-repeat grid place-content-center">

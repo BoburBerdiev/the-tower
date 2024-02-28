@@ -77,11 +77,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
                 />
               </SwiperSlide>
             ))}
-          {/*{productsArr?.map(product => (*/}
-          {/*    product?.id && <SwiperSlide className={'h-full '} key={product?.id}>*/}
 
-          {/*    </SwiperSlide>*/}
-          {/*))}*/}
           {services && 
           services?.map((item , index) => (
             <SwiperSlide className="h-full" key={item.id}>
@@ -91,12 +87,12 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
           }
 
           <div className="relative flex items-center justify-center py-4 mt-5 md:mt-10 gap-x-5">
-            <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-prev ">
+            <div className="cursor-pointer text-brown p-2  swipper-button-prev ">
               <GrPrevious className="text-2xl" />
             </div>
             <div className="inline-flex items-center gap-x-4 my-pagination pagintaion-slider"></div>
 
-            <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-next ">
+            <div className="cursor-pointer text-brown p-2  swipper-button-next ">
               <GrNext className="text-2xl" />
             </div>
           </div>
