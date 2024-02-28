@@ -1,4 +1,4 @@
-import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, SwiperGallery} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, SwiperGallery, GallerySlider} from '@/components/'
 import { useTranslation } from 'react-i18next'
 
 const hotelCardData = [
@@ -216,23 +216,19 @@ const locationInfos = [
 ]
 const gallery = [
     {
-        scr:'/image/IMG_5346-min.jpg',
-        thumbnailUrl:'/image/IMG_5346-min.jpg',
+        src:'/image/IMG_5346-min.jpg',
         id:1
     }
     ,{
-        scr:'/image/IMG_5397-min.jpg',
-        thumbnailUrl:'/image/IMG_5397-min.jpg',
+        src:'/image/IMG_5397-min.jpg',
         id:2
     }
     ,{
-        scr:'/image/IMG_5448-min.jpg',
-        thumbnailUrl:'/image/IMG_5448-min.jpg',
+        src:'/image/IMG_5448-min.jpg',
         id:3
     },
     {
-        scr:'/image/IMG_5451-min.jpg',
-        thumbnailUrl:'/image/IMG_5451-min.jpg',
+        src:'/image/IMG_5451-min.jpg',
         id:4
     },
 ]
@@ -304,13 +300,7 @@ const Home = () => {
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={t('index.section3.title')}/>
                 </div>
-                <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 md:gap-6 ">
-                    {
-                        serviceCardData.map((item , index) => (
-                            <ServiceCard indexForAos={index}   key={item.title} title={item.title} href={item.href} decsr={item.decsr} src={item.src}/>
-                        ))
-                    }
-                </div>
+                <SwiperSlider services={serviceCardData} xlSlidesPerView={"4"} />
             </SectionUI>
             <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
@@ -331,7 +321,7 @@ const Home = () => {
                 <div className="space-y-5 md:space-y-10">
                     <SectionTitle title={t('index.section5.title')} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
                     {/*<GalleryZoom />*/}
-                    <SwiperSlider gallery={gallery} />
+                    <GallerySlider gallery={gallery} />
                 </div>
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
