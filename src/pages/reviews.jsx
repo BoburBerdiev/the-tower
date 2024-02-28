@@ -39,7 +39,7 @@ const Reviews = ({selectList}) => {
               twitterHandle={reviews[lang].twitterHandle}
             />
       <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-16 lg:pb-[80px] pt-10'}>
-        <SectionTitle title={'Отзыв'} justify={'justify-center'} />
+        <SectionTitle title={'Отзыв'}  />
         <form action="" className='mt-10 flex flex-col gap-[15px]'>
           <InputUl id={'name'} name={'name'} labelText={'ФИО (на английском языке)'} placeholder={'Фамилия (по-английски)'} />
           <div className='flex justify-between gap-x-[30px] gap-y-[15px]'>
@@ -50,7 +50,7 @@ const Reviews = ({selectList}) => {
         </form>
       </SectionUI>
       <SectionUI padding={'py-10 md:py-16 lg:py-[100px]'}>
-        <SectionTitle title={'Отзывы клиентов'} justify={'justify-center'} />
+        <SectionTitle title={'Отзывы клиентов'} />
         <div className='pt-10 space-y-10'>
           {
             reviewData.map(review => (

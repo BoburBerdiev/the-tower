@@ -55,8 +55,7 @@ const Gallery = () => {
           <div>
               <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
           </div>
-          <SectionUI padding='py-10 md:py-20   '>
-                <GalleryZoom />
+          <SectionUI padding='py-10 md:py-20'>
               <GalleryZoomInner images={images}/>
           </SectionUI>
       </>

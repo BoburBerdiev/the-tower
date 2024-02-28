@@ -18,8 +18,8 @@ const RoomsRow = ({card  , order}) =>  {
                 </p>
                 <RoomsCharacterList list={card.information} />
                 <div className={'flex gap-x-5'}>
-                 <ButtonUI  text={t('btn.booking')}   />
-                 <ButtonUI  btnBorder={true} text={t('btn.more')}   />
+                 <ButtonUI  text={t('btn.booking')} href={'/booking'}   />
+                 <ButtonUI  btnBorder={true} text={t('btn.more')} href={'/123'}   />
                 </div>
             </div>
         </div>

@@ -75,13 +75,13 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <FooterContent  title={FooterContentData.menu.title} list={FooterContentData.menu.list} />
+            <FooterContent  title={FooterContentData.menu.title} list={FooterContentData.menu.list} textJustify={'text-right'} />
           </div>
           <div>
             <FooterContent  title={FooterContentData.location.title} paragraph={FooterContentData.location.paragraph} hrefText={FooterContentData.location.linkReiews} />
           </div>
           <div className='space-y-3 lg:space-y-5'>
-           <FooterContent  title={FooterContentData.managers.title}   />
+           <FooterContent textJustify={'text-right'}  title={FooterContentData.managers.title}   />
            <MesengerList/>
 {/*>>>>>>> fa165d8e17a0ada03e1f62f7eb17b6d6a1de5245*/}
           </div>

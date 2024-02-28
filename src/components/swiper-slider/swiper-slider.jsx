@@ -55,7 +55,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
             hotelCardData?.map((card) => (
               <SwiperSlide className={"h-full"} key={card?.id}>
                 <HotelCard
-                  img={card?.img}
+                  imgs={card?.imgs}
                   key={card.id}
                   id={card.id}
                   cardTitle={card?.title}

@@ -100,7 +100,7 @@ const GallerySlider = ({gallery}) => {
                   <SwiperSlide className={"h-full"} key={image?.id}>
                     <div
                         // onClick={() => handleGalleryClick(true)}
-                      className={"w-full  h-[400px] block relative overflow-hidden card-shadow duration-300"}
+                      className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden card-shadow duration-300"}
                     >
                       <ImgUI
                         src={image?.src}
