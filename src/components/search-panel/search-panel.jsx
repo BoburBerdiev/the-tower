@@ -28,7 +28,7 @@ function SearchPanel(props) {
             <button onClick={openSeachPanel} className={'flex justify-center items-center'}>
                 <CiSearch className="text-xl lg:text-2xl"/>
             </button>
-            <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 backdrop-blur-2xl bg-white/70 p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-full"}`}>
+            <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 backdrop-blur-2xl bg-white/70 p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-[200%]"}`}>
                 <button onClick={closeSeachPanel} className="self-end	">
                     <TfiClose />
                 </button>

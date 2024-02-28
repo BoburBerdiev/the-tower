@@ -9,6 +9,9 @@ import {
     RoomsRow
 } from "@/components"
 import { useTranslation } from "react-i18next";
+import SEO from "@/SEO/SEO";
+import {rooms} from "@/SEO/SEO.config"
+import { useSelector } from "react-redux";
 
 
 const roomsBannerText = [
@@ -255,6 +258,8 @@ const roomsCardsContent = [
 const index = () => {
     const [load, setLoad] = useState(false)
     const {t} = useTranslation()
+const {lang} = useSelector(state => state.langSlice)
+    
 
     
 const newsBanner = {
@@ -266,7 +271,14 @@ const newsBanner = {
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomsBannerText} innerBtn={true} />*/}
             {/*</div>*/}
-
+            <SEO
+                ogImage={'/logo.png'}
+                title={rooms[lang].title}
+                description={rooms[lang].description}
+                ogTitle={rooms[lang].ogTitle}
+                ogDescription={rooms[lang].ogDescription}
+                twitterHandle={rooms[lang].twitterHandle}
+            />
             <div>
                 <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
             </div>

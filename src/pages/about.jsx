@@ -1,4 +1,7 @@
+import SEO from '@/SEO/SEO';
 import {ImgBoxFlex, ImgUI, MiniHeader, SectionTitle, SectionUI, Slider} from '@/components';
+import { aboutUsSEO } from '@/SEO/SEO.config';
+import { useSelector } from 'react-redux';
 const AboutBannerText = [
   {
     title: "Комфорт в любое время!",
@@ -29,12 +32,22 @@ const AboutBannerText2 = [
 ];
 
 const About = () => {
+  const {lang} = useSelector(state => state.langSlice)
+
     const newsBanner = {
         title: 'О нашем отеле',
         img : '/image/IMG_5451-min.jpg'
     }
   return (
       <div className="wrapper">
+        <SEO
+                ogImage={'/logo.png'}
+                title={aboutUsSEO[lang].title}
+                description={aboutUsSEO[lang].description}
+                ogTitle={aboutUsSEO[lang].ogTitle}
+                ogDescription={aboutUsSEO[lang].ogDescription}
+                twitterHandle={aboutUsSEO[lang].twitterHandle}
+            />
           {/*<div className="w-full h-[90vh]">*/}
           {/*  <Slider SliderContent={AboutBannerText} innerBtn={true} />*/}
           {/*</div>*/}
