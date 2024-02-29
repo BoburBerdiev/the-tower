@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next"
 
-const FooterContent = ({title , list, paragraph, hrefText}) => {
+const FooterContent = ({title , list, paragraph, hrefText, textJustify}) => {
   const {t} = useTranslation()
   return (
     <>
-    <div>
-            <h3 className='mb-2 text-xl md:text-2xl font-openSans'>{title}</h3>
-            <ul className='space-y-2 font-light font-openSans  '>
+    <div className={`max-md:${textJustify}`}>
+            <h3 className='mb-2 text-xl md:text-2xl font-openSans '>{title}</h3>
+            <ul className={`space-y-2 font-light font-openSans`}>
               {
                 list?.map((item , index) => (
                   <li key={index}>
-                    <a href={item.link}>
+                    <a href={item.link} className={`w-full block`}>
                       {item.name}
                     </a></li>
                 ))

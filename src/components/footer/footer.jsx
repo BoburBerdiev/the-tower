@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="container grid grid-cols-2 gap-5 pt-10 pb-7 lg:grid-cols-4 text-iron">
           <div className='flex flex-col justify-between font-openSans text-xl gap-[10px]'>
             <a href='' className='block w-[120px] h-[90px] relative'>
-              <ImgUI src={'/image/Tower hotel___eng 1.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFit={'object-contain'}/>
+              <ImgUI src={'/image/the-tower.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFit={'object-contain'}/>
             </a>
 {/*<<<<<<< HEAD*/}
 {/*            <div className='space-y-1 text-base md:text-xl'>*/}
@@ -75,13 +75,13 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <FooterContent  title={FooterContentData.menu.title} list={FooterContentData.menu.list} />
+            <FooterContent  title={FooterContentData.menu.title} list={FooterContentData.menu.list} textJustify={'text-right'} />
           </div>
           <div>
             <FooterContent  title={FooterContentData.location.title} paragraph={FooterContentData.location.paragraph} hrefText={FooterContentData.location.linkReiews} />
           </div>
           <div className='space-y-3 lg:space-y-5'>
-           <FooterContent  title={FooterContentData.managers.title}   />
+           <FooterContent textJustify={'text-right'}  title={FooterContentData.managers.title}   />
            <MesengerList/>
 {/*>>>>>>> fa165d8e17a0ada03e1f62f7eb17b6d6a1de5245*/}
           </div>

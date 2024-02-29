@@ -1,9 +1,9 @@
 import {ButtonUI} from "@/components";
 
-const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSubtitle , href }) => {
+const SectionTitle = ({title, subTitle, colorContent, btnText, styleSubtitle , href }) => {
   return (
     
-    <div className={`flex flex-col md:flex-row gap-y-5 w-full items-center  ${justify ? justify : 'justify-start'}`}>
+    <div className={`flex gap-y-5 w-full items-center  ${btnText ? 'justify-between' : 'max-md:justify-center'}`}>
       <div className='flex flex-col items-center'>
          <h2 data-aos='fade-up' className={` ${colorContent && "text-white" } ${styleSubtitle && styleSubtitle} section-title  text-center ${subTitle && 'mb:3 md:mb-5'}`}>{title}</h2>
          <p  data-aos='fade-up' data-aos-delay='100' className={`text-center section-text  ${colorContent && "text-white" }`}>{subTitle}</p>
@@ -11,7 +11,7 @@ const SectionTitle = ({title,  justify, subTitle, colorContent, btnText, styleSu
       {
         btnText && 
         <div  data-aos='fade-up' data-aos-delay='120'>
-          <ButtonUI text={btnText} btnBorder={true} href={href}  />
+          <ButtonUI text={btnText} btnBorder={true} href={href} stylePadding={'py-2.5 md:py-3.5 px-6 md:w-full'}  />
         </div>
       }
       

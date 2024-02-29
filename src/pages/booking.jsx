@@ -59,10 +59,10 @@ const {lang} = useSelector(state => state.langSlice)
                 ogDescription={booking[lang].ogDescription}
                 twitterHandle={booking[lang].twitterHandle}
             />
-      <SectionUI padding={'py-10  md:pb-[90px]'}>
+      <SectionUI padding={'py-10 md:py-20  md:pb-[90px]'}>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-5 md:space-y-10">
             <div>
-              <SectionTitle title={'Бронирование'} justify={'justify-center'}  subTitle={'Это бронирование не подтверждено. Мы рассмотрим ваш запрос и подтвердим бронирование.'}/>
+              <SectionTitle title={'Бронирование'}  subTitle={'Это бронирование не подтверждено. Мы рассмотрим ваш запрос и подтвердим бронирование.'}/>
             </div>
             <div className=" flex flex-col items-center">
               <LittleTitleUI content={'Введите данные'}/>

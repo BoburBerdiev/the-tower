@@ -196,7 +196,7 @@ const Room = () => {
             />
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle justify={'justify-center'} title={'Номер "Standart Double"'}/>
+                    <SectionTitle title={'Номер "Standart Double"'}/>
                 </div>
                 <RoomInnerSlider images={roomBannerContent} />
                 <p className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">Комфортная комната для 1 персоны в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.В номере имеется:</p>

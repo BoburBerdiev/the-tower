@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import {ButtonUI , ImgUI} from '@/components/index'
+import {ButtonUI , ImgUI, Slider} from '@/components/index'
 import {RoomsCharacterList} from "@/components";
 
 
-const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAos}) => {
+const HotelCard = ({imgs, cardTitle, descriptions, href, price, time , indexForAos}) => {
     const {t} = useTranslation()
 
   return (
@@ -12,7 +12,7 @@ const HotelCard = ({img, cardTitle, descriptions, href, price, time , indexForAo
       <div className='flex flex-col justify-between h-full'>
         <div>
          <div className=' w-full h-[180px] md:h-[250px] xl:h-[300px]  mb-3 lg:mb-5 relative'>
-            <ImgUI src={img}  alt={'The Tower card'}  />
+            <Slider SliderContent={imgs} PaginationInner={true}/>
          </div>
          <div className='md:space-y-3 '>
            <h5 className='font-elegance leading-normal tracking-[0.48px] uppercase text-lg md:text-xl lg:text-2xl '>{cardTitle}</h5>

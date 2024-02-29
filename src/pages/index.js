@@ -6,7 +6,24 @@ import { useSelector } from 'react-redux'
 
 const hotelCardData = [
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:5,
         information: [
@@ -20,7 +37,24 @@ const hotelCardData = [
         time: 'за ночь',
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:50,
         information: [
@@ -34,7 +68,24 @@ const hotelCardData = [
         time: 'за ночь',
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:10,
         information: [
@@ -48,7 +99,24 @@ const hotelCardData = [
         time: 'за ночь',
     },
     {
-        img: "/image/IMG_5481-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:1,
         information: [
@@ -62,7 +130,24 @@ const hotelCardData = [
         time: 'за ночь',
     },
     {
-        img: "/image/IMG_5484-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:2,
         information: [
@@ -76,7 +161,24 @@ const hotelCardData = [
         time: 'за ночь',
     },
     {
-        img: "/image/IMG_5346-min.jpg" ,
+        imgs: [
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5481-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5346-min.jpg",
+            },
+            {
+                id: 1,
+                img:"/image/IMG_5484-min.jpg",
+            },
+        ] ,
         title: "Standart Twin",
         id:3,
         information: [
@@ -301,7 +403,7 @@ const Home = () => {
             <SectionUI padding={'pt-10 md:pt-20 lg:pt-[90px] pb-5 md:pb-11'} >
                 <div className="space-y-5 md:space-y-10">
                     <div className='flex  '>
-                    <SectionTitle title={t('index.section2.title')} justify={'justify-between'} href={'/news'}   btnText={t('btn.allNums')} />
+                    <SectionTitle title={t('index.section2.title')} href={'/news'}   btnText={t('btn.allNums')} />
                     </div>
                     <SwiperSlider hotelCardData={hotelCardData} />
                 </div>
@@ -329,7 +431,7 @@ const Home = () => {
             </SectionUI>
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
-                    <SectionTitle title={t('index.section5.title')} justify={'justify-between'}  btnText={t('btn.viewAllPhoto')}/>
+                    <SectionTitle title={t('index.section5.title')}  btnText={t('btn.viewAllPhoto')} href={'/gallery'}/>
                     {/*<GalleryZoom />*/}
                     <GallerySlider gallery={gallery} />
                 </div>
@@ -341,7 +443,7 @@ const Home = () => {
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">
                     <div className="text-white flex flex-col items-center max-w-[690px]">
-                        <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'} justify={'justify-center'}/>
+                        <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'}/>
                         <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">Забронируйте пребывание с предоплатой и сэкономьте до 25%</p>
                         <div  data-aos='fade-up' data-aos-delay='150'>
                             <ButtonUI text={t('btn.more')} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
@@ -351,7 +453,7 @@ const Home = () => {
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={t('index.section6.title')} btnText={'Все новости'} justify={'justify-between'} href={'/news'} />
+                    <SectionTitle title={t('index.section6.title')} btnText={t('btn.allNews')} href={'/news'}  />
                 </div>
                 <SwiperSlider newsCard={newsCard} />
             </SectionUI>

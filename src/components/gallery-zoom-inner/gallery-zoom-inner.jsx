@@ -43,8 +43,20 @@ const GalleryZoomInner = ({images}) => {
                     <Swiper
                         onSwiper={setThumbsSwiper}
                         loop={true}
-                        spaceBetween={30}
-                        slidesPerView={6.5}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 4,
+                                spaceBetween: 15,
+                            },
+                            768: {
+                                slidesPerView: 5,
+                                spaceBetween: 25
+                            },
+                            1024: {
+                                slidesPerView: 6.5,
+                                spaceBetween: 30,
+                            }
+                        }}
                         freeMode={true}
                         watchSlidesProgress={true}
                         modules={[FreeMode, Thumbs ,Navigation]}
