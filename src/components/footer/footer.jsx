@@ -35,7 +35,7 @@ const Footer = () => {
      location: {
       title: t('footer.address.title'),
       paragraph: t('footer.address.map'),
-      linkReiews: '/'
+      linkReiews: '/reviews'
     },
     managers : {
       title: t('footer.manager.title'),

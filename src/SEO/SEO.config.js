@@ -1,62 +1,56 @@
 export const seoContent = {
   index: {
       uz: {
-          title: "Sirius | Arzon narxdagi internet do'kon",
-          description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-          ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
+          title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
+          description: "Biz yuqori darajadagi xizmat, har bir mijozga individual yondashuv, keng doiradagi xizmat va qulay joylashuvni taklif etamiz.",
       },
       ru: {
-          title: 'Сириус | Дешевый интернет-магазин',
-          description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-          ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
+          title: 'THE TOWER HOTEL TASHKENT – это изысканность во всём.',
+          description: 'Мы предлагаем высокий уровень сервиса, индивидуальный подход к каждому клиенту, широкий спектр услуг и удобное расположение.',
       },
+      en: {
+        title: "THE TOWER HOTEL TASHKENT – это изысканность во всём.",
+        description: "defe"
+      }
   },
   reviews: {
     uz: {
         title: "Sirius | Arzon narxdagi internet do'kon",
         description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
     },
     ru: {
         title: 'Сириус | Дешевый интернет-магазин',
         description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
     },
   },
   gallery: {
     uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
+        title: "THE TOWER HOTEL TASHKENT bo'ylab virtual sayohat.",
+        description: "Mehmonxona fotosuratlari, xonalar va boshqalar.",
     },
     ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
+        title: 'Виртуальная экскурсия по THE TOWER HOTEL TASHKENT.',
+        description: 'Снимки отеля, условии, номера и другие.',
     },
   },
   booking: {
     uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
+        title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
+        description: "Bizda onlayn bron qilish imkoniyati mavjud.",
     },
     ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
+        title: 'THE TOWER HOTEL TASHKENT – это изысканность во всём.',
+        description: 'У нас есть возможность онлайн бронирования.',
     },
   },
   rooms: {
     uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
+        title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
+        description: "Mehmonlar neoklassik uslubda bezatilgan 96 xonadan birida qulay dam olishlari mumkin.",
     },
     ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
+        title: 'THE TOWER HOTEL TASHKENT – это изысканность во всём. ',
+        description: 'Гости могут насладиться комфортным пребыванием в одном из 96 номеров, оформленных ',
     },
   },
   roomsInnerSeo: {
@@ -73,14 +67,12 @@ export const seoContent = {
   },
   news: {
     uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
+        title: "THE TOWER HOTEL TOSHKENT",
+        description: "Barcha yangiliklardan xabardor bo'ling",
     },
     ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
+        title: 'THE TOWER HOTEL TASHKENT  ',
+        description: 'Будьте в курсе всех новостей',
     },
   },
   newsInner: {
@@ -97,26 +89,22 @@ export const seoContent = {
   },
   aboutUsSEO: {
       uz: {
-          title: 'Sirius-tech ning ochilishi: hamyonbop mobil aksessuarlar, bizning hikoyamiz, sizning uslubingiz',
-          description: "Sirius-tech ortidagi voqea haqida bilib oling. Biz arzon va zamonaviy mobil aksessuarlarni taqdim etishga ishtiyoqimiz bor. Eng soʻnggi texnologiya yoʻnalishlarini hamma uchun ochiq qilish missiyamizga qoʻshiling.",
-          ogDescription: "Sirius-tech ortidagi voqea haqida bilib oling. Biz arzon va zamonaviy mobil aksessuarlarni taqdim etishga ishtiyoqimiz bor. Eng soʻnggi texnologiya yoʻnalishlarini hamma uchun ochiq qilish missiyamizga qoʻshiling.",
+          title: 'THE TOWER HOTEL TASHKENT — barcha xizmat ko‘rsatish standartlariga javob beradigan, qulay xonalarga ega',
+          description: " eng ko‘p imkoniyatlardan foydalanadigan premium mehmonxona. Ilg'or texnologiyalar va keng ko'lamli qo'shimcha xizmatlarni taqdim etadi.",
       },
       ru: {
-          title: 'Представляем Sirius-tech: доступные мобильные аксессуары, наша история, ваш стиль',
-          description: 'Узнайте об истории Sirius-tech. Мы стремимся предоставлять доступные и стильные мобильные аксессуары. Присоединяйтесь к нашей миссии — сделать новейшие технологические тенденции доступными для каждого.',
-          ogDescription: 'Узнайте об истории Sirius-tech. Мы стремимся предоставлять доступные и стильные мобильные аксессуары. Присоединяйтесь к нашей миссии — сделать новейшие технологические тенденции доступными для каждого.',
+          title: 'THE TOWER HOTEL TASHKENT это отель премиум класса',
+          description: 'который отвечает на все стандарты обслуживания, имеет комфортабельные номера, использует самые передовые технологии и предоставляет широкий спектр дополнительных услуг.',
       },
   },
   contactSEO: {
       uz: {
-          title: "Sirius-tech bilan bog'laning - arzon mobil aksessuarlar",
-          description: "Savollaringiz bormi yoki yordam kerakmi? Tez va samimiy yordam uchun Sirius-tech bilan bog'laning. Biz sizning ehtiyojlaringiz uchun mukammal hamyonbop mobil aksessuarlarni topishga yordam berish uchun shu yerdamiz.",
-          ogDescription: "Savollaringiz bormi yoki yordam kerakmi? Tez va samimiy yordam uchun Sirius-tech bilan bog'laning. Biz sizning ehtiyojlaringiz uchun mukammal hamyonbop mobil aksessuarlarni topishga yordam berish uchun shu yerdamiz.",
+          title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
+          description: "Qo'shimcha ma'lumot uchun biz bilan bog'laning.",
       },
       ru: {
-          title: 'Свяжитесь с Sirius-tech — доступные мобильные аксессуары',
-          description: 'Есть вопросы или нужна помощь? Свяжитесь с Sirius-tech для получения оперативной и дружелюбной поддержки. Мы здесь, чтобы помочь вам найти идеальные мобильные аксессуары по доступной цене, отвечающие вашим потребностям.',
-          ogDescription: 'Есть вопросы или нужна помощь? Свяжитесь с Sirius-tech для получения оперативной и дружелюбной поддержки. Мы здесь, чтобы помочь вам найти идеальные мобильные аксессуары по доступной цене, отвечающие вашим потребностям.',
+          title: 'THE TOWER HOTEL TASHKENT – это изысканность во всём.',
+          description: 'Для дополнительной информации свяжитесь с нами.',
       },
   },
 };
