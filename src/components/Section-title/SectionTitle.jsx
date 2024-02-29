@@ -1,9 +1,9 @@
 import {ButtonUI} from "@/components";
 
-const SectionTitle = ({title, subTitle, colorContent, btnText, styleSubtitle , href }) => {
+const SectionTitle = ({title, subTitle, colorContent, justify, btnText, styleSubtitle , href }) => {
   return (
     
-    <div className={`flex gap-y-5 w-full items-center  ${btnText ? 'justify-between' : 'max-md:justify-center'}`}>
+    <div className={`flex gap-y-5 w-full items-center  ${btnText ? 'justify-between' : justify}`}>
       <div className='flex flex-col items-center'>
          <h2 data-aos='fade-up' className={` ${colorContent && "text-white" } ${styleSubtitle && styleSubtitle} section-title  text-center ${subTitle && 'mb:3 md:mb-5'}`}>{title}</h2>
          <p  data-aos='fade-up' data-aos-delay='100' className={`text-center section-text  ${colorContent && "text-white" }`}>{subTitle}</p>
