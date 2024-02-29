@@ -151,11 +151,11 @@
     background-color: #000000;
 }
 
-/*.room-inner-swiper .swiper-wrapper {*/
-/*    flex-direction: column !important;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
+.room-inner-swiper .swiper-wrapper {
+   flex-direction: column !important;
+   width: 100%;
+   height: 100%;
+}
 
 
 /* input type = number arrowi o'chirish */

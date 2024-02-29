@@ -35,7 +35,7 @@ const GallerySlider = ({gallery}) => {
   //   }
   // };
   return (
-    <div   className="card-ui relative">
+    <div   className=" relative">
        {/* <div ref={containerRef}>
         
         </div>

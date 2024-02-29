@@ -10,7 +10,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
 
 
   return (
-    <div   className="card-ui relative">
+    <div   className=" relative">
       {(hotelCardData || newsCard || services ) &&
         <Swiper
           autoplay={{
@@ -45,7 +45,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
           }}
           pagination={{
             clickable: true,
-            el: ".my-pagination",
+            el: ".my-pagination-cards",
           }}
           loop={true}
           modules={[Navigation, Pagination]}
@@ -90,7 +90,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
             <div className="cursor-pointer text-brown p-2  swipper-button-prev ">
               <GrPrevious className="text-2xl" />
             </div>
-            <div className="inline-flex items-center gap-x-4 my-pagination pagintaion-slider"></div>
+            <div className="inline-flex items-center gap-x-4 my-pagination-cards pagintaion-slider"></div>
 
             <div className="cursor-pointer text-brown p-2  swipper-button-next ">
               <GrNext className="text-2xl" />

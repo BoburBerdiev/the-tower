@@ -12,8 +12,7 @@ const HotelCard = ({imgs, cardTitle, descriptions, href, price, time , indexForA
       <div className='flex flex-col justify-between h-full'>
         <div>
          <div className=' w-full h-[180px] md:h-[250px] xl:h-[300px]  mb-3 lg:mb-5 relative'>
-            <Slider SliderContent={imgs} />
-            {/* <ImgUI src={img}  alt={'The Tower card'}  /> */}
+            <Slider SliderContent={imgs} PaginationInner={true}/>
          </div>
          <div className='md:space-y-3 '>
            <h5 className='font-elegance leading-normal tracking-[0.48px] uppercase text-lg md:text-xl lg:text-2xl '>{cardTitle}</h5>
