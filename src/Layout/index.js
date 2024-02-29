@@ -9,10 +9,10 @@ const Layout = ({ children }) => {
     } , [])
 
     return (
-        <div className={'relative'}>
+        <div className={'relative '}>
             <TopNav />
             <Navbar  />
-            <main className={"  " }>
+            <main className={"  overflow-x-hidden" }>
                 {children}
             </main>
             <Footer  />
