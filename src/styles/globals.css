@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 9px;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #00000000;
+  }
+
+  *::-webkit-scrollbar-track-piece {
+    background-color: #00000000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #8F817090;
+    border: 1px solid #ffffff40;
+    border-radius: 24px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #8F8170;
+  }
+
 @layer components {
 
     .btn-border {
@@ -177,4 +207,13 @@ input::-webkit-inner-spin-button {
 .room-inner-slider .mySwiper .swiper-slide {
     width: 100% !important;
     height: 31% !important;
+}
+
+.image-animate {
+    animation: image-animate 100s infinite;
+}
+
+@keyframes image-animate {
+    from {background-position: top;}
+    to {background-position: bottom;}
 }
