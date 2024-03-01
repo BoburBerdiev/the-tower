@@ -69,8 +69,9 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
             ))}
           {newsCard &&
             newsCard?.map((card, index) => (
-              <SwiperSlide className={"h-full"} key={card?.id} data-aos='fade-up' data-aos-delay={`${index}00`}>
+              <SwiperSlide className={"h-full"} key={card?.id} >
                 <NewsCard
+                
                   img={card?.img}
                   date={card?.date}
                   decr={card?.decr}

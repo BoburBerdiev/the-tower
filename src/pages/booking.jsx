@@ -100,11 +100,10 @@ const {lang} = useSelector(state => state.langSlice)
                 <p>{t("booking.cancelRule.text2")}</p>
                 <p className="mt-4 md:mt-6">The Tower Hotel Tashkent, {t("booking.cancelRule.phone")}: <a href="tel:+998 55 512 11 00">+998 55 512 11 00</a></p>
               </div>
-              <ButtonUI text={t('btn.booking')} typeClass={'btn-gold'} type={'submit'} />
-              {/* <Modal/> */}
             </div>
           </form>
       </SectionUI>
+              <Modal textBtn={t('btn.booking')} typeClassBtn={'btn-gold'} typeBtn={'submit'}/>
     </div>
   )
 }
