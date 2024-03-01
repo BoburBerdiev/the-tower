@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {CiSearch} from "react-icons/ci";
 import {TfiClose} from "react-icons/tfi";
-import {HotelCard} from "@/components/index";
+import {HotelCard, ImgUI} from "@/components/index";
 
 function SearchPanel(props) {
     const [searchPanel, setSearchPanel] = useState(false)
+    const [isElementsHave , setIsElementsHave] = useState(true)
     const openSeachPanel = () => {
         setSearchPanel(true)
         setTimeout(() => {
@@ -35,11 +36,22 @@ function SearchPanel(props) {
                 <div className="w-full md:max-w-[700px] mb-10">
                     <input type="text" className=" w-full rounded-md p-2 md:p-3 lg:px-5 outline-none text-sm md:text-base font-roboto border text-gray-600  shadow-lg" />
                 </div>
-                <div className="container grid grid-cols-2  lg:grid-cols-3 gap-4 lg:gap-8">
-                    {
-                        <HotelCard img={'/image/IMG_5448-min.jpg'} cardTitle={'Title'} time={'09-10'} price={'120 000'} descriptions={describe}  />
+                     {
+                        isElementsHave ?
+
+                        <div className='container flex flex-col items-center gap-5'>
+                            <h2 className='text-4xl'>Ohh no Room not found</h2>
+                            <div className='w-[500px] aspect-video relative'>
+                                <ImgUI src={'/image/not-found.png'}/>
+                            </div>
+                        </div>
+                        :
+                        <div className="container grid grid-cols-2  lg:grid-cols-3 gap-4 lg:gap-8">
+                            {
+                                <HotelCard img={'/image/IMG_5448-min.jpg'} cardTitle={'Title'} time={'09-10'} price={'120 000'} descriptions={describe}  />
+                            }
+                        </div>
                     }
-                </div>
             </div>
         </>
     );
