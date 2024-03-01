@@ -25,7 +25,43 @@ const Reviews = ({selectList}) => {
       date: '2024-01-29',
       title: 'Один из любимых отелей в Ташкенте!',
       text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-    }
+    },
+    {
+      name: 'Svetlana',
+      flag: '/image/ru-flag.svg',
+      country: 'Россия',
+      rate: '3',
+      date: '2024-01-29',
+      title: 'Один из любимых отелей в Ташкенте!',
+      text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
+    },
+    {
+      name: 'Svetlana',
+      flag: '/image/ru-flag.svg',
+      country: 'Россия',
+      rate: '3',
+      date: '2024-01-29',
+      title: 'Один из любимых отелей в Ташкенте!',
+      text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
+    },
+    {
+      name: 'Svetlana',
+      flag: '/image/ru-flag.svg',
+      country: 'Россия',
+      rate: '3',
+      date: '2024-01-29',
+      title: 'Один из любимых отелей в Ташкенте!',
+      text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
+    },
+    {
+      name: 'Svetlana',
+      flag: '/image/ru-flag.svg',
+      country: 'Россия',
+      rate: '3',
+      date: '2024-01-29',
+      title: 'Один из любимых отелей в Ташкенте!',
+      text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
+    },
   ]
   const {lang} = useSelector(state => state.langSlice)
   
@@ -52,7 +88,7 @@ const Reviews = ({selectList}) => {
       </SectionUI>
       <SectionUI padding={'py-10 md:py-16 lg:py-[100px]'}>
         <SectionTitle title={t('reviews.reviewClients')} justify={'justify-center'} />
-        <div className='pt-10 space-y-10'>
+        <div className='pt-10 space-y-10 overflow-y-auto max-h-[300px]'>
           {
             reviewData.map(review => (
               <ReviewCard name={review.name} flag={review.flag} country={review.country} rateCount={review.rate} date={review.date} title={review.title} text={review.text} />

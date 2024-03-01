@@ -96,9 +96,10 @@ const GallerySlider = ({gallery}) => {
               className="w-full mySwiper h-full flex items-center justify-center overflow-auto"
             >
               
-                {gallery?.map((image) => (
+                {gallery?.map((image, index) => (
                   <SwiperSlide className={"h-full"} key={image?.id}>
                     <div
+                      data-aos='fade-up' data-aos-delay={`${index}00`}
                         // onClick={() => handleGalleryClick(true)}
                       className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden card-shadow duration-300"}
                     >

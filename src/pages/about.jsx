@@ -55,7 +55,7 @@ const About = () => {
               <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
           </div>
           <SectionUI bgFigureTopPostion={'top-0 left-0'} bgFigureBottomPostion={'bottom-0 left-0'}
-                     padding={"py-20 md:py-[100px] lg:py-[180px]"}>
+                     padding={"py-10 md:py-20 "}>
               <div className="relative space-y-5 md:space-y-10 z-5">
                   <SectionTitle
                       title={"Добро пожаловать в The Tower Hotel!"}
