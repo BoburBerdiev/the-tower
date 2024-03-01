@@ -20,6 +20,7 @@ export const PageWayRouter  = ( pageAsPath , findPage) => {
 
 
 export const langSelect = ( lang , ru , eng ,uz) => {
+    console.log(ru)
    if(lang === 'ru')  {
        return ru
    }else if(lang === 'eng'){

@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import SEO from "@/SEO/SEO";
 import {rooms} from "@/SEO/SEO.config"
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 
 const roomsBannerText = [
@@ -255,17 +256,21 @@ const roomsCardsContent = [
         decr: "Комфортная комната для двух персон в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса."
     },
 ]
-const index = () => {
+
+
+const index = ({rooms}) => {
     const [load, setLoad] = useState(false)
     const {t} = useTranslation()
 const {lang} = useSelector(state => state.langSlice)
-    
 
-    
-const newsBanner = {
-    title: t('rooms.miniHeader'),
-    img : '/image/IMG_5451-min.jpg'
-}
+
+    const newsBanner = {
+        title: t('rooms.miniHeader'),
+        img : '/image/IMG_5451-min.jpg'
+    }
+
+
+    console.log(rooms)
     return (
         <div>
             {/*<div className="w-full h-[90vh]">*/}
@@ -273,11 +278,11 @@ const newsBanner = {
             {/*</div>*/}
             <SEO
                 ogImage={'/logo.png'}
-                title={rooms[lang].title}
-                description={rooms[lang].description}
-                ogTitle={rooms[lang].ogTitle}
-                ogDescription={rooms[lang].ogDescription}
-                twitterHandle={rooms[lang].twitterHandle}
+                title={rooms[lang]?.title}
+                description={rooms[lang]?.description}
+                ogTitle={rooms[lang]?.ogTitle}
+                ogDescription={rooms[lang]?.ogDescription}
+                twitterHandle={rooms[lang]?.twitterHandle}
             />
             <div>
                 <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
@@ -287,11 +292,8 @@ const newsBanner = {
 
                 <div className="grid grid-cols-1 gap-5 lg:gap-[30px] pt-10">
                     {
-                        load ?
-                            Array(9).fill("").map((_, ind) => (
-                                <HotelCardSkeleton key={ind}/>
-                            ))
-                            :
+                        rooms?.results &&
+
                             roomsCardsContent.map((card , index) => (
                                 <>
                                     {/*<HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />*/}
@@ -307,3 +309,20 @@ const newsBanner = {
 }
 
 export default index
+export async function getServerSideProps({req, res}) {
+    res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=10, stale-while-revalidate=59"
+    );
+    // Fetch data from external API
+    const [rooms ] = await Promise.all([
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rooms/`),
+
+    ]);
+    return {
+        props: {
+            rooms: rooms?.data,
+
+        },
+    };
+}

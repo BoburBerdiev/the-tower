@@ -5,6 +5,9 @@ import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { HiChevronDown } from "react-icons/hi";
 import Skeleton, {SkeletonTheme} from "react-loading-skeleton";
+import {log} from "next/dist/server/typescript/utils";
+import {langSelect} from "@/helper";
+import {useSelector} from "react-redux";
 
 const Slider = ({
   SliderContent,
@@ -13,6 +16,9 @@ const Slider = ({
   PaginationInner,
   isLoading
 }) => {
+  const {lang} = useSelector(state => state.langSlice)
+
+  console.log(SliderContent)
   return (
     <SkeletonTheme baseColor="#EBEAE8" highlightColor="#D7D3CE">
     <div
@@ -40,38 +46,39 @@ const Slider = ({
         }}
         modules={[EffectFade, Autoplay, Navigation , Pagination]}
       >
-        {SliderContent?.map((slider, index) => (
-          
-          
+        {SliderContent?.map((slider) => (
+
           <SwiperSlide
-            key={index}
+            key={slider?.id}
             className="relative flex justify-center w-full h-full"
           >
             {
  slider.title &&
             <div className="relative z-20 w-full h-full">
               <div className="container flex flex-col items-center justify-center h-full pb-10 space-y-5 ">
-                 
+
                 <h2 data-aos='fade-up' data-aos-delay='0.1' className="text-center header-title w-full max-w-[1000px] drop-shadow-lg">{
-                  
+
                   isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : slider.title
                   }</h2>
                   {
-                    slider.subTitle && <p data-aos='fade-up' data-aos-delay='50' className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
-                    {
-                      isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : slider.subTitle
-                    }
+                    slider.subTitle_ru && <p data-aos='fade-up' data-aos-delay='50' className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
+                      {langSelect(lang ,slider?.subTitle_ru, slider?.subTitle_en , slider?.subTitle_uz )}
                   </p>
                   }
-                
+
               </div>
             </div>
+
+
             }
             <div className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
             {
-              isLoading ? <Skeleton duration={2} height={'100%'} width={'100%'} /> : <ImgUI  objectFit="object-cover" src={slider.img} />
+              isLoading ? <Skeleton duration={2} height={'100%'} width={'100%'} /> : <ImgUI  objectFit="object-cover" src={slider?.image} />
             }
-              
+
+
+
             </div>
           </SwiperSlide>
         ))}
