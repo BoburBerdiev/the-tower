@@ -1,18 +1,21 @@
 import {Footer, Navbar, TopNav} from "@/components/index";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Aos from "aos";
 
 const Layout = ({ children }) => {
+
+  const [navOpen, setNavOpen] = useState(false)
+    
 
     useEffect(() => {
             Aos.init()
     } , [])
 
     return (
-        <div className={'relative '}>
+        <div className={ `relative ${navOpen ? 'h-screen overflow-hidden': ''}`}>
             <TopNav />
-            <Navbar  />
-            <main className={"  overflow-x-hidden" }>
+            <Navbar setNavOpen={setNavOpen} navOpen={navOpen}/>
+            <main className={`  overflow-x-hidden` }>
                 {children}
             </main>
             <Footer  />

@@ -7,7 +7,7 @@ import {ButtonUI, ImgUI, SearchPanel} from "@/components";
 
 
 
-const Navbar = () => {
+const Navbar = ({setNavOpen,navOpen}) => {
   const { t } = useTranslation();
 
   const navLinks = [
@@ -37,25 +37,14 @@ const Navbar = () => {
     },
   ]
 
-  const [navOpen, setNavOpen] = useState(false)
   const [isNavScroll , setIsNavScroll] = useState(false)
-  
-  // useEffect(() => {
-  //   openNav()
-  // }, [navOpen])
+
   
  
-  console.log(document.body.offsetWidth);
   const openNav = () => {
-    if (document.body.offsetWidth < 1024) {
       setNavOpen(!navOpen)
-      if (navOpen === false) {
-        document.body.classList.add('overflow-hidden')
-      }else {
-        document.body.classList.remove('overflow-hidden')
-      }
     }
-  }
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 36) {
       setIsNavScroll(true)
@@ -67,7 +56,7 @@ const Navbar = () => {
   return (  
     <>
 
-    <nav className='bg-[#FFFFFF] py-3 w-full z-[100] sticky left-0  top-0 shadow-md'>
+    <nav className='bg-[#FFFFFF] py-3 w-full z-[100] fixed  left-0  top-0 shadow-md'>
       <div  className=" container  flex justify-between overflow-x-hidden font-roboto">
         <div className="flex items-center gap-3 md:gap-7">
           <Link href="/" className={'relative block w-12 md:w-16 h-9 md:h-12'}>
