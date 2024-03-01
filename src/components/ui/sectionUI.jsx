@@ -28,7 +28,7 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           
           {
             bgFigureBottomPostion &&
-          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute image-translate w-full  h-[300px] z-[1]`}>
+          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute image-animate-scale w-full  h-[300px] z-[1]`}>
             <ImgUI src={'/image/pattern.png'} objectFit={'object-cover'} />
           </div>
           }
