@@ -2,6 +2,9 @@ import SEO from '@/SEO/SEO';
 import {ImgBoxFlex, ImgUI, MiniHeader, SectionTitle, SectionUI, Slider} from '@/components';
 import { aboutUsSEO } from '@/SEO/SEO.config';
 import { useSelector } from 'react-redux';
+import axios from "axios";
+import {useEffect} from "react";
+
 const AboutBannerText = [
   {
     title: "Комфорт в любое время!",
@@ -31,9 +34,16 @@ const AboutBannerText2 = [
   },
 ];
 
-const About = () => {
-  const {lang} = useSelector(state => state.langSlice)
+const About = ({header}) => {
 
+  const {lang} = useSelector(state => state.langSlice)
+    console.log(header)
+
+
+    useEffect(() => {
+        console.log(1)
+        console.log(header)
+    } , [])
     const newsBanner = {
         title: 'О нашем отеле',
         img : '/image/IMG_5451-min.jpg'
@@ -117,3 +127,22 @@ const About = () => {
 };
 
 export default About;
+
+
+export async function getServerSideProps({req, res}) {
+    res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=10, stale-while-revalidate=59"
+    );
+    // Fetch data from external API
+    const [header ] = await Promise.all([
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/about/`),
+
+    ]);
+    return {
+        props: {
+            header: header?.data,
+
+        },
+    };
+}
