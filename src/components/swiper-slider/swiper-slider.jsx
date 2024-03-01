@@ -52,7 +52,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
           className="w-full mySwiper h-full flex items-center justify-center overflow-auto"
         >
           {hotelCardData &&
-            hotelCardData?.map((card) => (
+            hotelCardData?.map((card, index) => (
               <SwiperSlide className={"h-full"} key={card?.id}>
                 <HotelCard
                   imgs={card?.imgs}
@@ -63,6 +63,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
                   href={card?.slug}
                   price={card?.price}
                   time={card?.time}
+                  indexForAos={index}
                 />
               </SwiperSlide>
             ))}
