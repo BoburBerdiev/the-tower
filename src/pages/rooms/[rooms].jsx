@@ -182,7 +182,7 @@ const Room = () => {
     const {lang} = useSelector(state => state.langSlice)
 
     return (
-        <div className="wrapper pt-10 md:pt-20 ">
+        <div className="wrapper pt-10 md:pt-20 relative">
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
@@ -196,17 +196,17 @@ const Room = () => {
             />
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={'Номер "Standart Double"'}/>
+                    <SectionTitle title={'Номер "Standart Double"'} justify={'justify-center'}/>
                 </div>
                 <RoomInnerSlider images={roomBannerContent} />
-                <p className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">Комфортная комната для 1 персоны в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.В номере имеется:</p>
+                <p data-aos='fade-left' className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">Комфортная комната для 1 персоны в неоклассическом стиле с элементами минимализма имеет все удобства номера премиум класса и отвечает на все стандарты высокого сервиса.В номере имеется:</p>
             </div>
            <SectionUI padding={'py-[50px]'}>
-                <h3 className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">Удобства и услуги </h3>
+                <h3 data-aos='fade-up' className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">Удобства и услуги </h3>
                 <div className="flex flex-wrap gap-2 md:gap-6">
                     {
-                        services?.map(service => (
-                            <div key={service.id} className="flex items-center gap-2 md:gap-4 py-2 px-3 md:pl-5 md:py-3.5 md:pr-11  border border-[#B0A79B] cursor-pointer text-[#59657A] font-roboto text-sm md:text-base lg:text-lg">
+                        services?.map((service, index) => (
+                            <div data-aos='fade-in' data-aos-delay={`${index}00`} key={service.id} className="flex items-center gap-2 md:gap-4 py-2 px-3 md:pl-5 md:py-3.5 md:pr-11  border border-[#B0A79B] cursor-pointer text-[#59657A] font-roboto text-sm md:text-base lg:text-lg">
                                 <img src={service.img} alt="Icon" className="w-4 h-4 md:w-6 md:h-6 object-contain" />
                                 <span>{service.text}</span>
                             </div>
@@ -214,13 +214,13 @@ const Room = () => {
                     }
                 </div>
                 <div className="py-10">
-                    <h4 className="flex items-center gap-x-[10px] text-lg">
+                    <h4 data-aos='fade-up' className="flex items-center gap-x-[10px] text-lg">
                         <RxInfoCircled className="text-[#808080] text-xl" />
                         <span className="font-roboto font-medium">Общие</span>
                     </h4>
                     <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-x-5 lg:gap-x-[30px] gap-y-[10px] max-md:text-sm lg:text-lg font-roboto mt-[10px]">
-                        {common.map(item => (
-                            <li key={item.id} className="flex items-center gap-2 md:gap-x-[10px]">
+                        {common.map((item, index) => (
+                            <li data-aos='fade-left' data-aos-delay={`${index}9`} key={item.id} className="flex items-center gap-2 md:gap-x-[10px]">
                                 <IoMdCheckmark className="md:text-xl text-[#808080]" />
                                 {item.text}
                             </li>
@@ -228,7 +228,7 @@ const Room = () => {
                     </ul>
                 </div>
            </SectionUI>
-           <div className="bg-white duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-xl py-5">
+           <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-xl py-5">
                 <div className="container flex items-center justify-between gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
                         Номер "{roomIinfo.type}"

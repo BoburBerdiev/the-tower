@@ -23,7 +23,7 @@ const Contact = () => {
           {/* section title */}
           <div>
             <div className="mb-10">
-              <SectionTitle title={t('contact.title')} />
+              <SectionTitle title={t('contact.title')} justify={'justify-center'} />
             </div>
             <div data-aos='fade-up' data-aos-once data-aos-delay='0.2' className="space-y-5 text-center">
               <a className="block" href={`tel:${9999999}`}>
