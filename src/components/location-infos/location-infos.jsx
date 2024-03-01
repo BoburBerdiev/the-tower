@@ -9,10 +9,10 @@ const LocationInfos = ({title, icon, alt, locations}) => {
         </div>
         <h3 className='text-lg font-medium'>{title}</h3>
       </div>
-      <ul className='space-y-[5px] md:space-y-[10px]'>
+      <ul data-aos='fade-right' className='space-y-[5px] md:space-y-[10px]'>
         {
           locations.map((location, index) => (
-            <li data-aos='fade-right' data-aos-delay={`${index}00`} key={location?.id} className='flex items-center justify-between text-sm lg:text-base gap-10 font-thin'>
+            <li key={location?.id} className='flex items-center justify-between text-sm lg:text-base gap-10 font-thin'>
               <p>{location.place}</p>
               <p className=" shrink-0 text-[12px] lg:text-base">{location.distance}</p>
             </li>

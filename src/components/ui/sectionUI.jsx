@@ -10,7 +10,7 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           
           {
             bgFigureTopPostion &&
-          <div className={` ${bgFigureTopPostion ? bgFigureTopPostion : " top-0 left-0"} absolute  w-full  h-[300px] z-[1] hidden md:block`}>
+          <div className={` ${bgFigureTopPostion ? bgFigureTopPostion : " top-0 left-0"} absolute image-animate-scale   w-full  h-[300px] z-[1] hidden md:block`}>
             <ImgUI src={'/image/pattern.png'} objectFit={'object-cover'} />
           </div>
           }
@@ -28,7 +28,7 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           
           {
             bgFigureBottomPostion &&
-          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute  w-full  h-[300px] z-[1]`}>
+          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute image-animate-scale w-full  h-[300px] z-[1]`}>
             <ImgUI src={'/image/pattern.png'} objectFit={'object-cover'} />
           </div>
           }
