@@ -38,8 +38,9 @@ const Navbar = ({setNavOpen,navOpen}) => {
   ]
 
   const [isNavScroll , setIsNavScroll] = useState(false)
+  const [scrollPx , setScrollPx] = useState('0')
 
-  
+  console.log(scrollPx)
  
   const openNav = () => {
       setNavOpen(!navOpen)
@@ -48,15 +49,17 @@ const Navbar = ({setNavOpen,navOpen}) => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 36) {
       setIsNavScroll(true)
+      setScrollPx('0')
     }else {
       setIsNavScroll(false)
+      setIsNavScroll('36px')
     }
   })
  
   return (  
     <>
 
-    <nav className='bg-[#FFFFFF] py-3 w-full z-[100] fixed  left-0  top-0 shadow-md'>
+    <nav className={`bg-[#FFFFFF] py-3 w-full z-[100] static  left-0  top-[${scrollPx}] shadow-md`}>
       <div  className=" container  flex justify-between overflow-x-hidden font-roboto">
         <div className="flex items-center gap-3 md:gap-7">
           <Link href="/" className={'relative block w-12 md:w-16 h-9 md:h-12'}>

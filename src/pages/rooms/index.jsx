@@ -262,7 +262,7 @@ const index = ({rooms}) => {
     const [load, setLoad] = useState(false)
     const {t} = useTranslation()
 const {lang} = useSelector(state => state.langSlice)
-
+    console.log(rooms)
 
     const newsBanner = {
         title: t('rooms.miniHeader'),
@@ -290,13 +290,12 @@ const {lang} = useSelector(state => state.langSlice)
             <SectionUI bgFigureTopPostion={'top-0 left-0'}
                        padding={'py-10 md:py-20 lg:pb-[90px] lg:pt-32 xl:pt-[100px]'}>
 
-                <div className="grid grid-cols-1 gap-5 lg:gap-[30px] pt-10">
+                <div className="grid grid-cols-1 gap-5 lg:gap-[30px] ">
                     {
                         rooms?.results &&
 
-                            roomsCardsContent.map((card , index) => (
+                        rooms?.results?.map((card , index) => (
                                 <>
-                                    {/*<HotelCard img={card.img} key={card.id} id={card.id} cardTitle={card.title} descriptions={card.information} href={card.slug} price={card.price} time={card.time} />*/}
                                     <RoomsRow key={card.id} order={index} card={card}/>
                                 </>
 

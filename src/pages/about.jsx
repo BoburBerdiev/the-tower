@@ -80,7 +80,7 @@ const About = ({about ,services}) => {
           {
               services?.map((service , ind) => (
 
-              <ImgBoxFlex key={service?.id} imgOrder={ind % 2}  title_uz={service?.title_uz} title_ru={service?.title_ru} title_en={service?.title_en} subTitle_ru={service?.description_ru} subTitle_en={service?.description_uz} subTitle_uz={service?.description_uz}  />
+              <ImgBoxFlex key={service?.id} imgOrder={ind % 2}  title_uz={service?.title_uz} title_ru={service?.title_ru} title_en={service?.title_en} subTitle_ru={service?.description_ru} subTitle_en={service?.description_uz} subTitle_uz={service?.description_uz} images={service?.images} />
               ))
           }
           </SectionUI>

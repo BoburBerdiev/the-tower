@@ -53,17 +53,17 @@ const Slider = ({
             className="relative flex justify-center w-full h-full"
           >
             {
- slider.title &&
+ slider.title_ru &&
             <div className="relative z-20 w-full h-full">
               <div className="container flex flex-col items-center justify-center h-full pb-10 space-y-5 ">
 
                 <h2 data-aos='fade-up' data-aos-delay='0.1' className="text-center header-title w-full max-w-[1000px] drop-shadow-lg">{
 
-                  isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : slider.title
+                  isLoading ? <Skeleton duration={1} height={'100%'} width={'100%'} /> : langSelect(lang ,slider?.title_ru, slider?.title_en , slider?.title_uz )
                   }</h2>
                   {
-                    slider.subTitle_ru && <p data-aos='fade-up' data-aos-delay='50' className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
-                      {langSelect(lang ,slider?.subTitle_ru, slider?.subTitle_en , slider?.subTitle_uz )}
+                    slider.sub_title_ru && <p data-aos='fade-up' data-aos-delay='50' className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
+                      {langSelect(lang ,slider?.sub_title_ru, slider?.sub_title_en , slider?.sub_title_uz )}
                   </p>
                   }
 
@@ -73,12 +73,7 @@ const Slider = ({
 
             }
             <div className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
-            {
-              isLoading ? <Skeleton duration={2} height={'100%'} width={'100%'} /> : <ImgUI  objectFit="object-cover" src={slider?.image} />
-            }
-
-
-
+             <ImgUI  objectFit="object-cover" src={slider?.image} />
             </div>
           </SwiperSlide>
         ))}

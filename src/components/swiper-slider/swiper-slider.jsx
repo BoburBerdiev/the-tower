@@ -2,11 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { HotelCard, ImgUI, NewsCard, ServiceCard } from "@/components";
+import {langSelect} from "@/helper";
+import {useSelector} from "react-redux";
 
 
 
 const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) => {
-
+  const {lang} = useSelector(state => state.langSlice)
 
 
   return (
@@ -55,14 +57,12 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
             hotelCardData?.map((card, index) => (
               <SwiperSlide className={"h-full"} key={card?.id}>
                 <HotelCard
-                  imgs={card?.imgs}
+                  imgs={card?.images}
                   key={card.id}
                   id={card.id}
-                  cardTitle={card?.title}
+                  cardTitle={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
                   descriptions={card?.information}
-                  href={card?.slug}
-                  price={card?.price}
-                  time={card?.time}
+                  href={`rooms/${card?.slug}`}
                   indexForAos={index}
                 />
               </SwiperSlide>
@@ -72,10 +72,10 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
               <SwiperSlide className={"h-full"} key={card?.id} >
                 <NewsCard
                 
-                  img={card?.img}
+                  img={card?.main_image}
                   date={card?.date}
-                  decr={card?.decr}
-                  href={card?.href}
+                  decr={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
+                  href={`news/${card?.slug}`}
                 />
               </SwiperSlide>
             ))}
@@ -83,7 +83,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
           {services && 
           services?.map((item , index) => (
             <SwiperSlide className="h-full" key={item.id}>
-              <ServiceCard indexForAos={index}  key={item.title} title={item.title} href={item.href} decsr={item.decsr} src={item.src}/>
+              <ServiceCard indexForAos={index} key={item?.id} title={langSelect(lang ,item?.title_ru, item?.title_en , item?.title_uz )} href={`/about#${item?.title_uz}`} decsr={langSelect(lang ,item?.description_ru, item?.description_en , item?.description_uz )} src={item?.image?.image}/>
             </SwiperSlide>
           ))
           }
