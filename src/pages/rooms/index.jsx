@@ -262,7 +262,6 @@ const index = ({rooms}) => {
     const [load, setLoad] = useState(false)
     const {t} = useTranslation()
 const {lang} = useSelector(state => state.langSlice)
-    console.log(rooms)
 
     const newsBanner = {
         title: t('rooms.miniHeader'),
@@ -270,7 +269,6 @@ const {lang} = useSelector(state => state.langSlice)
     }
 
 
-    console.log(rooms)
     return (
         <div>
             {/*<div className="w-full h-[90vh]">*/}

@@ -40,8 +40,7 @@ const Navbar = ({setNavOpen,navOpen}) => {
   const [isNavScroll , setIsNavScroll] = useState(false)
   const [scrollPx , setScrollPx] = useState('0')
 
-  console.log(scrollPx)
- 
+
   const openNav = () => {
       setNavOpen(!navOpen)
     }

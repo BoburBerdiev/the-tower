@@ -8,11 +8,9 @@ import {useEffect} from "react";
 const About = ({about ,services}) => {
 
     const {lang} = useSelector(state => state.langSlice)
-    console.log(about)
 
 
     useEffect(() => {
-        console.log(1)
         console.log(about?.images)
     } , [])
     const newsBanner = {

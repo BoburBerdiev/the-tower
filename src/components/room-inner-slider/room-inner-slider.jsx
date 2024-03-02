@@ -5,7 +5,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {useState} from "react";
 
 const RoomInnerSlider = ({images}) => {
-    // console.log(images[0].src)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (

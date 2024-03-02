@@ -7,321 +7,6 @@ import axios from "axios";
 import about from "@/pages/about";
 import {langSelect} from "@/helper";
 
-const hotelCardData = [
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:5,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:50,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:10,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:1,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:2,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-    {
-        imgs: [
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5481-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5346-min.jpg",
-            },
-            {
-                id: 1,
-                img:"/image/IMG_5484-min.jpg",
-            },
-        ] ,
-        title: "Standart Twin",
-        id:3,
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],
-        slug: "link",
-        price: '400 000 ',
-        time: 'за ночь',
-    },
-]
-const serviceCardData = [
-    {
-        title: 'Ресторан',
-        decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
-        href: 'link',
-        src: '/image/IMG_5448-min.jpg'
-    },
-    {
-        title: 'Лаунж-бар',
-        decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
-        href: 'link',
-        src: '/image/IMG_5513-min.jpg'
-    },
-    {
-        title: 'Конференц-зал',
-        decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
-        href: 'link',
-        src: '/image/IMG_7362-min.jpg'
-    },
-    {
-        title: 'Тренажерный зал',
-        decsr: 'Лаунж-бар, расположенный в вестибюле отеля, является идеальным местом для отдыха в вечернее время, местом для приятной встречи с друзьями или с деловыми партнерами. ',
-        href: 'link',
-        src: '/image/IMG_7363-min.jpg'
-    },
-]
-const locationInfos = [
-    {
-        id:2,
-        title: "Рестораны и кафе",
-        icon:"/image/restaurants&cafes.svg",
-        locations: [
-            {
-                id:30,
-                place: 'Кафе-бар: T4K Performance Bar',
-                distance: '200 м'
-            },
-            {
-                id:3,
-                place: 'Кафе-бар: Бухара',
-                distance: '250 м'
-            },
-            {
-                id:1,
-                place: 'Ресторан: Азия',
-                distance: '300 м'
-            }
-        ]
-    },
-    {
-        id:4,
-        title: "Развлечения",
-        icon:"/image/entertainment.svg",
-        locations: [
-            {
-                id:1,
-                place: 'Пкио им.Фурката',
-                distance: '2,1 км'
-            },
-            {
-                id:2,
-                place: 'Сеульский национальный парк',
-                distance: '2,6 км'
-            },
-            {
-                id:3,
-                place: 'Парк Навруз',
-                distance: '3,1 км'
-            },
-            {
-                id:5,
-                place: 'Пкио им.Фурката',
-                distance: '2,1 км'
-            },
-            {
-                id:120,
-                place: 'Сеульский национальный парк',
-                distance: '2,6 км'
-            },
-            {
-                id:1500,
-                place: 'Парк Навруз',
-                distance: '3,1 км'
-            }
-        ]
-    },
-    {
-        id:5,
-        title: "Общественный транспорт",
-        icon: "/image/public-transport.svg",
-        locations: [
-            {
-                id:1,
-                place: 'Поезд: Tashkent-Passenger',
-                distance: '600 м'
-            },
-            {
-                id:2,
-                place: 'Поезд: Tashkent',
-                distance: '850 м'
-            },
-            {
-                id:3,
-                place: 'Метро: Oybek',
-                distance: '1,5 км'
-            },
-            {
-                id:100,
-
-                place: 'Метро: Pushkin',
-                distance: '4,6 км'
-            }
-        ]
-    },
-    {
-        id:10,
-        title: "Ближайшие аэропорты",
-        icon: "/image/airports.svg",
-        locations: [
-            {
-                id:10,
-                place: 'Международный аэропорт Ташкент им Ислама Каримова',
-                distance: '200 м'
-            }
-        ]
-    }
-]
 const gallery = [
     {
         src:'/image/IMG_5346-min.jpg',
@@ -340,37 +25,8 @@ const gallery = [
         id:4
     },
 ]
-const newsCard = [
-    {
-        id:24,
-        img: '/image/IMG_5497-min.jpg',
-        date: "17 февр. 2023г.",
-        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
-        href: "/"
-    },
-    {
-        id:23,
-        img: '/image/IMG_5497-min.jpg',
-        date: "17 февр. 2023г.",
-        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
-        href: "/"
-    },
-    {
-        id:21,
-        img: '/image/IMG_5497-min.jpg',
-        date: "17 февр. 2023г.",
-        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
-        href: "/"
-    },
-    {
-        id:20,
-        img: '/image/IMG_5497-min.jpg',
-        date: "17 февр. 2023г.",
-        decr: 'Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.',
-        href: "/"
-    },
-]
-const Home = ({home , about , rooms , services , news}) => {
+
+const Home = ({home , about , rooms , services , news , landmarks}) => {
     // landmarks
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -424,11 +80,11 @@ const Home = ({home , about , rooms , services , news}) => {
                 <div className='relative z-[5]'>
                     <SectionTitle title={t('index.section4.title')} colorContent={true} />
                     <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
-                        {/*{*/}
-                        {/*    landmarks?.map(item => (*/}
-                        {/*        <LocationInfos key={item?.id} title={langSelect(lang , item?.title_ru, item?.title_en , item?.title_uz )} icon={item?.image} locations={item?.landmarks} />*/}
-                        {/*    ))*/}
-                        {/*}*/}
+                        {
+                            landmarks?.map(item => (
+                                <LocationInfos key={item?.id} title={langSelect(lang , item?.title_ru, item?.title_en , item?.title_uz )} icon={item?.image} locations={item?.landmarks} />
+                            ))
+                        }
                     </div>
                 </div>
                 <div className='absolute -bottom-24 left-0 right-0 z-[1] h-full w-full '>
@@ -482,7 +138,7 @@ export async function getServerSideProps({req, res}) {
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rooms/?page=1&page_size=10`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/services/?page=1&page_size=10`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/news/`),
-        // axios.get(`${process.env.NEXT_PUBLIC_API_URL}/landmarkcategories/`),
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/landmarkcategories/`),
     ]);
     return {
         props: {
@@ -491,7 +147,7 @@ export async function getServerSideProps({req, res}) {
             rooms: rooms?.data,
             services: services?.data?.results,
             news: news?.data,
-            // landmarks: landmarks?.data?.results
+            landmarks: landmarks?.data
         },
     };
 }

@@ -18,7 +18,6 @@ const Slider = ({
 }) => {
   const {lang} = useSelector(state => state.langSlice)
 
-  console.log(SliderContent)
   return (
     <SkeletonTheme baseColor="#EBEAE8" highlightColor="#D7D3CE">
     <div
