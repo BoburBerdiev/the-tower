@@ -24,6 +24,10 @@
     "notFound": {
       "text": "Элемент не найден"
     },
+    "modal": {
+      "questionCorrect": "Ваш запрос принят",
+      "contactYou": "Мы свяжемся с вами"
+    },
     "footer": {
       "menu": {
         "title": "Навигация",

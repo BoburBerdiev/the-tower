@@ -95,7 +95,7 @@ const {lang} = useSelector(state => state.langSlice)
             </div>
           </form>
       </SectionUI>
-      <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}/>
+      <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} content={t('modal.questionCorrect')}/>
     </div>
   )
 }
