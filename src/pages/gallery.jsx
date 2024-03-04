@@ -1,6 +1,6 @@
 import SEO from "@/SEO/SEO";
 import {GalleryZoomInner, SectionUI, MiniHeader} from "@/components";
-import {gallery} from '@/SEO/SEO.config'
+import {gallerySEO} from '@/SEO/SEO.config'
 import { useSelector } from "react-redux";
 import axios from "axios";
 import {langSelect} from "@/helper";
@@ -11,12 +11,12 @@ const Gallery = ({galleryData}) => {
   return (
       <>
       <SEO
-              ogImage={'/image/Tower hotel___eng 1.png'}
-              title={gallery[lang].title}
-              description={gallery[lang].description}
-              ogTitle={gallery[lang].ogTitle}
-              ogDescription={gallery[lang].ogDescription}
-              twitterHandle={gallery[lang].twitterHandle}
+              ogImage={'/image/logo.png'}
+              title={gallerySEO[lang].title}
+              description={gallerySEO[lang].description}
+              ogTitle={gallerySEO[lang].ogTitle}
+              ogDescription={gallerySEO[lang].ogDescription}
+              twitterHandle={gallerySEO[lang].twitterHandle}
             />
           <div>
               <MiniHeader img={galleryData?.header_image} title={langSelect(lang , galleryData?.title_ru, galleryData?.title_en , galleryData?.title_uz )}/>

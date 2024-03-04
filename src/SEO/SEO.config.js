@@ -1,5 +1,5 @@
 export const seoContent = {
-  index: {
+  indexSEO: {
       uz: {
           title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
           description: "Biz yuqori darajadagi xizmat, har bir mijozga individual yondashuv, keng doiradagi xizmat va qulay joylashuvni taklif etamiz.",
@@ -13,7 +13,7 @@ export const seoContent = {
         description: 'We offer a high level of service, individual approach to each client, a wide range of services, and convenient location.'
       }
   },
-  reviews: {
+  reviewsSEO: {
     uz: {
         title: "Sirius | Arzon narxdagi internet do'kon",
         description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
@@ -23,7 +23,7 @@ export const seoContent = {
         description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
     },
   },
-  gallery: {
+  gallerySEO: {
     uz: {
         title: "THE TOWER HOTEL TASHKENT bo'ylab virtual sayohat.",
         description: "Mehmonxona fotosuratlari, xonalar va boshqalar.",
@@ -38,7 +38,7 @@ export const seoContent = {
       }
       
   },
-  booking: {
+  bookingSEO: {
     uz: {
         title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
         description: "Bizda onlayn bron qilish imkoniyati mavjud.",
@@ -53,7 +53,7 @@ export const seoContent = {
       }
       
   },
-  rooms: {
+  roomsSEO: {
     uz: {
         title: "THE TOWER HOTEL TASHKENT - hammasi nafosat ila.",
         description: "Mehmonlar neoklassik uslubda bezatilgan 96 xonadan birida qulay dam olishlari mumkin.",
@@ -68,19 +68,7 @@ export const seoContent = {
       }
       
   },
-  roomsInnerSeo: {
-    uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-    },
-    ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-    },
-  },
-  news: {
+  newsSEO: {
     uz: {
         title: "THE TOWER HOTEL TOSHKENT",
         description: "Barcha yangiliklardan xabardor bo'ling",
@@ -94,18 +82,6 @@ export const seoContent = {
         description: 'Stay up to date with all the latest news.'
       }
       
-  },
-    newsInnerSEO: {
-    uz: {
-        title: "Sirius | Arzon narxdagi internet do'kon",
-        description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-        ogDescription: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
-    },
-    ru: {
-        title: 'Сириус | Дешевый интернет-магазин',
-        description: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-        ogDescription: 'Интернет-магазин, предлагающий новинки Узбекистана из первых рук. Есть сервис, гарантия и доставка.',
-    },
   },
   aboutUsSEO: {
       uz: {
@@ -138,4 +114,4 @@ export const seoContent = {
   },
 };
 
-export const {index , news, newsInnerSEO, roomsInnerSeo ,rooms ,booking ,gallery , reviews , contactSEO , aboutUsSEO } = seoContent
+export const {indexSEO , reviewsSEO, gallerySEO, bookingSEO,roomsSEO,newsSEO , aboutUsSEO, contactSEO  } = seoContent

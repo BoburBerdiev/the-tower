@@ -6,7 +6,6 @@ import apiService from "@/service/axois";
 
 const Layout = ({ children }) => {
 
-  const [navOpen, setNavOpen] = useState(false)
     const { data: contact  , refetch: contactRefetch, isLoading , isSuccess } = useQuery("contact", () =>
         apiService.getData( '/pages/contact') , { enabled: false}
     );
@@ -21,9 +20,9 @@ const Layout = ({ children }) => {
 
 
     return (
-        <div className={ `relative ${navOpen ? 'h-screen': ''}`}>
+        <div className={ `relative `}>
             <TopNav contact={contact} />
-            <Navbar setNavOpen={setNavOpen} navOpen={navOpen}/>
+            <Navbar/>
             <main >
                 {children}
             </main>

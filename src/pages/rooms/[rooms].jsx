@@ -205,14 +205,14 @@ const Room = () => {
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
-            <SEO
+            {/* <SEO
                 ogImage={'/image/logo.png'}
                 title={roomsInnerSeo[lang].title}
                 description={roomsInnerSeo[lang].description}
                 ogTitle={roomsInnerSeo[lang].ogTitle}
                 ogDescription={roomsInnerSeo[lang].ogDescription}
                 twitterHandle={roomsInnerSeo[lang].twitterHandle}
-            />
+            /> */}
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={'Номер "Standart Double"'} justify={'justify-center'}/>

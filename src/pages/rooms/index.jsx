@@ -10,7 +10,7 @@ import {
 } from "@/components"
 import { useTranslation } from "react-i18next";
 import SEO from "@/SEO/SEO";
-import {rooms} from "@/SEO/SEO.config"
+import {roomsSEO} from "@/SEO/SEO.config"
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -275,12 +275,12 @@ const {lang} = useSelector(state => state.langSlice)
             {/*    <Slider SliderContent={roomsBannerText} innerBtn={true} />*/}
             {/*</div>*/}
             <SEO
-                ogImage={'/image/logo.png'}
-                title={rooms[lang]?.title}
-                description={rooms[lang]?.description}
-                ogTitle={rooms[lang]?.ogTitle}
-                ogDescription={rooms[lang]?.ogDescription}
-                twitterHandle={rooms[lang]?.twitterHandle}
+              ogImage={'/image/logo.png'}
+              title={roomsSEO[lang]?.title}
+                description={roomsSEO[lang]?.description}
+                ogTitle={roomsSEO[lang]?.ogTitle}
+                ogDescription={roomsSEO[lang]?.ogDescription}
+                twitterHandle={roomsSEO[lang]?.twitterHandle}
             />
             <div>
                 <MiniHeader img={newsBanner.img} title={newsBanner.title}/>

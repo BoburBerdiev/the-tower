@@ -2,7 +2,7 @@ import {ButtonUI, ReviewCard, SectionTextUI, SectionTitle, SectionUI} from '@/co
 import InputUl from '@/components/ui/Input-UI'
 import React, {useEffect} from 'react'
 import { useSelector } from 'react-redux'
-import {reviews} from '@/SEO/SEO.config'
+import {indexSEO} from '@/SEO/SEO.config'
 import SEO from '@/SEO/SEO'
 import {useTranslation} from "react-i18next";
 import {useForm} from "react-hook-form";
@@ -104,12 +104,12 @@ const Reviews = () => {
   return (
     <div>
       <SEO
-              ogImage={'/image/Tower hotel___eng 1.png'}
-              title={reviews[lang].title}
-              description={reviews[lang].description}
-              ogTitle={reviews[lang].ogTitle}
-              ogDescription={reviews[lang].ogDescription}
-              twitterHandle={reviews[lang].twitterHandle}
+              ogImage={'/image/logo.png'}
+              title={indexSEO[lang].title}
+              description={indexSEO[lang].description}
+              ogTitle={indexSEO[lang].ogTitle}
+              ogDescription={indexSEO[lang].ogDescription}
+              twitterHandle={indexSEO[lang].twitterHandle}
             />
       <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-16 lg:pb-[80px] pt-10'}>
         <SectionTitle title={t('reviews.title')} justify={'justify-center'} />

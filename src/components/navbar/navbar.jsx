@@ -7,9 +7,9 @@ import {ButtonUI, ImgUI, SearchPanel} from "@/components";
 
 
 
-const Navbar = ({setNavOpen,navOpen}) => {
+const Navbar = () => {
   const { t } = useTranslation();
-
+  const [navOpen,setNavOpen ] = useState(false)
   const navLinks = [
     {
       name: 'navbar.home',
@@ -42,10 +42,20 @@ const Navbar = ({setNavOpen,navOpen}) => {
 
   const openNav = () => {
       setNavOpen(!navOpen)
-    }
+  }
+  const closeNav = () => {
+    setNavOpen(false)
+    document.body.classList.remove('overflow-hidden')
+  }
+  if (navOpen === true) {
+    document.body.classList.add('overflow-hidden')
+  }else if (navOpen === false) {
+    document.body.classList.remove('overflow-hidden')
+  }
+      
 
   window.addEventListener('scroll', (e) => {
-    if (e.target.scrollY > 36) {
+    if (window.scrollY > 36) {
       setIsNavScroll(true)
     }else {
       setIsNavScroll(false)
@@ -69,15 +79,20 @@ const Navbar = ({setNavOpen,navOpen}) => {
           <ul className={`${navOpen ? ' right-0' : '-right-[150%]'} ${isNavScroll ?  'top-[60px] md:top-[72px]' : " top-[95px] md:top-[105px]"} pt-10 lg:pt-0 flex items-center gap-4 md:gap-[30px] xl:gap-[60px] fixed lg:static text-lg text-black w-full h-screen bg-[#FFFFFFE5] lg:bg-transparent lg:w-auto lg:h-auto flex-col lg:flex-row duration-200 z-10 `}>
             {
               navLinks.map((item) => (
-                  <li key={item.name} className="relative before:w-0 before:duration-300 before:h-0.5 before:bg-brown before:absolute hover:before:w-1/2 hover:text-brown duration-300 before:-bottom-2 before:rounded-e-[1px] before:left-1/2 after:w-0 after:duration-300 after:h-0.5 after:bg-brown after:absolute hover:after:w-1/2 after:-bottom-2 after:rounded-s-[1px]  after:right-1/2 font-elegance font-medium" onClick={openNav}>
+                  <li key={item.name} className="relative before:w-0 before:duration-300 before:h-0.5 before:bg-brown before:absolute hover:before:w-1/2 hover:text-brown duration-300 before:-bottom-2 before:rounded-e-[1px] before:left-1/2 after:w-0 after:duration-300 after:h-0.5 after:bg-brown after:absolute hover:after:w-1/2 after:-bottom-2 after:rounded-s-[1px]  after:right-1/2 font-elegance font-medium" onClick={closeNav}>
                     <Link href={item.link} className=''>{t(item.name)}</Link>
                   </li>
               ))
             }
             <li >
+              <div className="max-lg:hidden">
               <SearchPanel/>
+              </div>
             </li>
           </ul>
+              <div className="lg:hidden mx-3">
+              <SearchPanel/> 
+              </div>
           <div
               className={`lg:hidden p-2 border  rounded-md  duration-200 text-lg ${navOpen ? 'nav-active' : 'nav-btn'}`}
               onClick={openNav}>
