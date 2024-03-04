@@ -248,7 +248,7 @@ const Room = () => {
                 </div>
            </SectionUI>
            <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-sm py-5 border-t border-brown">
-                <div className="container flex items-center justify-between gap-x-5">
+                <div className="container flex flex-wrap items-center  justify-center md:justify-between gap-y-5 gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
                         {t('index.room')} "{roomIinfo.type}"
                     </div>

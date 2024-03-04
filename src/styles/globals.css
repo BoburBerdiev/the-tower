@@ -225,3 +225,8 @@ input::-webkit-inner-spin-button {
         transform:scale(1)
     }
 }
+
+/* map */
+iframe div {
+        border: none!important;
+}

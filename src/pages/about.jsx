@@ -62,7 +62,7 @@ const About = ({about ,services}) => {
                       subTitle_uz={about?.additional_info?.sub_title_uz}
                   />
 
-                  <div className="grid grid-cols-3 gap-[20px] md:gap-[30px]">
+                  <div className="grid grid-cols-3 gap-1.5 md:gap-[30px]">
                       {
                           about?.additional_info?.images?.map(item => (
                               <div data-aos='zoom-in' key={item?.id} data-aos-delay='100' className="w-full relative aspect-square">
@@ -74,7 +74,7 @@ const About = ({about ,services}) => {
               </div>
           </SectionUI>
           <SectionUI  bgFigureTopPostion={'top-0 -right-2/3  '}
-                     padding={'pb-[20px] md:pb-[50px] lg:pb-[90px] pt-20 md:pt-[100px] lg:pt-[180px]'}>
+                     padding={'pb-[20px] md:pb-[50px] lg:pb-[90px] pt-10 md:pt-[100px] lg:pt-[180px]'}>
           {
               services?.map((service , ind) => (
 

@@ -52,11 +52,11 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
                             <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true}/>
                         </div>
                     </div>
-                    <div className="relative flex flex-col items-end aspect-square lg:aspect-auto">
+                    <div className="relative flex flex-col md:items-end aspect-square lg:aspect-auto">
                         <div data-aos='zoom-in' data-aos-delay='50' className="w-[68%]  aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2  border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10  	">
                             <ImgUI src={about?.image_1} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
-                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%]  aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-0 left-0 z-[9]">
+                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%]  aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-5 md:bottom-0 right-0 md:left-0 max-md:border-3 border-white z-20 md:z-[9]">
                             <ImgUI  src={about?.image_2} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
                     </div>

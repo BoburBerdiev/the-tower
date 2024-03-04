@@ -75,6 +75,7 @@
        "typeOfNumber": "Тип номера",
        "choose": "Выбрать"
       },
+      "room": "Номер ",
       "section2": {
         "title": "Типы номеров"
       },
