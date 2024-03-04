@@ -33,24 +33,25 @@ function SearchPanel(props) {
                 <button onClick={closeSeachPanel} className="self-end	">
                     <TfiClose />
                 </button>
-                <div className="w-full md:max-w-[700px] mb-10">
+                <div className="w-full md:max-w-[700px] mb-10 mt-5">
                     <input type="text" className=" w-full rounded-md p-2 md:p-3 lg:px-5 outline-none text-sm md:text-base font-roboto border text-gray-600  shadow-lg" />
                 </div>
                      {
                         isElementsHave ?
-
-                        <div className='container flex flex-col items-center gap-5'>
-                            <h2 className='text-4xl'>Ohh no Room not found</h2>
-                            <div className='w-[500px] aspect-video relative'>
-                                <ImgUI src={'/image/not-found.png'} alt={'not found'}/>
-                            </div>
-                        </div>
-                        :
                         <div className="container grid grid-cols-2  lg:grid-cols-3 gap-4 lg:gap-8">
                             {
                                 <HotelCard img={'/image/IMG_5448-min.jpg'} cardTitle={'Title'} time={'09-10'} price={'120 000'} descriptions={describe}  />
                             }
                         </div>
+                        
+                        :
+                        <div className='container flex flex-col items-center gap-5'>
+                            <h2 className='text-4xl text-center font-elegance '>Rooms Not Found</h2>
+                            <div className='w-full md:w-[500px] aspect-video lg:w-[600px] relative'>
+                                <ImgUI src={'/image/no-room-found.png'} objectFitContain alt={'not found'}/>
+                            </div>
+                        </div>
+                        
                     }
             </div>
         </>

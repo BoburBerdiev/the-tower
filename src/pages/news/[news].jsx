@@ -27,14 +27,14 @@ const {lang} = useSelector(state => state.langSlice)
   console.log(newsInner)
   return (
     <>
-    <SEO
+    {/* <SEO
         ogImage={'/image/logo.png'}
                 title={newsInnerSEO[lang].title}
                 description={newsInnerSEO[lang].description}
                 ogTitle={newsInnerSEO[lang].ogTitle}
                 ogDescription={newsInnerSEO[lang].ogDescription}
                 twitterHandle={newsInnerSEO[lang].twitterHandle}
-            />
+            /> */}
     
     <SectionUI bgFigureBottomPostion={'bottom-0 left-0'} bgFigureTopPostion={'top-0 right-0'} padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
       <div className='container'>
