@@ -54,10 +54,10 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
                     </div>
                     <div className="relative flex flex-col items-end aspect-square lg:aspect-auto">
                         <div data-aos='zoom-in' data-aos-delay='50' className="w-[68%]  aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2  border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10  	">
-                            <ImgUI src={about?.image_1} objectFit={'object-cover'}/>
+                            <ImgUI src={about?.image_1} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
                         <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%]  aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-0 left-0 z-[9]">
-                            <ImgUI  src={about?.image_2} objectFit={'object-cover'}/>
+                            <ImgUI  src={about?.image_2} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
                     </div>
                 </div>
@@ -94,13 +94,12 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
                     <SectionTitle title={t('index.section5.title')}  btnText={t('btn.viewAllPhoto')} href={'/gallery'}/>
-                    {/*<GalleryZoom />*/}
                     <GallerySlider gallery={gallery} />
                 </div>
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
                 <div className="absolute top-0 left-0 z-10 w-full h-full">
-                    <ImgUI src={'/image/IMG_7359-min.jpg'} objectFit={'object-cover'}/>
+                    <ImgUI src={'/image/IMG_7359-min.jpg'} objectFit={'object-cover'} alt={'banner'}/>
                 </div>
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">

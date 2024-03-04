@@ -22,7 +22,7 @@ const RoomsRow = ({card  , order}) =>  {
                 <RoomsCharacterList list={card.information} />
                 <div data-aos='fade-up' className={'flex gap-x-5'}>
                  <ButtonUI  text={t('btn.booking')} href={'/booking'}   />
-                 <ButtonUI  btnBorder={true} text={t('btn.more')} href={'/rooms/1'}   />
+                 <ButtonUI  btnBorder={true} text={t('btn.more')} href={`/rooms/${card?.slug}`}   />
                 </div>
             </div>
         </div>

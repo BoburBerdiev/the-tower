@@ -2,7 +2,7 @@ import moment from "moment";
 import {IoCalendarOutline} from "react-icons/io5";
 import DatePicker from "react-datepicker";
 import {changleEndTimeBooking, changleStartTimeBooking} from "@/slice/booking";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 
 const InputDateUI = ({ startDateUpdate  , labelText,setSelectOptionName  }) => {
@@ -12,6 +12,7 @@ const InputDateUI = ({ startDateUpdate  , labelText,setSelectOptionName  }) => {
     moment.locale('uz');
     const inputHandler = (e) => {
         e.preventDefault()
+        e.stopPropagation()
         setOpenDropdown(!openDropdown)
     }
     const handleDateChange = (date) => {
@@ -22,8 +23,24 @@ const InputDateUI = ({ startDateUpdate  , labelText,setSelectOptionName  }) => {
         }
     };
 
+    useEffect(() => {
+        const handleWindow = () => {
+            setOpenDropdown(false)
+        }
+
+        window.addEventListener('click', handleWindow)
+
+
+        return () => {
+            window.removeEventListener('click', handleWindow)
+        }
+
+
+    }, [openDropdown]);
+
+
     return (
-        <div className={'relative space-y-3 flex flex-col w-full  justify-end'}>
+        <div className={'relative space-y-3 flex flex-col w-full  justify-end'} >
             {
                 labelText && <label className='font-roboto font-light tracking-[0.4px] md:text-lg xl:text-xl text-black   '>{labelText}</label>
             }

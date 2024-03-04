@@ -14,6 +14,10 @@ import {
 import SEO from "@/SEO/SEO";
 import {roomsInnerSeo} from '@/SEO/SEO.config'
 import { useSelector } from "react-redux";
+import {useQuery} from "react-query";
+import apiService from "@/service/axois";
+import {useRouter} from "next/router";
+import {useEffect} from "react";
 
 const roomBannerContent = [
     {
@@ -180,6 +184,21 @@ const common = [
 const Room = () => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
+    const router = useRouter()
+    const {rooms}=router.query
+
+
+    const { data: room  , refetch: refetchRoom, isLoading , isSuccess } = useQuery(["room" , rooms], () =>
+        apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
+    );
+
+    useEffect(() => {
+        if(rooms) {
+            refetchRoom()
+        }
+    } ,  [rooms])
+
+    console.log(router.query)
 
     return (
         <div className="wrapper pt-10 md:pt-20 relative">
@@ -187,7 +206,7 @@ const Room = () => {
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
             <SEO
-                ogImage={'/logo.png'}
+                ogImage={'/image/logo.png'}
                 title={roomsInnerSeo[lang].title}
                 description={roomsInnerSeo[lang].description}
                 ogTitle={roomsInnerSeo[lang].ogTitle}
@@ -231,7 +250,7 @@ const Room = () => {
            <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-xl py-5">
                 <div className="container flex items-center justify-between gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
-                        Номер "{roomIinfo.type}"
+                        {t('index.room')} "{roomIinfo.type}"
                     </div>
                     <div
                         className='flex shrink-0 leading-normal divide-x-2 divide-iron gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>

@@ -2,39 +2,55 @@ import React from 'react'
 import DropdownUl from "@/components/ui/Dropdown-UI";
 import { IoLogoInstagram } from 'react-icons/io5';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa6';
+import {formatPhoneNumber, langSelect} from "@/helper";
+import {changleLang} from "@/slice/lang";
+import {useTranslation} from "react-i18next";
+import {useDispatch} from "react-redux";
 
 
 
 
-const lang = [
-  {
-    title:'Русский',
-    id:1
-  },
-  {
-    title: "English",
-    id: 2
-  },
-  {
-    title: "O'zbek",
-    id: 3
-  }
-]
-const TopNav = () => {
+const TopNav = ({contact}) => {
+    const { t , i18n  } = useTranslation();
+    const dispatch = useDispatch();
+    const handleChangleLang = (lang) => {
+        i18n.changeLanguage(lang.value)
+        console.log(lang)
+        dispatch(changleLang(lang.value))
+    }
 
+    const lang = [
+        {
+            title:t('lang.ru'),
+            value:'ru',
+            id:1
+        },
+        {
+            title: t('lang.en'),
+            value:'en',
+            id: 2
+        },
+        {
+            title: t('lang.uz'),
+            value: 'uz',
+            id: 3
+        }
+    ]
   return (
     <div className='bg-brown w-full'>
      <div className='container'>
      <div className='flex justify-between gap-x-4 xl:gap-x-10 items-center text-white '>
-        <div className='flex items-center gap-2.5 xl:gap-'>
-          <a href="https://instagram.com" target='_blank'><IoLogoInstagram className='text-xl md:text-2xl'/></a>
-          <a href="https://facebook.com" target='_blank'><FaFacebookF className=''/></a>
-          <a href="https://youtube.com" target='_blank'><FaYoutube className='text-xl'/></a>
+        <div className='flex items-center gap-2.5'>
+          <a href={contact?.instagram} target='_blank'><IoLogoInstagram className='text-xl md:text-2xl'/></a>
+          <a href={contact?.facebook} target='_blank'><FaFacebookF /></a>
+          <a href={contact?.youtube} target='_blank'><FaYoutube className='text-xl'/></a>
         </div>
       <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white '>
-        <DropdownUl list={lang} defualtList={lang[0]} />
-        <a href="tel:+998 55 512 11 00" className='hidden sm:block'>+998 55 512 11 00</a>
-        <a href="#" className='hidden lg:block'>Малая Бешагачская ул., 40-40 / 1, Яккасарайский район, Ташкент, 100070, Узбекистан</a>
+        <DropdownUl list={lang} defualtList={lang[0]} onClick={handleChangleLang} />
+        <a href={`tel:${contact?.phone}`} className='hidden sm:block'>{
+            formatPhoneNumber(contact?.phone)
+        }</a>
+        <p className='hidden lg:block'> { langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}</p>
       </div>
       </div>
     </div>

@@ -1,47 +1,13 @@
 import SEO from "@/SEO/SEO";
-import {GalleryZoomInner, SectionUI, SectionTitle, GalleryZoom, MiniHeader} from "@/components";
-import { useTranslation } from "react-i18next";
+import {GalleryZoomInner, SectionUI, MiniHeader} from "@/components";
 import {gallery} from '@/SEO/SEO.config'
 import { useSelector } from "react-redux";
+import axios from "axios";
+import {langSelect} from "@/helper";
 
-const Gallery = () => {
+const Gallery = ({galleryData}) => {
 
-    const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
-    const images = [
-        {
-            id:1,
-            src:"/image/IMG_5481-min.jpg"
-        },
-        {
-            id:2,
-            src:"/image/IMG_5481-min.jpg"
-        },
-        {
-            id:3,
-            src:"/image/IMG_5481-min.jpg"
-        },
-        {
-            id:4,
-            src:"/image/IMG_5481-min.jpg"
-        },
-        {
-            id:5,
-            src:"/image/IMG_5514-min.jpg"
-        },
-        {
-            id:7,
-            src:"/image/IMG_5481-min.jpg"
-        },
-        {
-            id:15,
-            src:"/image/IMG_5514-min.jpg"
-        }
-    ]
-    const newsBanner = {
-        title: t('gallery.title'),
-        img : '/image/IMG_5451-min.jpg'
-    }
   return (
       <>
       <SEO
@@ -53,14 +19,33 @@ const Gallery = () => {
               twitterHandle={gallery[lang].twitterHandle}
             />
           <div>
-              <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
+              <MiniHeader img={galleryData?.header_image} title={langSelect(lang , galleryData?.title_ru, galleryData?.title_en , galleryData?.title_uz )}/>
           </div>
           <SectionUI padding='py-10 md:py-20'>
-              <GalleryZoomInner images={images}/>
+              <GalleryZoomInner images={galleryData?.images}/>
           </SectionUI>
       </>
 
   )
 }
 
+export async function getServerSideProps({req, res}) {
+    res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=10, stale-while-revalidate=59"
+    );
+    // Fetch data from external API
+    const [galleryData ] = await Promise.all([
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/gallery/`),
+
+    ]);
+    return {
+        props: {
+            galleryData: galleryData?.data,
+
+        },
+    };
+}
+
 export default Gallery
+// /pages/gallery/

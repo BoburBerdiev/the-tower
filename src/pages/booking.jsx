@@ -53,7 +53,7 @@ const {lang} = useSelector(state => state.langSlice)
   return (
     <div className="wrapper">
        <SEO
-                ogImage={'/logo.png'}
+           ogImage={'/image/logo.png'}
                 title={booking[lang].title}
                 description={booking[lang].description}
                 ogTitle={booking[lang].ogTitle}
@@ -84,26 +84,15 @@ const {lang} = useSelector(state => state.langSlice)
               <LittleTitleUI content={t('booking.request.title')} />
               <div className="max-w-[800px] ">
                 <textarea formname={...register('complete-information')} name={'complete-information'} id="textarea" placeholder={t("booking.request.textarea")} cols={100} className="cursor-pointer border w-full border-black rounded-none outline-none p-3 lg:p-5 h-[100px] lg:h-[200px] font-roboto font-light tracking-[0.36px] xl:text-lg duration-300 focus:border-brown"></textarea>
-                <h4 className="font-roboto font-light tracking-[0.4px] md:text-lg lg:text-xl mt-4 lg:mt-[30px] pb-3">Сбор и использование личной информации (Обязательно)</h4>
-                <div className="border w-full p-4 md:p-5 md:pb-8 ">
-                  <div className="h-[25vh] overflow-y-scroll font-roboto font-light tracking-[0.36px] md:text-lg text-black">
-                    <p className="pb-10">Наш отел сети (<a href="#">http://www.thetowerhotel.com/hotel-finder.html</a>) собирает и использует ваши персональные данные при бронировании номера в нашем отеле следующим образом.</p>
-                    <p>1. Собираемые персональные данные Полное имя (на английском языке), контактная информация (номер мобильного, домашнего, рабочего телефона), адрес электронной почты и информация о кредитной </p>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <LittleTitleUI content={t('booking.cancelRule.title')}/>
-              <div className="max-w-[800px] font-roboto font-light tracking-[0.32px] mb-6 md:mb-10">
-                <p className="">{t("booking.cancelRule.text")}</p>
-                <p>{t("booking.cancelRule.text2")}</p>
-                <p className="mt-4 md:mt-6">The Tower Hotel Tashkent, {t("booking.cancelRule.phone")}: <a href="tel:+998 55 512 11 00">+998 55 512 11 00</a></p>
-              </div>
+                <ButtonUI  text={t('btn.booking')}  typeClassBtn={'btn-gold'} typeBtn={'submit'} />
+
             </div>
 
         {/*     typeClass={typeClassBtn} type={typeBtn} onClick={openModal}*/}
-        <ButtonUI  text={t('btn.booking')}  typeClassBtn={'btn-gold'} typeBtn={'submit'} />
           </form>
 
       </SectionUI>

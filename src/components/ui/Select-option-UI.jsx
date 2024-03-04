@@ -1,7 +1,21 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOptionName ,labelOption}) => {
     const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        const handleWindow = () => {
+            setIsOpen(false)
+        }
+
+        window.addEventListener('click', handleWindow)
+
+
+        return () => {
+            window.removeEventListener('click', handleWindow)
+        }
+
+
+    }, [isOpen]);
         const selectInputValue = (value) =>{
             if(setSelectOptionName) {
                 setSelectOptionName(
@@ -26,7 +40,8 @@ const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOpti
                 type="button"
                 className="cursor-pointer appearance-none border border-black rounded-none outline-none p-3 lg:p-5 w-full font-roboto font-light tracking-[0.36px] xl:text-lg duration-300 focus:border-brown text-left"
 
-                onClick={() => {
+                onClick={e => {
+                    e.stopPropagation()
                     setIsOpen(!isOpen)
                 }}
             >

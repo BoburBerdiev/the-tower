@@ -9,7 +9,7 @@ const LocationInfos = ({title, icon, alt, locations}) => {
     <div className='text-white'>
       <div className='flex items-center gap-x-5 pb-[10px]'>
         <div className="w-6 h-6 relative shrink-0">
-          <ImgUI src={icon} alt={alt} objectFitContain/>
+          <ImgUI src={icon} alt={'icon'} objectFitContain={true}/>
         </div>
         <h3 className='text-lg font-medium'>{title}</h3>
       </div>

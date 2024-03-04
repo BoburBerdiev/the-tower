@@ -275,7 +275,7 @@ const {lang} = useSelector(state => state.langSlice)
             {/*    <Slider SliderContent={roomsBannerText} innerBtn={true} />*/}
             {/*</div>*/}
             <SEO
-                ogImage={'/logo.png'}
+                ogImage={'/image/logo.png'}
                 title={rooms[lang]?.title}
                 description={rooms[lang]?.description}
                 ogTitle={rooms[lang]?.ogTitle}
@@ -304,8 +304,6 @@ const {lang} = useSelector(state => state.langSlice)
         </div>
     )
 }
-
-export default index
 export async function getServerSideProps({req, res}) {
     res.setHeader(
         "Cache-Control",
@@ -323,3 +321,5 @@ export async function getServerSideProps({req, res}) {
         },
     };
 }
+
+export default index

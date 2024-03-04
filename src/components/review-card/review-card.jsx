@@ -26,7 +26,7 @@ const ReviewCard = ({name, flag, country, rateCount, date, title, text}) => {
             <h4 className='text-sm font-medium'>{name}</h4>
             <div className='flex items-center gap-x-[6px]'>
               <div className='w-5 h-[14px] relative'>
-                <ImgUI src={flag} />
+                <ImgUI src={flag} alt={'flag'} />
               </div>
               <p className='text-xs'>{country}</p>
             </div>

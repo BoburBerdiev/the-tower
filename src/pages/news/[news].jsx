@@ -1,45 +1,50 @@
 import SEO from '@/SEO/SEO'
 import { SectionUI, Slider } from '@/components'
 import ImageUI from '@/components/ui/ImageUI'
-import React from 'react'
+import React, {useEffect} from 'react'
 import { LuCalendarRange } from 'react-icons/lu'
-import {newsInner} from "@/SEO/SEO.config"
+import {newsInnerSEO} from "@/SEO/SEO.config"
 import { useSelector } from 'react-redux'
+import {useQuery} from "react-query";
+import apiService from "@/service/axois";
+import {useRouter} from "next/router";
 
-const  News = ({sliderContent, title, date, desc}) => {
-  const newsImage = [
-    {
-      id:1,
-      src:"/image/IMG_5481-min.jpg"
-    },
-    {
-        id:2,
-        src:"/image/IMG_5481-min.jpg"
-    },
-    {
-        id:3,
-        src:"/image/IMG_5481-min.jpg"
-    }
-  ]
+const  News = () => {
+  const router = useRouter()
+  const {news}=router.query
+  console.log(news)
 const {lang} = useSelector(state => state.langSlice)
+  const { data: newsInner  , refetch: refetchNewsInner, isLoading , isSuccess } = useQuery(["newsInner" , news], () =>
+      apiService.getDataByID(  '/pages/news' ,news) , { enabled: false}
+  );
 
+  useEffect(() => {
+    if(news) {
+      refetchNewsInner()
+    }
+  } ,  [news])
+
+  console.log(newsInner)
   return (
     <>
     <SEO
-                ogImage={'/logo.png'}
-                title={newsInner[lang].title}
-                description={newsInner[lang].description}
-                ogTitle={newsInner[lang].ogTitle}
-                ogDescription={newsInner[lang].ogDescription}
-                twitterHandle={newsInner[lang].twitterHandle}
+        ogImage={'/image/logo.png'}
+                title={newsInnerSEO[lang].title}
+                description={newsInnerSEO[lang].description}
+                ogTitle={newsInnerSEO[lang].ogTitle}
+                ogDescription={newsInnerSEO[lang].ogDescription}
+                twitterHandle={newsInnerSEO[lang].twitterHandle}
             />
     
     <SectionUI bgFigureBottomPostion={'bottom-0 left-0'} bgFigureTopPostion={'top-0 right-0'} padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
       <div className='container'>
         <div data-aos='fade-in' className='relative z-[5] md:float-left w-full lg:w-[450px] xl:w-[650px] h-[275px] xl:h-[350px] mr-10 mb-5'>
-          <Slider SliderContent={newsImage} PaginationInner={true} />
+          <Slider  PaginationInner={true} />
+        {/*  SliderContent={newsImage}*/}
         </div>
-        <h3 data-aos='fade-left' className='text-xl 2xl:text-2xl font-inter font-semibold'>Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.</h3>
+        <h3 data-aos='fade-left' className='text-xl 2xl:text-2xl font-inter font-semibold'>
+
+          Подборка мероприятий и выставок, которые пройдут в районе отеля в ближайшее время. Это может быть полезной информацией для гостей, планирующих свое время.</h3>
         <div data-aos='fade-left' data-aos-delay='100' className='flex items-center py-3'>
           <LuCalendarRange className="md:text-xl text-lg pb-[3px]" />
           <p className={`font-inter font-medium text-sm md:text-base`}>17 февр. 2023г.</p>

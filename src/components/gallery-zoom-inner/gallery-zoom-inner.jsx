@@ -27,8 +27,8 @@ const GalleryZoomInner = ({images}) => {
                             images?.map(image => (
                                 <SwiperSlide key={image?.id}>
                                     <LightGallery plugins={[lgThumbnail, lgZoom]}>
-                                    <a  href={image?.src} className={'block w-full aspect-video lg:aspect-[10/4]'}>
-                                        <ImgUI priority={true} src={image?.src}/>
+                                    <a  href={image?.image} className={'block w-full aspect-video lg:aspect-[10/4]'}>
+                                        <ImgUI priority={true} src={image?.image} alt={'gallery'}/>
                                     </a>
                                     </LightGallery>
                                 </SwiperSlide>
@@ -71,7 +71,7 @@ const GalleryZoomInner = ({images}) => {
                                 images?.map(image => (
                                     <SwiperSlide key={image?.id}>
                                         <div className={'w-full aspect-video'}>
-                                            <ImgUI src={image?.src}/>
+                                            <ImgUI src={image?.image} alt={'gallery-zoom'}/>
                                         </div>
                                     </SwiperSlide>
 

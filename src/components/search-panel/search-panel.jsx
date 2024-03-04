@@ -42,7 +42,7 @@ function SearchPanel(props) {
                         <div className='container flex flex-col items-center gap-5'>
                             <h2 className='text-4xl'>Ohh no Room not found</h2>
                             <div className='w-[500px] aspect-video relative'>
-                                <ImgUI src={'/image/not-found.png'}/>
+                                <ImgUI src={'/image/not-found.png'} alt={'not found'}/>
                             </div>
                         </div>
                         :

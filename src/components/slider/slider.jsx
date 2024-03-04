@@ -65,14 +65,11 @@ const Slider = ({
                       {langSelect(lang ,slider?.sub_title_ru, slider?.sub_title_en , slider?.sub_title_uz )}
                   </p>
                   }
-
               </div>
             </div>
-
-
             }
             <div className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
-             <ImgUI  objectFit="object-cover" src={slider?.image} />
+             <ImgUI  objectFit="object-cover" src={slider?.image} alt={'banner'} priority={true} />
             </div>
           </SwiperSlide>
         ))}

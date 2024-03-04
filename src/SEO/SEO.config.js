@@ -95,7 +95,7 @@ export const seoContent = {
       }
       
   },
-  newsInner: {
+    newsInnerSEO: {
     uz: {
         title: "Sirius | Arzon narxdagi internet do'kon",
         description: "O'zbekistonga birinchi qo'l bilan yangi turdagi mahsulotlarni taqdim etuvchi internet do'kon. Servis xizmati, garantiya va yetkazib berish xizmati mavjud",
@@ -138,4 +138,4 @@ export const seoContent = {
   },
 };
 
-export const {index , news, newsInner, roomsInnerSeo ,rooms ,booking ,gallery , reviews , contactSEO , aboutUsSEO } = seoContent
+export const {index , news, newsInnerSEO, roomsInnerSeo ,rooms ,booking ,gallery , reviews , contactSEO , aboutUsSEO } = seoContent

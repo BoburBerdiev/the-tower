@@ -20,7 +20,7 @@ const About = ({about ,services}) => {
   return (
       <div className="wrapper">
         <SEO
-                ogImage={'/logo.png'}
+            ogImage={'/image/logo.png'}
                 title={aboutUsSEO[lang].title}
                 description={aboutUsSEO[lang].description}
                 ogTitle={aboutUsSEO[lang].ogTitle}

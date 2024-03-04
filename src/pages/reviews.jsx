@@ -4,9 +4,11 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import {reviews} from '@/SEO/SEO.config'
 import SEO from '@/SEO/SEO'
-import { t } from 'i18next'
+import {useTranslation} from "react-i18next";
 
-const Reviews = ({selectList}) => {
+const Reviews = () => {
+  const {t} = useTranslation()
+
   const reviewData = [
     {
       name: 'Svetlana',
