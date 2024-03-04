@@ -35,7 +35,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
     return (
         <div>
             <SEO
-              ogImage={'/image/Tower hotel___eng 1.png'}
+              ogImage={'/image/logo.png'}
               title={indexSEO[lang].title}
               description={indexSEO[lang].description}
               ogTitle={indexSEO[lang].ogTitle}

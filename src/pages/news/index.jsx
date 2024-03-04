@@ -64,8 +64,8 @@ const index = () => {
   return (
     <div>
        <SEO
-           ogImage={'/image/logo.png'}
-                title={newsSEO[lang].title}
+              ogImage={'/image/logo.png'}
+              title={newsSEO[lang].title}
                 description={newsSEO[lang].description}
                 ogTitle={newsSEO[lang].ogTitle}
                 ogDescription={newsSEO[lang].ogDescription}

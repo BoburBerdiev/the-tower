@@ -53,8 +53,8 @@ const {lang} = useSelector(state => state.langSlice)
   return (
     <div className="wrapper">
        <SEO
-           ogImage={'/image/logo.png'}
-                title={bookingSEO[lang].title}
+              ogImage={'/image/logo.png'}
+              title={bookingSEO[lang].title}
                 description={bookingSEO[lang].description}
                 ogTitle={bookingSEO[lang].ogTitle}
                 ogDescription={bookingSEO[lang].ogDescription}

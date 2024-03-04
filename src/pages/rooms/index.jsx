@@ -275,8 +275,8 @@ const {lang} = useSelector(state => state.langSlice)
             {/*    <Slider SliderContent={roomsBannerText} innerBtn={true} />*/}
             {/*</div>*/}
             <SEO
-                ogImage={'/image/logo.png'}
-                title={roomsSEO[lang]?.title}
+              ogImage={'/image/logo.png'}
+              title={roomsSEO[lang]?.title}
                 description={roomsSEO[lang]?.description}
                 ogTitle={roomsSEO[lang]?.ogTitle}
                 ogDescription={roomsSEO[lang]?.ogDescription}

@@ -11,7 +11,7 @@ const Gallery = ({galleryData}) => {
   return (
       <>
       <SEO
-              ogImage={'/image/Tower hotel___eng 1.png'}
+              ogImage={'/image/logo.png'}
               title={gallerySEO[lang].title}
               description={gallerySEO[lang].description}
               ogTitle={gallerySEO[lang].ogTitle}
