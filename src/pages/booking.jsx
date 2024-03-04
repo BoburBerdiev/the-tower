@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {changleTypeBooking} from "@/slice/booking";
 import SEO from '@/SEO/SEO';
-import {booking} from "@/SEO/SEO.config"
+import {bookingSEO} from "@/SEO/SEO.config"
 import { t } from 'i18next';
 const optionArr = [
   {
@@ -54,11 +54,11 @@ const {lang} = useSelector(state => state.langSlice)
     <div className="wrapper">
        <SEO
            ogImage={'/image/logo.png'}
-                title={booking[lang].title}
-                description={booking[lang].description}
-                ogTitle={booking[lang].ogTitle}
-                ogDescription={booking[lang].ogDescription}
-                twitterHandle={booking[lang].twitterHandle}
+                title={bookingSEO[lang].title}
+                description={bookingSEO[lang].description}
+                ogTitle={bookingSEO[lang].ogTitle}
+                ogDescription={bookingSEO[lang].ogDescription}
+                twitterHandle={bookingSEO[lang].twitterHandle}
             />
       <SectionUI padding={'py-10 md:py-20  md:pb-[90px]'}>
           <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-5 md:space-y-10">

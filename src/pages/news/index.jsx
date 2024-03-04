@@ -2,7 +2,7 @@ import SEO from '@/SEO/SEO'
 import {ButtonUI, MiniHeader, NewsCard, SectionUI} from '@/components'
 import NewsCardSkeleton from '@/components/news-card-skeleton/news-card-skeleton'
 import { useTranslation } from 'react-i18next'
-import {news} from '@/SEO/SEO.config'
+import {newsSEO} from '@/SEO/SEO.config'
 import { useSelector } from 'react-redux'
 import axios from "axios";
 import apiService from "@/service/axois";
@@ -65,11 +65,11 @@ const index = () => {
     <div>
        <SEO
            ogImage={'/image/logo.png'}
-                title={news[lang].title}
-                description={news[lang].description}
-                ogTitle={news[lang].ogTitle}
-                ogDescription={news[lang].ogDescription}
-                twitterHandle={news[lang].twitterHandle}
+                title={newsSEO[lang].title}
+                description={newsSEO[lang].description}
+                ogTitle={newsSEO[lang].ogTitle}
+                ogDescription={newsSEO[lang].ogDescription}
+                twitterHandle={newsSEO[lang].twitterHandle}
             />
       <div>
         <MiniHeader img={newsBanner.img} title={newsBanner.title}/>

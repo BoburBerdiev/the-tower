@@ -1,5 +1,5 @@
 import SEO from '@/SEO/SEO'
-import {index} from '@/SEO/SEO.config'
+import {indexSEO} from '@/SEO/SEO.config'
 import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, GallerySlider} from '@/components/'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -36,11 +36,11 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
         <div>
             <SEO
               ogImage={'/image/Tower hotel___eng 1.png'}
-              title={index[lang].title}
-              description={index[lang].description}
-              ogTitle={index[lang].ogTitle}
-              ogDescription={index[lang].ogDescription}
-              twitterHandle={index[lang].twitterHandle}
+              title={indexSEO[lang].title}
+              description={indexSEO[lang].description}
+              ogTitle={indexSEO[lang].ogTitle}
+              ogDescription={indexSEO[lang].ogDescription}
+              twitterHandle={indexSEO[lang].twitterHandle}
             />
             <Header home={home} />
             <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-20 lg:py-[90px] lg:pt-32 xl:pt-[180px]'}>
