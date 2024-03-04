@@ -30,6 +30,7 @@ const optionArr = [
 ]
 const Booking = () => {
   const {timeBooking ,typeBooking} = useSelector(state => state.bookingSlice)
+  const [isOpenModal, setIsOpenModal] = useState(false)
   const dispatch = useDispatch()
   const {register,
     handleSubmit ,setValue,
@@ -48,13 +49,15 @@ useEffect(() => {
 }, [selectOptionName])
 
 const {lang} = useSelector(state => state.langSlice)
-
+  const openModal = () => {
+    setIsOpenModal(prev => !prev)
+  }
 
   return (
     <div className="wrapper">
        <SEO
-           ogImage={'/image/logo.png'}
-                title={bookingSEO[lang].title}
+              ogImage={'/image/logo.png'}
+              title={bookingSEO[lang].title}
                 description={bookingSEO[lang].description}
                 ogTitle={bookingSEO[lang].ogTitle}
                 ogDescription={bookingSEO[lang].ogDescription}
@@ -88,15 +91,11 @@ const {lang} = useSelector(state => state.langSlice)
               </div>
             </div>
             <div className="flex flex-col items-center">
-                <ButtonUI  text={t('btn.booking')}  typeClassBtn={'btn-gold'} typeBtn={'submit'} />
-
+                <ButtonUI  text={t('btn.booking')}  typeClassBtn={'btn-gold'} typeBtn={'submit'} onClick={openModal}/>
             </div>
-
-        {/*     typeClass={typeClassBtn} type={typeBtn} onClick={openModal}*/}
           </form>
-
       </SectionUI>
-              {/*<Modal textBtn={t('btn.booking')} typeClassBtn={'btn-gold'} typeBtn={'submit'}/>*/}
+      <Modal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} content={t('modal.questionCorrect')}/>
     </div>
   )
 }

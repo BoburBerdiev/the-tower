@@ -13,8 +13,8 @@ const Contact = ({contact}) => {
   return (
     <>
       <SEO
-          ogImage={'/image/logo.png'}
-                title={contactSEO[lang].title}
+              ogImage={'/image/logo.png'}
+              title={contactSEO[lang].title}
                 description={contactSEO[lang].description}
                 ogTitle={contactSEO[lang].ogTitle}
                 ogDescription={contactSEO[lang].ogDescription}

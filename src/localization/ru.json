@@ -21,6 +21,13 @@
       "viewAllPhoto": "Посмотреть все фото",
       "allNews": "Все новости"
     },
+    "notFound": {
+      "text": "Элемент не найден"
+    },
+    "modal": {
+      "questionCorrect": "Ваш запрос принят",
+      "contactYou": "Мы свяжемся с вами"
+    },
     "footer": {
       "menu": {
         "title": "Навигация",
@@ -30,6 +37,7 @@
         "href4": "Новости",
         "href5": "Контакты"
       },
+      
       "address": {
         "title": "Адрес"
       },

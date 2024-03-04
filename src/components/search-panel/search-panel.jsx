@@ -2,21 +2,25 @@ import React, {useState} from 'react';
 import {CiSearch} from "react-icons/ci";
 import {TfiClose} from "react-icons/tfi";
 import {HotelCard, ImgUI} from "@/components/index";
+import {useTranslation} from "react-i18next";
 
-function SearchPanel(props) {
+function SearchPanel() {
     const [searchPanel, setSearchPanel] = useState(false)
-    const [isElementsHave , setIsElementsHave] = useState(true)
+    const [isElementsHave , setIsElementsHave] = useState(false)
+    const { t } = useTranslation()
     const openSeachPanel = () => {
         setSearchPanel(true)
-        setTimeout(() => {
             document.body.classList.add('overflow-hidden')
-        }, 200)
     }
     const closeSeachPanel = () => {
         setSearchPanel(false)
         document.body.classList.remove('overflow-hidden')
     }
-
+    if (searchPanel === true) {
+        document.body.classList.add('overflow-hidden')
+      }else if (searchPanel === false) {
+        document.body.classList.remove('overflow-hidden')
+      }
     const describe = [
         'dasds',
         'dasdsad',
@@ -30,7 +34,7 @@ function SearchPanel(props) {
                 <CiSearch className="text-xl lg:text-2xl"/>
             </button>
             <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 backdrop-blur-2xl bg-white/70 p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-[200%]"}`}>
-                <button onClick={closeSeachPanel} className="self-end	">
+                <button onClick={closeSeachPanel} className="self-end p-2 border duration-200 hover:bg-brown hover:text-white border-brown rounded">
                     <TfiClose />
                 </button>
                 <div className="w-full md:max-w-[700px] mb-10 mt-5">
@@ -46,7 +50,7 @@ function SearchPanel(props) {
                         
                         :
                         <div className='container flex flex-col items-center gap-5'>
-                            <h2 className='text-4xl text-center font-elegance '>Rooms Not Found</h2>
+                            <h2 className='text-4xl text-center font-elegance '>{t('notFound.text')}</h2>
                             <div className='w-full md:w-[500px] aspect-video lg:w-[600px] relative'>
                                 <ImgUI src={'/image/no-room-found.png'} objectFitContain alt={'not found'}/>
                             </div>
