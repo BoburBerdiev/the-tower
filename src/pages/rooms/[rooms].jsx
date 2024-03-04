@@ -205,14 +205,14 @@ const Room = () => {
             {/*<div className="w-full h-[90vh]">*/}
             {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
             {/*</div>*/}
-            <SEO
+            {/* <SEO
                 ogImage={'/image/logo.png'}
                 title={roomsInnerSeo[lang].title}
                 description={roomsInnerSeo[lang].description}
                 ogTitle={roomsInnerSeo[lang].ogTitle}
                 ogDescription={roomsInnerSeo[lang].ogDescription}
                 twitterHandle={roomsInnerSeo[lang].twitterHandle}
-            />
+            /> */}
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={'Номер "Standart Double"'} justify={'justify-center'}/>
@@ -247,7 +247,7 @@ const Room = () => {
                     </ul>
                 </div>
            </SectionUI>
-           <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-xl py-5">
+           <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-sm py-5 border-t border-brown">
                 <div className="container flex items-center justify-between gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
                         {t('index.room')} "{roomIinfo.type}"

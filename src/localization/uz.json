@@ -5,7 +5,131 @@
       "about": "Biz haqimizda",
       "rooms":"Honalar",
       "gallery":"Suratlar",
-      "contact": "Aloqa"
+      "contact": "Aloqa",
+      "news": "Yangiliklar"
+    },
+    "lang": {
+      "ru": "Russ",
+      "en": "Ingliz",
+      "uz": "O'zbek"
+    },
+    "btn": {
+      "more":"Batafsil",
+      "booking":"Band qilish",
+      "readMore": "Ko'proq o'qish",
+      "allNums": "Barcha xonalar",
+      "viewAllPhoto": "Barcha fotosuratlarni ko'rish",
+      "allNews": "Barcha yangiliklar"
+    },
+    "footer": {
+      "menu": {
+        "title": "Yo'nalish",
+        "href1": "Mehmonxona haqida",
+        "href2": "Xonalar",
+        "href3": "Fotogalereya",
+        "href4": "Yangiliklar",
+        "href5": "Aloqa"
+      },
+      "address": {
+        "title": "Manzil"
+      },
+      "manager": {
+        "title": "Yangiliklarimizni kuzatib boring"
+      },
+      "miniFooter": {
+        "allrights": "The Tower Hotel. Barcha huquqlar himoyalangan.",
+        "siteCreated": "Veb-sayt yaratilgan:"
+      }
+    },
+    "links": {
+      "viewReviews": "Sharhlarni ko'rish"
+    },
+    "contact": {
+      "title": "Biz bilan bog'lanish"
+    },
+    "news": {
+      "title": "Yangiliklar blogi"
+    },
+    "gallery": {
+      "title": "Fotogalereya"
+    },
+    "about": {
+      "headerTitle": "Mehmonxonamiz haqida",
+      "section1": {
+        "title": "The Tower Hotelga Xush kelibsiz!",
+        "text": ""
+      }
+    },
+    "index": {
+      "headerBooking": {
+       "checkIn": "Belgilanish",
+       "entryDay": "Kelish kuni",
+       "departure": "Jo'nab ketish",
+       "departureDay": "Jo'nab ketish kuni",
+       "numberOfGuests" : "Mehmonlar soni",
+       "room": "Xona",
+       "adults": "Kattalar",
+       "children": "Bolalar",
+       "roomNumber": "Xonalar",
+       "forChildren": "Bolalar (0-11 yosh)",
+       "typeOfNumber": "Xona turi",
+       "choose": "Tanlash"
+      },
+      "section2": {
+        "title": "Xonalar turi"
+      },
+      "section3": {
+        "title": "Bizning xizmatlarimiz"
+      },
+      "section4": {
+        "title": "Yaqin atrofdagi diqqatga sazovor joylar"
+      },
+      "section5": {
+        "title": "Fotogalereya"
+      },
+      "section6": {
+        "title": "Rejalashtirish va saqlash",
+        "subtitle": "Oldindan toʻlov bilan turar joyni bron qiling va 25% gacha tejang"
+      },
+      "section7": {
+        "title": "Yangiliklar blogi"
+      }
+    },
+    "rooms": {
+      "miniHeader": "Bizning xonalarimiz"
+    },
+    "booking": {
+      "headerTitle": "Band qilish",
+      "headerSubtitle": "Bu bandlov tasdiqlanmagan. Biz sizning so'rovingizni ko'rib chiqamiz va bandlovingizni tasdiqlaymiz.",
+      "form": {
+        "title": "Ma'lumotlarni kiriting",
+        "arrival": "Kelish sanasi",
+        "departure": "Jo'nab ketish sanasi",
+        "adults": "Kattalar",
+        "children": "Bolalar",
+        "surnameEN": "Familiya (ingliz tilida)",
+        "nameEN": "Ism (ingliz tilida)",
+        "number": "Telefon nomer",
+        "email": "Elektron pochta"
+      },
+      "request": {
+        "title": "So'rovlar uchun aloqa ma'lumotlari",
+        "textarea": "So'rovingizni kiriting"
+      },
+      "cancelRule": {
+        "title": "Bekor qilish siyosati",
+        "text": "- Bandlovni bekor qilish yoki o'zgartirishga kelishdan 3 kun oldin soat 12:00 gacha ruxsat beriladi. Agar siz ushbu vaqtdan keyin bekor qilsangiz yoki o'zgartirsangiz yoki kelish kunida ko'rinmasangiz (ko'rsatilmaydi), sizdan turar joyingizning birinchi kechasi narxiga teng to'lov olinadi..",
+        "text2": "- Bandlovni bekor qilish uchun xonani band qilish bo'limiga murojaat qiling.",
+        "phone": "tel.nomer"
+      }
+    },
+    "reviews": {
+      "title": "Ko‘rib chiqish",
+      "surnameEN": "To'liq ismingiz (ingliz tilida)",
+      "country": "Mamlakat",
+      "countryPlaceholder": "Mamlakatni tanlang",
+      "review": "Sharh yozing",
+      "reviewClients": "Mijozlarning sharhlari"
     }
   }
 }

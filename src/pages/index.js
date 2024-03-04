@@ -104,8 +104,8 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">
                     <div className="text-white flex flex-col items-center max-w-[690px]">
-                        <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'}/>
-                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">Забронируйте пребывание с предоплатой и сэкономьте до 25%</p>
+                        <SectionTitle justify={'justify-center'} title={t('index.section6.title')} colorContent={'text-white'}/>
+                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">{t('index.section6.subtitle')}</p>
                         <div  data-aos='fade-up' data-aos-delay='150'>
                             <ButtonUI text={t('btn.more')} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
                         </div>
@@ -114,7 +114,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={t('index.section6.title')} btnText={t('btn.allNews')} href={'/news'}  />
+                    <SectionTitle title={t('index.section7.title')} btnText={t('btn.allNews')} href={'/news'}  />
                 </div>
                 <SwiperSlider newsCard={news?.results} />
             </SectionUI>
