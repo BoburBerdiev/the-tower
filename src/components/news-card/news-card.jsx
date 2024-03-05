@@ -7,7 +7,7 @@ import Skeleton from "react-loading-skeleton";
 const NewsCard = ({img, date, decr, href}) => {
   const {t} = useTranslation()
   return (
-    <a data-aos='fade-up' href={href} className={`block group w-full aspect-[16/22] lg:aspect-[16/18] relative overflow-hidden card-shadow duration-500 `}>
+    <a data-aos='fade-up' href={href} className={`block group w-full aspect-[14/16] lg:aspect-[16/18] relative overflow-hidden card-shadow duration-500 `}>
       <div className='duration-300 group-hover:scale-[1.1] absolute top-0 left-0 w-full h-full z-[8] '>
         <ImgUI src={img} imgStyle={'object-cover'} alt={'The Tower news'}/>
       </div>

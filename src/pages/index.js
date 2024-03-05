@@ -79,7 +79,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
             <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
                     <SectionTitle title={t('index.section4.title')} colorContent={true} />
-                    <div className='grid grid-cols-2 xl:grid-cols-3 gap-y-10 xl:gap-y-5 gap-x-10 md:gap-x-20 2xl:gap-x-[150px] py-10'>
+                    <div className='grid grid-cols-2 xl:grid-cols-3 xl:gap-y-5 gap-5 md:gap-x-20 2xl:gap-x-[150px] py-10'>
                         {
                             landmarks?.map(item => (
                                 <LocationInfos key={item?.id} title={langSelect(lang , item?.title_ru, item?.title_en , item?.title_uz )} icon={item?.image} locations={item?.landmarks} />
