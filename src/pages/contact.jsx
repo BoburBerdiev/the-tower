@@ -31,7 +31,9 @@ const Contact = ({contact}) => {
               <a className="block" href={`tel:${contact?.phone}`}>
                 <p className="space-x-2">
                   <span className="text-base md:text-xl text-iron">
-                    Телефон:
+                    {
+                      t('contact.phone')
+                    }
                   </span>
                   <span>{
                     formatPhoneNumber(contact?.phone)
@@ -41,14 +43,20 @@ const Contact = ({contact}) => {
               <a className="block" href={`mailto:${contact?.email}`}>
                 <p className="space-x-2">
                   <span className="text-base md:text-xl text-iron">
-                    Электронная почта:
+                  {
+                      t('contact.mail')
+                    }
                   </span>
                   <span>{contact?.email}</span>
                 </p>
               </a>
               <p className="block" >
                 <p className="space-x-2">
-                  <span className="text-base md:text-xl text-iron">Адрес:</span>
+                  <span className="text-base md:text-xl text-iron">
+                    {
+                      t('contact.address')
+                    }
+                  </span>
                   <span>
                    { langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}
                   </span>

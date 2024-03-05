@@ -1,12 +1,13 @@
 import SEO from '@/SEO/SEO';
 import {ImgBoxFlex, ImgUI, MiniHeader, SectionTitle, SectionUI, Slider} from '@/components';
 import { aboutUsSEO } from '@/SEO/SEO.config';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import axios from "axios";
 import {useEffect} from "react";
 
 const About = ({about ,services}) => {
-
+    const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
 
 
@@ -14,7 +15,7 @@ const About = ({about ,services}) => {
         console.log(about?.images)
     } , [])
     const newsBanner = {
-        title: 'О нашем отеле',
+        title: t('about.headerTitle'),
         img : '/image/IMG_5451-min.jpg'
     }
   return (

@@ -84,103 +84,7 @@ const roomIinfo = {
             'балкон'
         ],   
     }
-const services = [
-    {
-        img: '',
-        text: "Фитнес-центр",
-        id: 0
-    },
-    {
-        img: '',
-        text: "Мини-бар",
-        id: 1
-    },
-    {
-        img: '',
-        text: "Крытый бассейн",
-        id: 2
-    },
-    {
-        img: '',
-        text: "Кондиционер",
-        id: 3
-    },
-    {
-        img: '',
-        text: "Телевизор",
-        id: 4
-    },
-    {
-        img: '',
-        text: "Бесплатная парковка",
-        id: 5
-    },
-    {
-        img: '',
-        text: "Бесплатный Wi-Fi",
-        id: 6
-    },
-    {
-        img: '',
-        text: "Вид на город",
-        id: 7
-    },
-    {
-        img: '',
-        text: "Превосходный завтрак",
-        id: 8
-    },
-]
-const common = [
-    {
-        id: 1,
-        text: 'Односпальная кровать'
-    },
-    {
-        id: 2,
-        text: 'Гардероб'
-    },
-    {
-        id: 3,
-        text: 'Утюг'
-    },
-    {
-        id: 4,
-        text: 'Рабочий стол'
-    },
-    {
-        id: 5,
-        text: 'Мини бар'
-    },
-    {
-        id: 6,
-        text: 'Ванные принадлежности'
-    },
-    {
-        id: 7,
-        text: 'Кофеварка, чайник'
-    },
-    {
-        id: 8,
-        text: 'Завтрак Шведский стол'
-    },
-    {
-        id: 9,
-        text: 'Смарт ТВ'
-    },
-    {
-        id: 10,
-        text: 'Бесплатный Wi-Fi'
-    },
-    {
-        id: 11,
-        text: 'Сейф в номере'
-    },
-    {
-        id: 12,
-        text: 'Площадь номера 28m2'
-    },
-]
+
 
 const Room = () => {
     const {t} = useTranslation()
@@ -188,6 +92,53 @@ const Room = () => {
     const router = useRouter()
     const {rooms}=router.query
 
+    const services = [
+        {
+            img: '/image/service1.svg',
+            text: t('roomInner.services.service1'),
+            id: 0
+        },
+        {
+            img: '/image/service2.svg',
+            text: t('roomInner.services.service2'),
+            id: 1
+        },
+        {
+            img: '/image/service3.svg',
+            text: t('roomInner.services.service3'),
+            id: 2
+        },
+        {
+            img: '/image/service4.svg',
+            text: t('roomInner.services.service4'),
+            id: 3
+        },
+        {
+            img: '/image/service5.svg',
+            text: t('roomInner.services.service5'),
+            id: 4
+        },
+        {
+            img: '/image/service6.svg',
+            text: t('roomInner.services.service6'),
+            id: 5
+        },
+        {
+            img: '/image/service7.svg',
+            text: t('roomInner.services.service7'),
+            id: 6
+        },
+        {
+            img: '/image/service8.svg',
+            text: t('roomInner.services.service8'),
+            id: 7
+        },
+        {
+            img: '/image/service9.svg',
+            text: t('roomInner.services.service9'),
+            id: 8
+        },
+    ]
 
     const { data: room  , refetch: refetchRoom, isLoading , isSuccess } = useQuery(["room" , rooms], () =>
         apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
@@ -226,12 +177,14 @@ const Room = () => {
                 </p>
             </div>
            <SectionUI padding={'py-[50px]'}>
-                <h3 data-aos='fade-up' className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">Удобства и услуги </h3>
+                <h3 data-aos='fade-up' className=" font-elegance tracking-[2%] text-xl md:text-2xl lg:text-[30px] pb-5">{t('roomInner.servicesTitle')} </h3>
                 <div className="flex flex-wrap gap-2 md:gap-6">
                     {
                         services?.map((service, index) => (
                             <div data-aos='fade-in' data-aos-delay={`${index}00`} key={service.id} className="flex items-center gap-2 md:gap-4 py-2 px-3 md:pl-5 md:py-3.5 md:pr-11  border border-[#B0A79B] cursor-pointer text-iron font-roboto text-sm md:text-base lg:text-lg">
-                                <img src={service.img} alt="Icon" className="w-4 h-4 md:w-6 md:h-6 object-contain" />
+                                <div className="w-4 h-4 md:w-6 md:h-6 relative">
+                                    <ImgUI src={service.img} alt={'Icon'} objectFitContain/>
+                                </div>
                                 <span>{service.text}</span>
                             </div>
                         ))
@@ -240,7 +193,7 @@ const Room = () => {
                 <div className="py-10">
                     <h4 data-aos='fade-up' className="flex items-center gap-x-[10px] text-lg">
                         <RxInfoCircled className="text-customGrey text-xl" />
-                        <span className="font-roboto font-medium">Общие</span>
+                        <span className="font-roboto font-medium">{t('roomInner.allComforts')}</span>
                     </h4>
                     <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-x-5 lg:gap-x-[30px] gap-y-[10px] max-md:text-sm lg:text-lg font-roboto mt-[10px]">
                         {room?.room_characteristics?.map((item, index) => (
@@ -259,10 +212,10 @@ const Room = () => {
                     </div>
                     <div
                         className='flex shrink-0 leading-normal divide-x-2 divide-iron gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
-                            <p className="px-3">{room?.room_size} m</p>
-                            <p className="px-3">{room?.capacity} m</p>
-                            <p className="px-3">{room?.num_balconies} m</p>
-                            <p className="px-3">{room?.num_bathrooms} m</p>
+                            <p className="px-3">{room?.room_size} {t('roomInner.areaSymbol')}</p>
+                            <p className="px-3">{room?.capacity} {t('roomInner.humenSymbol')}</p>
+                            <p className="px-3">{room?.num_balconies} {t('roomInner.filterSymbol')}</p>
+                            <p className="px-3">{room?.num_bathrooms} {t('roomInner.balconySymbol')}</p>
                     </div>
                     <div>
                         <ButtonUI paddingFull={true} text={t('btn.booking')} href={'/booking'} />

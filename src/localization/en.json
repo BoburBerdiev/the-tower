@@ -41,11 +41,17 @@
         "siteCreated": "Website created"
       }
     },
+    "notFound": {
+      "text": "Room not found"
+    },
     "links": {
       "viewReviews": "View reviews"
     },
     "contact": {
-      "title": "News blog"
+      "title": "News blog",
+      "phone": "Phone:",
+      "mail": "Email:",
+      "address": "Address:"
     },
     "news": {
       "title": "News blog"
@@ -74,6 +80,7 @@
        "typeOfNumber": "Type of room",
        "choose": "Choose"
       },
+      "room": "Room ",
       "section2": {
         "title": "Type of rooms"
       },
@@ -129,6 +136,25 @@
       "countryPlaceholder": "Choose your country",
       "review": "Write a review",
       "reviewClients": "Customer Reviews"
+    },
+    "roomInner": {
+      "allComforts": "Are common",
+      "servicesTitle": "Facilities and services",
+      "services": {
+        "service1": "A fitness center",
+        "service2": "Mini bar",
+        "service3": "Indoor pool",
+        "service4": "Air conditioner",
+        "service5": "TV",
+        "service6": "Free parking",
+        "service7": "Free Wi-Fi",
+        "service8": "City view",
+        "service9": "Excellent breakfast"
+      },
+      "areaSymbol": "㎡ ",
+      "humenSymbol": "person",
+      "filterSymbol": "bathroom",
+      "balconySymbol": "balcony"
     }
   }
 }

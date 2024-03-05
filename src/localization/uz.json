@@ -13,6 +13,9 @@
       "en": "Ingliz",
       "uz": "O'zbek"
     },
+    "notFound": {
+      "text": "Hona topilmadi"
+    },
     "btn": {
       "more":"Batafsil",
       "booking":"Band qilish",
@@ -45,7 +48,10 @@
       "viewReviews": "Sharhlarni ko'rish"
     },
     "contact": {
-      "title": "Biz bilan bog'lanish"
+      "title": "Biz bilan bog'lanish",
+      "phone": "Telefon:",
+      "mail": "Elektron pochta:",
+      "address": "Manzil:"
     },
     "news": {
       "title": "Yangiliklar blogi"
@@ -75,6 +81,7 @@
        "typeOfNumber": "Xona turi",
        "choose": "Tanlash"
       },
+      "room": "Hona ",
       "section2": {
         "title": "Xonalar turi"
       },
@@ -130,6 +137,25 @@
       "countryPlaceholder": "Mamlakatni tanlang",
       "review": "Sharh yozing",
       "reviewClients": "Mijozlarning sharhlari"
+    },
+    "roomInner": {
+      "allComforts": "Barchasi",
+      "servicesTitle": "Qulayliklar va xizmatlar",
+      "services": {
+        "service1": "Fitnes markazi",
+        "service2": "Mini bar",
+        "service3": "Yopiq basseyn",
+        "service4": "Konditsioner",
+        "service5": "Televizor",
+        "service6": "Bepul avtoturargoh",
+        "service7": "Bepul Wi-Fi",
+        "service8": "Shahar ko'rinishi",
+        "service9": "Ajoyib nonushta"
+      },
+      "areaSymbol": "㎡ ",
+      "humenSymbol": "kishi",
+      "filterSymbol": "vannaxona",
+      "balconySymbol": "balkon"
     }
   }
 }

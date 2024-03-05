@@ -22,7 +22,7 @@
       "allNews": "Все новости"
     },
     "notFound": {
-      "text": "Элемент не найден"
+      "text": "Комната не найдена"
     },
     "modal": {
       "questionCorrect": "Ваш запрос принят",
@@ -53,7 +53,10 @@
       "viewReviews": "Посмотреть отзывы"
     },
     "contact": {
-      "title": "Свяжитесь с нами"
+      "title": "Свяжитесь с нами",
+      "phone": "Телефон:",
+      "mail":"Электронная почта:",
+      "address":"Адрес:"
     },
     "news": {
       "title": "Новостной блог"
@@ -139,6 +142,25 @@
       "countryPlaceholder": "Выберите страну",
       "review": "Напишите отзыв",
       "reviewClients": "Отзывы клиентов"
+    },
+    "roomInner": {
+      "allComforts": "Общие",
+      "servicesTitle": "Удобства и услуги",
+      "services": {
+        "service1": "Фитнес-центр",
+        "service2": "Мини-бар",
+        "service3": "Крытый бассейн",
+        "service4": "Кондиционер",
+        "service5": "Телевизор",
+        "service6": "Бесплатная парковка",
+        "service7": "Бесплатный Wi-Fi",
+        "service8": "Вид на город",
+        "service9": "Превосходный завтрак"
+      },
+      "areaSymbol": "㎡ ",
+      "humenSymbol": "чел",
+      "filterSymbol": "ванная",
+      "balconySymbol": "балкон"
     }
   }
 }
