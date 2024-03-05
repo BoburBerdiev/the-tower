@@ -5,7 +5,7 @@ import { FaFacebookF, FaYoutube } from 'react-icons/fa6';
 import {formatPhoneNumber, langSelect} from "@/helper";
 import {changleLang} from "@/slice/lang";
 import {useTranslation} from "react-i18next";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 
 
@@ -18,8 +18,10 @@ const TopNav = ({contact}) => {
         console.log(lang)
         dispatch(changleLang(lang.value))
     }
+    const {lang} = useSelector(state => state.langSlice)
+    
 
-    const lang = [
+    const langList = [
         {
             title:t('lang.ru'),
             value:'ru',
@@ -46,7 +48,7 @@ const TopNav = ({contact}) => {
           <a href={contact?.youtube} target='_blank'><FaYoutube className='text-xl'/></a>
         </div>
       <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white '>
-        <DropdownUl list={lang} defualtList={lang[0]} onClick={handleChangleLang} />
+        <DropdownUl list={langList} defualtList={langList[0]} onClick={handleChangleLang} />
         <a href={`tel:${contact?.phone}`} className='hidden sm:block'>{
             formatPhoneNumber(contact?.phone)
         }</a>

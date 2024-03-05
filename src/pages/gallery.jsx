@@ -7,6 +7,7 @@ import {langSelect} from "@/helper";
 
 const Gallery = ({galleryData}) => {
 
+    console.log(galleryData)
     const {lang} = useSelector(state => state.langSlice)
   return (
       <>

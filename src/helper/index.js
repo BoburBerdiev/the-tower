@@ -19,11 +19,11 @@ export const PageWayRouter  = ( pageAsPath , findPage) => {
 }
 
 
-export const langSelect = ( lang , ru , eng ,uz) => {
+export const langSelect = ( lang , ru , en ,uz) => {
    if(lang === 'ru')  {
        return ru
-   }else if(lang === 'eng'){
-       return eng
+   }else if(lang === 'en'){
+       return en
    }else if(lang === 'uz') {
        return uz
    }

@@ -22,13 +22,13 @@ const index = () => {
   const {
     data: newsCard,
     refetch: newsCardRefetch,
-      isLoading:newsIsLoading,
+    isLoading:newsIsLoading,
     isSuccess: newsCardSuccess,
   } = useQuery(
       "news",
       () =>
           apiService.getData(
-              `/pages/news?&page=${page}&page_size=8`
+              `/pages/news?&page=${page}&page_size=1`
           ),
       {
         enabled: false,
@@ -55,12 +55,15 @@ const index = () => {
     }
   }, [newsCard])
 
+  useEffect(() => {
+    newsCardRefetch()
+  }, []);
+
   const newsBanner = {
     title: t('news.title'),
     img : '/image/IMG_5451-min.jpg'
   }
 
-  console.log(newsCard)
 
   return (
     <div>
@@ -80,16 +83,16 @@ const index = () => {
 
 
 
-
           {
             newsIsLoading ?
-                <>
-                  <NewsCardSkeleton />
-                  <NewsCardSkeleton />
-                  <NewsCardSkeleton />
-                </>
-                :
-                <InfiniteScroll
+          <>
+            <NewsCardSkeleton />
+            <NewsCardSkeleton />
+            <NewsCardSkeleton />
+          </>
+          :
+
+            <InfiniteScroll
                 next={newsCardRefetch}
                 hasMore={hasMore}
                 loader={<div className={'flex w-full justify-center items-center mt-5 mb-3'}><ButtonUI
