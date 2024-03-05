@@ -263,6 +263,8 @@ const index = ({rooms}) => {
     const {t} = useTranslation()
 const {lang} = useSelector(state => state.langSlice)
 
+
+
     const newsBanner = {
         title: t('rooms.miniHeader'),
         img : '/image/IMG_5451-min.jpg'

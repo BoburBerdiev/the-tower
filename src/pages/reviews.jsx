@@ -1,12 +1,11 @@
-import {ButtonUI, ReviewCard, SectionTextUI, SectionTitle, SectionUI} from '@/components'
+import {ButtonUI, Modal, ReviewCard,  SectionTitle, SectionUI} from '@/components'
 import InputUl from '@/components/ui/Input-UI'
-import React, {useEffect} from 'react'
+import React, {useEffect , useState} from 'react'
 import { useSelector } from 'react-redux'
 import {indexSEO} from '@/SEO/SEO.config'
 import SEO from '@/SEO/SEO'
 import {useTranslation} from "react-i18next";
 import {useForm} from "react-hook-form";
-import {t} from "i18next";
 import {useMutation} from "react-query";
 import apiService from "@/service/axois";
 import {useRouter} from "next/router";
@@ -70,9 +69,10 @@ const Reviews = () => {
   const router = useRouter();
   const {t} = useTranslation()
   const {register,reset,
-    handleSubmit ,setValue,
-    formState: {  },
+    handleSubmit
   } = useForm();
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
 
   const {
     mutate: userPost,
@@ -98,6 +98,9 @@ const Reviews = () => {
       }, 2000);
     }
   }, [userPostData]);
+  const openModal = () => {
+    setIsOpenModal(prev => !prev)
+  }
 
   const {lang} = useSelector(state => state.langSlice)
   
@@ -148,9 +151,7 @@ const Reviews = () => {
         </div>
       </SectionUI>
       {
-        userPostSuccess && <p className={'fixed top-50 left-50 bg-red-300'}>
-        salom
-          </p>
+        userPostSuccess &&   <Modal  isOpenModal={userPostSuccess}  content={t('modal.questionCorrect')}/>
       }
     </div>
   )

@@ -60,6 +60,7 @@ const index = () => {
     img : '/image/IMG_5451-min.jpg'
   }
 
+  console.log(newsCard)
 
   return (
     <div>
