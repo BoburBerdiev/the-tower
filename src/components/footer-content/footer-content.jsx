@@ -4,12 +4,12 @@ const FooterContent = ({title , list, paragraph, hrefText, textJustify}) => {
   const {t} = useTranslation()
   return (
     <>
-    <div className={`max-md:${textJustify}`}>
-            <h3 className='mb-2 text-xl md:text-2xl font-openSans '>{title}</h3>
+    <div>
+            <h3 className={`mb-1 md:mb-2 md:text-2xl font-openSans ${textJustify} md:text-start`}>{title}</h3>
             <ul className={`space-y-2 font-light font-openSans`}>
               {
                 list?.map((item , index) => (
-                  <li key={index}>
+                  <li key={index} className={`max-md:text-sm ${textJustify} md:text-start`}>
                     <a href={item.link} className={`w-full block`}>
                       {item.name}
                     </a></li>
@@ -21,7 +21,9 @@ const FooterContent = ({title , list, paragraph, hrefText, textJustify}) => {
               }
               {
                 hrefText && 
-                <a href={hrefText} className=' text-iron font-light font-openSans underline decoration-1'>{t('links.viewReviews')}</a>
+                <li className={`${textJustify} md:text-start`}>
+                  <a href={hrefText} className='max-md:text-sm text-iron font-light font-openSans underline decoration-1'>{t('links.viewReviews')}</a>
+                </li>
               }
             </ul>
           </div>

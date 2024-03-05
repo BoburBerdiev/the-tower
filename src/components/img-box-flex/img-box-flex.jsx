@@ -16,7 +16,7 @@ const ImgBoxFlex = ({ title_ru , title_uz , title_en, subTitle_ru , subTitle_uz 
 
     const {lang} = useSelector(state => state.langSlice)
   return (
-    <div id={title_uz} className="grid items-center grid-cols-1 gap-8   md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div id={title_uz} className="grid items-center grid-cols-1 gap-5 py-5  md:grid-cols-2 md:gap-10 lg:gap-16">
       <div
         className={`${
           imgOrder ? "order-2" : "order-1"
@@ -29,7 +29,7 @@ const ImgBoxFlex = ({ title_ru , title_uz , title_en, subTitle_ru , subTitle_uz 
       data-aos='zoom-in'
       data-aos-delay='150'
         className={`${
-          imgOrder ? "order-1" : "order-2"
+          imgOrder ? "order-2 md:order-1" : "order-1 md:order-2"
         } w-full aspect-video md:aspect-[16/14] room-slider`}
       >
           <Slider SliderContent={images} PaginationInner={true}/>

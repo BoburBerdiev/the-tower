@@ -52,11 +52,11 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
                             <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true}/>
                         </div>
                     </div>
-                    <div className="relative flex flex-col items-end aspect-square lg:aspect-auto">
-                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[68%]  aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2  border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10  	">
+                    <div className="relative flex flex-col md:items-end aspect-square lg:aspect-auto">
+                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[62%] aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2 border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10">
                             <ImgUI src={about?.image_1} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
-                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[55%]  aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%]  absolute bottom-0 left-0 z-[9]">
+                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[62%] aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%] absolute bottom-8 md:bottom-0 right-0 md:left-0 max-md:border-[10px] border-white z-20 md:z-[9]">
                             <ImgUI  src={about?.image_2} objectFit={'object-cover'} alt={'banner'}/>
                         </div>
                     </div>
@@ -104,8 +104,8 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">
                     <div className="text-white flex flex-col items-center max-w-[690px]">
-                        <SectionTitle title={'Планируйте и экономьте'} colorContent={'text-white'}/>
-                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">Забронируйте пребывание с предоплатой и сэкономьте до 25%</p>
+                        <SectionTitle justify={'justify-center'} title={t('index.section6.title')} colorContent={'text-white'}/>
+                        <p  data-aos='fade-up' data-aos-delay='100' className="my-2 text-sm text-center font-roboto md:text-lg lg:text-xl md:mb-5 ">{t('index.section6.subtitle')}</p>
                         <div  data-aos='fade-up' data-aos-delay='150'>
                             <ButtonUI text={t('btn.more')} stylePadding={'py-2.5 px-6'} btnBorder={true} btnWhiteBorder={true}/>
                         </div>
@@ -114,7 +114,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
             </section>
             <SectionUI padding={'py-8 md:py-16 lg:py-[100px]'}>
                 <div className="pb-5 md:pb-10">
-                    <SectionTitle title={t('index.section6.title')} btnText={t('btn.allNews')} href={'/news'}  />
+                    <SectionTitle title={t('index.section7.title')} btnText={t('btn.allNews')} href={'/news'}  />
                 </div>
                 <SwiperSlider newsCard={news?.results} />
             </SectionUI>

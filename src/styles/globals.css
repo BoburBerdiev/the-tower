@@ -18,7 +18,7 @@ html, body {
     background-color: #00000000;
   }
 
-  *::-webkit-scrollbar-track-piece {
+*::-webkit-scrollbar-track-piece {
     background-color: #00000000;
   }
   
@@ -224,4 +224,9 @@ input::-webkit-inner-spin-button {
     100% {
         transform:scale(1)
     }
+}
+
+/* map */
+iframe div {
+        border: none!important;
 }

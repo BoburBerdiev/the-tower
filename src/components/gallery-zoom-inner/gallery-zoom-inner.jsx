@@ -15,12 +15,11 @@ const GalleryZoomInner = ({images}) => {
                 <>
 
                     <Swiper
-
                         loop={true}
                         spaceBetween={10}
                         thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
                         modules={[FreeMode, Thumbs ,EffectFade, Autoplay]}
-                        className="mySwiper2"
+                        className="mySwiper2 mb-5"
                         effect={"fade"}
                     >
                         {
@@ -35,18 +34,15 @@ const GalleryZoomInner = ({images}) => {
 
                             ))
                         }
-
                     </Swiper>
-                    <div className={'h-[30px] md:h-10'}>
-
-                    </div>
+                    
                     <Swiper
                         onSwiper={setThumbsSwiper}
                         loop={true}
                         breakpoints={{
                             0: {
                                 slidesPerView: 4,
-                                spaceBetween: 15,
+                                spaceBetween: 5,
                             },
                             768: {
                                 slidesPerView: 5,
@@ -70,7 +66,7 @@ const GalleryZoomInner = ({images}) => {
                             {
                                 images?.map(image => (
                                     <SwiperSlide key={image?.id}>
-                                        <div className={'w-full aspect-video'}>
+                                        <div className={'w-full aspect-[16/11]'}>
                                             <ImgUI src={image?.image} alt={'gallery-zoom'}/>
                                         </div>
                                     </SwiperSlide>
