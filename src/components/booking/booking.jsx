@@ -1,31 +1,37 @@
 import {ButtonUI, DropdownBooking, NumberGuests, TypeRoom} from "@/components";
-import { useState} from "react";
+import {useEffect, useState} from "react";
 import DatePicker from 'react-datepicker'
 import moment from "moment";
 import 'moment/locale/uz'
 import { useTranslation } from 'react-i18next'
 import {useDispatch, useSelector} from "react-redux";
 import { changleTimeBooking } from "@/slice/booking";
+import {useQuery} from "react-query";
+import apiService from "@/service/axois";
+import {langSelect} from "@/helper";
 
-moment.locale('uz')
 
-const typeRoomArr=[
-    "Standart double",
-    "Standart Twin",
-    "Standart double",
-    "Standart Twin",
-    "Deluxe",
-]
+
 
 
 const Booking = () => {
-
-     const {t} = useTranslation()
+    moment.locale('uz')
+    const {t} = useTranslation()
+    const {lang} = useSelector(state => state.langSlice)
     const dispatch = useDispatch();
     const { timeBooking ,typeBooking ,countRoomBooking ,countOlderBooking ,countChildrenBooking} = useSelector(
         (state) => state.bookingSlice);
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
+
+    const { data: typeRoom  , refetch: typeRoomRefetch, isLoading , isSuccess } = useQuery("typeRoom", () =>
+        apiService.getData( 'rooms-simple/') , { enabled: false}
+    );
+
+    useEffect(() =>{
+        typeRoomRefetch()
+    } , [])
+
 
 
 
@@ -68,9 +74,9 @@ const Booking = () => {
             <div className={'bg-brown w-full lg:w-[2px] h-0.5 lg:h-6 relative z-10'}/>
             <DropdownBooking
                 title={t('index.headerBooking.typeOfNumber')}
-                subTitle={ typeBooking|| t('index.headerBooking.choose')}
+                subTitle={ langSelect(lang, typeBooking?.title_ru ,typeBooking?.title_en ,typeBooking?.title_uz)|| t('index.headerBooking.choose')}
             >
-                <TypeRoom type={typeRoomArr} />
+                <TypeRoom type={typeRoom} />
             </DropdownBooking>
             <div >
                 <ButtonUI text={t('btn.booking')} href={'/booking'} />

@@ -19,6 +19,16 @@ const bookingSlice = createSlice({
         changleEndTimeBooking: (state , {payload}) => {
             state.timeBooking[1] = payload
         },
+
+        changleCountRoomBooking: (state , {payload}) => {
+            state.countRoomBooking = payload
+        },
+        changleCountOlderBooking: (state , {payload}) => {
+            state.countOlderBooking = payload
+        },
+        changleCountChildrenBooking: (state , {payload}) => {
+            state.countChildrenBooking = payload
+        },
         plusCountRoomBooking: (state ) => {
             state.countRoomBooking = ++state.countRoomBooking
         }
@@ -44,6 +54,13 @@ const bookingSlice = createSlice({
         },
         changleTypeBooking: (state , {payload}) => {
             state.typeBooking = payload
+        },
+        clearBooking: (state) => {
+            state.timeBooking= [0 , 0]
+                state.countRoomBooking= 0
+                state.countOlderBooking=0
+                state.countChildrenBooking=0
+                state.typeBooking=null
         }
     }
 })
@@ -52,6 +69,6 @@ const bookingSlice = createSlice({
 
 export const {changleTimeBooking ,changleEndTimeBooking ,changleStartTimeBooking
 ,plusCountRoomBooking , changleTypeBooking, minusCountChildrenBooking, minusCountOlderBooking ,minusCountRoomBooking ,plusCountChildrenBooking ,plusCountOlderBooking
-} = bookingSlice.actions
+ , changleCountRoomBooking ,changleCountChildrenBooking ,clearBooking ,changleCountOlderBooking} = bookingSlice.actions
 export default bookingSlice.reducer
 

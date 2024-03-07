@@ -139,7 +139,9 @@
       "title": "Отзыв",
       "surnameEN": "ФИО (на английском языке)",
       "country": "Страна",
-      "countryPlaceholder": "Выберите страну",
+      "countryPlaceholder": "Введите свою страну",
+      "notice": "Уведомление о нас",
+      "noticeTitle": "напиши название",
       "review": "Напишите отзыв",
       "reviewClients": "Отзывы клиентов"
     },

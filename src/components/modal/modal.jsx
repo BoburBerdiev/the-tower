@@ -9,21 +9,15 @@ const Modal = ({isOpenModal, setIsOpenModal, content}) => {
     //
     // }, 5000)
 
-  //   const stopModal = (e) => {
-  //     e.stopPropagation()
-  //   }
-  //   const closeModal = (e) => {
-  //     setIsOpenModal(false)
-  //   }
-  //
-  //
-  // useEffect(() => {
-  //   if (isOpenModal === true ) {
-  //     document.body.classList.add('overflow-hidden')
-  //   }else {
-  //     document.body.classList.remove('overflow-hidden')
-  //   }
-  // }, [isOpenModal])
+
+
+  useEffect(() => {
+    if (isOpenModal === true ) {
+      document.body.classList.add('overflow-hidden')
+    }else {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [isOpenModal])
 
   
 

@@ -9,7 +9,7 @@
       "news": "Yangiliklar"
     },
     "lang": {
-      "ru": "Russ",
+      "ru": "Rus",
       "en": "Ingliz",
       "uz": "O'zbek"
     },
@@ -134,7 +134,9 @@
       "title": "Ko‘rib chiqish",
       "surnameEN": "To'liq ismingiz (ingliz tilida)",
       "country": "Mamlakat",
-      "countryPlaceholder": "Mamlakatni tanlang",
+      "countryPlaceholder": "Mamlakatni yozing",
+      "notice": "Biz haqimizda habarnoma",
+      "noticeTitle": "sarlavha yozing",
       "review": "Sharh yozing",
       "reviewClients": "Mijozlarning sharhlari"
     },

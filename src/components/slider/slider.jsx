@@ -21,7 +21,7 @@ const Slider = ({
   return (
     <SkeletonTheme baseColor="#EBEAE8" highlightColor="#D7D3CE">
     <div
-      className={`relative bg-transparent h-full  ${
+      className={`relative z-50 bg-transparent h-full ${
         PaginationMod && "pb-6 md:pb-20"
       } ${PaginationMod ? "section-slider" : "header-slider"} `}
     >
@@ -31,10 +31,10 @@ const Slider = ({
         } w-full h-full`}
         spaceBetween={30}
         effect={"fade"}
-        // autoplay={{
-        //   delay: 5500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
           el: ".inner-pagination",
@@ -69,19 +69,11 @@ const Slider = ({
             </div>
             }
             <div className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
-             <ImgUI  objectFit="object-cover" src={slider?.image} alt={'banner'} priority={true} />
+             <ImgUI  objectFit="object-cover object-top" src={slider?.image} alt={'banner'} priority={true} />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {innerBtn && (
-        <div data-aos='zoom-in' data-aos-delay='50' className="absolute z-20 flex items-center justify-center w-full bottom-10 md:bottom-20">
-          <button className="p-3 border border-white rounded-full ">
-            <HiChevronDown className="text-xl text-white md:text-3xl" />
-          </button>
-        </div>
-      )}
 
       {PaginationMod && (
         <div className="relative flex items-center justify-center py-4 mt-5 md:mt-10 gap-x-5">

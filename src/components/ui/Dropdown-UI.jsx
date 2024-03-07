@@ -1,18 +1,28 @@
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import { FaAngleDown } from "react-icons/fa6";
 import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 import {changleLang} from "@/slice/lang";
 
-const DropdownUl = ({ list  ,  defualtList  ,onClick}) => {
-
+const DropdownUl = ({ list  ,  onClick}) => {
     const  [dropdown , setDropdown] = useState(false)
+    const [changleLang , setChangleLang] = useState('lang.ru')
+    const { t  } = useTranslation();
 
     const openDropdown  = () => {
         setDropdown(!dropdown)
     }
-    const setLang = () => {
-
+    const selectedLang = (item) => {
+        setDropdown(!dropdown)
+        onClick(item)
+        let langchangle =list?.filter(lang => lang.id === item.id )
+        if(langchangle[0].value === 'uz'){
+            setChangleLang("lang.uz")
+        }else if(langchangle[0].value === 'ru'){
+            setChangleLang("lang.ru")
+        }else if(langchangle[0].value === 'en'){
+            setChangleLang("lang.en")
+        }
     }
     return (
         <div className="relative">
@@ -20,7 +30,7 @@ const DropdownUl = ({ list  ,  defualtList  ,onClick}) => {
             <button onClick={openDropdown} className="py-2 text-white flex items-center gap-2">
       <span>
       {
-          defualtList?.title
+          t(`${changleLang}`)
       }
       </span>
                 <FaAngleDown className={`${dropdown && "-rotate-180 " } duration-500`} />
@@ -33,8 +43,7 @@ const DropdownUl = ({ list  ,  defualtList  ,onClick}) => {
               {
                     list?.map(item => (
                         <div onClick={() => {
-                            setDropdown(!dropdown)
-                            onClick(item)
+                            selectedLang(item)
                         }} key={item.id} className="cursor-pointer text-sm"  >
                             {item?.title}
                         </div>

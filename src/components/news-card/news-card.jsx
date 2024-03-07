@@ -3,6 +3,7 @@ import { HiArrowRight } from "react-icons/hi";
 import { ImgUI } from '..'
 import { useTranslation } from "react-i18next";
 import Skeleton from "react-loading-skeleton";
+import moment from "moment";
 
 const NewsCard = ({img, date, decr, href}) => {
   const {t} = useTranslation()
@@ -16,7 +17,7 @@ const NewsCard = ({img, date, decr, href}) => {
         <div className="relative z-10 duration-300 h-fit flex flex-col group-hover:pl-6 px-3 lg:px-[15px] pb-4 md:pb-6 text-white space-y-2 before:h-full before:w-0 before:bg-brown before:absolute before:top-0 before:left-0 group-hover:before:w-2 before:duration-300 before:rounded-tr before:z-[99]">
           <div className='flex items-center'>
             <LuCalendarRange className="md:text-xl text-lg pb-[3px]" />
-            <p className={`font-inter font-medium text-sm md:text-base`}>{date}</p>
+            <p className={`font-inter font-medium text-sm md:text-base`}>{  moment(date).format('L')}</p>
           </div>
           <p className={`font-openSans text-sm md:text-xl  line-clamp-3 md:line-clamp-2`}>{decr}</p>
           <div className={`font-openSans max-md:text-xs w-fit flex items-center gap-x-2  hover:underline`}>

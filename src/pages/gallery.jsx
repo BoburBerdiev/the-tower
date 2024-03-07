@@ -7,12 +7,11 @@ import {langSelect} from "@/helper";
 
 const Gallery = ({galleryData}) => {
 
-    console.log(galleryData)
     const {lang} = useSelector(state => state.langSlice)
   return (
       <>
       <SEO
-              ogImage={'/image/logo.png'}
+              ogImage={'/logo.png'}
               title={gallerySEO[lang].title}
               description={gallerySEO[lang].description}
               ogTitle={gallerySEO[lang].ogTitle}
@@ -43,7 +42,6 @@ export async function getServerSideProps({req, res}) {
     return {
         props: {
             galleryData: galleryData?.data,
-
         },
     };
 }

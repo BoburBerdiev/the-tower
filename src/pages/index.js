@@ -7,26 +7,9 @@ import axios from "axios";
 import about from "@/pages/about";
 import {langSelect} from "@/helper";
 
-const gallery = [
-    {
-        src:'/image/IMG_5346-min.jpg',
-        id:1
-    }
-    ,{
-        src:'/image/IMG_5397-min.jpg',
-        id:2
-    }
-    ,{
-        src:'/image/IMG_5448-min.jpg',
-        id:3
-    },
-    {
-        src:'/image/IMG_5451-min.jpg',
-        id:4
-    },
-]
 
-const Home = ({home , about , rooms , services , news , landmarks}) => {
+
+const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => {
     // landmarks
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
@@ -35,7 +18,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
     return (
         <div>
             <SEO
-              ogImage={'/image/logo.png'}
+              ogImage={'/logo.png'}
               title={indexSEO[lang].title}
               description={indexSEO[lang].description}
               ogTitle={indexSEO[lang].ogTitle}
@@ -94,7 +77,7 @@ const Home = ({home , about , rooms , services , news , landmarks}) => {
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >
                 <div className="space-y-5 md:space-y-10">
                     <SectionTitle title={t('index.section5.title')}  btnText={t('btn.viewAllPhoto')} href={'/gallery'}/>
-                    <GallerySlider gallery={gallery} />
+                    <GallerySlider gallery={gallery?.images} />
                 </div>
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
@@ -131,13 +114,14 @@ export async function getServerSideProps({req, res}) {
         "public, s-maxage=10, stale-while-revalidate=59"
     );
     // Fetch data from external API
-    const [home, about , rooms ,services , news ,landmarks ] = await Promise.all([
+    const [home, about , rooms ,services , news ,landmarks, gallery ] = await Promise.all([
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/index/`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/about/index/`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/rooms/?page=1&page_size=10`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/services/?page=1&page_size=10`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/news/`),
         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/landmarkcategories/`),
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/gallery/`),
     ]);
     return {
         props: {
@@ -146,7 +130,8 @@ export async function getServerSideProps({req, res}) {
             rooms: rooms?.data,
             services: services?.data?.results,
             news: news?.data,
-            landmarks: landmarks?.data
+            landmarks: landmarks?.data,
+            gallery: gallery?.data
         },
     };
 }

@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { RxInfoCircled } from "react-icons/rx";
 import { IoMdCheckmark } from "react-icons/io";
 import {
-    ButtonUI,
+    ButtonUI, GallerySlider,
     GalleryZoom,
     ImgUI,
     RoomInnerSlider,
@@ -12,78 +12,13 @@ import {
     Slider
 } from "../../components"
 import SEO from "@/SEO/SEO";
-import {roomsInnerSeo} from '@/SEO/SEO.config'
+import {indexSEO} from '@/SEO/SEO.config'
 import { useSelector } from "react-redux";
 import {useQuery} from "react-query";
 import apiService from "@/service/axois";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {langSelect} from "@/helper";
-
-const roomBannerContent = [
-    {
-        title: "Стандартный номер",
-        img: "/image/IMG_5513-min.jpg",
-        id: 0
-    },
-    {
-        title: "Стандартный номер 2",
-        img: "/image/IMG_5451-min.jpg",
-        id: 1
-    },
-    {
-        title: "Стандартный номер 3",
-        img: "/image/IMG_5513-min.jpg",
-        id: 2
-    },
-]
-const additionalAmenities = [
-    {
-        title: '42-FULL HD TV, телефон, чайник, тапочки, рожок для обуви',
-        id: 1
-    },
-    {
-        title: 'Предметы гигиены, халат, фен',
-        id: 2
-    },
-    {
-        title: 'Постельные принадлежности для лучшего крепкого сна',
-        id: 3
-    },
-    {
-        title: 'Бесплатный доступ в открытый плавательный бассейн и сауну',
-        id: 4
-    },
-    {
-        title: 'Бесплатный доступ в фитнес-центр (с профессиональным тренером)',
-        id: 5
-    },
-    {
-        title: 'Бесплатный проводной/беспроводной доступ в Интернет во всех номерах',
-        id: 6
-    },
-]
-const roomsInner =[
-    {
-        img: "/image/IMG_7363-min.jpg"
-    },
-    {
-        img: "/image/IMG_7361-min.jpg"
-    },
-    {
-        img: "/image/IMG_7362-min.jpg"
-    },
-]
-const roomIinfo = {
-        id: 1,
-        type: 'Standart Twin',
-        information: [
-            '27 m2',
-            '2 чел',
-            '1 ванная',
-            'балкон'
-        ],   
-    }
 
 
 const Room = () => {
@@ -150,21 +85,18 @@ const Room = () => {
         }
     } ,  [rooms])
 
-    console.log(room)
 
     return (
         <div className="wrapper pt-10 md:pt-20 relative">
-            {/*<div className="w-full h-[90vh]">*/}
-            {/*    <Slider SliderContent={roomBannerContent} innerBtn={true} />*/}
-            {/*</div>*/}
-            {/* <SEO
-                ogImage={'/image/logo.png'}
-                title={roomsInnerSeo[lang].title}
-                description={roomsInnerSeo[lang].description}
-                ogTitle={roomsInnerSeo[lang].ogTitle}
-                ogDescription={roomsInnerSeo[lang].ogDescription}
-                twitterHandle={roomsInnerSeo[lang].twitterHandle}
-            /> */}
+
+             <SEO
+                ogImage={'/logo.png'}
+                title={langSelect(lang , room?.title_ru , room?.title_en , room?.title_uz)}
+                description={indexSEO[lang].description}
+                ogTitle={langSelect(lang , room?.title_ru , room?.title_en , room?.title_uz)}
+                ogDescription={indexSEO[lang].ogDescription}
+                twitterHandle={indexSEO[lang].twitterHandle}
+            />
             <div className={'w-full container'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={langSelect(lang , room?.title_ru , room?.title_en , room?.title_uz)} justify={'justify-center'}/>
@@ -205,6 +137,12 @@ const Room = () => {
                     </ul>
                 </div>
            </SectionUI>
+            <SectionUI padding={'py-10 '} >
+                <div className="space-y-5 md:space-y-10">
+                    <SectionTitle title={t('index.section5.title')} />
+                    <GallerySlider gallery={room?.room_gallery} />
+                </div>
+            </SectionUI>
            <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-sm py-5 border-t border-brown">
                 <div className="container flex flex-wrap items-center  justify-center md:justify-between gap-y-5 gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
@@ -217,6 +155,7 @@ const Room = () => {
                             <p className="px-3">{room?.num_balconies} {t('roomInner.filterSymbol')}</p>
                             <p className="px-3">{room?.num_bathrooms} {t('roomInner.balconySymbol')}</p>
                     </div>
+
                     <div>
                         <ButtonUI paddingFull={true} text={t('btn.booking')} href={'/booking'} />
                     </div>

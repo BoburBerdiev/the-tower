@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react";
+import {langSelect} from "@/helper";
+import {useSelector} from "react-redux";
 
 const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOptionName ,labelOption}) => {
     const [isOpen, setIsOpen] = useState(false);
+    const {lang} = useSelector(state => state.langSlice)
     useEffect(() => {
         const handleWindow = () => {
             setIsOpen(false)
@@ -21,7 +24,7 @@ const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOpti
                 setSelectOptionName(
                     {
                         name: labelOption ,
-                        value: value.value
+                        value: value
                     }
                 )
 
@@ -45,7 +48,7 @@ const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOpti
                     setIsOpen(!isOpen)
                 }}
             >
-                {SelectOptionName || 'Select an option'}
+                {SelectOptionName || labelText}
             </button>
             {isOpen && (
                 <div
@@ -53,11 +56,11 @@ const SelectOptionUI = ({selectList ,labelText  ,SelectOptionName, setSelectOpti
                     <div className="py-1">
                         {selectList.map((content) => (
                             <div
-                                key={content.id}
+                                key={content?.slug}
                                 className="px-4 md:px-4 py-1 md:py-3 font-roboto text-black/80 hover:bg-brown/30  text-sm cursor-pointer z-50 "
                                 onClick={() => selectInputValue(content)}
                             >
-                                {content.value}
+                                { langSelect(lang,content?.title_ru , content?.title_en , content?.title_uz)}
                             </div>
                         ))}
                     </div>

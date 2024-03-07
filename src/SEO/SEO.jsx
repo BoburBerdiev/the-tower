@@ -15,11 +15,11 @@ const SEO = ({ title, description, canonical, ogUrl, ogTitle, ogDescription, ogI
                     url: ogImage,
                     width: 1200,
                     height: 630,
-                    alt: 'Sirius Tech',
-                    type: 'image/jpeg',
+                    alt: 'The Tower Hotel Tashkent',
+                    type: 'image/png',
                 },
             ],
-            siteName: 'Sirius Tech',
+            siteName: 'The Tower Hotel Tashkent',
             link: [
                 {
                     rel: 'icon',
@@ -30,21 +30,14 @@ const SEO = ({ title, description, canonical, ogUrl, ogTitle, ogDescription, ogI
         additionalLinkTags={[
             {
                 rel: 'icon',
-                href: '/logo-title.png',
+                href: ogImage,
             },
             {
-                rel: 'apple-touch-icon',
-                href: '/logo.png',
+                rel: 'The-Tower-Hotel-Tashkent',
+                href: ogImage,
                 sizes: '76x76'
             },
-            {
-                rel: 'manifest',
-                href: '/manifest.json'
-            },
-            {
-                rel: 'preload',
-                href: '/logo.png',
-            }
+
         ]}
         twitter={{
             handle: twitterHandle,

@@ -12,7 +12,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import {AiOutlineLoading3Quarters} from "react-icons/ai";
 import {langSelect} from "@/helper";
 
-const index = () => {
+const index = ({newsHeader}) => {
   const {t} = useTranslation()
   const {lang} = useSelector(state => state.langSlice)
   const [page, setPage] = useState(1)
@@ -59,16 +59,11 @@ const index = () => {
     newsCardRefetch()
   }, []);
 
-  const newsBanner = {
-    title: t('news.title'),
-    img : '/image/IMG_5451-min.jpg'
-  }
-
 
   return (
     <div>
        <SEO
-              ogImage={'/image/logo.png'}
+              ogImage={'/logo.png'}
               title={newsSEO[lang].title}
                 description={newsSEO[lang].description}
                 ogTitle={newsSEO[lang].ogTitle}
@@ -76,7 +71,7 @@ const index = () => {
                 twitterHandle={newsSEO[lang].twitterHandle}
             />
       <div>
-        <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
+        <MiniHeader img={newsHeader?.header_image} title={langSelect(lang , newsHeader?.title_ru, newsHeader?.title_en , newsHeader?.title_uz )}/>
       </div>
       <SectionUI padding={'py-10 md:py-16 lg:py-[100px]'}>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-[30px]">
@@ -107,7 +102,7 @@ const index = () => {
                   productInfinity?.map(news => (
                       <NewsCard
                           img={news?.main_image}
-                          date={news?.date}
+                          date={news?.created_at}
                           decr={langSelect(lang ,news?.title_ru, news?.title_en , news?.title_uz )}
                           href={`news/${news?.slug}`}/>
                   ))
@@ -127,5 +122,22 @@ const index = () => {
 }
 
 
+export async function getServerSideProps({req, res}) {
+  res.setHeader(
+      "Cache-Control",
+      "public, s-maxage=10, stale-while-revalidate=59"
+  );
+  // Fetch data from external API
+  const [newsHeader ] = await Promise.all([
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/newspage/`),
+
+  ]);
+  return {
+    props: {
+      newsHeader: newsHeader?.data,
+
+    },
+  };
+}
 
 export default index

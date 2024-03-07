@@ -27,10 +27,7 @@ const InputDateUI = ({ startDateUpdate  , labelText,setSelectOptionName  }) => {
         const handleWindow = () => {
             setOpenDropdown(false)
         }
-
         window.addEventListener('click', handleWindow)
-
-
         return () => {
             window.removeEventListener('click', handleWindow)
         }
@@ -48,7 +45,7 @@ const InputDateUI = ({ startDateUpdate  , labelText,setSelectOptionName  }) => {
                     <div className='relative flex flex-col justify-center'>
 
                         <p onClick={inputHandler} className={'cursor-pointer border border-black rounded-none outline-none p-3 lg:p-5 w-full font-roboto font-light tracking-[0.36px] xl:text-lg duration-300 focus:border-brown'}>
-                            {startDateUpdate ?    moment(startDateUpdate).add(0, 'days').calendar(): 'salom'}
+                            {startDateUpdate ?    moment(startDateUpdate).add(0, 'days').calendar(): labelText}
                         </p>
                              <IoCalendarOutline onClick={inputHandler} className={`absolute duration-200 right-5 text-2xl cursor-pointer   ${openDropdown ? 'text-brown' : 'text-black' }`} />
                     </div>

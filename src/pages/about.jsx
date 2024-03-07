@@ -5,23 +5,20 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import axios from "axios";
 import {useEffect} from "react";
+import {langSelect} from "@/helper";
 
 const About = ({about ,services}) => {
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
-
+    console.log(about)
 
     useEffect(() => {
         console.log(about?.images)
     } , [])
-    const newsBanner = {
-        title: t('about.headerTitle'),
-        img : '/image/IMG_5451-min.jpg'
-    }
   return (
       <div className="wrapper">
         <SEO
-              ogImage={'/image/logo.png'}
+              ogImage={'/logo.png'}
               title={aboutUsSEO[lang].title}
                 description={aboutUsSEO[lang].description}
                 ogTitle={aboutUsSEO[lang].ogTitle}
@@ -29,7 +26,7 @@ const About = ({about ,services}) => {
                 twitterHandle={aboutUsSEO[lang].twitterHandle}
             />
           <div>
-              <MiniHeader img={newsBanner.img} title={newsBanner.title}/>
+              <MiniHeader img={about?.header?.image} title={langSelect(lang , about?.header?.title_ru , about?.header?.title_en , about?.header?.title_uz)}/>
           </div>
           <SectionUI bgFigureTopPostion={'top-0 left-0'} bgFigureBottomPostion={'bottom-0 left-0'}
                      padding={"py-10 md:py-20 "}>
@@ -42,9 +39,6 @@ const About = ({about ,services}) => {
                       subTitle_ru={about?.sub_title_ru}
                       subTitle_uz={about?.sub_title_uz}
                       subTitle_en={about?.sub_title_en}
-                      subTitle={
-                          "Удобное расположение в центре города Ташкента, недалеко от основных транспортных развязок, выставочных и бизнес-центров позволяет быстро добраться до места назначения. В Tower hotel Tashkent вы сможете ощутить по-настоящему высокое качество обслуживания."
-                      }
                   />
                   <div className="w-full aspect-video">
                       <Slider SliderContent={about?.images} PaginationMod={true}/>

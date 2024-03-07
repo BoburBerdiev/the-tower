@@ -71,7 +71,6 @@ const Reviews = () => {
   const {register,reset,
     handleSubmit
   } = useForm();
-  const [isOpenModal, setIsOpenModal] = useState(false)
 
 
   const {
@@ -84,6 +83,7 @@ const Reviews = () => {
       fullname: data?.fullname,
       description: data?.description,
       phone: data?.phone ,
+      title:data?.title,
       country: data?.country
     }
 
@@ -98,16 +98,14 @@ const Reviews = () => {
       }, 2000);
     }
   }, [userPostData]);
-  const openModal = () => {
-    setIsOpenModal(prev => !prev)
-  }
+
 
   const {lang} = useSelector(state => state.langSlice)
   
   return (
     <div>
       <SEO
-              ogImage={'/image/logo.png'}
+              ogImage={'/logo.png'}
               title={indexSEO[lang].title}
               description={indexSEO[lang].description}
               ogTitle={indexSEO[lang].ogTitle}
@@ -127,8 +125,8 @@ const Reviews = () => {
           </div>
 
           <div className={'space-y-10'}>
-            <InputUl id={'description'} name={'description'} labelText={t('reviews.country')}
-                     placeholder={t('reviews.countryPlaceholder')} formname={...register('title')}/>
+            <InputUl id={'description'} name={'description'} labelText={t('reviews.notice')}
+                     placeholder={t('reviews.noticeTitle')} formname={...register('title')}/>
             <textarea name="description" id="description" rows="10" placeholder={t('reviews.review')} {...register('description')}
                       className='cursor-pointer border border-black rounded-none outline-none p-3 lg:p-5  w-full font-roboto font-light tracking-[0.36px] xl:text-lg duration-300 focus:border-brown'></textarea>
           </div>
@@ -145,7 +143,7 @@ const Reviews = () => {
         <div className='pt-10 space-y-10 overflow-y-auto max-h-[300px] border-y border-brown shadow'>
           {
             reviewData.map(review => (
-              <ReviewCard name={review.name} flag={review.flag} country={review.country} date={review.date} title={review.title} text={review.text} />
+              <ReviewCard key={review?.id} name={review.name} flag={review.flag} country={review.country} date={review.date} title={review.title} text={review.text} />
             ))
           }
         </div>

@@ -62,6 +62,10 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
                   id={card.id}
                   cardTitle={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
                   descriptions={card?.information}
+                  capacity={card?.capacity}
+                  num_balconies={card?.num_balconies}
+                  room_size={card?.room_size}
+                  num_bathrooms={card?.num_bathrooms}
                   href={`rooms/${card?.slug}`}
                   indexForAos={index}
                 />
@@ -73,7 +77,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
                 <NewsCard
                 
                   img={card?.main_image}
-                  date={card?.date}
+                  date={card?.created_at}
                   decr={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
                   href={`news/${card?.slug}`}
                 />

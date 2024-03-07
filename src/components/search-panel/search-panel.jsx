@@ -30,11 +30,11 @@ function SearchPanel() {
 
     return (
         <>
-            <button onClick={openSeachPanel} className={'flex justify-center items-center'}>
-                <CiSearch className="text-xl lg:text-2xl"/>
+            <button onClick={openSeachPanel} className={'flex justify-center items-center p-2 md:border-0 border nav-btn'}>
+                <CiSearch className="text-xl lg:text-2xl "/>
             </button>
             <div className={`fixed w-screen h-screen overflow-y-scroll flex flex-col items-center right-0 backdrop-blur-2xl bg-white/70 p-5 md:p-10 left-0 z-[102] duration-200 ${searchPanel ? "top-0" : "-top-[200%]"}`}>
-                <button onClick={closeSeachPanel} className="self-end p-2 border duration-200 hover:bg-brown hover:text-white border-brown rounded">
+                <button onClick={closeSeachPanel} className="self-end p-2 border duration-200 hover:bg-brown hover:text-white border-brown">
                     <TfiClose />
                 </button>
                 <div className="w-full md:max-w-[700px] mb-10 mt-5">

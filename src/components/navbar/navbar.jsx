@@ -94,7 +94,7 @@ const Navbar = () => {
               <SearchPanel/> 
               </div>
           <div
-              className={`lg:hidden p-2 border  rounded-md  duration-200 text-lg ${navOpen ? 'nav-active' : 'nav-btn'}`}
+              className={`lg:hidden p-2 border   duration-200 text-lg ${navOpen ? 'nav-active' : 'nav-btn'}`}
               onClick={openNav}>
             <CiMenuFries/>
           </div>

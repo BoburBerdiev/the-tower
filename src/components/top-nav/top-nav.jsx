@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import DropdownUl from "@/components/ui/Dropdown-UI";
 import { IoLogoInstagram } from 'react-icons/io5';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa6';
@@ -15,7 +15,6 @@ const TopNav = ({contact}) => {
     const dispatch = useDispatch();
     const handleChangleLang = (lang) => {
         i18n.changeLanguage(lang.value)
-        console.log(lang)
         dispatch(changleLang(lang.value))
     }
     const {lang} = useSelector(state => state.langSlice)
@@ -48,7 +47,7 @@ const TopNav = ({contact}) => {
           <a href={contact?.youtube} target='_blank'><FaYoutube className='text-xl'/></a>
         </div>
       <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white '>
-        <DropdownUl list={langList} defualtList={langList[0]} onClick={handleChangleLang} />
+        <DropdownUl list={langList}  onClick={handleChangleLang} />
         <a href={`tel:${contact?.phone}`} className='hidden sm:block'>{
             formatPhoneNumber(contact?.phone)
         }</a>

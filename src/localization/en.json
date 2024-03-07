@@ -133,8 +133,10 @@
       "title": "Review",
       "surnameEN": "Full name (in English)",
       "country": "Country",
-      "countryPlaceholder": "Choose your country",
+      "countryPlaceholder": "Enter your country",
       "review": "Write a review",
+      "notice": "Notice about us",
+      "noticeTitle": "write a title",
       "reviewClients": "Customer Reviews"
     },
     "roomInner": {

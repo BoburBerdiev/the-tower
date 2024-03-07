@@ -11,10 +11,9 @@ const RoomInnerSlider = ({images}) => {
         <>
             {
                 images?.length > 0 &&
-                <div className={'grid grid-cols-8 xl:grid-cols-12 gap-2 lg:gap-[30px]'}>
+                <div className={'grid grid-cols-8 xl:grid-cols-12 gap-2 lg:gap-5'}>
                     <div className={'col-span-6 xl:col-span-10 room-slider'}>
                         <Swiper
-
                             loop={true}
                             spaceBetween={10}
                             thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
@@ -28,7 +27,7 @@ const RoomInnerSlider = ({images}) => {
                             {
                                 images?.map(image => (
                                     <SwiperSlide key={image?.id}>
-                                        <div data-aos='fade-in'  href={image?.image} className={'block w-full h-full'}>
+                                        <div data-aos='fade-in'   className={'block w-full h-full'}>
                                             <ImgUI priority={true} src={image?.image} alt={'room-inner'}/>
                                         </div>
                                     </SwiperSlide>
@@ -52,8 +51,8 @@ const RoomInnerSlider = ({images}) => {
                         >
                                     {
                                         images?.map(image => (
-                                            <SwiperSlide key={image?.id} className='relative  w-full '>
-                                                <ImgUI src={image?.image} imgStyle={'object-cover cursor-pointer'} alt={'rooms-inner'}/>
+                                            <SwiperSlide key={image?.id} className='relative  w-full'>
+                                                <ImgUI src={image?.image} imgStyle={'object-cover w-full h-full cursor-pointer'} alt={'rooms-inner'}/>
                                             </SwiperSlide>
     
                                         ))

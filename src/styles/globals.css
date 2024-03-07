@@ -154,13 +154,13 @@ html, body {
     background-color: #af8d64f3;
     border-radius: 0;
 }
-.room-slider .pagintaion-slider .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet{
+.room-slider .section-slider .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet{
     width: 60px;
     height: 4px;
     background-color:rgba(255, 255, 255, 0.50) !important;
     border-radius: 0;
 }
-.room-slider .pagintaion-slider .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active{
+.room-slider .section-slider .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active{
     width: 60px;
     height: 4px;
     background-color:white !important;
@@ -206,7 +206,7 @@ input::-webkit-inner-spin-button {
 }
 .room-inner-slider .mySwiper .swiper-slide {
     width: 100% !important;
-    height: 31% !important;
+    height: 24% !important;
 }
 
 .image-animate-scale {

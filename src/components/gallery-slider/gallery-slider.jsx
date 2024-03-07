@@ -104,7 +104,7 @@ const GallerySlider = ({gallery}) => {
                       className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden card-shadow duration-300"}
                     >
                       <ImgUI
-                        src={image?.src}
+                        src={image?.image}
                         alt={"gallery"}
                         objectFit={"object-cover"}
                       />
