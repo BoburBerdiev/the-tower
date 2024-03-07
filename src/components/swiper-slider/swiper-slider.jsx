@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import { HotelCard, ImgUI, NewsCard, ServiceCard } from "@/components";
+import { HotelCard,  NewsCard, ServiceCard } from "@/components";
 import {langSelect} from "@/helper";
 import {useSelector} from "react-redux";
 
@@ -72,7 +72,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
               </SwiperSlide>
             ))}
           {newsCard &&
-            newsCard?.map((card, index) => (
+            newsCard?.map((card) => (
               <SwiperSlide className={"h-full"} key={card?.id} >
                 <NewsCard
                 

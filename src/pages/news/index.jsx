@@ -13,7 +13,6 @@ import {AiOutlineLoading3Quarters} from "react-icons/ai";
 import {langSelect} from "@/helper";
 
 const index = ({newsHeader}) => {
-  const {t} = useTranslation()
   const {lang} = useSelector(state => state.langSlice)
   const [page, setPage] = useState(1)
   const [productInfinity, setProductInfinity] = useState([])
@@ -122,7 +121,7 @@ const index = ({newsHeader}) => {
 }
 
 
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({ res}) {
   res.setHeader(
       "Cache-Control",
       "public, s-maxage=10, stale-while-revalidate=59"

@@ -1,14 +1,11 @@
-import {useEffect, useState} from "react"
+import {useState} from "react"
 import { FaAngleDown } from "react-icons/fa6";
-import {useDispatch, useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
-import {changleLang} from "@/slice/lang";
 
 const DropdownUl = ({ list  ,  onClick}) => {
     const  [dropdown , setDropdown] = useState(false)
     const [changleLang , setChangleLang] = useState('lang.ru')
     const { t  } = useTranslation();
-
     const openDropdown  = () => {
         setDropdown(!dropdown)
     }

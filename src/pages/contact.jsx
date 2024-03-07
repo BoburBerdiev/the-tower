@@ -63,7 +63,7 @@ const Contact = ({contact}) => {
                 </p>
               </p>
             </div>
-            <div data-aos='fade-up' data-aos-once data-aos-delay='0.3' className="mt-5 flex justify-center">
+            <div data-aos='fade-up'  data-aos-delay='0.3' className="mt-5 flex justify-center">
               <MesengerList instagram={contact?.instagram} facebook={contact?.facebook}  youtube={contact?.youtube} />
             </div>
           </div>
@@ -81,7 +81,7 @@ const Contact = ({contact}) => {
   );
 };
 
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({ res}) {
   res.setHeader(
       "Cache-Control",
       "public, s-maxage=10, stale-while-revalidate=59"
@@ -94,7 +94,6 @@ export async function getServerSideProps({req, res}) {
   return {
     props: {
       contact: contact?.data,
-
     },
   };
 }

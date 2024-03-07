@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect } from 'react'
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 
-const Modal = ({isOpenModal, setIsOpenModal, content}) => {
+const Modal = ({isOpenModal,  content}) => {
 
-    // setTimeout(() => {
-    //   setIsOpenModal(false)
-    //
-    // }, 5000)
+
 
 
 

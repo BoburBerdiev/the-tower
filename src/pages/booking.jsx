@@ -12,40 +12,17 @@ import moment from "moment";
 import axios from "axios";
 import {langSelect} from "@/helper";
 import {useRouter} from "next/router";
-const optionArr = [
-  {
-    value:"Стандартный номер",
-    id:"1"
-  },
-  {
-    value:"Стандартный номер 2",
-    id:"4"
-  },
-  {
-    value:"Стандартный номер 3",
-    id:"20"
-  },
-  {
-    value:"Стандартный номер 24",
-    id:"22"
-  },
-  {
-    value:"Стандартный номер 12",
-    id:"21"
-  },
-]
+
 const Booking = ({roomsTypeGet}) => {
   const {timeBooking ,typeBooking ,countRoomBooking ,countOlderBooking ,countChildrenBooking} = useSelector(state => state.bookingSlice)
   const router = useRouter();
   const dispatch = useDispatch()
   const {register,reset,
-    handleSubmit ,setValue,
-    formState: {  },
+    handleSubmit
   } = useForm();
 
   const {
     mutate: userPost,
-    data: userPostData,
     isSuccess: userPostSuccess,
   } = useMutation(({url, data}) => apiService.postData(url, data));
 const [selectOptionName , setSelectOptionName] = useState(null)
@@ -131,7 +108,7 @@ useEffect(() => {
     </div>
   )
 }
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({ res}) {
   res.setHeader(
       "Cache-Control",
       "public, s-maxage=10, stale-while-revalidate=59"

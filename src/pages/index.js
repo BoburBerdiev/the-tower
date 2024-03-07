@@ -1,10 +1,9 @@
 import SEO from '@/SEO/SEO'
 import {indexSEO} from '@/SEO/SEO.config'
-import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI, ServiceCard, LocationInfos ,SwiperSlider, GallerySlider} from '@/components/'
+import {ImgUI,  Header, SectionTitle, ButtonUI  , SectionUI,  LocationInfos ,SwiperSlider, GallerySlider} from '@/components/'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import axios from "axios";
-import about from "@/pages/about";
 import {langSelect} from "@/helper";
 
 
@@ -108,7 +107,7 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
 export default Home
 
 
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({res}) {
     res.setHeader(
         "Cache-Control",
         "public, s-maxage=10, stale-while-revalidate=59"

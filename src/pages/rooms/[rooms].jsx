@@ -3,13 +3,10 @@ import { RxInfoCircled } from "react-icons/rx";
 import { IoMdCheckmark } from "react-icons/io";
 import {
     ButtonUI, GallerySlider,
-    GalleryZoom,
     ImgUI,
     RoomInnerSlider,
-    SectionTextUI,
     SectionTitle,
     SectionUI,
-    Slider
 } from "../../components"
 import SEO from "@/SEO/SEO";
 import {indexSEO} from '@/SEO/SEO.config'
@@ -75,7 +72,7 @@ const Room = () => {
         },
     ]
 
-    const { data: room  , refetch: refetchRoom, isLoading , isSuccess } = useQuery(["room" , rooms], () =>
+    const { data: room  , refetch: refetchRoom } = useQuery(["room" , rooms], () =>
         apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
     );
 

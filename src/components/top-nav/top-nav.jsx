@@ -1,4 +1,3 @@
-import React, {useState} from 'react'
 import DropdownUl from "@/components/ui/Dropdown-UI";
 import { IoLogoInstagram } from 'react-icons/io5';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa6';

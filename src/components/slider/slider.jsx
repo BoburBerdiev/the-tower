@@ -3,16 +3,13 @@ import { EffectFade, Autoplay, Navigation ,Pagination } from "swiper/modules";
 import { ImgUI } from "@/components/";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-import { HiChevronDown } from "react-icons/hi";
 import Skeleton, {SkeletonTheme} from "react-loading-skeleton";
-import {log} from "next/dist/server/typescript/utils";
 import {langSelect} from "@/helper";
 import {useSelector} from "react-redux";
 
 const Slider = ({
   SliderContent,
   PaginationMod,
-  innerBtn,
   PaginationInner,
   isLoading
 }) => {

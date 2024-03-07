@@ -24,7 +24,7 @@ const Booking = () => {
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
 
-    const { data: typeRoom  , refetch: typeRoomRefetch, isLoading , isSuccess } = useQuery("typeRoom", () =>
+    const { data: typeRoom  , refetch: typeRoomRefetch} = useQuery("typeRoom", () =>
         apiService.getData( 'rooms-simple/') , { enabled: false}
     );
 

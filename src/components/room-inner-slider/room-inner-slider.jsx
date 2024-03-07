@@ -1,6 +1,5 @@
 import {Autoplay, EffectFade, FreeMode, Navigation, Pagination, Thumbs} from 'swiper/modules';
 import {ImgUI} from "@/components";
-import {GrNext, GrPrevious} from "react-icons/gr";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useState} from "react";
 

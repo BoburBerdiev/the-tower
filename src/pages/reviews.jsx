@@ -1,6 +1,6 @@
 import {ButtonUI, Modal, ReviewCard,  SectionTitle, SectionUI} from '@/components'
 import InputUl from '@/components/ui/Input-UI'
-import React, {useEffect , useState} from 'react'
+import React, {useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import {indexSEO} from '@/SEO/SEO.config'
 import SEO from '@/SEO/SEO'

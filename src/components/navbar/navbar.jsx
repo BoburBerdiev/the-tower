@@ -1,8 +1,8 @@
-import {CiMenuFries, CiSearch} from "react-icons/ci";
-import { useCallback, useEffect, useState } from "react";
+import {CiMenuFries} from "react-icons/ci";
+import { useState } from "react";
 import {useTranslation} from "react-i18next";
 import Link from "next/link";
-import {ButtonUI, ImgUI, SearchPanel} from "@/components";
+import { ImgUI, SearchPanel} from "@/components";
 
 
 
@@ -54,7 +54,7 @@ const Navbar = () => {
   }
       
 
-  window.addEventListener('scroll', (e) => {
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 36) {
       setIsNavScroll(true)
     }else {

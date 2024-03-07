@@ -8,7 +8,6 @@ import {useEffect} from "react";
 import {langSelect} from "@/helper";
 
 const About = ({about ,services}) => {
-    const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
     console.log(about)
 
@@ -84,7 +83,7 @@ const About = ({about ,services}) => {
 export default About;
 
 
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({ res}) {
     res.setHeader(
         "Cache-Control",
         "public, s-maxage=10, stale-while-revalidate=59"

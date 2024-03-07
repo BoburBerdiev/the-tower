@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import {ButtonUI , ImgUI, Slider} from '@/components/index'
+import {ButtonUI , Slider} from '@/components/index'
 import {RoomsCharacterList} from "@/components";
 import {changleTypeBooking} from "@/slice/booking";
 import {useDispatch} from "react-redux";
@@ -8,8 +8,6 @@ import {useDispatch} from "react-redux";
 const HotelCard = ({imgs, cardTitle, room_size,capacity ,num_balconies , num_bathrooms,  indexForAos , href}) => {
     const {t} = useTranslation()
     const dispatch = useDispatch()
-
-
 
   return (
 

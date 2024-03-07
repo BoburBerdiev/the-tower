@@ -1,9 +1,7 @@
 import SEO from '@/SEO/SEO'
 import { SectionUI, Slider } from '@/components'
-import ImageUI from '@/components/ui/ImageUI'
-import React, {useEffect} from 'react'
+import  {useEffect} from 'react'
 import { LuCalendarRange } from 'react-icons/lu'
-import {newsInnerSEO} from "@/SEO/SEO.config"
 import { useSelector } from 'react-redux'
 import {useQuery} from "react-query";
 import apiService from "@/service/axois";
@@ -14,7 +12,7 @@ const  News = () => {
   const router = useRouter()
   const {news}=router.query
 const {lang} = useSelector(state => state.langSlice)
-  const { data: newsInner  , refetch: refetchNewsInner, isLoading , isSuccess } = useQuery(["newsInner" , news], () =>
+  const { data: newsInner  , refetch: refetchNewsInner } = useQuery(["newsInner" , news], () =>
       apiService.getDataByID(  '/pages/news' ,news) , { enabled: false}
   );
 
