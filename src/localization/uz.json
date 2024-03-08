@@ -138,7 +138,8 @@
       "notice": "Biz haqimizda habarnoma",
       "noticeTitle": "sarlavha yozing",
       "review": "Sharh yozing",
-      "reviewClients": "Mijozlarning sharhlari"
+      "reviewClients": "Mijozlarning sharhlari",
+      "reviewDate": "Ko'rib chiqish sanasi:"
     },
     "roomInner": {
       "allComforts": "Barchasi",

@@ -137,7 +137,9 @@
       "review": "Write a review",
       "notice": "Notice about us",
       "noticeTitle": "write a title",
-      "reviewClients": "Customer Reviews"
+      "reviewClients": "Customer Reviews",
+      "reviewDate": "Review date:"
+
     },
     "roomInner": {
       "allComforts": "Are common",

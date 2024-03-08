@@ -9,63 +9,9 @@ import {useForm} from "react-hook-form";
 import {useMutation} from "react-query";
 import apiService from "@/service/axois";
 import {useRouter} from "next/router";
-const reviewData = [
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-  {
-    name: 'Svetlana',
-    flag: '/image/ru-flag.svg',
-    country: 'Россия',
-    rate: '3',
-    date: '2024-01-29',
-    title: 'Один из любимых отелей в Ташкенте!',
-    text: 'Красивый отель! Великолепный завтрак! Отличное расположение! Просторные комфортные номера! Вежливый персонал!'
-  },
-]
-const Reviews = () => {
+import axios from "axios";
+
+const Reviews = ({feedback}) => {
   const router = useRouter();
   const {t} = useTranslation()
   const {register,reset,
@@ -136,14 +82,14 @@ const Reviews = () => {
           </div>
         </form>
       </SectionUI>
-      <SectionUI padding={'py-10 md:py-16 lg:py-[100px] space-y-10 md:space-y-20'}>
-        <div>
+      <SectionUI padding={'pb-10 md:pb-16 lg:py-[100px] space-y-10 md:space-y-20'}>
+        <div className={'mb-10'}>
           <SectionTitle title={t('reviews.reviewClients')} justify={'justify-center'} />
         </div>
-        <div className='pt-10 space-y-10 overflow-y-auto max-h-[300px] border-y border-brown shadow'>
+        <div className='pt-10 space-y-10 overflow-y-auto max-h-[300px] md:max-h-[500px] border-y border-brown shadow'>
           {
-            reviewData.map(review => (
-              <ReviewCard key={review?.id} name={review.name} flag={review.flag} country={review.country} date={review.date} title={review.title} text={review.text} />
+            feedback.map(review => (
+              <ReviewCard key={review?.id} name={review?.fullname} country={review?.country} date={review?.created_at} title={review?.title} text={review?.description} />
             ))
           }
         </div>
@@ -153,6 +99,23 @@ const Reviews = () => {
       }
     </div>
   )
+}
+
+export async function getServerSideProps({ res}) {
+  res.setHeader(
+      "Cache-Control",
+      "public, s-maxage=10, stale-while-revalidate=59"
+  );
+  // Fetch data from external API
+  const [feedback ] = await Promise.all([
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/feedback/`),
+
+  ]);
+  return {
+    props: {
+      feedback: feedback?.data,
+    },
+  }
 }
 
 export default Reviews
