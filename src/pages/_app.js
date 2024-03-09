@@ -19,7 +19,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Inter, Open_Sans, Playfair, Roboto} from "@next/font/google";
+import {Inter, Open_Sans, Playfair, Roboto} from "next/font/google";
 import "react-datepicker/dist/react-datepicker.css";
 
 const roboto = Roboto({
@@ -47,6 +47,8 @@ const inter = Inter({
 const elegance = Playfair({
     subsets: ['cyrillic', 'latin'],
     variable: '--font-rounded-elegance',
+    display:"swap",
+    adjustFontFallback:false
 })
 
 
