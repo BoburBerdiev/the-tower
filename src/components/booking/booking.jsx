@@ -43,7 +43,7 @@ const Booking = () => {
 
     return (
         <div
-            className={'container  absolute bottom-12 md:bottom-[125px] left-1/2 -translate-x-1/2   z-10  '}>
+            className={'container z-100  absolute bottom-12 md:bottom-[125px] left-1/2 -translate-x-1/2   z-10  '}>
     <div className={'bg-white py-2 shadow-xl md:py-4 lg:py-6 px-5 sm:px-[35px] md:px-[50px]  xl:px-[70px] flex lg:flex-row flex-col items-center justify-center gap-3 md:gap-5 xl:gap-12'}>
 
             <DropdownBooking

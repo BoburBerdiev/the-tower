@@ -18,7 +18,7 @@ const Slider = ({
   return (
     <SkeletonTheme baseColor="#EBEAE8" highlightColor="#D7D3CE">
     <div
-      className={`relative z-50 bg-transparent h-full ${
+      className={`relative bg-transparent h-full ${
         PaginationMod && "pb-6 md:pb-20"
       } ${PaginationMod ? "section-slider" : "header-slider"} `}
     >
