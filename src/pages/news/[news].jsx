@@ -7,6 +7,7 @@ import {useQuery} from "react-query";
 import apiService from "@/service/axois";
 import {useRouter} from "next/router";
 import {langSelect} from "@/helper";
+import moment from "moment/moment";
 
 const  News = () => {
   const router = useRouter()
@@ -43,7 +44,11 @@ const {lang} = useSelector(state => state.langSlice)
          </h3>
         <div data-aos='fade-left' data-aos-delay='100' className='flex items-center py-3'>
           <LuCalendarRange className="md:text-xl text-lg pb-[3px]" />
-          <p className={`font-inter font-medium text-sm md:text-base`}>17 февр. 2023г.</p>
+          <p className={`font-inter font-medium text-sm md:text-base`}>
+              {
+                  moment(newsInner?.created_at).format('L')
+              }
+          </p>
         </div>
         <p data-aos='fade-up' className='text-justify font-openSans'>
             {

@@ -22,14 +22,14 @@ const Layout = ({ children }) => {
 
 
     return (
-        <div className={ `relative `}>
+        <>
             <TopNav contact={contact} />
             <Navbar/>
-            <main >
+            <section >
                 {children}
-            </main>
+            </section>
             <Footer contact={contact} />
-        </div>
+        </>
     );
 };
 

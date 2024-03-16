@@ -3,9 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay, EffectFade, FreeMode, Navigation, Thumbs} from 'swiper/modules';
 import {ImgUI} from "@/components";
 import {GrNext, GrPrevious} from "react-icons/gr";
-import LightGallery from 'lightgallery/react';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
 const GalleryZoomInner = ({images}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
@@ -24,14 +21,9 @@ const GalleryZoomInner = ({images}) => {
                     >
                         {
                             images?.map(image => (
-                                <SwiperSlide key={image?.id}>
-                                    <LightGallery plugins={[lgThumbnail, lgZoom]}>
-                                    <a  href={image?.image} className={'block w-full aspect-video lg:aspect-[10/4]'}>
+                                <SwiperSlide key={image?.id} className={'block w-full aspect-video lg:aspect-[10/4]'}>
                                         <ImgUI priority={true} src={image?.image} alt={'gallery'}/>
-                                    </a>
-                                    </LightGallery>
                                 </SwiperSlide>
-
                             ))
                         }
                     </Swiper>
