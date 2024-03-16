@@ -76,7 +76,7 @@ const Footer = ({contact}) => {
       </footer>
       <div className="mini-footer relative bg-brown py-3 overflow-hidden">
         <div className='absolute top-0 left-0 w-full h-full z-1'>
-          <ImgUI src={'/image/footer-bg.png'} objectFit={'object-cover object-bottom'} alt={'footer'} priority={true}/>
+          <ImgUI src={'/image/footer-bg.png'} objectFitContain={false} objectFit={'object-cover object-bottom'} alt={'footer'} priority={true}/>
         </div>
         <div className="container relative z-[2] flex flex-col text-white/60 md:flex-row justify-between items-center text-xs md:text-sm text-white roboto-light gap-[10px]">
           <p className=''>

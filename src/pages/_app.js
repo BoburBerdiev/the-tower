@@ -21,6 +21,7 @@ import Layout from "@/Layout";
 import "../localization/i18n";
 import {Inter, Open_Sans, Playfair, Roboto} from "next/font/google";
 import "react-datepicker/dist/react-datepicker.css";
+import NextNProgress from "nextjs-progressbar";
 
 const roboto = Roboto({
     subsets:['cyrillic', 'latin'],
@@ -72,6 +73,7 @@ export default function App({ Component, pageProps }) {
             <PersistGate loading={null} persistor={persistor}>
                 <main className={`${roboto.variable} ${inter.variable} ${openSans.variable} ${elegance.variable}`}>
                     <Layout>
+                        <NextNProgress color={'white'}  startPosition={0.3} stopDelayMs={200} height={3}  />
                         <Component {...pageProps} />
                     </Layout>
                 </main>

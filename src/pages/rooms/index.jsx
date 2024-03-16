@@ -35,9 +35,9 @@ const {lang} = useSelector(state => state.langSlice)
                     {
                         rooms?.results &&
 
-                        rooms?.results?.map((card , index) => (
+                        rooms?.results?.map((card) => (
                                 <>
-                                    <RoomsRow key={card.id} order={index} card={card}/>
+                                    <RoomsRow key={card?.id} order={card?.id} card={card}/>
                                 </>
 
                             ))

@@ -1,17 +1,7 @@
 import { SectionTitle, Slider} from "@/components";
 import {langSelect} from "@/helper";
 import {useSelector} from "react-redux";
-// const roomsInner =[
-//     {
-//         img: "/image/IMG_7363-min.jpg"
-//     },
-//     {
-//         img: "/image/IMG_7361-min.jpg"
-//     },
-//     {
-//         img: "/image/IMG_7362-min.jpg"
-//     },
-// ]
+
 const ImgBoxFlex = ({ title_ru , title_uz , title_en, subTitle_ru , subTitle_uz ,subTitle_en,   imgOrder  ,images}) => {
 
     const {lang} = useSelector(state => state.langSlice)
@@ -32,7 +22,7 @@ const ImgBoxFlex = ({ title_ru , title_uz , title_en, subTitle_ru , subTitle_uz 
           imgOrder ? "order-2 md:order-1" : "order-1 md:order-2"
         } w-full aspect-video md:aspect-[16/14] room-slider`}
       >
-          <Slider SliderContent={images} PaginationInner={true}/>
+          <Slider SliderContent={images} PaginationInner={true} card={false} Quality={100} />
       </div>
     </div>
   );

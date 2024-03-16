@@ -72,9 +72,12 @@ const Room = () => {
         },
     ]
 
-    const { data: room  , refetch: refetchRoom } = useQuery(["room" , rooms], () =>
+
+    const { data: room  , refetch: refetchRoom , isLoading: isLoadingRoom } = useQuery(["room" , rooms], () =>
         apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
     );
+
+    console.log(isLoadingRoom)
 
     useEffect(() => {
         if(rooms) {
@@ -98,7 +101,7 @@ const Room = () => {
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={langSelect(lang , room?.title_ru , room?.title_en , room?.title_uz)} justify={'justify-center'}/>
                 </div>
-                <RoomInnerSlider images={room?.images} />
+                <RoomInnerSlider isLoadingRoom={!isLoadingRoom} images={room?.images} />
                 <p data-aos='fade-left' className=" font-roboto lg:text-xl font-light pt-5 md:pt-10">
                     {
                         langSelect(lang , room?.description_ru , room?.description_en , room?.description_uz)
@@ -112,7 +115,7 @@ const Room = () => {
                         services?.map((service, index) => (
                             <div data-aos='fade-in' data-aos-delay={`${index}00`} key={service.id} className="flex items-center gap-2 md:gap-4 py-2 px-3 md:pl-5 md:py-3.5 md:pr-11  border border-[#B0A79B] cursor-pointer text-iron font-roboto text-sm md:text-base lg:text-lg">
                                 <div className="w-4 h-4 md:w-6 md:h-6 relative">
-                                    <ImgUI src={service.img} alt={'Icon'} objectFitContain/>
+                                    <ImgUI src={service.img} alt={'Icon'} objectFitContain={true} card={true}/>
                                 </div>
                                 <span>{service.text}</span>
                             </div>

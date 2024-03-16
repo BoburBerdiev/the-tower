@@ -10,7 +10,7 @@ const NewsCard = ({img, date, decr, href}) => {
   return (
     <a data-aos='fade-up' href={href} className={`block group w-full aspect-[14/16] lg:aspect-[16/18] relative overflow-hidden card-shadow duration-500 `}>
       <div className='duration-300 group-hover:scale-[1.1] absolute top-0 left-0 w-full h-full z-[8] '>
-        <ImgUI src={img} imgStyle={'object-cover'} alt={'The Tower news'}/>
+        <ImgUI src={img} card={true} quality={90}  objectFitContain={false} alt={'The Tower news'}/>
       </div>
       <div className=' bg-gradient-to-t from-black/80 group-hover:from-black/65 md:from-black/50 via-black/50 to-black/0 w-full h-full absolute top-0 left-0 z-[9]'></div>
       <div className='w-full h-full duration-300 z-10 flex flex-col justify-end  '>

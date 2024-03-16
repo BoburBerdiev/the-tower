@@ -57,15 +57,17 @@ const NumberGuests = ({guests,setGuests}) => {
 
                     <div className={'gap-y-1 flex flex-col items-center'}>
                         <div className={'flex items-center gap-2'}>
-                            <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FiMinus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
-                                      btnBorder={true}
-                                      onClick={() => handleDecrement('older')}
-                            />
+
+                            <button className={'p-2 text-black/80 hover:opacity-90'}  onClick={() => handleDecrement('older')} >
+                                <FiMinus className={'text-sm text-black/80'}/>
+                            </button>
                             <p className={'font-roboto  text-xl text-black/80'}>{countOlderBooking }</p>
-                            <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FaPlus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
-                                      btnBorder={true}
-                                      onClick={() => handleIncrement('older')}
-                            />
+
+
+                            <button className={'p-2 text-black/80 hover:opacity-90'} onClick={() => handleIncrement('older')}>
+                                <FaPlus
+                                    className={'text-sm text-black/80  '}/>
+                            </button>
                         </div>
 
                         <p className={'font-roboto  text-center text-xs'}>
@@ -74,19 +76,19 @@ const NumberGuests = ({guests,setGuests}) => {
                     </div>
                     <div className={'gap-y-1 flex flex-col items-center'}>
                         <div className={'flex items-center gap-2'}>
-                            <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FiMinus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
-                                      btnBorder={true}
-                                      onClick={() => handleDecrement('child')}
-                            />
+                            <button className={'p-2 text-black/80 hover:opacity-90'}
+                                    onClick={() => handleDecrement('child')}>
+                                <FiMinus className={'text-sm text-black/80'}/>
+                            </button>
                             <p className={'font-roboto  text-xl text-black/80'}>{countChildrenBooking}</p>
-                            <ButtonUI stylePadding={'group p-2 rounded-full before:rounded-full after:rounded-full '} icon={<FaPlus className={'text-sm text-black/80 group-hover:text-white duration-500 '}/>}
-                                      btnBorder={true}
-                                      onClick={() => handleIncrement('child')}
-                            />
+                            <button className={'p-2 text-black/80 hover:opacity-90'}
+                                    onClick={() => handleIncrement('child')}>
+                                <FiMinus className={'text-sm text-black/80'}/>
+                            </button>
                         </div>
 
                         <p className={'font-roboto  text-center text-xs'}>
-                        {t('index.headerBooking.forChildren')}
+                            {t('index.headerBooking.forChildren')}
                         </p>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ const GallerySlider = ({gallery}) => {
                       <ImgUI
                         src={image?.image}
                         alt={"gallery"}
-                        objectFit={"object-cover"}
+                        priority={90}
                       />
                     </div>
                   </SwiperSlide>

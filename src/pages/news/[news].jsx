@@ -31,7 +31,7 @@ const {lang} = useSelector(state => state.langSlice)
                 twitterHandle={langSelect(lang , newsInner?.title_ru , newsInner?.title_en , newsInner?.title_uz)}
             />
     
-    <SectionUI bgFigureBottomPostion={'bottom-0 left-0'} bgFigureTopPostion={'top-0 right-0'} padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
+    <SectionUI  bgFigureTopPostion={'top-0 right-0'} padding={'py-10 md:py-20 lg:pt-[90px] lg:pb-32 xl:pb-[180px]'}>
         <div data-aos='fade-in' className='relative z-[5] md:float-left w-full lg:w-[450px] xl:w-[650px] h-[275px] xl:h-[350px] md:mr-10 mb-5'>
           <Slider SliderContent={newsInner?.images}  PaginationInner={true} />
         {/*  SliderContent={newsImage}*/}

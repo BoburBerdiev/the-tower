@@ -163,14 +163,14 @@ html, body {
     border-radius: 0;
 }
 
-.room-slider .section-slider .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet {
+.room-slider  .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet {
     width: 60px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.50) !important;
     border-radius: 0;
 }
 
-.room-slider .section-slider .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active {
+.room-slider  .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active {
     width: 60px;
     height: 4px;
     background-color: white !important;

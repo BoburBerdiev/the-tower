@@ -3,12 +3,14 @@ import { useState } from "react";
 import {useTranslation} from "react-i18next";
 import Link from "next/link";
 import { ImgUI, SearchPanel} from "@/components";
+import {useRouter} from "next/router";
 
 
 
 
 const Navbar = () => {
   const { t } = useTranslation();
+  const router = useRouter()
   const [navOpen,setNavOpen ] = useState(false)
   const navLinks = [
     {
@@ -66,10 +68,10 @@ const Navbar = () => {
     <>
 
     <nav className={`bg-[#FFFFFF] py-3 w-full z-[100] sticky  left-0  top-[0] shadow-md`}>
-      <div  className=" container  flex justify-between overflow-x-hidden font-roboto">
+      <div  className=" container  flex justify-between  font-roboto">
         <div className="flex items-center gap-3 md:gap-7">
           <Link href="/" className={'relative block w-12 md:w-16 h-9 md:h-12'}>
-            <ImgUI src={'/image/the-tower.png'} alt={'Tower'}/>
+            <ImgUI src={'/image/the-tower.png'} alt={'Tower'} objectFitContain={true}/>
           </Link>
           <Link href="/" className={'relative block w-20 h-5 md:w-24 md:'}>
             <ImgUI src={'/image/hotel-pro.svg'} alt={'Tower'} objectFitContain={true}/>
@@ -80,7 +82,7 @@ const Navbar = () => {
             {
               navLinks.map((item) => (
                   <li key={item.name} className="relative before:w-0 before:duration-300 before:h-0.5 before:bg-brown before:absolute hover:before:w-1/2 hover:text-brown duration-300 before:-bottom-2 before:rounded-e-[1px] before:left-1/2 after:w-0 after:duration-300 after:h-0.5 after:bg-brown after:absolute hover:after:w-1/2 after:-bottom-2 after:rounded-s-[1px]  after:right-1/2 font-elegance font-medium" onClick={closeNav}>
-                    <Link href={item.link} className=''>{t(item.name)}</Link>
+                    <Link href={item.link}>{t(item.name)}</Link>
                   </li>
               ))
             }

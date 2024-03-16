@@ -9,11 +9,8 @@ import {langSelect} from "@/helper";
 
 const About = ({about ,services}) => {
     const {lang} = useSelector(state => state.langSlice)
-    console.log(about)
 
-    useEffect(() => {
-        console.log(about?.images)
-    } , [])
+
   return (
       <div className="wrapper">
         <SEO
@@ -24,9 +21,7 @@ const About = ({about ,services}) => {
                 ogDescription={aboutUsSEO[lang].ogDescription}
                 twitterHandle={aboutUsSEO[lang].twitterHandle}
             />
-          <div>
-              <MiniHeader img={about?.header?.image} title={langSelect(lang , about?.header?.title_ru , about?.header?.title_en , about?.header?.title_uz)}/>
-          </div>
+              <MiniHeader imageStyle={'object-center'} img={about?.header?.image} title={langSelect(lang ,about?.header?.title_ru ,about?.header?.title_en , about?.header?.title_uz)}/>
           <SectionUI bgFigureTopPostion={'top-0 left-0'} bgFigureBottomPostion={'bottom-0 left-0'}
                      padding={"py-10 md:py-20 "}>
               <div className="relative space-y-5 md:space-y-10 z-5">
@@ -40,7 +35,7 @@ const About = ({about ,services}) => {
                       subTitle_en={about?.sub_title_en}
                   />
                   <div className="w-full aspect-video">
-                      <Slider SliderContent={about?.images} PaginationMod={true}/>
+                      <Slider Quality={100} SliderContent={about?.images} PaginationMod={true} card={false} />
                   </div>
               </div>
           </SectionUI>
@@ -60,7 +55,7 @@ const About = ({about ,services}) => {
                       {
                           about?.additional_info?.images?.map(item => (
                               <div data-aos='zoom-in' key={item?.id} data-aos-delay='100' className="w-full relative aspect-square">
-                                  <ImgUI src={item?.image} alt="about"/>
+                                  <ImgUI src={item?.image} alt="about" card={true} priority={true}/>
                               </div>
                           ))
                       }
