@@ -1,25 +1,29 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import { FaAngleDown } from "react-icons/fa6";
 import {useTranslation} from "react-i18next";
 
 const DropdownUl = ({ list  ,  onClick}) => {
     const  [dropdown , setDropdown] = useState(false)
     const [changleLang , setChangleLang] = useState('lang.ru')
-    const { t  } = useTranslation();
+    const { t,i18n  } = useTranslation();
     const openDropdown  = () => {
         setDropdown(!dropdown)
     }
+
+    useEffect(() => {
+        if(i18n.language === 'uz'){
+            setChangleLang("lang.uz")
+        }else if(i18n.language === 'ru'){
+            setChangleLang("lang.ru")
+        }else if(i18n.language === 'en'){
+            setChangleLang("lang.en")
+        }
+    }, [i18n.language]);
+
     const selectedLang = (item) => {
         setDropdown(!dropdown)
         onClick(item)
-        let langchangle =list?.filter(lang => lang.id === item.id )
-        if(langchangle[0].value === 'uz'){
-            setChangleLang("lang.uz")
-        }else if(langchangle[0].value === 'ru'){
-            setChangleLang("lang.ru")
-        }else if(langchangle[0].value === 'en'){
-            setChangleLang("lang.en")
-        }
+
     }
     return (
         <div className="relative">
