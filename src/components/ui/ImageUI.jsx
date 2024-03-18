@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const ImageUI = ({src,alt,priority,objectFitContain ,card , quality ,imageStyle}) => {
+const ImageUI = ({ src, alt, priority = false, objectFitContain = false, card = false, quality = 90, imageStyle}) => {
 
     const [loading , setLoading] = useState(true)
 
