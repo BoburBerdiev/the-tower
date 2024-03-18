@@ -56,10 +56,10 @@ const Footer = ({contact}) => {
               <ImgUI src={'/image/the-tower.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFitContain={true}/>
             </Link>
             <div className='md:space-y-2 text-center md:text-start'>
-              <a href={`tel:${contact?.phone}`} className='block hover:underline text-base md:text-xl lg:text-2xl'>{
+              <a href={`tel:${contact?.phone}`} className='block text-sm md:text-base'>{
                 formatPhoneNumber(contact?.phone)
               }</a>
-              <a href={`mailto:${contact?.email}`} className='block hover:underline text-sm md:text-base'>{contact?.email}</a>
+              <a href={`mailto:${contact?.email}`} className='block  text-sm md:text-base'>{contact?.email}</a>
             </div>
           </div>
           <div>

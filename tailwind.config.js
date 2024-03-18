@@ -28,8 +28,10 @@ module.exports = {
       fontFamily: {
         // app.js ga qarab font ulansin
         elegance: ['var(--font-rounded-elegance)'],
-        roboto: ['var(--font-roboto)'],
-        inter: ['var(--font-inter)'],
+        // roboto: ['var(--font-roboto)'],
+        // inter: ['var(--font-inter)'],
+        roboto: ['var(--font-alegreya_sans)'],
+        alegreya: ['var(--font-alegreya_sans)'],
         openSans: ['var(--font-open-sans)']
       },
     },

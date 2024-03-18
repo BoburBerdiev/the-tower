@@ -16,7 +16,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Inter, Open_Sans, Playfair, Roboto} from "next/font/google";
+import {Alegreya_Sans,  Open_Sans, Playfair, Roboto} from "next/font/google";
 import "react-datepicker/dist/react-datepicker.css";
 import NextNProgress from "nextjs-progressbar";
 
@@ -28,13 +28,6 @@ const roboto = Roboto({
     adjustFontFallback:false,
     preload: false
 })
-
-// const girloy = Gilroy({
-//     subsets:['cyrillic', 'latin'],
-//     weight: ['300' , '400' , '500'  , '700'],
-//     variable: '--font-roboto'
-// })
-
 const openSans = Open_Sans({
     subsets: ['cyrillic', 'latin'],
     variable: '--font-open-sans',
@@ -42,11 +35,11 @@ const openSans = Open_Sans({
     adjustFontFallback:false,
     preload: false
 })
-
-const inter = Inter({
+const alegreya_sans
+    = Alegreya_Sans
+({weight:[ "100" , "300" , "400" , "500"],
     subsets: ['cyrillic', 'latin'],
-    variable: '--font-inter',
-    display:"swap",
+    variable: '--font-alegreya_sans',
     adjustFontFallback:false,
     preload: false
 })
@@ -72,7 +65,7 @@ export default function App({ Component, pageProps }) {
        <QueryClientProvider client={queryClient}>
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <main className={`${roboto.variable} ${inter.variable} ${openSans.variable} ${elegance.variable} `}>
+                <main className={`${roboto.variable} ${alegreya_sans.variable}  ${openSans.variable} ${elegance.variable} `}>
                     <Layout>
                         <NextNProgress color={'white'}  startPosition={0.3} stopDelayMs={200} height={3}  />
                         <Component {...pageProps} />

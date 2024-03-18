@@ -35,15 +35,15 @@ html, body {
 @layer components {
 
     .btn-border {
-        @apply relative font-medium lg:text-lg text-brown hover:text-white duration-500 block before:absolute z-0 text-center before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-bottom-right before:scale-0 hover:before:scale-100 hover:before:origin-top-left   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-top-left after:border-2 after:border-brown hover:after:scale-0 hover:after:origin-bottom-right
+        @apply relative  lg:text-lg text-brown hover:text-white duration-500 block before:absolute z-0 text-center before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-bottom-right before:scale-0 hover:before:scale-100 hover:before:origin-top-left   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-top-left after:border after:border-brown hover:after:scale-0 hover:after:origin-bottom-right
     }
 
     .btn-bg {
-        @apply relative  font-medium lg:text-lg text-white hover:text-brown text-center duration-500 z-0 block before:absolute before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-top-left  hover:before:scale-0 hover:before:origin-bottom-right   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-bottom-right after:border-2 after:border-brown hover:after:scale-100 after:scale-0 hover:after:origin-top-left
+        @apply relative   lg:text-lg text-white hover:text-brown text-center duration-500 z-0 block before:absolute before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-top-left  hover:before:scale-0 hover:before:origin-bottom-right   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-bottom-right after:border after:border-brown hover:after:scale-100 after:scale-0 hover:after:origin-top-left
     }
 
     .btn-border-white {
-        @apply relative font-medium text-sm md:text-base lg:text-lg text-white hover:text-white text-center duration-500 block z-0 before:absolute before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-bottom-right before:scale-0 hover:before:scale-100 hover:before:origin-top-left   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-top-left after:border-2 after:border-white hover:after:scale-0 hover:after:origin-bottom-right
+        @apply relative  text-sm md:text-base lg:text-lg text-white hover:text-white text-center duration-500 block z-0 before:absolute before:top-0 before:left-0 before:w-full  before:h-full  before:bg-brown  before:z-[-1]  before:transition-transform  before:duration-500  before:transform  before:origin-bottom-right before:scale-0 hover:before:scale-100 hover:before:origin-top-left   after:absolute after:top-0 after:left-0 after:w-full  after:h-full   after:z-[-1]  after:transition-transform  after:duration-500  after:transform  after:origin-top-left after:border after:border-white hover:after:scale-0 hover:after:origin-bottom-right
     }
 
     .section-title {
@@ -58,7 +58,7 @@ html, body {
     }
 
     .section-text {
-        @apply text-black tracking-[0.4px] font-light md:text-lg  xl:text-xl
+        @apply text-black tracking-[0.4px] font-alegreya font-light md:text-lg  xl:text-xl
     }
 
     .nav-active {
@@ -164,14 +164,14 @@ html, body {
 }
 
 .room-slider  .swiper-pagination-bullet, .room-slider .mySwiper2 .swiper-pagination-bullet {
-    width: 60px;
+    width: 40px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.50) !important;
     border-radius: 0;
 }
 
 .room-slider  .swiper-pagination-bullet-active, .room-slider .mySwiper2 .swiper-pagination-bullet-active {
-    width: 60px;
+    width: 40px;
     height: 4px;
     background-color: white !important;
     border-radius: 0;

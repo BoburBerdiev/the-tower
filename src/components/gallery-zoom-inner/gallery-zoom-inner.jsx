@@ -67,11 +67,11 @@ const GalleryZoomInner = ({images}) => {
                             }
                             {(
                                 <div className="relative flex items-center justify-center py-4 mt-5 md:mt-10 gap-x-5">
-                                    <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-prev ">
+                                    <div className="cursor-pointer text-brown p-2  swipper-button-prev ">
                                         <GrPrevious className="text-2xl" />
                                     </div>
 
-                                    <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-next ">
+                                    <div className="cursor-pointer text-brown p-2  swipper-button-next ">
                                         <GrNext className="text-2xl" />
                                     </div>
                                 </div>
