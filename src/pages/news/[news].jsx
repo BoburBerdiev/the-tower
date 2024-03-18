@@ -50,7 +50,7 @@ const {lang} = useSelector(state => state.langSlice)
               }
           </p>
         </div>
-        <p data-aos='fade-up' className='text-justify font-openSans'>
+        <p data-aos='fade-up' className='text-justify font-roboto'>
             {
                 langSelect(lang , newsInner?.description_ru , newsInner?.description_en , newsInner?.description_uz)
             }

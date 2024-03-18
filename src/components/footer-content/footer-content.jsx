@@ -5,7 +5,7 @@ const FooterContent = ({title , list, paragraph, hrefText, textJustify}) => {
   return (
     <>
     <div>
-            <h3 className={`mb-1 md:mb-2 md:text-2xl font-openSans ${textJustify} md:text-start`}>{title}</h3>
+            <h3 className={`mb-1 md:mb-2 md:text-xl font-roboto ${textJustify} md:text-start`}>{title}</h3>
             <ul className={`space-y-2 font-light font-roboto`}>
               {
                 list?.map((item , index) => (
@@ -17,12 +17,12 @@ const FooterContent = ({title , list, paragraph, hrefText, textJustify}) => {
               }
               {
                 paragraph && 
-                <p className='font-light font-openSans mb-1'>{paragraph}</p>
+                <p className='font-light font-roboto mb-1'>{paragraph}</p>
               }
               {
                 hrefText && 
                 <li className={`${textJustify} md:text-start`}>
-                  <a href={hrefText} className='max-md:text-sm text-iron font-light font-openSans underline decoration-1'>{t('links.viewReviews')}</a>
+                  <a href={hrefText} className='max-md:text-sm text-iron font-light font-roboto underline decoration-1'>{t('links.viewReviews')}</a>
                 </li>
               }
             </ul>
