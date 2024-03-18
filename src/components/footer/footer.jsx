@@ -56,8 +56,8 @@ const Footer = ({contact}) => {
       <footer className='relative bg-white border-t border-[#8F8170]'>
         <div className="container grid grid-cols-2 gap-3 md:gap-5 pt-10 pb-7 lg:grid-cols-4 text-iron">
           <div className='flex flex-col justify-between font-roboto text-xl gap-[10px]'>
-            <Link href='/' className='block w-[100px] h-[90px] max-md:mx-auto relative'>
-              <ImgUI src={'/image/the-tower.png'} alt={'THE TOWER HOTEL TASHKENT'} objectFitContain={true}/>
+            <Link href='/' className='block w-[90px] h-[80px] max-md:mx-auto relative'>
+              <ImgUI src={'/image/the-tower.png'} alt={'THE TOWER HOTEL TASHKENT'} quality={100} objectFitContain={true}/>
             </Link>
             <div className='md:space-y-2 text-center md:text-start'>
               <a href={`tel:${contact?.phone}`} className='block text-sm '>{
@@ -90,10 +90,10 @@ const Footer = ({contact}) => {
             <span>{FooterContentData.miniFooter.siteCreated}</span>
             <a href="https://abduganiev.uz" target='_blank' className='flex group items-center gap-2 relative w-[80px] md:w-[100px] h-[50px] overflow-hidden'>
               <div className='max-md:hidden w-8 h-8 object-cover relative duration-200 group-hover:scale-50 group-hover:opacity-0 group-hover:-translate-x-10'>
-                <ImgUI src={'/image/abduganiev-A.png'} alt={"Abdug'aniev"} objectFitContain={'object-contain'}/>
+                <ImgUI src={'/image/abduganiev-A.png'} alt={"Abdug'aniev"} priority={true} quality={100} objectFitContain={true}/>
               </div>
               <div className='shrink-0  duration-300  md:opacity-0 md:translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 md:absolute left-0 object-contain w-full h-full'>
-                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"} objectFitContain={'object-contain'}/>
+                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"}  priority={true} objectFitContain={true} quality={100}/>
               </div>
             </a>
           </div>
