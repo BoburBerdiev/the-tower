@@ -10,8 +10,8 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           
           {
             bgFigureTopPostion &&
-          <div className={` ${bgFigureTopPostion ? bgFigureTopPostion : " top-0 left-0"} absolute image-animate-scale   w-full  h-[300px] z-[1] hidden md:block`}>
-            <ImgUI src={'/image/pattern.png'}  alt={'banner'} />
+          <div className={` ${bgFigureTopPostion ? bgFigureTopPostion : " -top-10 left-0"} rotate-180 absolute image-animate-scale   w-full  h-[200px] z-[1] hidden md:block`}>
+            <ImgUI src={'/image/pattern.png'}  alt={'banner'}  />
           </div>
           }
           {

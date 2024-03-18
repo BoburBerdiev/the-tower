@@ -53,7 +53,7 @@ const GallerySlider = ({gallery}) => {
                     <div
                       data-aos='fade-up' data-aos-delay={`${index}00`}
                         // onClick={() => handleGalleryClick(true)}
-                      className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden card-shadow duration-300"}
+                      className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden  duration-300"}
                     >
                       <ImgUI
                         src={image?.image}
@@ -64,12 +64,12 @@ const GallerySlider = ({gallery}) => {
                   </SwiperSlide>
                 ))}
               <div className="relative flex items-center justify-center py-4 mt-5 md:mt-10 gap-x-5">
-                <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-prev ">
+                <div className="cursor-pointer text-brown p-2  swipper-button-prev ">
                   <GrPrevious className="text-2xl" />
                 </div>
                 <div className="inline-flex items-center gap-x-4 my-pagination pagintaion-slider"></div>
 
-                <div className="cursor-pointer text-[#8F8170] p-2  swipper-button-next ">
+                <div className="cursor-pointer text-brown p-2  swipper-button-next ">
                   <GrNext className="text-2xl" />
                 </div>
               </div>

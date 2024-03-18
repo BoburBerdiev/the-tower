@@ -33,7 +33,7 @@ const SwiperSlider = ({ hotelCardData, newsCard, services, xlSlidesPerView }) =>
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 15,
             },
             1024: {

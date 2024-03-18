@@ -13,7 +13,7 @@ const Slider = ({
                   PaginationInner,
   isLoading , card
 }) => {
-  const {lang} = useSelector(state => state.langSlice)
+    const {lang} = useSelector(state => state.langSlice)
 
   return (
     <SkeletonTheme baseColor="#EBEAE8" highlightColor="#D7D3CE">
@@ -61,7 +61,7 @@ const Slider = ({
                       }</h2>
                       {
                           slider.sub_title_ru && <p data-aos='fade-up' data-aos-delay='50'
-                                                    className="lowercase drop-shadow-lg text-white text-center max-w-[700px] roboto-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
+                                                    className="lowercase drop-shadow-lg text-white text-center max-w-[700px] font-roboto  font-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
                             {langSelect(lang, slider?.sub_title_ru, slider?.sub_title_en, slider?.sub_title_uz)}
                           </p>
                       }

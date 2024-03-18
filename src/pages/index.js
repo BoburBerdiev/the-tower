@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import axios from "axios";
 import {langSelect} from "@/helper";
+import Image from "next/image";
 
 
 
@@ -31,15 +32,15 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
                         <SectionTitle styleSubtitle={'text-start'} title_ru={about?.title_ru} title_en={about?.title_en} title_uz={about?.title_uz} />
                         <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text"> {langSelect(lang ,about?.sub_title_ru, about?.sub_title_en , about?.sub_title_uz )} </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
-                            <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true}/>
+                            <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true} href={'/about'}/>
                         </div>
                     </div>
                     <div className="relative flex flex-col md:items-end aspect-square lg:aspect-auto">
-                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[62%] aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2 border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10">
-                            <ImgUI src={about?.image_1} priority={true}  alt={'banner'}/>
+                        <div data-aos='zoom-in' data-aos-delay='50' className="w-[62%] aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2 border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10 overflow-hidden">
+                            <ImgUI  src={about?.image_1}   alt={about?.title_en} priority={true} />
                         </div>
-                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[62%] aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%] absolute bottom-8 md:bottom-0 right-0 md:left-0 max-md:border-[10px] border-white z-20 md:z-[9]">
-                            <ImgUI  src={about?.image_2} priority={true}  alt={'banner'}/>
+                        <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[62%] aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%] absolute bottom-8 md:bottom-0 right-0 md:left-0 max-md:border-[10px] border-white z-20 md:z-[9] overflow-hidden">
+                            <ImgUI  src={about?.image_2} priority={true}  alt={about?.title_en}/>
                         </div>
                     </div>
                 </div>
@@ -52,7 +53,7 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
                     <SwiperSlider hotelCardData={rooms?.results} />
                 </div>
             </SectionUI>
-            <SectionUI bgFigureBottomPostion={'-top-20 -left-[60%]'}  padding={'py-10 md:py-20 lg:pt-[54px] lg:pb-[100px]'}>
+            <SectionUI   padding={'py-10 md:py-20 lg:pt-[54px] lg:pb-[100px]'}>
                 <div className="pb-5 md:pb-10">
                     <SectionTitle title={t('index.section3.title')}/>
                 </div>
