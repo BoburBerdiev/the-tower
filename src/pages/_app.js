@@ -14,7 +14,7 @@ import {PersistGate} from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Alegreya_Sans, Open_Sans, Playfair, Roboto} from "next/font/google";
+import {Alegreya_Sans, Playfair, Roboto} from "next/font/google";
 import "react-datepicker/dist/react-datepicker.css";
 import NextNProgress from "nextjs-progressbar";
 
