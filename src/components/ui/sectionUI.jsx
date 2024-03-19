@@ -1,6 +1,6 @@
 import {ImgUI} from "@/components";
 
-const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureBottomPostion,centerFigure}) => {
+const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureBottomPostion,centerFigure , langmark}) => {
 
 
   // bgFigureTopPostion  2ta qiymat keliw kk (top left  yoki bottom right)
@@ -28,13 +28,19 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
           
           {
             bgFigureBottomPostion &&
-          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute image-animate-scale w-full  h-[300px] z-[1]`}>
+          <div className={` ${bgFigureBottomPostion ? bgFigureBottomPostion : " bottom-0 left-0"} absolute  w-full  h-[300px] z-[1]`}>
             <ImgUI src={'/image/pattern.png'}  alt={'banner'} />
           </div>
           }
-        </section>
-    </>
-  )
+            {
+                langmark &&
+                <div className='absolute bottom-0 left-0 right-0 z-[1] h-full w-full '>
+                    <ImgUI src={'/image/bg.svg'} imageStyle={'w-full'} priority={true} alt={'locations'}/>
+                </div>
+        }
+    </section>
+</>
+)
 }
 
 export default SectionUI

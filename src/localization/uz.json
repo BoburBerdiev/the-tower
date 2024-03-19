@@ -21,8 +21,9 @@
       "booking":"Band qilish",
       "readMore": "Ko'proq o'qish",
       "allNums": "Barcha xonalar",
-      "viewAllPhoto": "Barcha fotosuratlarni ko'rish",
-      "allNews": "Barcha yangiliklar"
+      "viewAllPhoto": "Barcha suratlarni ko'rish",
+      "allNews": "Barcha yangiliklar",
+      "sendMesseng": "Jo'natish"
     },
     "footer": {
       "menu": {
@@ -89,7 +90,10 @@
         "title": "Bizning xizmatlarimiz"
       },
       "section4": {
-        "title": "Yaqin atrofdagi diqqatga sazovor joylar"
+        "title": "Yaqin atrofdagi diqqatga sazovor joylar",
+          "km": "km",
+          "m": "m"
+        }
       },
       "section5": {
         "title": "Fotogalereya"
@@ -139,7 +143,7 @@
       "noticeTitle": "sarlavha yozing",
       "review": "Sharh yozing",
       "reviewClients": "Mijozlarning sharhlari",
-      "reviewDate": "Ko'rib chiqish sanasi:"
+      "reviewDate": "Yozilgan vaqti:"
     },
     "roomInner": {
       "allComforts": "Barchasi",
@@ -155,7 +159,7 @@
         "service8": "Shahar ko'rinishi",
         "service9": "Ajoyib nonushta"
       },
-      "areaSymbol": "㎡ ",
+      "areaSymbol": "m²",
       "humenSymbol": "kishi",
       "filterSymbol": "vannaxona",
       "balconySymbol": "balkon"

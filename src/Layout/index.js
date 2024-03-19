@@ -6,7 +6,7 @@ import apiService from "@/service/axois";
 
 const Layout = ({ children }) => {
 
-    const { data: contact  , refetch: contactRefetch, isLoading , isSuccess } = useQuery("contact", () =>
+    const { data: contact  , refetch: contactRefetch,  } = useQuery("contact", () =>
         apiService.getData( '/pages/contact') , { enabled: false}
     );
 

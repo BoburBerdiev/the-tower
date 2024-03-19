@@ -73,18 +73,6 @@ const index = ({newsHeader}) => {
         <MiniHeader img={newsHeader?.header_image} title={langSelect(lang , newsHeader?.title_ru, newsHeader?.title_en , newsHeader?.title_uz )}/>
       </div>
       <SectionUI padding={'py-10 md:py-16 lg:py-[100px]'}>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-[30px]">
-
-
-
-          {
-            newsIsLoading ?
-          <>
-            <NewsCardSkeleton />
-            <NewsCardSkeleton />
-            <NewsCardSkeleton />
-          </>
-          :
 
             <InfiniteScroll
                 next={newsCardRefetch}
@@ -92,10 +80,9 @@ const index = ({newsHeader}) => {
                 loader={<div className={'flex w-full justify-center items-center mt-5 mb-3'}><ButtonUI
                     leftIcon={<AiOutlineLoading3Quarters
                         className={'animate-spin text-darkBlue '}/>}> </ButtonUI></div>}
-                className={'w-full'}
+                className={'grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-[30px] h-auto'}
                 dataLength={productInfinity?.count || []}>
-              <div
-                  className={``}>
+
                 {
 
                   productInfinity?.map(news => (
@@ -106,15 +93,12 @@ const index = ({newsHeader}) => {
                           href={`news/${news?.slug}`}/>
                   ))
                 }
-              </div>
 
             </InfiniteScroll>
-          }
 
 
 
 
-        </div>
       </SectionUI>
     </div>
   )
