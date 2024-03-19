@@ -18,7 +18,7 @@ const HotelCard = ({imgs, cardTitle, room_size,capacity ,num_balconies , num_bat
             <Slider SliderContent={imgs} PaginationInner={true} card={true} />
          </div>
          <div className='md:space-y-3 '>
-           <h5 className='font-elegance leading-normal tracking-[0.48px] uppercase text-lg md:text-xl lg:text-2xl '>{cardTitle}</h5>
+           <h5 className='font-elegance h-[24px] leading-normal tracking-[0.48px] uppercase text-base md:text-xl lg:text-2xl '>{cardTitle}</h5>
            <div className='flex flex-wrap leading-normal gap-x-2 md:gap-x-4 lg:gap-x-6 gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
               <RoomsCharacterList room_size={room_size} capacity={capacity} num_balconies={num_balconies} num_bathrooms={num_bathrooms} />
            </div>

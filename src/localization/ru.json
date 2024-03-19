@@ -6,7 +6,8 @@
       "rooms":"Номера",
       "gallery":"Фотогалерея",
       "contact": "Контакты",
-      "news": "Новости"
+      "news": "Новости",
+      "searching": "Ищите комнату"
     },
     "lang": {
       "ru": "Русский",
@@ -68,8 +69,7 @@
     "about": {
       "headerTitle": "О нашем отеле",
       "section1": {
-        "title": "Добро пожаловать в The Tower Hotel!",
-        "text": ""
+        "title": "Добро пожаловать в The Tower Hotel!"
       }
     },
     "index": {

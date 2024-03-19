@@ -6,7 +6,9 @@
       "rooms":"Rooms",
       "gallery":"Gallery",
       "contact": "Contact",
-      "news": "News"
+      "news": "News",
+      "searching": "Look for a room"
+
     },
     "lang": {
       "ru": "Russian",

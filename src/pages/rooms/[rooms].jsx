@@ -23,7 +23,9 @@ const Room = () => {
     const {lang} = useSelector(state => state.langSlice)
     const router = useRouter()
     const {rooms}=router.query
-
+    const { data: room  , refetch: refetchRoom , isLoading: isLoadingRoom } = useQuery(["room" , rooms], () =>
+        apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
+    );
     const services = [
         {
             img: '/image/service1.svg',
@@ -73,11 +75,8 @@ const Room = () => {
     ]
 
 
-    const { data: room  , refetch: refetchRoom , isLoading: isLoadingRoom } = useQuery(["room" , rooms], () =>
-        apiService.getDataByID(  '/rooms' ,rooms) , { enabled: false}
-    );
 
-    console.log(isLoadingRoom)
+
 
     useEffect(() => {
         if(rooms) {
@@ -122,7 +121,7 @@ const Room = () => {
                         ))
                     }
                 </div>
-                <div className="py-10">
+                <div className="pt-10">
                     <h4 data-aos='fade-up' className="flex items-center gap-x-[10px] text-lg">
                         <RxInfoCircled className="text-customGrey text-xl" />
                         <span className="font-roboto font-medium">{t('roomInner.allComforts')}</span>
@@ -137,7 +136,7 @@ const Room = () => {
                     </ul>
                 </div>
            </SectionUI>
-            <SectionUI padding={'py-10 '} >
+            <SectionUI padding={'pb-10 '} >
                 <div className="space-y-5 md:space-y-10">
                     <SectionTitle title={t('index.section5.title')} />
                     <GallerySlider gallery={room?.room_gallery} />
