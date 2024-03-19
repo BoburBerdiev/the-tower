@@ -38,7 +38,7 @@ const alegreya_sans
 ({
     weight: ["100", "300", "400", "500"],
     subsets: ['cyrillic', 'latin'],
-    // variable: '--font-alegreya_sans',
+    variable: '--font-alegreya_sans',
     // adjustFontFallback: false,
     // preload: false
 })
