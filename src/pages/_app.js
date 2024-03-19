@@ -24,15 +24,15 @@ const roboto = Roboto({
     variable: '--font-roboto',
     display: "swap",
     adjustFontFallback: false,
-    // preload: false
+    preload: false
 })
-const openSans = Open_Sans({
-    subsets: ['cyrillic', 'latin'],
-    variable: '--font-open-sans',
-    display: "swap",
-    adjustFontFallback: false,
-    // preload: false
-})
+// const openSans = Open_Sans({
+//     subsets: ['cyrillic', 'latin'],
+//     variable: '--font-open-sans',
+//     display: "swap",
+//     adjustFontFallback: false,
+//     preload: false
+// })
 const alegreya_sans
     = Alegreya_Sans
 ({
@@ -40,7 +40,7 @@ const alegreya_sans
     subsets: ['cyrillic', 'latin'],
     variable: '--font-alegreya_sans',
     adjustFontFallback: false,
-    // preload: false
+    preload: false
 })
 
 const elegance = Playfair({
@@ -48,7 +48,7 @@ const elegance = Playfair({
     variable: '--font-rounded-elegance',
     display: "swap",
     adjustFontFallback: false,
-    // preload: false
+    preload: false
 })
 
 
@@ -63,7 +63,7 @@ export default function App({Component, pageProps}) {
                     <PersistGate loading={null} persistor={persistor}>
                         <Client>
                             <main
-                                className={`${roboto.variable} ${alegreya_sans.variable}  ${openSans.variable} ${elegance.variable} `}>
+                                className={`${roboto.variable} ${alegreya_sans.variable}   ${elegance.variable} `}>
 
                                 <Layout>
                                     <NextNProgress color={'white'} startPosition={0.3} stopDelayMs={200} height={3}/>
