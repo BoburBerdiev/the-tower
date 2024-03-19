@@ -78,7 +78,7 @@ const Footer = ({contact}) => {
           </div>
         </div>
       </footer>
-      <div className="mini-footer relative bg-brown py-3 overflow-hidden">
+      <div className="mini-footer relative bg-brown py-1 overflow-hidden">
         <div className='absolute top-0 left-0 w-full h-full z-1'>
           <ImgUI src={'/image/footer-bg.png'} objectFitContain={false} objectFit={'object-cover object-bottom'} alt={'footer'} priority={true}/>
         </div>

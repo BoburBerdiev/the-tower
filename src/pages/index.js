@@ -59,7 +59,7 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
                 </div>
                 <SwiperSlider services={services} xlSlidesPerView={4} />
             </SectionUI>
-            <SectionUI bgGold={true} padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
+            <SectionUI bgGold={true} langmark={true}  padding={'py-[20px] md:py-[50px] py-[90px] relative'}>
                 <div className='relative z-[5]'>
                     <SectionTitle title={t('index.section4.title')} colorContent={true} />
                     <div className='grid grid-cols-2 xl:grid-cols-3 xl:gap-y-5 gap-5 md:gap-x-20 2xl:gap-x-[150px] py-10'>
@@ -69,9 +69,6 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
                             ))
                         }
                     </div>
-                </div>
-                <div className='absolute -bottom-24 left-0 right-0 z-[1] h-full w-full '>
-                    <ImgUI src={'/image/bg.svg'} priority={true} alt={'locations'}  />
                 </div>
             </SectionUI>
             <SectionUI padding={'py-10 md:py-20 lg:py-[90px]'} >

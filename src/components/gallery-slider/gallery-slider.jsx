@@ -53,7 +53,7 @@ const GallerySlider = ({gallery}) => {
                     <div
                       data-aos='fade-up' data-aos-delay={`${index}00`}
                         // onClick={() => handleGalleryClick(true)}
-                      className={"w-full h-[200px] md:h-[400px] block relative overflow-hidden  duration-300"}
+                      className={"w-full h-[200px] md:h-[300px] block relative overflow-hidden  duration-300"}
                     >
                       <ImgUI
                         src={image?.image}

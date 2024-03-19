@@ -8,7 +8,7 @@ const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnB
             {
                 href 
                     ?
-                    <Link href={href} onClick={onClick} target={target} className={btnBorder ? ` ${paddingFull && 'py-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
+                    <Link href={href} onClick={onClick} target={target} className={btnBorder ? ` ${paddingFull && 'py-3 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3 `}   `  : ` ${paddingFull && 'py-3 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3 `}  `}>
                         <span>
                             {text}
                         </span>
@@ -17,7 +17,7 @@ const ButtonUl = ({ href , text , icon,onClick , stylePadding, paddingFull, btnB
                         }
                     </Link>
                     :
-                    <button type={type} onClick={onClick} className={btnBorder ? ` ${paddingFull && ' py-3.5 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3.5 `}   `  : ` ${paddingFull && 'py-3.5 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3.5 `}  `}>
+                    <button type={type} onClick={onClick} className={btnBorder ? ` ${paddingFull && ' py-3 w-full'} ${btnWhiteBorder ? 'btn-border-white' : 'btn-border'} font-gilroy  ${stylePadding ? stylePadding : ` px-5 py-3 `}   `  : ` ${paddingFull && 'py-3 w-full'}  btn-bg  font-gilroy ${stylePadding ? stylePadding : ` px-5 py-3 `}  `}>
                         <span>
                             {text}
                         </span>
