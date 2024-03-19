@@ -36,14 +36,14 @@ const TopNav = ({contact}) => {
         }
     ]
     return (
-        <div className='bg-brown w-full'>
+        <div className='bg-brown w-full '>
             <div className='container flex justify-between gap-x-4 xl:gap-x-10 items-center text-white'>
                 <div className='flex items-center gap-2.5'>
                     <a href={contact?.instagram} target='_blank'><RiInstagramFill className='text-xl' /></a>
                     <a href={contact?.facebook} target='_blank'><FaFacebookSquare className='text-lg' /></a>
                     <a href={contact?.youtube} target='_blank'><FaYoutube className='text-xl'/></a>
                 </div>
-                <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white '>
+                <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white  '>
                     <DropdownUI list={langList} onClick={handleChangleLang}/>
                     <a href={`tel:${contact?.phone}`} className='hidden sm:block'>{
                         formatPhoneNumber(contact?.phone)

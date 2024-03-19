@@ -19,7 +19,8 @@
       "readMore": "Read more",
       "allNums": "All rooms",
       "viewAllPhoto": "All photos",
-      "allNews": "All news"
+      "allNews": "All news",
+      "sendMesseng": "Send"
     },
     "footer": {
       "menu": {
@@ -88,7 +89,9 @@
         "title": "Our services"
       },
       "section4": {
-        "title": "Landmarks nearby"
+        "title": "Landmarks nearby",
+        "km": "km",
+        "m": "m"
       },
       "section5": {
         "title": "Photo gallery"
@@ -138,7 +141,7 @@
       "notice": "Notice about us",
       "noticeTitle": "write a title",
       "reviewClients": "Customer Reviews",
-      "reviewDate": "Review date:"
+      "reviewDate": "Stretched time:"
 
     },
     "roomInner": {
@@ -155,7 +158,7 @@
         "service8": "City view",
         "service9": "Excellent breakfast"
       },
-      "areaSymbol": "㎡ ",
+      "areaSymbol": "m²",
       "humenSymbol": "person",
       "filterSymbol": "bathroom",
       "balconySymbol": "balcony"

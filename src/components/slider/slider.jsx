@@ -9,8 +9,7 @@ import {useSelector} from "react-redux";
 
 const Slider = ({
   SliderContent,
-  PaginationMod, Quality,
-                  PaginationInner,
+  PaginationMod, Quality, PaginationInner,
   isLoading , card
 }) => {
     const {lang} = useSelector(state => state.langSlice)
@@ -51,7 +50,7 @@ const Slider = ({
               {
                   slider.title_ru &&
                   <div className="relative z-20 w-full h-full">
-                    <div className="container flex flex-col items-center justify-center h-full pb-10 space-y-5 ">
+                    <div className="container flex flex-col items-center justify-center h-full pb-40 md:mb-10 space-y-5 ">
 
                       <h2 data-aos='fade-up' data-aos-delay='0.1'
                           className="text-center header-title w-full max-w-[1000px] drop-shadow-lg">{
@@ -61,7 +60,7 @@ const Slider = ({
                       }</h2>
                       {
                           slider.sub_title_ru && <p data-aos='fade-up' data-aos-delay='50'
-                                                    className="lowercase drop-shadow-lg text-white text-center max-w-[700px] font-roboto  font-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
+                                                    className="drop-shadow-lg text-white text-center max-w-[700px] font-roboto  font-light tracing-[0.48px] sm:text-lg w-full  lg:text-xl xl:text-2xl">
                             {langSelect(lang, slider?.sub_title_ru, slider?.sub_title_en, slider?.sub_title_uz)}
                           </p>
                       }
@@ -70,7 +69,7 @@ const Slider = ({
               }
               <div
                   className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
-                <ImgUI src={slider?.image} alt={'banner'} quality={Quality} priority={true} card={card || false} />
+                <ImgUI src={slider?.image} alt={'banner'} quality={Quality} priority={true} imageStyle={'object-center'} card={card || false} />
               </div>
             </SwiperSlide>
         ))}
