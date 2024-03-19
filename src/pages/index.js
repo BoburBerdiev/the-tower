@@ -14,7 +14,6 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
     const {t} = useTranslation()
     const {lang} = useSelector(state => state.langSlice)
 
-    // console.log(services)
     return (
         <div>
             <SEO

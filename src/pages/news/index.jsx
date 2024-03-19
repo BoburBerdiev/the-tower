@@ -87,6 +87,7 @@ const index = ({newsHeader}) => {
 
                   productInfinity?.map(news => (
                       <NewsCard
+                          key={news?.id}
                           img={news?.main_image}
                           date={news?.created_at}
                           decr={langSelect(lang ,news?.title_ru, news?.title_en , news?.title_uz )}

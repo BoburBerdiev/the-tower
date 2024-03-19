@@ -30,7 +30,7 @@ const RoomInnerSlider = ({images ,isLoadingRoom}) => {
                                 images?.map(image => (
                                     <SwiperSlide key={image?.id}>
                                         <div data-aos='fade-in'   className={'block w-full h-full'}>
-                                            <ImgUI priority={true} src={image?.image} card={false} alt={'room-inner'}/>
+                                            <ImgUI priority={true} src={image?.image} card={false} alt={'room-inner'} imageStyle={'object-center'}/>
                                         </div>
                                     </SwiperSlide>
 
@@ -60,7 +60,7 @@ const RoomInnerSlider = ({images ,isLoadingRoom}) => {
                                     {
                                         images?.map(image => (
                                             <SwiperSlide key={image?.id} className='relative  w-full cursor-pointer'>
-                                                <ImgUI src={image?.image}  alt={'rooms-inner'} card={true}/>
+                                                <ImgUI src={image?.image}  alt={'rooms-inner'} card={true} imageStyle={'object-center'} />
                                             </SwiperSlide>
     
                                         ))

@@ -59,6 +59,7 @@ const GallerySlider = ({gallery}) => {
                         src={image?.image}
                         alt={"gallery"}
                         priority={90}
+                        imageStyle={'object-center'}
                       />
                     </div>
                   </SwiperSlide>

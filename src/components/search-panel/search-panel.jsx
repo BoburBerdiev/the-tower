@@ -21,11 +21,12 @@ function SearchPanel() {
     const {
         refetch,
         data,
-        isLoading
+        isSuccess
     } = useQuery('search-input', () => apiService.getData(`/rooms/?search=${debounceInputValue}`),
         {
             enabled: false
         })
+
 
     useEffect(() => {
         if (debounceInputValue !== "") {
@@ -69,34 +70,40 @@ function SearchPanel() {
                                maxLength={20} onChange={e => onChangeSearch(e)} className=" cursor-pointer border border-black rounded-none outline-none p-3 lg:p-5 w-full font-roboto font-light tracking-[0.36px] xl:text-lg duration-300 focus:border-brown" />
                     </div>
                     {
-                        data?.count > 0  ?
-                            <div className="grid grid-cols-2  lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
-                                {
-                                    data?.results?.map(card => (
-                                        <div onClick={closeSeachPanel}>
-                                            <HotelCard
-                                                imgs={card?.images}
-                                                key={card.id}
-                                                id={card.id}
-                                                cardTitle={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
-                                                descriptions={card?.information}
-                                                capacity={card?.capacity}
-                                                num_balconies={card?.num_balconies}
-                                                room_size={card?.room_size}
-                                                num_bathrooms={card?.num_bathrooms}
-                                                href={`/rooms/${card?.slug}`}
-                                            />
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                            :
-                            <div className='flex flex-col items-center gap-5'>
-                                <h2 className='text-4xl text-center font-elegance '>{t('notFound.text')}</h2>
-                                <div className='w-full md:w-[500px] aspect-video lg:w-[600px] relative'>
-                                    <ImgUI src={'/image/no-room-found.png'} objectFitContain={true} alt={'not found'}/>
+                        isSuccess &&
+                        <>
+                        {
+                            data?.count > 0  ?
+                                <div className="grid grid-cols-2  lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
+                                    {
+                                        data?.results?.map(card => (
+                                            <div key={card?.id} onClick={closeSeachPanel}>
+                                                <HotelCard
+                                                    imgs={card?.images}
+                                                    key={card.id}
+                                                    id={card.id}
+                                                    cardTitle={langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
+                                                    descriptions={card?.information}
+                                                    capacity={card?.capacity}
+                                                    num_balconies={card?.num_balconies}
+                                                    room_size={card?.room_size}
+                                                    num_bathrooms={card?.num_bathrooms}
+                                                    href={`/rooms/${card?.slug}`}
+                                                />
+                                            </div>
+                                        ))
+                                    }
                                 </div>
-                            </div>
+                                :
+                                <div className='flex flex-col items-center gap-5'>
+                                    <h2 className='text-4xl text-center font-elegance '>{t('notFound.text')}</h2>
+                                    <div className='w-full md:w-[500px] aspect-video lg:w-[600px] relative'>
+                                        <ImgUI src={'/image/no-room-found.png'} objectFitContain={true} alt={'not found'}/>
+                                    </div>
+                                </div>
+                        }
+                        </>
+
                     }
                 </div>
 
