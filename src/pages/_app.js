@@ -22,9 +22,9 @@ const roboto = Roboto({
     subsets: ['cyrillic', 'latin'],
     weight: ['300', '400', '500', '700'],
     variable: '--font-roboto',
-    display: "swap",
-    adjustFontFallback: false,
-    preload: false
+    // display: "swap",
+    // adjustFontFallback: false,
+    // preload: false
 })
 // const openSans = Open_Sans({
 //     subsets: ['cyrillic', 'latin'],
@@ -38,9 +38,9 @@ const alegreya_sans
 ({
     weight: ["100", "300", "400", "500"],
     subsets: ['cyrillic', 'latin'],
-    variable: '--font-alegreya_sans',
-    adjustFontFallback: false,
-    preload: false
+    // variable: '--font-alegreya_sans',
+    // adjustFontFallback: false,
+    // preload: false
 })
 
 const elegance = Playfair({
