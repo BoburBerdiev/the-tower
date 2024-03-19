@@ -79,7 +79,7 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
             </SectionUI>
             <section className="relative py-10 lg:py-[87px] bg-black/60 overflow-hidden">
                 <div className="absolute top-0 left-0 z-10 w-full h-full">
-                    <ImgUI src={'/image/IMG_7359-min.jpg'} priority={true}  alt={'banner'}/>
+                    {/*<ImgUI src={'/image/IMG_7359-min.jpg'} priority={true}  alt={'banner'}/>*/}
                 </div>
                 <div className="bg-black/60 w-full h-full absolute top-0 left-0 z-[11]"></div>
                 <div className="container relative z-20 flex flex-col items-center">
