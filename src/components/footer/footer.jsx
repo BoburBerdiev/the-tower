@@ -92,8 +92,8 @@ const Footer = ({contact}) => {
               <div className='max-md:hidden w-8 h-8 object-cover relative duration-200 group-hover:scale-50 group-hover:opacity-0 group-hover:-translate-x-10'>
                 <ImgUI src={'/image/abduganiev-A.png'} alt={"Abdug'aniev"} priority={true} quality={100} objectFitContain={true}/>
               </div>
-              <div className='shrink-0  duration-300  md:opacity-0 md:translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 md:absolute left-0 object-contain w-full h-full'>
-                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"}  priority={true} objectFitContain={true} quality={100}/>
+              <div className='shrink-0  duration-300  md:opacity-0 md:translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 md:absolute left-0  w-full h-full flex justify-center items-center'>
+                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"}  priority={true} objectFitContain={true} quality={100} imageStyle={'object-contain'}/>
               </div>
             </a>
           </div>

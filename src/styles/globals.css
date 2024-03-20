@@ -212,8 +212,8 @@ input::-webkit-inner-spin-button {
 .room-inner-slider .swiper-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 0 !important;
+    gap:10px;
     padding: 0;
     width: 100%;
     overflow: hidden;

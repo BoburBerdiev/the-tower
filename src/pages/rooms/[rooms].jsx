@@ -16,6 +16,8 @@ import apiService from "@/service/axois";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {langSelect} from "@/helper";
+import {MdBalcony, MdOutlineBedroomParent, MdOutlinePhotoSizeSelectSmall} from "react-icons/md";
+import {LiaRestroomSolid} from "react-icons/lia";
 
 
 const Room = () => {
@@ -143,16 +145,28 @@ const Room = () => {
                 </div>
             </SectionUI>
            <div className="bg-white w-full duration-300 bottom-0 left-0 righ-0 sticky z-[10] shadow-sm py-5 border-t border-brown">
-                <div className="container flex flex-wrap items-center  justify-center md:justify-between gap-y-5 gap-x-5">
+                <div className="container flex flex-wrap items-center  justify-center md:justify-between gap-y-3 gap-x-5">
                     <div className="text-2xl font-elegance shrink-0">
                         {t('index.room')} {langSelect(lang , room?.title_ru , room?.title_en , room?.title_uz)}
                     </div>
                     <div
-                        className='flex shrink-0 leading-normal divide-x-2 divide-iron gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
-                            <p className="px-3">{room?.room_size} {t('roomInner.areaSymbol')}</p>
-                            <p className="px-3">{room?.capacity} {t('roomInner.humenSymbol')}</p>
-                            <p className="px-3">{room?.num_balconies} {t('roomInner.filterSymbol')}</p>
-                            <p className="px-3">{room?.num_bathrooms} {t('roomInner.balconySymbol')}</p>
+                        className='flex shrink-0 leading-normal divide-x divide-iron/50 gap-y-1 items-center text-iron font-roboto text-sm md:text-base lg:text-lg tracking-[0.4px] xl:text-xl '>
+                            <p className="px-3 py-1 flex gap-x-2 items-center"> <span> <MdOutlinePhotoSizeSelectSmall className={'text-lg'} /></span> <span>{room?.room_size} {t('roomInner.areaSymbol')}</span></p>
+                        <p className="px-3 py-1 flex gap-x-2 items-center"><span> <MdOutlineBedroomParent
+                            className={'text-lg'}/></span> <span> {room?.capacity} {t('roomInner.humenSymbol')}</span></p>
+                        <p className="px-3 py-1 flex gap-x-2 items-center">
+                            <span > <LiaRestroomSolid className={'text-lg'} /></span  >
+                            <span>
+                            {room?.num_balconies} {t('roomInner.filterSymbol')}
+                            </span>
+                        </p>
+                        <p className="px-3 py-1 flex gap-x-2 items-center">
+                            <span> <MdBalcony className={'text-lg'}/></span>
+                            <span>
+                                {room?.num_bathrooms} {t('roomInner.balconySymbol')}
+
+                            </span>
+                        </p>
                     </div>
 
                     <div>

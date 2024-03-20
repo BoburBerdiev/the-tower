@@ -55,7 +55,7 @@ const RoomInnerSlider = ({images ,isLoadingRoom}) => {
                             freeMode={true}
                             watchSlidesProgress={true}
                             modules={[FreeMode, Thumbs ,Navigation]}
-                            className={"mySwiper flex flex-col w-full h-full"}
+                            className={"mySwiper flex flex-col w-full h-full gap-5 "}
                         >
                                     {
                                         images?.map(image => (
