@@ -13,10 +13,10 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '0.5rem',
-        lg: '1rem',
-        xl: '2rem',
-        '2xl': '3rem',
+        sm: '1.5rem',
+        lg: '2rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
     extend: {
@@ -26,8 +26,13 @@ module.exports = {
         'customGrey': '#808080'
       },
       fontFamily: {
+        // app.js ga qarab font ulansin
         elegance: ['var(--font-el_messiri)'],
+        // roboto: ['var(--font-roboto)'],
+        // inter: ['var(--font-inter)'],
         roboto: ['var(--font-alegreya_sans)'],
+        alegreya: ['var(--font-alegreya_sans)'],
+        openSans: ['var(--font-open-sans)']
       },
     },
   },

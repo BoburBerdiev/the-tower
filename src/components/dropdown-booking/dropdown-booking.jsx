@@ -40,7 +40,7 @@ const DropdownBooking = ({title, subTitle, titleSecond, subTitleSecond, children
                             <button className="py-1 md:py-2  flex items-start gap-2"
                                     onClick={handleDropdown}
                             >
-                          <p className={'text-black/80 text-center sm:text-start text-base '}>
+                          <p className={'text-black/80 text-center sm:text-start text-base  font-roboto'}>
                             {subTitle}
                           </p>
                                 <FaAngleDown className={` text-sm  text-black duration-100 flex-shrink-0 mt-1.5`}/>
@@ -55,7 +55,7 @@ const DropdownBooking = ({title, subTitle, titleSecond, subTitleSecond, children
                             <button className="py-1 md:py-2 flex items-start gap-2"
                                     onClick={handleDropdown}
                             >
-                          <p className={'text-black/80 text-center sm:text-start text-base '}>
+                          <p className={'text-black/80 text-center sm:text-start text-base  font-roboto'}>
                             {subTitleSecond}
                           </p>
                                 <FaAngleDown className={` text-sm  text-black duration-100 flex-shrink-0 mt-1.5`}/>
@@ -69,7 +69,7 @@ const DropdownBooking = ({title, subTitle, titleSecond, subTitleSecond, children
                         </h5>
                         <button className="py-2  flex items-start gap-2"
                                 onClick={handleDropdown}>
-                          <span className={'text-black/80 text-center sm:text-start text-base '}>
+                          <span className={'text-black/80 text-center sm:text-start text-base font-roboto'}>
                             {subTitle}
                           </span>
                             <FaAngleDown className={` text-sm  text-black duration-100 flex-shrink-0 mt-1.5`}/>

@@ -1,10 +1,9 @@
 import {DropdownUI} from "@/components";
-import { FaYoutube} from 'react-icons/fa6';
 import {formatPhoneNumber, langSelect} from "@/helper";
 import {changleLang} from "@/slice/lang";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
-import {FaFacebookSquare, FaInstagramSquare} from "react-icons/fa";
+import {FaFacebookSquare, FaTelegram} from "react-icons/fa";
 import {RiInstagramFill} from "react-icons/ri";
 
 
@@ -41,8 +40,8 @@ const TopNav = ({contact}) => {
             <div className='container flex justify-between gap-x-4 xl:gap-x-10 items-center text-white'>
                 <div className='flex items-center gap-2.5'>
                     <a href={contact?.instagram} target='_blank'><RiInstagramFill className='text-xl' /></a>
-                    <a href={contact?.facebook} target='_blank'><FaFacebookSquare className='text-lg' /></a>
-                    <a href={contact?.youtube} target='_blank'><FaYoutube className='text-xl'/></a>
+                    <a href={contact?.youtube} target='_blank'> <FaTelegram className='text-xl' /></a>
+                    <a href={contact?.facebook} target='_blank'><FaFacebookSquare className='text-xl' /></a>
                 </div>
                 <div className='flex justify-end gap-x-4 xl:gap-x-10 items-center font-roboto text-sm text-white  '>
                     <DropdownUI list={langList} onClick={handleChangleLang}/>
