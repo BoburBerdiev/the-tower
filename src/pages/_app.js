@@ -16,53 +16,25 @@ import {PersistGate} from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Alegreya_Sans, Marmelad, Open_Sans, Playfair, Roboto, Ubuntu} from "next/font/google";
+import {Alegreya_Sans, El_Messiri} from "next/font/google";
 
 import "react-datepicker/dist/react-datepicker.css";
 import NextNProgress from "nextjs-progressbar";
 
-const roboto = Roboto({
-    subsets: ['cyrillic', 'latin'],
-    weight: ['300', '400', '500', '700'],
-    variable: '--font-roboto',
-    // display: "swap",
-    // adjustFontFallback: false,
-    // preload: false
-})
-// const openSans = Open_Sans({
-//     subsets: ['cyrillic', 'latin'],
-//     variable: '--font-open-sans',
-//     display: "swap",
-//     adjustFontFallback: false,
-//     preload: false
-// })
 const alegreya_sans
     = Alegreya_Sans
 ({
     weight: ["100", "300", "400", "500"],
     subsets: ['cyrillic', 'latin'],
     variable: '--font-alegreya_sans',
-    // adjustFontFallback: false,
-    // preload: false
 })
 
-const elegance = Ubuntu({
+const elegance = El_Messiri({
     subsets: ['cyrillic', 'latin'],
-    weight:[ "300" , "400" , "500" , "700" ],
-    variable: '--font-ubuntu',
-    // display: "swap",
-    // adjustFontFallback: false,
-    // preload: false
+    weight:[   "400" , "500" , "700" ],
+    variable: '--font-el_messiri',
 })
-//
-// const marmelad = Marmelad({
-//     weight:400 ,
-//     subsets: ['cyrillic', 'latin'],
-//     variable: '--font-marmelad',
-//     display:"swap",
-//     adjustFontFallback:false,
-//     preload: false
-// })
+
 
 
 
@@ -78,7 +50,7 @@ export default function App({ Component, pageProps }) {
                     <PersistGate loading={null} persistor={persistor}>
                         <Client>
                             <main
-                                className={`${roboto.variable} ${alegreya_sans.variable}   ${elegance.variable} `}>
+                                className={` ${alegreya_sans.variable}   ${elegance.variable} `}>
 
                                 <Layout>
                                     <NextNProgress color={'white'} startPosition={0.3} stopDelayMs={200} height={3}/>

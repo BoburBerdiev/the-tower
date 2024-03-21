@@ -27,7 +27,7 @@ const Contact = ({contact}) => {
             <div className="mb-5 md:mb-10">
               <SectionTitle title={langSelect(lang , contact?.title_ru, contact?.title_en , contact?.title_uz )} justify={'justify-center'} />
             </div>
-            <div data-aos='fade-up'  data-aos-delay='0.2' className="space-y-2 md:space-y-5 text-center">
+            <div data-aos='fade-up'  data-aos-delay='0.2' className="space-y-2 md:space-y-5 text-center font-roboto">
               <a className="block" href={`tel:${contact?.phone}`}>
                 <p className="space-x-2">
                   <span className="text-base md:text-xl text-iron">
@@ -35,7 +35,7 @@ const Contact = ({contact}) => {
                       t('contact.phone')
                     }
                   </span>
-                  <span>{
+                  <span >{
                     formatPhoneNumber(contact?.phone)
                   }</span>
                 </p>

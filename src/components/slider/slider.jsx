@@ -27,10 +27,6 @@ const Slider = ({
           } w-full h-full`}
           spaceBetween={30}
           effect={"fade"}
-          autoplay={{
-            delay: 5500,
-            disableOnInteraction: false,
-          }}
           pagination={{
             clickable: true,
             el: ".inner-pagination",
@@ -68,7 +64,7 @@ const Slider = ({
                   </div>
               }
               <div
-                  className="absolute w-full h-full z-10 top-0 left-0 before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[11] before:bg-[#00000040]">
+                  className="absolute w-full h-full z-10 top-0 left-0">
                 <ImgUI src={slider?.image} alt={'banner'} quality={Quality} priority={true} imageStyle={'object-center'} card={card || false} />
               </div>
             </SwiperSlide>
