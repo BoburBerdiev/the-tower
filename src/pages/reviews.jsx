@@ -102,7 +102,7 @@ export async function getServerSideProps({ res}) {
   );
   // Fetch data from external API
   const [feedback ] = await Promise.all([
-    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/feedback/`),
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/pages/feedback/approved/`),
 
   ]);
   return {

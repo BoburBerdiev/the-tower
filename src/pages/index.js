@@ -28,7 +28,7 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
             <SectionUI bgFigureTopPostion={'top-0 left-0'} padding={'py-10 md:py-20 lg:py-[90px] lg:pt-32 xl:pt-[180px]'}>
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                     <div className="space-y-3 md:space-y-5 ">
-                        <SectionTitle styleSubtitle={'text-start capitalize'} title_ru={about?.title_ru} title_en={about?.title_en} title_uz={about?.title_uz} />
+                        <SectionTitle styleSubtitle={'text-start'} title_ru={about?.title_ru} title_en={about?.title_en} title_uz={about?.title_uz} />
                         <p data-aos='fade-up' data-aos-delay='100' className="text-justify section-text"> {langSelect(lang ,about?.sub_title_ru, about?.sub_title_en , about?.sub_title_uz )} </p>
                         <div className="flex justify-center md:justify-start" data-aos='fade-up' data-aos-delay='120'>
                             <ButtonUI btnNews={true} text={t('btn.readMore')} btnBorder={true} href={'/about'}/>

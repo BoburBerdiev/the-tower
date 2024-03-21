@@ -16,7 +16,7 @@ import apiService from "@/service/axois";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {langSelect} from "@/helper";
-import {MdBalcony, MdOutlineBedroomParent, MdOutlinePhotoSizeSelectSmall} from "react-icons/md";
+import {MdBalcony, MdOutlineBathroom, MdOutlineBedroomParent, MdOutlinePhotoSizeSelectSmall} from "react-icons/md";
 import {LiaRestroomSolid} from "react-icons/lia";
 
 
@@ -155,17 +155,12 @@ const Room = () => {
                         <p className="px-3 py-1 flex gap-x-2 items-center"><span> <MdOutlineBedroomParent
                             className={'text-lg'}/></span> <span> {room?.capacity} {t('roomInner.humenSymbol')}</span></p>
                         <p className="px-3 py-1 flex gap-x-2 items-center">
-                            <span > <LiaRestroomSolid className={'text-lg'} /></span  >
-                            <span>
-                            {room?.num_balconies} {t('roomInner.filterSymbol')}
-                            </span>
+                            <span> <MdOutlineBathroom className={'text-lg'}/></span> <span
+                            className={'text-nowrap'}>  {room?.num_bathrooms} {room?.num_bathrooms > 1 ? t('roomInner.filterSymbol') : t('roomInner.filterSymbols')}</span>
                         </p>
                         <p className="px-3 py-1 flex gap-x-2 items-center">
-                            <span> <MdBalcony className={'text-lg'}/></span>
-                            <span>
-                                {room?.num_bathrooms} {t('roomInner.balconySymbol')}
-
-                            </span>
+                            <span> <MdBalcony className={'text-lg'}/></span> <span
+                            className={'text-nowrap'}>{room?.num_balconies} {t('roomInner.balconySymbol')}</span>
                         </p>
                     </div>
 

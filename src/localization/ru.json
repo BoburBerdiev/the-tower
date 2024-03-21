@@ -75,9 +75,9 @@
     "index": {
       "headerBooking": {
        "checkIn": "Заезд",
-       "entryDay": "прибытие",
+       "entryDay": "Прибытие",
        "departure": "Выезд",
-       "departureDay": "День отъезда",
+       "departureDay": "Отъезд",
        "numberOfGuests" : "Число гостей",
        "room": "Номер ",
        "adults": "взрослых ",
@@ -104,7 +104,7 @@
       },
       "section6": {
         "title": "Планируйте и экономьте",
-        "subtitle": "Забронируйте пребывание с предоплатой и сэкономьте до 25%"
+        "subtitle": "Забронируйте пребывание с предоплатой и съэкономьте до 25%"
       },
       "section7": {
         "title": "Новостной блог"
@@ -163,9 +163,10 @@
         "service8": "Вид на город",
         "service9": "Превосходный завтрак"
       },
-      "areaSymbol": "кв.м",
+      "areaSymbol": "м²",
       "humenSymbol": "чел",
-      "filterSymbol": "ванная",
+      "filterSymbol": "ванна",
+      "filterSymbols": "ванны",
       "balconySymbol": "балкон"
     }
   }

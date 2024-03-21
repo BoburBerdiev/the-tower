@@ -10,9 +10,9 @@
       "searching": "Xona qidiring"
     },
     "lang": {
-      "ru": "русча",
-      "en": "инглизча",
-      "uz": "узбекча"
+      "ru": "rus",
+      "en": "ingliz",
+      "uz": "o'zbek"
     },
     "notFound": {
       "text": "Hona topilmadi"
@@ -161,6 +161,7 @@
     "areaSymbol": "m²",
     "humenSymbol": "kishi",
     "filterSymbol": "vannaxona",
+    "filterSymbols": "vannaxonalar",
     "balconySymbol": "balkon"
   }
   }

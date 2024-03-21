@@ -163,6 +163,7 @@
       "areaSymbol": "m²",
       "humenSymbol": "person",
       "filterSymbol": "bathroom",
+      "filterSymbols": "bathrooms",
       "balconySymbol": "balcony"
     }
   }

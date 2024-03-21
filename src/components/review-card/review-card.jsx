@@ -24,7 +24,7 @@ const ReviewCard = ({name,  country,  date, text}) => {
           </div>
         </div>
         <div className='space-y-2 md:w-[80%] lg:w-[90%]'>
-          <p className='text-xs font-light'> {t('reviews.reviewDate')}  {   moment(date).format('L') }</p>
+          <p className='text-xs font-light'>  {   moment(date).format('L') }</p>
           <p className='md:text-lg'>{`«${text}»`}</p>
         </div>
       </div>
