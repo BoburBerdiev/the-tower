@@ -2,7 +2,7 @@
   "translation": {
     "navbar": {
       "home" : "Главная",
-      "about": "Об отеле",
+      "about": "О нас",
       "rooms":"Номера",
       "gallery":"Фотогалерея",
       "contact": "Контакты",
@@ -10,9 +10,9 @@
       "searching": "Ищите комнату"
     },
     "lang": {
-      "ru": "Русский",
-      "en": "Английский",
-      "uz": "Узбек"
+      "ru": "русский",
+      "en": "английский",
+      "uz": "узбекский"
     },
     "btn": {
       "more":"Подробнее",
@@ -75,7 +75,7 @@
     "index": {
       "headerBooking": {
        "checkIn": "Заезд",
-       "entryDay": "Входной день",
+       "entryDay": "прибытие",
        "departure": "Выезд",
        "departureDay": "День отъезда",
        "numberOfGuests" : "Число гостей",

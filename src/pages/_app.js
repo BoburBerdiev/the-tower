@@ -16,7 +16,7 @@ import {PersistGate} from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Alegreya_Sans, Marmelad, Open_Sans, Playfair, Roboto} from "next/font/google";
+import {Alegreya_Sans, Marmelad, Open_Sans, Playfair, Roboto, Ubuntu} from "next/font/google";
 
 import "react-datepicker/dist/react-datepicker.css";
 import NextNProgress from "nextjs-progressbar";
@@ -46,12 +46,13 @@ const alegreya_sans
     // preload: false
 })
 
-const elegance = Playfair({
+const elegance = Ubuntu({
     subsets: ['cyrillic', 'latin'],
-    variable: '--font-rounded-elegance',
-    display: "swap",
-    adjustFontFallback: false,
-    preload: false
+    weight:[ "300" , "400" , "500" , "700" ],
+    variable: '--font-ubuntu',
+    // display: "swap",
+    // adjustFontFallback: false,
+    // preload: false
 })
 //
 // const marmelad = Marmelad({

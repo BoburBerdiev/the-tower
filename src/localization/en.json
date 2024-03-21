@@ -11,9 +11,9 @@
 
     },
     "lang": {
-      "ru": "Russian",
-      "en": "English",
-      "uz": "Uzbek"
+      "ru": "russian",
+      "en": "english",
+      "uz": "uzbek"
     },
     "btn": {
       "more":"More",
