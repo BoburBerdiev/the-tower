@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import axios from "axios";
 import {langSelect} from "@/helper";
-import Image from "next/image";
 
 
 

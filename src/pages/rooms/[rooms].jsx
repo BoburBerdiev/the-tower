@@ -17,7 +17,6 @@ import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {langSelect} from "@/helper";
 import {MdBalcony, MdOutlineBathroom, MdOutlineBedroomParent, MdOutlinePhotoSizeSelectSmall} from "react-icons/md";
-import {LiaRestroomSolid} from "react-icons/lia";
 
 
 const Room = () => {

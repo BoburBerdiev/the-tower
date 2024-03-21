@@ -1,14 +1,8 @@
-import React from 'react'
-import { ImgUI } from '..'
-import { MdStarRate } from "react-icons/md"; 
-import { MdStarOutline } from "react-icons/md";
-import {useTranslation} from "react-i18next";
 import moment from "moment";
 
 
 
 const ReviewCard = ({name,  country,  date, text}) => {
-  const { t   } = useTranslation();
 
 
   return (
