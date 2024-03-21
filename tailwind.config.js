@@ -26,12 +26,9 @@ module.exports = {
         'customGrey': '#808080'
       },
       fontFamily: {
-        // app.js ga qarab font ulansin
         elegance: ['var(--font-el_messiri)'],
-        // roboto: ['var(--font-roboto)'],
-        // inter: ['var(--font-inter)'],
-        roboto: ['var(--font-alegreya_sans)'],
-        alegreya: ['var(--font-alegreya_sans)'],
+        roboto: ['var(--font-open-sans)'],
+        alegreya: ['var(--font-open-sans)'],
         openSans: ['var(--font-open-sans)']
       },
     },

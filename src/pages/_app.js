@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import 'aos/dist/aos.css';
 
 
-// swiper
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
@@ -16,18 +15,19 @@ import {PersistGate} from "redux-persist/integration/react";
 import store, {persistor} from "@/store";
 import Layout from "@/Layout";
 import "../localization/i18n";
-import {Alegreya_Sans, El_Messiri} from "next/font/google";
-
+import { El_Messiri, Open_Sans} from "next/font/google";
 import "react-datepicker/dist/react-datepicker.css";
 import NextNProgress from "nextjs-progressbar";
 
-const alegreya_sans
-    = Alegreya_Sans
+
+const open_sans
+    = Open_Sans
 ({
-    weight: ["100", "300", "400", "500"],
+    weight: ["300" ,"400" , "500" , "600"],
     subsets: ['cyrillic', 'latin'],
-    variable: '--font-alegreya_sans',
+    variable: '--font-Open_Sans',
 })
+
 
 const elegance = El_Messiri({
     subsets: ['cyrillic', 'latin'],
@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }) {
                     <PersistGate loading={null} persistor={persistor}>
                         <Client>
                             <main
-                                className={` ${alegreya_sans.variable}   ${elegance.variable} `}>
+                                className={`  ${elegance.variable} ${open_sans.variable} `}>
 
                                 <Layout>
                                     <NextNProgress color={'white'} startPosition={0.3} stopDelayMs={200} height={3}/>

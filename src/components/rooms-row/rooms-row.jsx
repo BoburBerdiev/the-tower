@@ -15,7 +15,7 @@ const RoomsRow = ({card  , order}) =>  {
                 <h3 data-aos='fade-left' className={' text-2xl md:text-3xl lg:text-[40px] font-elegance'}>
                     {langSelect(lang ,card?.title_ru, card?.title_en , card?.title_uz )}
                 </h3>
-                <p data-aos='fade-left' data-aos-delay='100' className={' text-base md:text-lg'}>
+                <p data-aos='fade-left' data-aos-delay='100' className={' text-base md:text-lg text-[#575757]'}>
                     {langSelect(lang ,card?.description_ru, card?.description_en , card?.description_uz )}
                 </p>
                 <RoomsCharacterList num_balconies={card?.num_balconies} room_size={card?.room_size} capacity={card?.capacity} num_bathrooms={card?.num_bathrooms}  />

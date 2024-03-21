@@ -35,7 +35,7 @@ const Contact = ({contact}) => {
                       t('contact.phone')
                     }
                   </span>
-                  <span >{
+                  <span  className={'text-[#575757]'}>{
                     formatPhoneNumber(contact?.phone)
                   }</span>
                 </p>
@@ -47,7 +47,7 @@ const Contact = ({contact}) => {
                       t('contact.mail')
                     }
                   </span>
-                  <span>{contact?.email}</span>
+                  <span className={'text-[#575757]'}>{contact?.email}</span>
                 </p>
               </a>
               <p className="block" >
@@ -57,7 +57,7 @@ const Contact = ({contact}) => {
                       t('contact.address')
                     }
                   </span>
-                  <span>
+                  <span className={'text-[#575757]'}>
                    { langSelect(lang ,contact?.address_ru , contact?.address_en ,contact?.address_uz )}
                   </span>
                 </p>

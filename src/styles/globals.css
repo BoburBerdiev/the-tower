@@ -55,7 +55,7 @@
     }
 
     .section-text {
-        @apply text-black tracking-[0.4px] font-elegance font-light md:text-lg  xl:text-xl
+        @apply text-[#575757]  tracking-[0.4px] font-openSans font-light md:text-lg  xl:text-xl
     }
 
     .nav-active {

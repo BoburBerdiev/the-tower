@@ -37,20 +37,20 @@ const {lang} = useSelector(state => state.langSlice)
           <Slider SliderContent={newsInner?.images}  PaginationInner={true} />
         {/*  SliderContent={newsImage}*/}
         </div>
-        <h3 data-aos='fade-left' className='text-xl 2xl:text-2xl font-roboto font-semibold'>
+        <h3 data-aos='fade-left' className='text-xl 2xl:text-2xl font-elegance font-semibold'>
             {
                 langSelect(lang , newsInner?.title_ru , newsInner?.title_en , newsInner?.title_uz)
             }
          </h3>
-        <div data-aos='fade-left' data-aos-delay='100' className='flex items-center py-3'>
-          <LuCalendarRange className="md:text-xl text-lg pb-[3px]" />
-          <p className={`font-roboto font-medium text-sm md:text-base`}>
+        <div data-aos='fade-left' data-aos-delay='100' className='flex items-center py-3 space-x-3'>
+          <LuCalendarRange className="md:text-xl text-lg pb-[3px] text-brown" />
+          <p className={`font-roboto font-medium text-sm text-[#575757]`}>
               {
                   moment(newsInner?.created_at).format('L')
               }
           </p>
         </div>
-        <p data-aos='fade-up' className='text-justify font-roboto'>
+        <p data-aos='fade-up' className='text-justify font-roboto text-[#575757]'>
             {
                 langSelect(lang , newsInner?.description_ru , newsInner?.description_en , newsInner?.description_uz)
             }

@@ -12,7 +12,7 @@ const NewsCard = ({img, date, decr, href}) => {
       <div className='duration-300 group-hover:scale-[1.1] absolute top-0 left-0 w-full h-full z-[8] '>
         <ImgUI src={img} card={true} quality={90}   objectFitContain={false} alt={decr}/>
       </div>
-      <div className=' bg-gradient-to-t from-black/80 group-hover:from-black/65 md:from-black/50 via-black/50 to-black/0 w-full h-full absolute top-0 left-0 z-[9]'></div>
+      <div className=' bg-gradient-to-t from-black/50 group-hover:from-black/40 md:from-black/30  to-black/0 w-full h-full absolute top-0 left-0 z-[9]'></div>
       <div className='w-full h-full duration-300 z-10 flex flex-col justify-end gap-4  '>
         <div className="relative z-10 duration-300  flex flex-col group-hover:pl-6 px-5 pb-4 md:pb-6 text-white space-y-2 before:h-full before:w-0 before:bg-brown before:absolute before:top-0 before:left-0 group-hover:before:w-2 before:duration-300 before:rounded-tr before:z-[99]">
           <div className='flex items-center gap-x-2 '>

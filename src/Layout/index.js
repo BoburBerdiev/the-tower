@@ -22,14 +22,14 @@ const Layout = ({ children }) => {
 
 
     return (
-        <>
+        <div className={'font-openSans'}>
             <TopNav contact={contact} />
             <Navbar/>
             <section >
                 {children}
             </section>
             <Footer contact={contact} />
-        </>
+        </div>
     );
 };
 
