@@ -35,7 +35,7 @@ const SectionUI = ({children , bgGold, padding  , bgFigureTopPostion  ,bgFigureB
             {
                 langmark &&
                 <div className='absolute bottom-0 left-0 right-0 z-[1] h-full w-full '>
-                    <ImgUI src={'/image/bg.svg'} imageStyle={'w-full'} priority={true} alt={'locations'}/>
+                    <ImgUI src={'/image/bg.svg'} imageStyle={'w-full'}  alt={'locations'}/>
                 </div>
         }
     </section>

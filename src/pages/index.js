@@ -35,10 +35,10 @@ const Home = ({home , about , rooms , services , news , landmarks ,gallery}) => 
                     </div>
                     <div className="relative flex flex-col md:items-end aspect-square lg:aspect-auto">
                         <div data-aos='zoom-in' data-aos-delay='50' className="w-[62%] aspect-square xl:h-[78%] xl:w-[68%] lg:w-full lg:h-1/2 border-[10px] lg:border-x-[0px] lg:border-b-[10px] xl:border-[10px] border-white relative z-10 overflow-hidden">
-                            <ImgUI  src={about?.image_1}   alt={about?.title_en} priority={true} />
+                            <ImgUI  src={about?.image_1}   alt={about?.title_en} priority={false} />
                         </div>
                         <div data-aos-anchor-placement='top center'  data-aos='zoom-in' data-aos-delay='150' className="w-[62%] aspect-square lg:w-full lg:h-1/2 xl:h-[62%] xl:w-[55%] absolute bottom-8 md:bottom-0 right-0 md:left-0 max-md:border-[10px] border-white z-20 md:z-[9] overflow-hidden">
-                            <ImgUI  src={about?.image_2} priority={true}  alt={about?.title_en}/>
+                            <ImgUI  src={about?.image_2} priority={false}  alt={about?.title_en}/>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ export default Home
 export async function getServerSideProps({res}) {
     res.setHeader(
         "Cache-Control",
-        "public, s-maxage=10, stale-while-revalidate=59"
+        "no-cache"
     );
     // Fetch data from external API
     const [home, about , rooms ,services , news ,landmarks, gallery ] = await Promise.all([

@@ -22,7 +22,7 @@ const GalleryZoomInner = ({images}) => {
                         {
                             images?.map(image => (
                                 <SwiperSlide key={image?.id} className={'block w-full aspect-video lg:aspect-[10/4]'}>
-                                        <ImgUI priority={true} quality={100} imageStyle={'object-center'} src={image?.image} alt={'gallery'}/>
+                                        <ImgUI quality={100} imageStyle={'object-center'} src={image?.image} alt={'gallery'}/>
                                 </SwiperSlide>
                             ))
                         }

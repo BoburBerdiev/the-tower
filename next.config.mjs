@@ -11,7 +11,7 @@ const nextConfig = {
       },
     ],
     deviceSizes: [450, 640, 768, 1024, 1280, 1536],
-    // unoptimized:true
+    unoptimized:true
   },
 };
 export default nextConfig;

@@ -80,7 +80,7 @@ const Footer = ({contact}) => {
       </footer>
       <div className="mini-footer relative bg-brown py-1 overflow-hidden">
         <div className='absolute top-0 left-0 w-full h-full z-1'>
-          <ImgUI src={'/image/footer-bg.png'} objectFitContain={false} objectFit={'object-cover object-bottom'} alt={'footer'} priority={true}/>
+          <ImgUI src={'/image/footer-bg.png'} objectFitContain={false} objectFit={'object-cover object-bottom'} alt={'footer'} />
         </div>
         <div className="container relative z-[2] flex flex-col text-white/60 md:flex-row justify-between items-center text-xs md:text-sm text-white font-roboto gap-[10px]">
           <p className=''>
@@ -90,10 +90,10 @@ const Footer = ({contact}) => {
             <span>{FooterContentData.miniFooter.siteCreated}</span>
             <a href="https://abduganiev.uz" target='_blank' className='flex group items-center gap-2 relative w-[80px] md:w-[100px] h-[50px] overflow-hidden'>
               <div className='max-md:hidden w-8 h-8 object-cover relative duration-200 group-hover:scale-50 group-hover:opacity-0 group-hover:-translate-x-10'>
-                <ImgUI src={'/image/abduganiev-A.png'} alt={"Abdug'aniev"} priority={true} quality={100} objectFitContain={true}/>
+                <ImgUI src={'/image/abduganiev-A.png'} alt={"Abdug'aniev"}  quality={100} objectFitContain={true}/>
               </div>
               <div className='shrink-0  duration-300  md:opacity-0 md:translate-x-10 group-hover:translate-x-0 group-hover:opacity-100 md:absolute left-0  w-full h-full flex justify-center items-center'>
-                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"}  priority={true} objectFitContain={true} quality={100} imageStyle={'object-contain'}/>
+                <ImgUI src={'/image/abduganiev.png'} alt={"Abdug'aniev"}   objectFitContain={true} quality={100} imageStyle={'object-contain'}/>
               </div>
             </a>
           </div>

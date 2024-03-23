@@ -109,7 +109,7 @@ const index = ({newsHeader}) => {
 export async function getServerSideProps({ res}) {
   res.setHeader(
       "Cache-Control",
-      "public, s-maxage=10, stale-while-revalidate=59"
+      "no-cache"
   );
   // Fetch data from external API
   const [newsHeader ] = await Promise.all([

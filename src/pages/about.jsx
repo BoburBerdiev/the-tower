@@ -55,7 +55,7 @@ const About = ({about ,services}) => {
                       {
                           about?.additional_info?.images?.map(item => (
                               <div data-aos='zoom-in' key={item?.id} data-aos-delay='100' className="w-full relative aspect-square">
-                                  <ImgUI src={item?.image} alt="about" card={true} priority={true}/>
+                                  <ImgUI src={item?.image} alt="about" card={true} />
                               </div>
                           ))
                       }
@@ -81,7 +81,7 @@ export default About;
 export async function getServerSideProps({ res}) {
     res.setHeader(
         "Cache-Control",
-        "public, s-maxage=10, stale-while-revalidate=59"
+        "no-cache"
     );
     // Fetch data from external API
     const [about, services ] = await Promise.all([
