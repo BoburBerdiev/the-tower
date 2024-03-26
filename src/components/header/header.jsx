@@ -6,7 +6,7 @@ const Header = ({home}) => {
 
     
     <header className='relative h-screen'> 
-      <Slider  SliderContent={home}  PaginationMod={false} />
+      <Slider  SliderContent={home} isHeader={true}   PaginationMod={false} />
         <Booking/>
     </header>
     </>
